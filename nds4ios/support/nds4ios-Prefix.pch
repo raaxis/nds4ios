@@ -1,0 +1,47 @@
+//
+// Prefix header for all source files of the 'nds4ios' target in the 'nds4ios' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+/*
+ ugly hack, so that don't modify "nds4droid-code" project.
+ needs refactor later.
+ */
+
+#ifdef __cplusplus
+
+//#undef __APPLE__
+#define OBJ_C
+
+#define MAP_ANONYMOUS MAP_ANON
+#define _MAIN_H
+
+#define HAVE_JIT
+#define HAVE_CJIT
+#define TARGET_DEFS_ONLY
+#define USE_EXOPHASEJIT
+
+// Necessary #defines
+
+#define ANDROID_LOG_ERROR ""
+#define __android_log_print(fmt, ...) printf(fmt)
+
+
+#include <mach/mach.h>
+#include <mach/mach_time.h>
+#include <strings.h>
+
+#include "types.h"
+#include "nullJit.h"
+
+#endif

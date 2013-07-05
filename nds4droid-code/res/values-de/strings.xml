@@ -1,0 +1,71 @@
+<resources>
+    
+	<!-- Release 1 -->
+    <string name="app_name">nds4droid</string>
+    <string name="hello_world">Hallo Welt!</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="title_activity_main">nds4droid</string>
+	<string-array name="file_options">
+		<!--item>Umbenennen</item--> 
+		<item>Löschen</item>
+		<!--item>Ausschneiden</item-->
+		<!--item>Kopieren</item-->
+		<item>Senden an...</item>
+	</string-array>
+	<string name="rom_error">Fehler beim Laden des ROM :(</string>
+	<string name="OK">OK</string>
+	<string name="location">Ort</string>
+    <string name="cant_read_folder">Ordner kann nicht gelesen werden!</string>
+    <string name="nnew">Neu</string>
+    <string name="select">Ausw�hlen</string>
+    <string name="file_name">Dateiname:</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="create">Speichern</string>
+    <string name="no_data">Keine Daten</string>
+    <color name="gray">#ffff0000</color>
+    <string name="err">Fehler</string>
+    <string name="Load">Laden</string>
+    <string name="QuickSave">Schnell Sichern</string>
+    <string name="QuickRestore">Schnell Wiederherstellen</string>
+    <string name="SaveState">Zustand sichern</string>
+    <string name="RestoreState">Zustand wiederherstellen</string>
+    <string name="Settings">Einstellungen</string>
+    
+    <!-- Release 2 -->
+    <string name="touchnotify">Um zwischen Tastatur und touch Modus umzuschalten, tippen Sie oben auf den "touch" Button</string>
+    <string name="frameskip">Frame skip</string>
+    <string name="frameskipdesc">How many frames to skip when emulating. Helps make slow emulation match real time.</string>
+    <string name="vsync">VSync</string>
+    <string name="vsyncdesc">Only draw to the screen in-between frames. Can slow down emulation but turning off may cause graphical glitches.</string>
+    <string name="fps">Framerate anzeigen</string>
+    <string name="fpsdesc">Draw FPS onto screen.</string>
+    <string name="showtouchmsg">Show touch message</string>
+    <string name="showtouchmsgdesc">Display a message to the user explaining touch/keypad mode switching.</string>
+    
+    <!-- Release 3 -->
+    <string name="loading">Läd</string>    
+    
+    <!-- Release 4 -->
+    <string name="filter">Screen filter</string>
+    <string name="filterdesc">Filter to use when upscaling from Nintendo DS resolution to your sceren. Higher quality filters may degrade performance.</string>
+    
+    <!-- Release 5 -->
+    <string name="threedrenderer">3D Renderer</string>
+    <string name="threedrendererdesc">Zu benutzende 3D Rendering Engine.</string>
+    <string-array name ="threed_options">
+        <item>Kein</item>
+        <item>OpenGL</item>
+        <item>Software</item>
+    </string-array>
+    <string name="sound">Enable sound</string>
+    <string name="sounddesc">Verarbeiten und Abspielen von Ton einschalten. Abschalten kann die Leistung steigern.</string>
+    <string name="showsoundmsg">Show sound message</string>
+    <string name="showsoundmsgdesc">Den Anwender fragen, ob er den Ton einschalten m�chte.</string>
+    <string name="soundmsg">M�chten Sie den Ton einschalten? Dies k�nnte die Leistung um eine Framerate von 3 to 5 FPS mindern.</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    
+    <!-- Do not translate -->
+
+    
+</resources>

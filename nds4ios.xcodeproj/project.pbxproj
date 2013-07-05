@@ -1,0 +1,1246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0930178724E10060B347 /* Default-568h@2x.png */; };
+		8BEA0939178724E10060B347 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0931178724E10060B347 /* Default.png */; };
+		8BEA093A178724E10060B347 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0932178724E10060B347 /* Default@2x.png */; };
+		8BEA093B178724E10060B347 /* Icon-Multitasker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0933178724E10060B347 /* Icon-Multitasker@2x.png */; };
+		8BEA093C178724E10060B347 /* Icon-Spotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0934178724E10060B347 /* Icon-Spotlight.png */; };
+		8BEA093D178724E10060B347 /* Icon-Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0935178724E10060B347 /* Icon-Spotlight@2x.png */; };
+		8BEA093E178724E10060B347 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0936178724E10060B347 /* Icon.png */; };
+		8BEA093F178724E10060B347 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0937178724E10060B347 /* Icon@2x.png */; };
+		8BEA096217872BF90060B347 /* NDSROMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096117872BF90060B347 /* NDSROMTableViewController.m */; };
+		8BEA096517872C080060B347 /* NDSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096417872C080060B347 /* NDSSettingsViewController.m */; };
+		8BEA096A17872C190060B347 /* NDSButtonControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096717872C190060B347 /* NDSButtonControl.m */; };
+		8BEA096B17872C190060B347 /* NDSDirectionalControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096917872C190060B347 /* NDSDirectionalControl.m */; };
+		8BEA097017872C320060B347 /* NDSEmulatorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096D17872C320060B347 /* NDSEmulatorViewController.mm */; };
+		8BEA097117872C320060B347 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096F17872C320060B347 /* GLProgram.m */; };
+		8BEA097617872C3F0060B347 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097317872C3F0060B347 /* DocWatchHelper.m */; };
+		8BEA097717872C3F0060B347 /* RSTFileBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097517872C3F0060B347 /* RSTFileBrowserViewController.m */; };
+		8BEA097A17872C4B0060B347 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097917872C4B0060B347 /* UIScreen+Widescreen.m */; };
+		8BEA097E17872C5E0060B347 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097B17872C5E0060B347 /* main.m */; };
+		8BEA098A17872CF40060B347 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098117872CF40060B347 /* emu.cpp */; };
+		8BEA098B17872CF40060B347 /* matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098317872CF40060B347 /* matrix_impl.c */; };
+		8BEA098C17872CF40060B347 /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098717872CF40060B347 /* sndcoreaudio.mm */; };
+		8BEA098D17872CF40060B347 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098817872CF40060B347 /* throttle.cpp */; };
+		8BEA099017872FB50060B347 /* nds4ios-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA098E17872FB50060B347 /* nds4ios-Info.plist */; };
+		8BEA099F17876A6B0060B347 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA099517876A6B0060B347 /* ioapi.c */; };
+		8BEA09A017876A6B0060B347 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA099717876A6B0060B347 /* mztools.c */; };
+		8BEA09A117876A6B0060B347 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA099917876A6B0060B347 /* unzip.c */; };
+		8BEA09A217876A6B0060B347 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA099B17876A6B0060B347 /* zip.c */; };
+		8BEA09A317876A6B0060B347 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA099E17876A6B0060B347 /* SSZipArchive.m */; };
+		BF2AC478177FF0B700D3CF93 /* ArmLJit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */; };
+		BF9D514317865CD800B5864B /* SndOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF9D514117865CD800B5864B /* SndOut.cpp */; };
+		BF9D514817865D5100B5864B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9D514717865D5100B5864B /* AudioToolbox.framework */; };
+		BF9D516817867F7D00B5864B /* ABXYPad.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516017867F7D00B5864B /* ABXYPad.png */; };
+		BF9D516917867F7D00B5864B /* ABXYPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516117867F7D00B5864B /* ABXYPad@2x.png */; };
+		BF9D516A17867F7D00B5864B /* DPad.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516217867F7D00B5864B /* DPad.png */; };
+		BF9D516B17867F7D00B5864B /* DPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516317867F7D00B5864B /* DPad@2x.png */; };
+		BF9D516C17867F7D00B5864B /* JoystickBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516417867F7D00B5864B /* JoystickBackground.png */; };
+		BF9D516D17867F7D00B5864B /* JoystickBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516517867F7D00B5864B /* JoystickBackground@2x.png */; };
+		BF9D516E17867F7D00B5864B /* JoystickButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516617867F7D00B5864B /* JoystickButton.png */; };
+		BF9D516F17867F7D00B5864B /* JoystickButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516717867F7D00B5864B /* JoystickButton@2x.png */; };
+		BFAE6F9117674902000911CF /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAE6F9017674902000911CF /* GLKit.framework */; };
+		BFAE6F931767490A000911CF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAE6F921767490A000911CF /* OpenGLES.framework */; };
+		BFAE6F9B17674D93000911CF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAE6F9A17674D93000911CF /* libz.dylib */; };
+		BFCFE0F31764FBD3000A70CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCFE0F21764FBD3000A70CF /* UIKit.framework */; };
+		BFCFE0F51764FBD3000A70CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCFE0F41764FBD3000A70CF /* Foundation.framework */; };
+		BFCFE0F71764FBD3000A70CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCFE0F61764FBD3000A70CF /* CoreGraphics.framework */; };
+		BFCFE0FD1764FBD3000A70CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFCFE0FB1764FBD3000A70CF /* InfoPlist.strings */; };
+		BFCFE1031764FBD3000A70CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1021764FBD3000A70CF /* AppDelegate.m */; };
+		BFCFE10C1764FBD3000A70CF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCFE10A1764FBD3000A70CF /* MainStoryboard.storyboard */; };
+		BFCFE18017650FB0000A70CF /* arm_instructions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13217650FB0000A70CF /* arm_instructions.cpp */; };
+		BFCFE18117650FB0000A70CF /* ArmAnalyze.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13417650FB0000A70CF /* ArmAnalyze.cpp */; };
+		BFCFE18317650FB0000A70CF /* armcpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13817650FB0000A70CF /* armcpu.cpp */; };
+		BFCFE18417650FB0000A70CF /* ArmThreadedInterpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13A17650FB0000A70CF /* ArmThreadedInterpreter.cpp */; };
+		BFCFE18517650FB0000A70CF /* bios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13C17650FB0000A70CF /* bios.cpp */; };
+		BFCFE18617650FB0000A70CF /* cheatSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13E17650FB0000A70CF /* cheatSystem.cpp */; };
+		BFCFE18717650FB0000A70CF /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14017650FB0000A70CF /* common.cpp */; };
+		BFCFE18817650FB0000A70CF /* cp15.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14217650FB0000A70CF /* cp15.cpp */; };
+		BFCFE18917650FB0000A70CF /* CpuBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14417650FB0000A70CF /* CpuBase.cpp */; };
+		BFCFE18A17650FB0000A70CF /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14617650FB0000A70CF /* debug.cpp */; };
+		BFCFE18B17650FB0000A70CF /* Disassembler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14817650FB0000A70CF /* Disassembler.cpp */; };
+		BFCFE18C17650FB0000A70CF /* driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14A17650FB0000A70CF /* driver.cpp */; };
+		BFCFE18D17650FB0000A70CF /* emufile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14C17650FB0000A70CF /* emufile.cpp */; };
+		BFCFE18E17650FB0000A70CF /* FIFO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE14E17650FB0000A70CF /* FIFO.cpp */; };
+		BFCFE18F17650FB0000A70CF /* firmware.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15017650FB0000A70CF /* firmware.cpp */; };
+		BFCFE19017650FB0000A70CF /* fs-linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15217650FB0000A70CF /* fs-linux.cpp */; };
+		BFCFE19117650FB0000A70CF /* gfx3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15417650FB0000A70CF /* gfx3d.cpp */; };
+		BFCFE19217650FB0000A70CF /* GPU_osd_stub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15617650FB0000A70CF /* GPU_osd_stub.cpp */; };
+		BFCFE19317650FB0000A70CF /* GPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15817650FB0000A70CF /* GPU.cpp */; };
+		BFCFE19417650FB0000A70CF /* JitCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15A17650FB0000A70CF /* JitCommon.cpp */; };
+		BFCFE19517650FB0000A70CF /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15C17650FB0000A70CF /* matrix.cpp */; };
+		BFCFE19617650FB0000A70CF /* mc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15E17650FB0000A70CF /* mc.cpp */; };
+		BFCFE19717650FB0000A70CF /* MMU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE15F17650FB0000A70CF /* MMU.cpp */; };
+		BFCFE19817650FB0000A70CF /* movie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16117650FB0000A70CF /* movie.cpp */; };
+		BFCFE19917650FB0000A70CF /* NDSSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16317650FB0000A70CF /* NDSSystem.cpp */; };
+		BFCFE19A17650FB0000A70CF /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16517650FB0000A70CF /* path.cpp */; };
+		BFCFE19B17650FB0000A70CF /* rasterize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16717650FB0000A70CF /* rasterize.cpp */; };
+		BFCFE19C17650FB0000A70CF /* readwrite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16917650FB0000A70CF /* readwrite.cpp */; };
+		BFCFE19D17650FB0000A70CF /* render3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16B17650FB0000A70CF /* render3D.cpp */; };
+		BFCFE19E17650FB0000A70CF /* ROMReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16D17650FB0000A70CF /* ROMReader.cpp */; };
+		BFCFE19F17650FB0000A70CF /* rtc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE16F17650FB0000A70CF /* rtc.cpp */; };
+		BFCFE1A017650FB0000A70CF /* saves.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE17117650FB0000A70CF /* saves.cpp */; };
+		BFCFE1A117650FB0000A70CF /* slot1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE17317650FB0000A70CF /* slot1.cpp */; };
+		BFCFE1A217650FB0000A70CF /* SPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE17517650FB0000A70CF /* SPU.cpp */; };
+		BFCFE1A317650FB0000A70CF /* texcache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE17717650FB0000A70CF /* texcache.cpp */; };
+		BFCFE1A417650FB0000A70CF /* thumb_instructions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE17917650FB0000A70CF /* thumb_instructions.cpp */; };
+		BFCFE1A517650FB0000A70CF /* version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE17B17650FB0000A70CF /* version.cpp */; };
+		BFCFE1A617650FB0000A70CF /* wifi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE17D17650FB0000A70CF /* wifi.cpp */; };
+		BFCFE1B417651005000A70CF /* 2xsai.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1A817651005000A70CF /* 2xsai.cpp */; };
+		BFCFE1B517651005000A70CF /* bilinear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1A917651005000A70CF /* bilinear.cpp */; };
+		BFCFE1B617651005000A70CF /* epx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1AA17651005000A70CF /* epx.cpp */; };
+		BFCFE1B717651005000A70CF /* hq2x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1AC17651005000A70CF /* hq2x.cpp */; };
+		BFCFE1B817651005000A70CF /* hq4x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1AE17651005000A70CF /* hq4x.cpp */; };
+		BFCFE1B917651005000A70CF /* lq2x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1B117651005000A70CF /* lq2x.cpp */; };
+		BFCFE1BA17651005000A70CF /* scanline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1B317651005000A70CF /* scanline.cpp */; };
+		BFCFE1BE17651038000A70CF /* metaspu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1BC17651037000A70CF /* metaspu.cpp */; };
+		BFCFE1D517651076000A70CF /* ConvertUTF.c in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1C017651076000A70CF /* ConvertUTF.c */; };
+		BFCFE1D617651076000A70CF /* datetime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1C217651076000A70CF /* datetime.cpp */; };
+		BFCFE1D717651076000A70CF /* dlditool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1C417651076000A70CF /* dlditool.cpp */; };
+		BFCFE1D817651076000A70CF /* emufat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1C517651076000A70CF /* emufat.cpp */; };
+		BFCFE1D917651076000A70CF /* FileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1C717651076000A70CF /* FileMap.cpp */; };
+		BFCFE1DA17651076000A70CF /* guid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1C917651076000A70CF /* guid.cpp */; };
+		BFCFE1DB17651076000A70CF /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1CB17651076000A70CF /* md5.cpp */; };
+		BFCFE1DC17651076000A70CF /* MemBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1CD17651076000A70CF /* MemBuffer.cpp */; };
+		BFCFE1DD17651076000A70CF /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1CF17651076000A70CF /* task.cpp */; };
+		BFCFE1DE17651076000A70CF /* vfat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1D117651076000A70CF /* vfat.cpp */; };
+		BFCFE1DF17651076000A70CF /* xstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1D317651076000A70CF /* xstring.cpp */; };
+		BFCFE1E71765109C000A70CF /* crc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1E11765109C000A70CF /* crc.cpp */; };
+		BFCFE1E81765109C000A70CF /* decrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1E31765109C000A70CF /* decrypt.cpp */; };
+		BFCFE1E91765109C000A70CF /* header.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1E51765109C000A70CF /* header.cpp */; };
+		BFCFE21A176634AF000A70CF /* cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE205176634AF000A70CF /* cache.cpp */; };
+		BFCFE21B176634AF000A70CF /* directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE207176634AF000A70CF /* directory.cpp */; };
+		BFCFE21C176634AF000A70CF /* disc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE209176634AF000A70CF /* disc.cpp */; };
+		BFCFE21D176634AF000A70CF /* fatdir.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE20B176634AF000A70CF /* fatdir.cpp */; };
+		BFCFE21E176634AF000A70CF /* fatfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE20D176634AF000A70CF /* fatfile.cpp */; };
+		BFCFE21F176634AF000A70CF /* file_allocation_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE20F176634AF000A70CF /* file_allocation_table.cpp */; };
+		BFCFE220176634AF000A70CF /* filetime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE211176634AF000A70CF /* filetime.cpp */; };
+		BFCFE221176634AF000A70CF /* libfat_public_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE213176634AF000A70CF /* libfat_public_api.cpp */; };
+		BFCFE222176634AF000A70CF /* libfat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE215176634AF000A70CF /* libfat.cpp */; };
+		BFCFE223176634AF000A70CF /* lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE216176634AF000A70CF /* lock.cpp */; };
+		BFCFE224176634AF000A70CF /* partition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE218176634AF000A70CF /* partition.cpp */; };
+		BFCFE22B176634C6000A70CF /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE225176634C6000A70CF /* tinystr.cpp */; };
+		BFCFE22C176634C6000A70CF /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE227176634C6000A70CF /* tinyxml.cpp */; };
+		BFCFE22D176634C6000A70CF /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE229176634C6000A70CF /* tinyxmlerror.cpp */; };
+		BFCFE22E176634C6000A70CF /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE22A176634C6000A70CF /* tinyxmlparser.cpp */; };
+		BFCFE23C176634EE000A70CF /* slot1_none.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE230176634EE000A70CF /* slot1_none.cpp */; };
+		BFCFE23D176634EE000A70CF /* slot1_r4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE231176634EE000A70CF /* slot1_r4.cpp */; };
+		BFCFE23E176634EE000A70CF /* slot1_retail_nand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE232176634EE000A70CF /* slot1_retail_nand.cpp */; };
+		BFCFE23F176634EE000A70CF /* slot1_retail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE233176634EE000A70CF /* slot1_retail.cpp */; };
+		BFCFE240176634EE000A70CF /* slot2_expMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE234176634EE000A70CF /* slot2_expMemory.cpp */; };
+		BFCFE241176634EE000A70CF /* slot2_gbagame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE235176634EE000A70CF /* slot2_gbagame.cpp */; };
+		BFCFE242176634EE000A70CF /* slot2_guitarGrip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE236176634EE000A70CF /* slot2_guitarGrip.cpp */; };
+		BFCFE243176634EE000A70CF /* slot2_mpcf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE237176634EE000A70CF /* slot2_mpcf.cpp */; };
+		BFCFE244176634EE000A70CF /* slot2_none.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE238176634EE000A70CF /* slot2_none.cpp */; };
+		BFCFE245176634EE000A70CF /* slot2_paddle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE239176634EE000A70CF /* slot2_paddle.cpp */; };
+		BFCFE246176634EE000A70CF /* slot2_piano.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23A176634EE000A70CF /* slot2_piano.cpp */; };
+		BFCFE247176634EE000A70CF /* slot2_rumblepak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */; };
+		BFCFE26B1766379F000A70CF /* addons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13017650FB0000A70CF /* addons.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8BEA0930178724E10060B347 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/required/Default-568h@2x.png"; sourceTree = "<group>"; };
+		8BEA0931178724E10060B347 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/required/Default.png; sourceTree = "<group>"; };
+		8BEA0932178724E10060B347 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/required/Default@2x.png"; sourceTree = "<group>"; };
+		8BEA0933178724E10060B347 /* Icon-Multitasker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Multitasker@2x.png"; path = "Resources/required/Icon-Multitasker@2x.png"; sourceTree = "<group>"; };
+		8BEA0934178724E10060B347 /* Icon-Spotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight.png"; path = "Resources/required/Icon-Spotlight.png"; sourceTree = "<group>"; };
+		8BEA0935178724E10060B347 /* Icon-Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight@2x.png"; path = "Resources/required/Icon-Spotlight@2x.png"; sourceTree = "<group>"; };
+		8BEA0936178724E10060B347 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/required/Icon.png; sourceTree = "<group>"; };
+		8BEA0937178724E10060B347 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/required/Icon@2x.png"; sourceTree = "<group>"; };
+		8BEA096017872BF90060B347 /* NDSROMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSROMTableViewController.h; path = nds4ios/roms/NDSROMTableViewController.h; sourceTree = SOURCE_ROOT; };
+		8BEA096117872BF90060B347 /* NDSROMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSROMTableViewController.m; path = nds4ios/roms/NDSROMTableViewController.m; sourceTree = SOURCE_ROOT; };
+		8BEA096317872C080060B347 /* NDSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSSettingsViewController.h; path = nds4ios/settings/NDSSettingsViewController.h; sourceTree = SOURCE_ROOT; };
+		8BEA096417872C080060B347 /* NDSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSSettingsViewController.m; path = nds4ios/settings/NDSSettingsViewController.m; sourceTree = SOURCE_ROOT; };
+		8BEA096617872C190060B347 /* NDSButtonControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSButtonControl.h; path = nds4ios/controls/NDSButtonControl.h; sourceTree = SOURCE_ROOT; };
+		8BEA096717872C190060B347 /* NDSButtonControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSButtonControl.m; path = nds4ios/controls/NDSButtonControl.m; sourceTree = SOURCE_ROOT; };
+		8BEA096817872C190060B347 /* NDSDirectionalControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSDirectionalControl.h; path = nds4ios/controls/NDSDirectionalControl.h; sourceTree = SOURCE_ROOT; };
+		8BEA096917872C190060B347 /* NDSDirectionalControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSDirectionalControl.m; path = nds4ios/controls/NDSDirectionalControl.m; sourceTree = SOURCE_ROOT; };
+		8BEA096C17872C320060B347 /* NDSEmulatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSEmulatorViewController.h; path = nds4ios/emulator/NDSEmulatorViewController.h; sourceTree = SOURCE_ROOT; };
+		8BEA096D17872C320060B347 /* NDSEmulatorViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NDSEmulatorViewController.mm; path = nds4ios/emulator/NDSEmulatorViewController.mm; sourceTree = SOURCE_ROOT; };
+		8BEA096E17872C320060B347 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLProgram.h; path = nds4ios/emulator/GLProgram.h; sourceTree = SOURCE_ROOT; };
+		8BEA096F17872C320060B347 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = nds4ios/emulator/GLProgram.m; sourceTree = SOURCE_ROOT; };
+		8BEA097217872C3F0060B347 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocWatchHelper.h; path = nds4ios/filebrowser/DocWatchHelper.h; sourceTree = SOURCE_ROOT; };
+		8BEA097317872C3F0060B347 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocWatchHelper.m; path = nds4ios/filebrowser/DocWatchHelper.m; sourceTree = SOURCE_ROOT; };
+		8BEA097417872C3F0060B347 /* RSTFileBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTFileBrowserViewController.h; path = nds4ios/filebrowser/RSTFileBrowserViewController.h; sourceTree = SOURCE_ROOT; };
+		8BEA097517872C3F0060B347 /* RSTFileBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTFileBrowserViewController.m; path = nds4ios/filebrowser/RSTFileBrowserViewController.m; sourceTree = SOURCE_ROOT; };
+		8BEA097817872C4B0060B347 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Widescreen.h"; path = "nds4ios/categories/UIScreen+Widescreen.h"; sourceTree = SOURCE_ROOT; };
+		8BEA097917872C4B0060B347 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Widescreen.m"; path = "nds4ios/categories/UIScreen+Widescreen.m"; sourceTree = SOURCE_ROOT; };
+		8BEA097B17872C5E0060B347 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = nds4ios/support/main.m; sourceTree = SOURCE_ROOT; };
+		8BEA098117872CF40060B347 /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emu.cpp; path = nds4ios/core/emu.cpp; sourceTree = SOURCE_ROOT; };
+		8BEA098217872CF40060B347 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emu.h; path = nds4ios/core/emu.h; sourceTree = SOURCE_ROOT; };
+		8BEA098317872CF40060B347 /* matrix_impl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = matrix_impl.c; path = nds4ios/core/matrix_impl.c; sourceTree = SOURCE_ROOT; };
+		8BEA098417872CF40060B347 /* matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix_impl.h; path = nds4ios/core/matrix_impl.h; sourceTree = SOURCE_ROOT; };
+		8BEA098517872CF40060B347 /* nullJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nullJit.h; path = nds4ios/core/nullJit.h; sourceTree = SOURCE_ROOT; };
+		8BEA098617872CF40060B347 /* sndcoreaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sndcoreaudio.h; path = nds4ios/core/sndcoreaudio.h; sourceTree = SOURCE_ROOT; };
+		8BEA098717872CF40060B347 /* sndcoreaudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sndcoreaudio.mm; path = nds4ios/core/sndcoreaudio.mm; sourceTree = SOURCE_ROOT; };
+		8BEA098817872CF40060B347 /* throttle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = throttle.cpp; path = nds4ios/core/throttle.cpp; sourceTree = SOURCE_ROOT; };
+		8BEA098917872CF40060B347 /* throttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = throttle.h; path = nds4ios/core/throttle.h; sourceTree = SOURCE_ROOT; };
+		8BEA098E17872FB50060B347 /* nds4ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "nds4ios-Info.plist"; path = "nds4ios/support/nds4ios-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8BEA0991178733DB0060B347 /* nds4ios-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "nds4ios-Prefix.pch"; path = "nds4ios/support/nds4ios-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		8BEA099417876A6B0060B347 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		8BEA099517876A6B0060B347 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		8BEA099617876A6B0060B347 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		8BEA099717876A6B0060B347 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		8BEA099817876A6B0060B347 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		8BEA099917876A6B0060B347 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		8BEA099A17876A6B0060B347 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		8BEA099B17876A6B0060B347 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		8BEA099C17876A6B0060B347 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		8BEA099D17876A6B0060B347 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = nds4ios/openzip/SSZipArchive.h; sourceTree = SOURCE_ROOT; };
+		8BEA099E17876A6B0060B347 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = nds4ios/openzip/SSZipArchive.m; sourceTree = SOURCE_ROOT; };
+		BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmLJit.cpp; path = "nds4droid-code/jni/desmume/src/ArmLJit.cpp"; sourceTree = SOURCE_ROOT; };
+		BF2AC476177FF06600D3CF93 /* ArmLJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmLJit.h; path = "nds4droid-code/jni/desmume/src/ArmLJit.h"; sourceTree = SOURCE_ROOT; };
+		BF2AC47A177FF29000D3CF93 /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asm.h; sourceTree = "<group>"; };
+		BF2AC47B177FF29000D3CF93 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		BF2AC47C177FF29000D3CF93 /* fp-swf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fp-swf.h"; sourceTree = "<group>"; };
+		BF2AC47D177FF29000D3CF93 /* fp-vfp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "fp-vfp.h"; sourceTree = "<group>"; };
+		BF2AC47E177FF29000D3CF93 /* fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fp.h; sourceTree = "<group>"; };
+		BF2AC47F177FF29000D3CF93 /* funcs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funcs.h; sourceTree = "<group>"; };
+		BF2AC482177FF29000D3CF93 /* asm-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "asm-common.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/asm-common.h"; sourceTree = SOURCE_ROOT; };
+		BF2AC483177FF29000D3CF93 /* config_lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config_lightning.h; path = "nds4droid-code/jni/desmume/src/utils/lightning/config_lightning.h"; sourceTree = SOURCE_ROOT; };
+		BF2AC484177FF29000D3CF93 /* core-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "core-common.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/core-common.h"; sourceTree = SOURCE_ROOT; };
+		BF2AC485177FF29000D3CF93 /* fp-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "fp-common.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/fp-common.h"; sourceTree = SOURCE_ROOT; };
+		BF2AC486177FF29000D3CF93 /* funcs-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "funcs-common.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/funcs-common.h"; sourceTree = SOURCE_ROOT; };
+		BF9D514117865CD800B5864B /* SndOut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SndOut.cpp; path = "nds4droid-code/jni/desmume/src/metaspu/SndOut.cpp"; sourceTree = SOURCE_ROOT; };
+		BF9D514217865CD800B5864B /* SndOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SndOut.h; path = "nds4droid-code/jni/desmume/src/metaspu/SndOut.h"; sourceTree = SOURCE_ROOT; };
+		BF9D514717865D5100B5864B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BF9D516017867F7D00B5864B /* ABXYPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ABXYPad.png; path = Resources/ABXYPad.png; sourceTree = "<group>"; };
+		BF9D516117867F7D00B5864B /* ABXYPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ABXYPad@2x.png"; path = "Resources/ABXYPad@2x.png"; sourceTree = "<group>"; };
+		BF9D516217867F7D00B5864B /* DPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DPad.png; path = Resources/DPad.png; sourceTree = "<group>"; };
+		BF9D516317867F7D00B5864B /* DPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DPad@2x.png"; path = "Resources/DPad@2x.png"; sourceTree = "<group>"; };
+		BF9D516417867F7D00B5864B /* JoystickBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JoystickBackground.png; path = Resources/JoystickBackground.png; sourceTree = "<group>"; };
+		BF9D516517867F7D00B5864B /* JoystickBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "JoystickBackground@2x.png"; path = "Resources/JoystickBackground@2x.png"; sourceTree = "<group>"; };
+		BF9D516617867F7D00B5864B /* JoystickButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JoystickButton.png; path = Resources/JoystickButton.png; sourceTree = "<group>"; };
+		BF9D516717867F7D00B5864B /* JoystickButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "JoystickButton@2x.png"; path = "Resources/JoystickButton@2x.png"; sourceTree = "<group>"; };
+		BFAE6F9017674902000911CF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		BFAE6F921767490A000911CF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BFAE6F9A17674D93000911CF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BFCFE0EF1764FBD3000A70CF /* nds4ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nds4ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCFE0F21764FBD3000A70CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BFCFE0F41764FBD3000A70CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFCFE0F61764FBD3000A70CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BFCFE0FC1764FBD3000A70CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFCFE1011764FBD3000A70CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFCFE1021764FBD3000A70CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFCFE10B1764FBD3000A70CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BFCFE13017650FB0000A70CF /* addons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = addons.cpp; path = "nds4droid-code/jni/desmume/src/addons.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13117650FB0000A70CF /* addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addons.h; path = "nds4droid-code/jni/desmume/src/addons.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE13217650FB0000A70CF /* arm_instructions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arm_instructions.cpp; path = "nds4droid-code/jni/desmume/src/arm_instructions.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13317650FB0000A70CF /* arm_instructions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arm_instructions.h; path = "nds4droid-code/jni/desmume/src/arm_instructions.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE13417650FB0000A70CF /* ArmAnalyze.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmAnalyze.cpp; path = "nds4droid-code/jni/desmume/src/ArmAnalyze.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13517650FB0000A70CF /* ArmAnalyze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmAnalyze.h; path = "nds4droid-code/jni/desmume/src/ArmAnalyze.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE13617650FB0000A70CF /* ArmCJit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmCJit.cpp; path = "nds4droid-code/jni/desmume/src/ArmCJit.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13717650FB0000A70CF /* ArmCJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmCJit.h; path = "nds4droid-code/jni/desmume/src/ArmCJit.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE13817650FB0000A70CF /* armcpu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = armcpu.cpp; path = "nds4droid-code/jni/desmume/src/armcpu.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13917650FB0000A70CF /* armcpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = armcpu.h; path = "nds4droid-code/jni/desmume/src/armcpu.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE13A17650FB0000A70CF /* ArmThreadedInterpreter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmThreadedInterpreter.cpp; path = "nds4droid-code/jni/desmume/src/ArmThreadedInterpreter.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13B17650FB0000A70CF /* ArmThreadedInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmThreadedInterpreter.h; path = "nds4droid-code/jni/desmume/src/ArmThreadedInterpreter.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE13C17650FB0000A70CF /* bios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bios.cpp; path = "nds4droid-code/jni/desmume/src/bios.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13D17650FB0000A70CF /* bios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bios.h; path = "nds4droid-code/jni/desmume/src/bios.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE13E17650FB0000A70CF /* cheatSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cheatSystem.cpp; path = "nds4droid-code/jni/desmume/src/cheatSystem.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE13F17650FB0000A70CF /* cheatSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cheatSystem.h; path = "nds4droid-code/jni/desmume/src/cheatSystem.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14017650FB0000A70CF /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = common.cpp; path = "nds4droid-code/jni/desmume/src/common.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14117650FB0000A70CF /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = "nds4droid-code/jni/desmume/src/common.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14217650FB0000A70CF /* cp15.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cp15.cpp; path = "nds4droid-code/jni/desmume/src/cp15.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14317650FB0000A70CF /* cp15.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cp15.h; path = "nds4droid-code/jni/desmume/src/cp15.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14417650FB0000A70CF /* CpuBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CpuBase.cpp; path = "nds4droid-code/jni/desmume/src/CpuBase.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14517650FB0000A70CF /* CpuBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CpuBase.h; path = "nds4droid-code/jni/desmume/src/CpuBase.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14617650FB0000A70CF /* debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = debug.cpp; path = "nds4droid-code/jni/desmume/src/debug.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14717650FB0000A70CF /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = debug.h; path = "nds4droid-code/jni/desmume/src/debug.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14817650FB0000A70CF /* Disassembler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Disassembler.cpp; path = "nds4droid-code/jni/desmume/src/Disassembler.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14917650FB0000A70CF /* Disassembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Disassembler.h; path = "nds4droid-code/jni/desmume/src/Disassembler.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14A17650FB0000A70CF /* driver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = driver.cpp; path = "nds4droid-code/jni/desmume/src/driver.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14B17650FB0000A70CF /* driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = driver.h; path = "nds4droid-code/jni/desmume/src/driver.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14C17650FB0000A70CF /* emufile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emufile.cpp; path = "nds4droid-code/jni/desmume/src/emufile.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14D17650FB0000A70CF /* emufile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emufile.h; path = "nds4droid-code/jni/desmume/src/emufile.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE14E17650FB0000A70CF /* FIFO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FIFO.cpp; path = "nds4droid-code/jni/desmume/src/FIFO.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE14F17650FB0000A70CF /* FIFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FIFO.h; path = "nds4droid-code/jni/desmume/src/FIFO.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15017650FB0000A70CF /* firmware.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = firmware.cpp; path = "nds4droid-code/jni/desmume/src/firmware.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15117650FB0000A70CF /* firmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = firmware.h; path = "nds4droid-code/jni/desmume/src/firmware.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15217650FB0000A70CF /* fs-linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "fs-linux.cpp"; path = "nds4droid-code/jni/desmume/src/fs-linux.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15317650FB0000A70CF /* fs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fs.h; path = "nds4droid-code/jni/desmume/src/fs.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15417650FB0000A70CF /* gfx3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gfx3d.cpp; path = "nds4droid-code/jni/desmume/src/gfx3d.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15517650FB0000A70CF /* gfx3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gfx3d.h; path = "nds4droid-code/jni/desmume/src/gfx3d.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15617650FB0000A70CF /* GPU_osd_stub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GPU_osd_stub.cpp; path = "nds4droid-code/jni/desmume/src/GPU_osd_stub.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15717650FB0000A70CF /* GPU_osd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPU_osd.h; path = "nds4droid-code/jni/desmume/src/GPU_osd.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15817650FB0000A70CF /* GPU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GPU.cpp; path = "nds4droid-code/jni/desmume/src/GPU.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15917650FB0000A70CF /* GPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPU.h; path = "nds4droid-code/jni/desmume/src/GPU.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15A17650FB0000A70CF /* JitCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JitCommon.cpp; path = "nds4droid-code/jni/desmume/src/JitCommon.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15B17650FB0000A70CF /* JitCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JitCommon.h; path = "nds4droid-code/jni/desmume/src/JitCommon.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15C17650FB0000A70CF /* matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = matrix.cpp; path = "nds4droid-code/jni/desmume/src/matrix.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15D17650FB0000A70CF /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = "nds4droid-code/jni/desmume/src/matrix.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE15E17650FB0000A70CF /* mc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mc.cpp; path = "nds4droid-code/jni/desmume/src/mc.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE15F17650FB0000A70CF /* MMU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MMU.cpp; path = "nds4droid-code/jni/desmume/src/MMU.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16017650FB0000A70CF /* MMU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMU.h; path = "nds4droid-code/jni/desmume/src/MMU.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16117650FB0000A70CF /* movie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = movie.cpp; path = "nds4droid-code/jni/desmume/src/movie.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16217650FB0000A70CF /* movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = movie.h; path = "nds4droid-code/jni/desmume/src/movie.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16317650FB0000A70CF /* NDSSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NDSSystem.cpp; path = "nds4droid-code/jni/desmume/src/NDSSystem.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16417650FB0000A70CF /* NDSSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSSystem.h; path = "nds4droid-code/jni/desmume/src/NDSSystem.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16517650FB0000A70CF /* path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = path.cpp; path = "nds4droid-code/jni/desmume/src/path.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16617650FB0000A70CF /* path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = path.h; path = "nds4droid-code/jni/desmume/src/path.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16717650FB0000A70CF /* rasterize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rasterize.cpp; path = "nds4droid-code/jni/desmume/src/rasterize.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16817650FB0000A70CF /* rasterize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rasterize.h; path = "nds4droid-code/jni/desmume/src/rasterize.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16917650FB0000A70CF /* readwrite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = readwrite.cpp; path = "nds4droid-code/jni/desmume/src/readwrite.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16A17650FB0000A70CF /* readwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = readwrite.h; path = "nds4droid-code/jni/desmume/src/readwrite.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16B17650FB0000A70CF /* render3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = render3D.cpp; path = "nds4droid-code/jni/desmume/src/render3D.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16C17650FB0000A70CF /* render3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = render3D.h; path = "nds4droid-code/jni/desmume/src/render3D.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16D17650FB0000A70CF /* ROMReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ROMReader.cpp; path = "nds4droid-code/jni/desmume/src/ROMReader.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE16E17650FB0000A70CF /* ROMReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ROMReader.h; path = "nds4droid-code/jni/desmume/src/ROMReader.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE16F17650FB0000A70CF /* rtc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rtc.cpp; path = "nds4droid-code/jni/desmume/src/rtc.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17017650FB0000A70CF /* rtc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rtc.h; path = "nds4droid-code/jni/desmume/src/rtc.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE17117650FB0000A70CF /* saves.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = saves.cpp; path = "nds4droid-code/jni/desmume/src/saves.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17217650FB0000A70CF /* saves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = saves.h; path = "nds4droid-code/jni/desmume/src/saves.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE17317650FB0000A70CF /* slot1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1.cpp; path = "nds4droid-code/jni/desmume/src/slot1.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17417650FB0000A70CF /* slot1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slot1.h; path = "nds4droid-code/jni/desmume/src/slot1.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE17517650FB0000A70CF /* SPU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SPU.cpp; path = "nds4droid-code/jni/desmume/src/SPU.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17617650FB0000A70CF /* SPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPU.h; path = "nds4droid-code/jni/desmume/src/SPU.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE17717650FB0000A70CF /* texcache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = texcache.cpp; path = "nds4droid-code/jni/desmume/src/texcache.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17817650FB0000A70CF /* texcache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = texcache.h; path = "nds4droid-code/jni/desmume/src/texcache.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE17917650FB0000A70CF /* thumb_instructions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = thumb_instructions.cpp; path = "nds4droid-code/jni/desmume/src/thumb_instructions.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17A17650FB0000A70CF /* thumb_instructions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = thumb_instructions.h; path = "nds4droid-code/jni/desmume/src/thumb_instructions.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE17B17650FB0000A70CF /* version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = version.cpp; path = "nds4droid-code/jni/desmume/src/version.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17C17650FB0000A70CF /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = "nds4droid-code/jni/desmume/src/version.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE17D17650FB0000A70CF /* wifi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = wifi.cpp; path = "nds4droid-code/jni/desmume/src/wifi.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE17E17650FB0000A70CF /* wifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wifi.h; path = "nds4droid-code/jni/desmume/src/wifi.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1A817651005000A70CF /* 2xsai.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = 2xsai.cpp; path = "nds4droid-code/jni/desmume/src/filter/2xsai.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1A917651005000A70CF /* bilinear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bilinear.cpp; path = "nds4droid-code/jni/desmume/src/filter/bilinear.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1AA17651005000A70CF /* epx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = epx.cpp; path = "nds4droid-code/jni/desmume/src/filter/epx.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1AB17651005000A70CF /* filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filter.h; path = "nds4droid-code/jni/desmume/src/filter/filter.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1AC17651005000A70CF /* hq2x.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hq2x.cpp; path = "nds4droid-code/jni/desmume/src/filter/hq2x.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1AD17651005000A70CF /* hq2x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hq2x.h; path = "nds4droid-code/jni/desmume/src/filter/hq2x.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1AE17651005000A70CF /* hq4x.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hq4x.cpp; path = "nds4droid-code/jni/desmume/src/filter/hq4x.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1AF17651005000A70CF /* hq4x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hq4x.h; path = "nds4droid-code/jni/desmume/src/filter/hq4x.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1B017651005000A70CF /* interp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interp.h; path = "nds4droid-code/jni/desmume/src/filter/interp.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1B117651005000A70CF /* lq2x.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lq2x.cpp; path = "nds4droid-code/jni/desmume/src/filter/lq2x.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1B217651005000A70CF /* lq2x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lq2x.h; path = "nds4droid-code/jni/desmume/src/filter/lq2x.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1B317651005000A70CF /* scanline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scanline.cpp; path = "nds4droid-code/jni/desmume/src/filter/scanline.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1BC17651037000A70CF /* metaspu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = metaspu.cpp; path = "nds4droid-code/jni/desmume/src/metaspu/metaspu.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1BD17651038000A70CF /* metaspu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = metaspu.h; path = "nds4droid-code/jni/desmume/src/metaspu/metaspu.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C017651076000A70CF /* ConvertUTF.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ConvertUTF.c; path = "nds4droid-code/jni/desmume/src/utils/ConvertUTF.c"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C117651076000A70CF /* ConvertUTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConvertUTF.h; path = "nds4droid-code/jni/desmume/src/utils/ConvertUTF.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C217651076000A70CF /* datetime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = datetime.cpp; path = "nds4droid-code/jni/desmume/src/utils/datetime.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C317651076000A70CF /* datetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = datetime.h; path = "nds4droid-code/jni/desmume/src/utils/datetime.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C417651076000A70CF /* dlditool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dlditool.cpp; path = "nds4droid-code/jni/desmume/src/utils/dlditool.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C517651076000A70CF /* emufat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emufat.cpp; path = "nds4droid-code/jni/desmume/src/utils/emufat.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C617651076000A70CF /* emufat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emufat.h; path = "nds4droid-code/jni/desmume/src/utils/emufat.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C717651076000A70CF /* FileMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileMap.cpp; path = "nds4droid-code/jni/desmume/src/utils/FileMap.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C817651076000A70CF /* FileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileMap.h; path = "nds4droid-code/jni/desmume/src/utils/FileMap.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1C917651076000A70CF /* guid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = guid.cpp; path = "nds4droid-code/jni/desmume/src/utils/guid.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1CA17651076000A70CF /* guid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = guid.h; path = "nds4droid-code/jni/desmume/src/utils/guid.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1CB17651076000A70CF /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = md5.cpp; path = "nds4droid-code/jni/desmume/src/utils/md5.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1CC17651076000A70CF /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = md5.h; path = "nds4droid-code/jni/desmume/src/utils/md5.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1CD17651076000A70CF /* MemBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MemBuffer.cpp; path = "nds4droid-code/jni/desmume/src/utils/MemBuffer.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1CE17651076000A70CF /* MemBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemBuffer.h; path = "nds4droid-code/jni/desmume/src/utils/MemBuffer.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1CF17651076000A70CF /* task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task.cpp; path = "nds4droid-code/jni/desmume/src/utils/task.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1D017651076000A70CF /* task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task.h; path = "nds4droid-code/jni/desmume/src/utils/task.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1D117651076000A70CF /* vfat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vfat.cpp; path = "nds4droid-code/jni/desmume/src/utils/vfat.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1D217651076000A70CF /* vfat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vfat.h; path = "nds4droid-code/jni/desmume/src/utils/vfat.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1D317651076000A70CF /* xstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xstring.cpp; path = "nds4droid-code/jni/desmume/src/utils/xstring.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1D417651076000A70CF /* xstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xstring.h; path = "nds4droid-code/jni/desmume/src/utils/xstring.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1E11765109C000A70CF /* crc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crc.cpp; path = "nds4droid-code/jni/desmume/src/utils/decrypt/crc.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1E21765109C000A70CF /* crc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc.h; path = "nds4droid-code/jni/desmume/src/utils/decrypt/crc.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1E31765109C000A70CF /* decrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = decrypt.cpp; path = "nds4droid-code/jni/desmume/src/utils/decrypt/decrypt.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1E41765109C000A70CF /* decrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decrypt.h; path = "nds4droid-code/jni/desmume/src/utils/decrypt/decrypt.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE1E51765109C000A70CF /* header.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = header.cpp; path = "nds4droid-code/jni/desmume/src/utils/decrypt/header.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE1E61765109C000A70CF /* header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = header.h; path = "nds4droid-code/jni/desmume/src/utils/decrypt/header.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE205176634AF000A70CF /* cache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cache.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/cache.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE206176634AF000A70CF /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cache.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/cache.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE207176634AF000A70CF /* directory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = directory.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/directory.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE208176634AF000A70CF /* directory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = directory.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/directory.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE209176634AF000A70CF /* disc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = disc.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/disc.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE20A176634AF000A70CF /* disc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = disc.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/disc.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE20B176634AF000A70CF /* fatdir.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fatdir.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/fatdir.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE20C176634AF000A70CF /* fatdir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fatdir.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/fatdir.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE20D176634AF000A70CF /* fatfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fatfile.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/fatfile.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE20E176634AF000A70CF /* fatfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fatfile.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/fatfile.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE20F176634AF000A70CF /* file_allocation_table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = file_allocation_table.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/file_allocation_table.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE210176634AF000A70CF /* file_allocation_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_allocation_table.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/file_allocation_table.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE211176634AF000A70CF /* filetime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filetime.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/filetime.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE212176634AF000A70CF /* filetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filetime.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/filetime.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE213176634AF000A70CF /* libfat_public_api.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libfat_public_api.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/libfat_public_api.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE214176634AF000A70CF /* libfat_public_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libfat_public_api.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/libfat_public_api.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE215176634AF000A70CF /* libfat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libfat.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/libfat.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE216176634AF000A70CF /* lock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lock.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/lock.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE217176634AF000A70CF /* lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lock.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/lock.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE218176634AF000A70CF /* partition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = partition.cpp; path = "nds4droid-code/jni/desmume/src/utils/libfat/partition.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE219176634AF000A70CF /* partition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = partition.h; path = "nds4droid-code/jni/desmume/src/utils/libfat/partition.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE225176634C6000A70CF /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinystr.cpp; path = "nds4droid-code/jni/desmume/src/utils/tinyxml/tinystr.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE226176634C6000A70CF /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinystr.h; path = "nds4droid-code/jni/desmume/src/utils/tinyxml/tinystr.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE227176634C6000A70CF /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml.cpp; path = "nds4droid-code/jni/desmume/src/utils/tinyxml/tinyxml.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE228176634C6000A70CF /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = "nds4droid-code/jni/desmume/src/utils/tinyxml/tinyxml.h"; sourceTree = SOURCE_ROOT; };
+		BFCFE229176634C6000A70CF /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlerror.cpp; path = "nds4droid-code/jni/desmume/src/utils/tinyxml/tinyxmlerror.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE22A176634C6000A70CF /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlparser.cpp; path = "nds4droid-code/jni/desmume/src/utils/tinyxml/tinyxmlparser.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE230176634EE000A70CF /* slot1_none.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1_none.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot1_none.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE231176634EE000A70CF /* slot1_r4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1_r4.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot1_r4.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE232176634EE000A70CF /* slot1_retail_nand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1_retail_nand.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot1_retail_nand.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE233176634EE000A70CF /* slot1_retail.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot1_retail.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot1_retail.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE234176634EE000A70CF /* slot2_expMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_expMemory.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_expMemory.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE235176634EE000A70CF /* slot2_gbagame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_gbagame.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_gbagame.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE236176634EE000A70CF /* slot2_guitarGrip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_guitarGrip.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_guitarGrip.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE237176634EE000A70CF /* slot2_mpcf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_mpcf.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_mpcf.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE238176634EE000A70CF /* slot2_none.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_none.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_none.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE239176634EE000A70CF /* slot2_paddle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_paddle.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_paddle.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE23A176634EE000A70CF /* slot2_piano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_piano.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_piano.cpp"; sourceTree = SOURCE_ROOT; };
+		BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_rumblepak.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_rumblepak.cpp"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFCFE0EC1764FBD3000A70CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9D514817865D5100B5864B /* AudioToolbox.framework in Frameworks */,
+				BFAE6F9B17674D93000911CF /* libz.dylib in Frameworks */,
+				BFAE6F931767490A000911CF /* OpenGLES.framework in Frameworks */,
+				BFAE6F9117674902000911CF /* GLKit.framework in Frameworks */,
+				BFCFE0F31764FBD3000A70CF /* UIKit.framework in Frameworks */,
+				BFCFE0F51764FBD3000A70CF /* Foundation.framework in Frameworks */,
+				BFCFE0F71764FBD3000A70CF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BEA095217872BB50060B347 /* iOS Core */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA098117872CF40060B347 /* emu.cpp */,
+				8BEA098217872CF40060B347 /* emu.h */,
+				8BEA098317872CF40060B347 /* matrix_impl.c */,
+				8BEA098417872CF40060B347 /* matrix_impl.h */,
+				8BEA098517872CF40060B347 /* nullJit.h */,
+				8BEA098617872CF40060B347 /* sndcoreaudio.h */,
+				8BEA098717872CF40060B347 /* sndcoreaudio.mm */,
+				8BEA098817872CF40060B347 /* throttle.cpp */,
+				8BEA098917872CF40060B347 /* throttle.h */,
+			);
+			name = "iOS Core";
+			sourceTree = "<group>";
+		};
+		8BEA099217876A490060B347 /* Open Zip Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA099317876A6B0060B347 /* minizip */,
+				8BEA099D17876A6B0060B347 /* SSZipArchive.h */,
+				8BEA099E17876A6B0060B347 /* SSZipArchive.m */,
+			);
+			name = "Open Zip Files";
+			sourceTree = "<group>";
+		};
+		8BEA099317876A6B0060B347 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA099417876A6B0060B347 /* crypt.h */,
+				8BEA099517876A6B0060B347 /* ioapi.c */,
+				8BEA099617876A6B0060B347 /* ioapi.h */,
+				8BEA099717876A6B0060B347 /* mztools.c */,
+				8BEA099817876A6B0060B347 /* mztools.h */,
+				8BEA099917876A6B0060B347 /* unzip.c */,
+				8BEA099A17876A6B0060B347 /* unzip.h */,
+				8BEA099B17876A6B0060B347 /* zip.c */,
+				8BEA099C17876A6B0060B347 /* zip.h */,
+			);
+			name = minizip;
+			path = nds4ios/openzip/minizip;
+			sourceTree = SOURCE_ROOT;
+		};
+		BF2AC479177FF29000D3CF93 /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				BF2AC47A177FF29000D3CF93 /* asm.h */,
+				BF2AC47B177FF29000D3CF93 /* core.h */,
+				BF2AC47C177FF29000D3CF93 /* fp-swf.h */,
+				BF2AC47D177FF29000D3CF93 /* fp-vfp.h */,
+				BF2AC47E177FF29000D3CF93 /* fp.h */,
+				BF2AC47F177FF29000D3CF93 /* funcs.h */,
+			);
+			name = arm;
+			path = "nds4droid-code/jni/desmume/src/utils/lightning/arm";
+			sourceTree = SOURCE_ROOT;
+		};
+		BF9D515517865E1300B5864B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF9D517017867F8200B5864B /* Controls */,
+				BF9D515617865E1D00B5864B /* Required */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BF9D515617865E1D00B5864B /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA0930178724E10060B347 /* Default-568h@2x.png */,
+				8BEA0931178724E10060B347 /* Default.png */,
+				8BEA0932178724E10060B347 /* Default@2x.png */,
+				8BEA0933178724E10060B347 /* Icon-Multitasker@2x.png */,
+				8BEA0934178724E10060B347 /* Icon-Spotlight.png */,
+				8BEA0935178724E10060B347 /* Icon-Spotlight@2x.png */,
+				8BEA0936178724E10060B347 /* Icon.png */,
+				8BEA0937178724E10060B347 /* Icon@2x.png */,
+			);
+			name = Required;
+			sourceTree = "<group>";
+		};
+		BF9D517017867F8200B5864B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				BF9D516017867F7D00B5864B /* ABXYPad.png */,
+				BF9D516117867F7D00B5864B /* ABXYPad@2x.png */,
+				BF9D516217867F7D00B5864B /* DPad.png */,
+				BF9D516317867F7D00B5864B /* DPad@2x.png */,
+				BF9D516417867F7D00B5864B /* JoystickBackground.png */,
+				BF9D516517867F7D00B5864B /* JoystickBackground@2x.png */,
+				BF9D516617867F7D00B5864B /* JoystickButton.png */,
+				BF9D516717867F7D00B5864B /* JoystickButton@2x.png */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		BF9D51751786A60E00B5864B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA096317872C080060B347 /* NDSSettingsViewController.h */,
+				8BEA096417872C080060B347 /* NDSSettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		BFAE6F8F176748CF000911CF /* Emulator View */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA096C17872C320060B347 /* NDSEmulatorViewController.h */,
+				8BEA096D17872C320060B347 /* NDSEmulatorViewController.mm */,
+				8BEA096E17872C320060B347 /* GLProgram.h */,
+				8BEA096F17872C320060B347 /* GLProgram.m */,
+			);
+			name = "Emulator View";
+			sourceTree = "<group>";
+		};
+		BFAE6FAB17675623000911CF /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA096617872C190060B347 /* NDSButtonControl.h */,
+				8BEA096717872C190060B347 /* NDSButtonControl.m */,
+				8BEA096817872C190060B347 /* NDSDirectionalControl.h */,
+				8BEA096917872C190060B347 /* NDSDirectionalControl.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		BFCFE0E61764FBD3000A70CF = {
+			isa = PBXGroup;
+			children = (
+				BFCFE0F81764FBD3000A70CF /* Main */,
+				BF9D515517865E1300B5864B /* Resources */,
+				BFCFE0F11764FBD3000A70CF /* Frameworks */,
+				BFCFE0F01764FBD3000A70CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFCFE0F01764FBD3000A70CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE0EF1764FBD3000A70CF /* nds4ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFCFE0F11764FBD3000A70CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF9D514717865D5100B5864B /* AudioToolbox.framework */,
+				BFAE6F9A17674D93000911CF /* libz.dylib */,
+				BFAE6F921767490A000911CF /* OpenGLES.framework */,
+				BFAE6F9017674902000911CF /* GLKit.framework */,
+				BFCFE0F21764FBD3000A70CF /* UIKit.framework */,
+				BFCFE0F41764FBD3000A70CF /* Foundation.framework */,
+				BFCFE0F61764FBD3000A70CF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFCFE0F81764FBD3000A70CF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE1011764FBD3000A70CF /* AppDelegate.h */,
+				BFCFE1021764FBD3000A70CF /* AppDelegate.m */,
+				BFCFE10A1764FBD3000A70CF /* MainStoryboard.storyboard */,
+				8BEA096017872BF90060B347 /* NDSROMTableViewController.h */,
+				8BEA096117872BF90060B347 /* NDSROMTableViewController.m */,
+				BF9D51751786A60E00B5864B /* Settings */,
+				BFAE6FAB17675623000911CF /* Controls */,
+				BFAE6F8F176748CF000911CF /* Emulator View */,
+				BFCFE12F17650ED0000A70CF /* Emulator Code */,
+				BFCFE12E17650D3F000A70CF /* File Browser */,
+				BFCFE1191764FCDE000A70CF /* Categories */,
+				BFCFE0F91764FBD3000A70CF /* Supporting Files */,
+				8BEA099217876A490060B347 /* Open Zip Files */,
+			);
+			name = Main;
+			path = NDS4iOS;
+			sourceTree = "<group>";
+		};
+		BFCFE0F91764FBD3000A70CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA0991178733DB0060B347 /* nds4ios-Prefix.pch */,
+				8BEA098E17872FB50060B347 /* nds4ios-Info.plist */,
+				8BEA097B17872C5E0060B347 /* main.m */,
+				BFCFE0FB1764FBD3000A70CF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFCFE1191764FCDE000A70CF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA097817872C4B0060B347 /* UIScreen+Widescreen.h */,
+				8BEA097917872C4B0060B347 /* UIScreen+Widescreen.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		BFCFE12E17650D3F000A70CF /* File Browser */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA097217872C3F0060B347 /* DocWatchHelper.h */,
+				8BEA097317872C3F0060B347 /* DocWatchHelper.m */,
+				8BEA097417872C3F0060B347 /* RSTFileBrowserViewController.h */,
+				8BEA097517872C3F0060B347 /* RSTFileBrowserViewController.m */,
+			);
+			name = "File Browser";
+			sourceTree = "<group>";
+		};
+		BFCFE12F17650ED0000A70CF /* Emulator Code */ = {
+			isa = PBXGroup;
+			children = (
+				8BEA095217872BB50060B347 /* iOS Core */,
+				BFCFE24817663521000A70CF /* JIT */,
+				BFCFE13017650FB0000A70CF /* addons.cpp */,
+				BFCFE13117650FB0000A70CF /* addons.h */,
+				BFCFE13217650FB0000A70CF /* arm_instructions.cpp */,
+				BFCFE13317650FB0000A70CF /* arm_instructions.h */,
+				BFCFE13417650FB0000A70CF /* ArmAnalyze.cpp */,
+				BFCFE13517650FB0000A70CF /* ArmAnalyze.h */,
+				BFCFE13617650FB0000A70CF /* ArmCJit.cpp */,
+				BFCFE13717650FB0000A70CF /* ArmCJit.h */,
+				BFCFE13817650FB0000A70CF /* armcpu.cpp */,
+				BFCFE13917650FB0000A70CF /* armcpu.h */,
+				BFCFE13A17650FB0000A70CF /* ArmThreadedInterpreter.cpp */,
+				BFCFE13B17650FB0000A70CF /* ArmThreadedInterpreter.h */,
+				BFCFE13C17650FB0000A70CF /* bios.cpp */,
+				BFCFE13D17650FB0000A70CF /* bios.h */,
+				BFCFE13E17650FB0000A70CF /* cheatSystem.cpp */,
+				BFCFE13F17650FB0000A70CF /* cheatSystem.h */,
+				BFCFE14017650FB0000A70CF /* common.cpp */,
+				BFCFE14117650FB0000A70CF /* common.h */,
+				BFCFE14217650FB0000A70CF /* cp15.cpp */,
+				BFCFE14317650FB0000A70CF /* cp15.h */,
+				BFCFE14417650FB0000A70CF /* CpuBase.cpp */,
+				BFCFE14517650FB0000A70CF /* CpuBase.h */,
+				BFCFE14617650FB0000A70CF /* debug.cpp */,
+				BFCFE14717650FB0000A70CF /* debug.h */,
+				BFCFE14817650FB0000A70CF /* Disassembler.cpp */,
+				BFCFE14917650FB0000A70CF /* Disassembler.h */,
+				BFCFE14A17650FB0000A70CF /* driver.cpp */,
+				BFCFE14B17650FB0000A70CF /* driver.h */,
+				BFCFE14C17650FB0000A70CF /* emufile.cpp */,
+				BFCFE14D17650FB0000A70CF /* emufile.h */,
+				BFCFE14E17650FB0000A70CF /* FIFO.cpp */,
+				BFCFE14F17650FB0000A70CF /* FIFO.h */,
+				BFCFE15017650FB0000A70CF /* firmware.cpp */,
+				BFCFE15117650FB0000A70CF /* firmware.h */,
+				BFCFE15217650FB0000A70CF /* fs-linux.cpp */,
+				BFCFE15317650FB0000A70CF /* fs.h */,
+				BFCFE15417650FB0000A70CF /* gfx3d.cpp */,
+				BFCFE15517650FB0000A70CF /* gfx3d.h */,
+				BFCFE15617650FB0000A70CF /* GPU_osd_stub.cpp */,
+				BFCFE15717650FB0000A70CF /* GPU_osd.h */,
+				BFCFE15817650FB0000A70CF /* GPU.cpp */,
+				BFCFE15917650FB0000A70CF /* GPU.h */,
+				BFCFE15A17650FB0000A70CF /* JitCommon.cpp */,
+				BFCFE15B17650FB0000A70CF /* JitCommon.h */,
+				BFCFE15C17650FB0000A70CF /* matrix.cpp */,
+				BFCFE15D17650FB0000A70CF /* matrix.h */,
+				BFCFE15E17650FB0000A70CF /* mc.cpp */,
+				BFCFE15F17650FB0000A70CF /* MMU.cpp */,
+				BFCFE16017650FB0000A70CF /* MMU.h */,
+				BFCFE16117650FB0000A70CF /* movie.cpp */,
+				BFCFE16217650FB0000A70CF /* movie.h */,
+				BFCFE16317650FB0000A70CF /* NDSSystem.cpp */,
+				BFCFE16417650FB0000A70CF /* NDSSystem.h */,
+				BFCFE16517650FB0000A70CF /* path.cpp */,
+				BFCFE16617650FB0000A70CF /* path.h */,
+				BFCFE16717650FB0000A70CF /* rasterize.cpp */,
+				BFCFE16817650FB0000A70CF /* rasterize.h */,
+				BFCFE16917650FB0000A70CF /* readwrite.cpp */,
+				BFCFE16A17650FB0000A70CF /* readwrite.h */,
+				BFCFE16B17650FB0000A70CF /* render3D.cpp */,
+				BFCFE16C17650FB0000A70CF /* render3D.h */,
+				BFCFE16D17650FB0000A70CF /* ROMReader.cpp */,
+				BFCFE16E17650FB0000A70CF /* ROMReader.h */,
+				BFCFE16F17650FB0000A70CF /* rtc.cpp */,
+				BFCFE17017650FB0000A70CF /* rtc.h */,
+				BFCFE17117650FB0000A70CF /* saves.cpp */,
+				BFCFE17217650FB0000A70CF /* saves.h */,
+				BFCFE17317650FB0000A70CF /* slot1.cpp */,
+				BFCFE17417650FB0000A70CF /* slot1.h */,
+				BFCFE17517650FB0000A70CF /* SPU.cpp */,
+				BFCFE17617650FB0000A70CF /* SPU.h */,
+				BFCFE17717650FB0000A70CF /* texcache.cpp */,
+				BFCFE17817650FB0000A70CF /* texcache.h */,
+				BFCFE17917650FB0000A70CF /* thumb_instructions.cpp */,
+				BFCFE17A17650FB0000A70CF /* thumb_instructions.h */,
+				BFCFE17B17650FB0000A70CF /* version.cpp */,
+				BFCFE17C17650FB0000A70CF /* version.h */,
+				BFCFE17D17650FB0000A70CF /* wifi.cpp */,
+				BFCFE17E17650FB0000A70CF /* wifi.h */,
+				BFCFE1A717650FEF000A70CF /* filter */,
+				BFCFE1BB1765101B000A70CF /* metaspu */,
+				BFCFE1BF1765104F000A70CF /* utils */,
+				BFCFE22F176634E3000A70CF /* addons */,
+			);
+			name = "Emulator Code";
+			sourceTree = "<group>";
+		};
+		BFCFE1A717650FEF000A70CF /* filter */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE1A817651005000A70CF /* 2xsai.cpp */,
+				BFCFE1A917651005000A70CF /* bilinear.cpp */,
+				BFCFE1AA17651005000A70CF /* epx.cpp */,
+				BFCFE1AB17651005000A70CF /* filter.h */,
+				BFCFE1AC17651005000A70CF /* hq2x.cpp */,
+				BFCFE1AD17651005000A70CF /* hq2x.h */,
+				BFCFE1AE17651005000A70CF /* hq4x.cpp */,
+				BFCFE1AF17651005000A70CF /* hq4x.h */,
+				BFCFE1B017651005000A70CF /* interp.h */,
+				BFCFE1B117651005000A70CF /* lq2x.cpp */,
+				BFCFE1B217651005000A70CF /* lq2x.h */,
+				BFCFE1B317651005000A70CF /* scanline.cpp */,
+			);
+			name = filter;
+			sourceTree = "<group>";
+		};
+		BFCFE1BB1765101B000A70CF /* metaspu */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE1BC17651037000A70CF /* metaspu.cpp */,
+				BFCFE1BD17651038000A70CF /* metaspu.h */,
+				BF9D514117865CD800B5864B /* SndOut.cpp */,
+				BF9D514217865CD800B5864B /* SndOut.h */,
+			);
+			name = metaspu;
+			sourceTree = "<group>";
+		};
+		BFCFE1BF1765104F000A70CF /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE1C017651076000A70CF /* ConvertUTF.c */,
+				BFCFE1C117651076000A70CF /* ConvertUTF.h */,
+				BFCFE1C217651076000A70CF /* datetime.cpp */,
+				BFCFE1C317651076000A70CF /* datetime.h */,
+				BFCFE1C417651076000A70CF /* dlditool.cpp */,
+				BFCFE1C517651076000A70CF /* emufat.cpp */,
+				BFCFE1C617651076000A70CF /* emufat.h */,
+				BFCFE1C717651076000A70CF /* FileMap.cpp */,
+				BFCFE1C817651076000A70CF /* FileMap.h */,
+				BFCFE1C917651076000A70CF /* guid.cpp */,
+				BFCFE1CA17651076000A70CF /* guid.h */,
+				BFCFE1CB17651076000A70CF /* md5.cpp */,
+				BFCFE1CC17651076000A70CF /* md5.h */,
+				BFCFE1CD17651076000A70CF /* MemBuffer.cpp */,
+				BFCFE1CE17651076000A70CF /* MemBuffer.h */,
+				BFCFE1CF17651076000A70CF /* task.cpp */,
+				BFCFE1D017651076000A70CF /* task.h */,
+				BFCFE1D117651076000A70CF /* vfat.cpp */,
+				BFCFE1D217651076000A70CF /* vfat.h */,
+				BFCFE1D317651076000A70CF /* xstring.cpp */,
+				BFCFE1D417651076000A70CF /* xstring.h */,
+				BFCFE200176510DC000A70CF /* tinyxml */,
+				BFCFE1EA176510A1000A70CF /* libfat */,
+				BFCFE1E017651082000A70CF /* decrypt */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		BFCFE1E017651082000A70CF /* decrypt */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE1E11765109C000A70CF /* crc.cpp */,
+				BFCFE1E21765109C000A70CF /* crc.h */,
+				BFCFE1E31765109C000A70CF /* decrypt.cpp */,
+				BFCFE1E41765109C000A70CF /* decrypt.h */,
+				BFCFE1E51765109C000A70CF /* header.cpp */,
+				BFCFE1E61765109C000A70CF /* header.h */,
+			);
+			name = decrypt;
+			sourceTree = "<group>";
+		};
+		BFCFE1EA176510A1000A70CF /* libfat */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE205176634AF000A70CF /* cache.cpp */,
+				BFCFE206176634AF000A70CF /* cache.h */,
+				BFCFE207176634AF000A70CF /* directory.cpp */,
+				BFCFE208176634AF000A70CF /* directory.h */,
+				BFCFE209176634AF000A70CF /* disc.cpp */,
+				BFCFE20A176634AF000A70CF /* disc.h */,
+				BFCFE20B176634AF000A70CF /* fatdir.cpp */,
+				BFCFE20C176634AF000A70CF /* fatdir.h */,
+				BFCFE20D176634AF000A70CF /* fatfile.cpp */,
+				BFCFE20E176634AF000A70CF /* fatfile.h */,
+				BFCFE20F176634AF000A70CF /* file_allocation_table.cpp */,
+				BFCFE210176634AF000A70CF /* file_allocation_table.h */,
+				BFCFE211176634AF000A70CF /* filetime.cpp */,
+				BFCFE212176634AF000A70CF /* filetime.h */,
+				BFCFE213176634AF000A70CF /* libfat_public_api.cpp */,
+				BFCFE214176634AF000A70CF /* libfat_public_api.h */,
+				BFCFE215176634AF000A70CF /* libfat.cpp */,
+				BFCFE216176634AF000A70CF /* lock.cpp */,
+				BFCFE217176634AF000A70CF /* lock.h */,
+				BFCFE218176634AF000A70CF /* partition.cpp */,
+				BFCFE219176634AF000A70CF /* partition.h */,
+			);
+			name = libfat;
+			sourceTree = "<group>";
+		};
+		BFCFE200176510DC000A70CF /* tinyxml */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE225176634C6000A70CF /* tinystr.cpp */,
+				BFCFE226176634C6000A70CF /* tinystr.h */,
+				BFCFE227176634C6000A70CF /* tinyxml.cpp */,
+				BFCFE228176634C6000A70CF /* tinyxml.h */,
+				BFCFE229176634C6000A70CF /* tinyxmlerror.cpp */,
+				BFCFE22A176634C6000A70CF /* tinyxmlparser.cpp */,
+			);
+			name = tinyxml;
+			sourceTree = "<group>";
+		};
+		BFCFE22F176634E3000A70CF /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFE230176634EE000A70CF /* slot1_none.cpp */,
+				BFCFE231176634EE000A70CF /* slot1_r4.cpp */,
+				BFCFE232176634EE000A70CF /* slot1_retail_nand.cpp */,
+				BFCFE233176634EE000A70CF /* slot1_retail.cpp */,
+				BFCFE234176634EE000A70CF /* slot2_expMemory.cpp */,
+				BFCFE235176634EE000A70CF /* slot2_gbagame.cpp */,
+				BFCFE236176634EE000A70CF /* slot2_guitarGrip.cpp */,
+				BFCFE237176634EE000A70CF /* slot2_mpcf.cpp */,
+				BFCFE238176634EE000A70CF /* slot2_none.cpp */,
+				BFCFE239176634EE000A70CF /* slot2_paddle.cpp */,
+				BFCFE23A176634EE000A70CF /* slot2_piano.cpp */,
+				BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		BFCFE24817663521000A70CF /* JIT */ = {
+			isa = PBXGroup;
+			children = (
+				BF2AC479177FF29000D3CF93 /* arm */,
+				BF2AC482177FF29000D3CF93 /* asm-common.h */,
+				BF2AC483177FF29000D3CF93 /* config_lightning.h */,
+				BF2AC484177FF29000D3CF93 /* core-common.h */,
+				BF2AC485177FF29000D3CF93 /* fp-common.h */,
+				BF2AC486177FF29000D3CF93 /* funcs-common.h */,
+				BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */,
+				BF2AC476177FF06600D3CF93 /* ArmLJit.h */,
+			);
+			name = JIT;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFCFE0EE1764FBD3000A70CF /* nds4ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFCFE1151764FBD3000A70CF /* Build configuration list for PBXNativeTarget "nds4ios" */;
+			buildPhases = (
+				BFCFE0EB1764FBD3000A70CF /* Sources */,
+				BFCFE0EC1764FBD3000A70CF /* Frameworks */,
+				BFCFE0ED1764FBD3000A70CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nds4ios;
+			productName = NDS4iOS;
+			productReference = BFCFE0EF1764FBD3000A70CF /* nds4ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFCFE0E71764FBD3000A70CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NDS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "DS Team";
+			};
+			buildConfigurationList = BFCFE0EA1764FBD3000A70CF /* Build configuration list for PBXProject "nds4ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BFCFE0E61764FBD3000A70CF;
+			productRefGroup = BFCFE0F01764FBD3000A70CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFCFE0EE1764FBD3000A70CF /* nds4ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFCFE0ED1764FBD3000A70CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BEA093E178724E10060B347 /* Icon.png in Resources */,
+				8BEA093F178724E10060B347 /* Icon@2x.png in Resources */,
+				BFCFE0FD1764FBD3000A70CF /* InfoPlist.strings in Resources */,
+				8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */,
+				8BEA093C178724E10060B347 /* Icon-Spotlight.png in Resources */,
+				BFCFE10C1764FBD3000A70CF /* MainStoryboard.storyboard in Resources */,
+				BF9D516817867F7D00B5864B /* ABXYPad.png in Resources */,
+				8BEA093A178724E10060B347 /* Default@2x.png in Resources */,
+				8BEA093D178724E10060B347 /* Icon-Spotlight@2x.png in Resources */,
+				8BEA093B178724E10060B347 /* Icon-Multitasker@2x.png in Resources */,
+				BF9D516917867F7D00B5864B /* ABXYPad@2x.png in Resources */,
+				BF9D516A17867F7D00B5864B /* DPad.png in Resources */,
+				BF9D516B17867F7D00B5864B /* DPad@2x.png in Resources */,
+				8BEA0939178724E10060B347 /* Default.png in Resources */,
+				BF9D516C17867F7D00B5864B /* JoystickBackground.png in Resources */,
+				BF9D516D17867F7D00B5864B /* JoystickBackground@2x.png in Resources */,
+				BF9D516E17867F7D00B5864B /* JoystickButton.png in Resources */,
+				BF9D516F17867F7D00B5864B /* JoystickButton@2x.png in Resources */,
+				8BEA099017872FB50060B347 /* nds4ios-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFCFE0EB1764FBD3000A70CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCFE1031764FBD3000A70CF /* AppDelegate.m in Sources */,
+				BFCFE18017650FB0000A70CF /* arm_instructions.cpp in Sources */,
+				BFCFE18117650FB0000A70CF /* ArmAnalyze.cpp in Sources */,
+				BFCFE18317650FB0000A70CF /* armcpu.cpp in Sources */,
+				BFCFE18417650FB0000A70CF /* ArmThreadedInterpreter.cpp in Sources */,
+				BFCFE18517650FB0000A70CF /* bios.cpp in Sources */,
+				BFCFE18617650FB0000A70CF /* cheatSystem.cpp in Sources */,
+				BFCFE18717650FB0000A70CF /* common.cpp in Sources */,
+				BFCFE18817650FB0000A70CF /* cp15.cpp in Sources */,
+				8BEA096217872BF90060B347 /* NDSROMTableViewController.m in Sources */,
+				BFCFE18917650FB0000A70CF /* CpuBase.cpp in Sources */,
+				BFCFE18A17650FB0000A70CF /* debug.cpp in Sources */,
+				BFCFE18B17650FB0000A70CF /* Disassembler.cpp in Sources */,
+				8BEA097617872C3F0060B347 /* DocWatchHelper.m in Sources */,
+				BFCFE18C17650FB0000A70CF /* driver.cpp in Sources */,
+				8BEA098C17872CF40060B347 /* sndcoreaudio.mm in Sources */,
+				BFCFE18D17650FB0000A70CF /* emufile.cpp in Sources */,
+				BFCFE18E17650FB0000A70CF /* FIFO.cpp in Sources */,
+				8BEA09A117876A6B0060B347 /* unzip.c in Sources */,
+				BFCFE18F17650FB0000A70CF /* firmware.cpp in Sources */,
+				BFCFE19017650FB0000A70CF /* fs-linux.cpp in Sources */,
+				BFCFE19117650FB0000A70CF /* gfx3d.cpp in Sources */,
+				8BEA097A17872C4B0060B347 /* UIScreen+Widescreen.m in Sources */,
+				BFCFE19217650FB0000A70CF /* GPU_osd_stub.cpp in Sources */,
+				BFCFE19317650FB0000A70CF /* GPU.cpp in Sources */,
+				8BEA099F17876A6B0060B347 /* ioapi.c in Sources */,
+				BFCFE19417650FB0000A70CF /* JitCommon.cpp in Sources */,
+				BF2AC478177FF0B700D3CF93 /* ArmLJit.cpp in Sources */,
+				BFCFE19517650FB0000A70CF /* matrix.cpp in Sources */,
+				BFCFE19617650FB0000A70CF /* mc.cpp in Sources */,
+				8BEA09A217876A6B0060B347 /* zip.c in Sources */,
+				BFCFE19717650FB0000A70CF /* MMU.cpp in Sources */,
+				BFCFE19817650FB0000A70CF /* movie.cpp in Sources */,
+				BFCFE19917650FB0000A70CF /* NDSSystem.cpp in Sources */,
+				BFCFE19A17650FB0000A70CF /* path.cpp in Sources */,
+				BFCFE19B17650FB0000A70CF /* rasterize.cpp in Sources */,
+				BFCFE19C17650FB0000A70CF /* readwrite.cpp in Sources */,
+				BFCFE19D17650FB0000A70CF /* render3D.cpp in Sources */,
+				BFCFE19E17650FB0000A70CF /* ROMReader.cpp in Sources */,
+				BFCFE19F17650FB0000A70CF /* rtc.cpp in Sources */,
+				BFCFE1A017650FB0000A70CF /* saves.cpp in Sources */,
+				8BEA096517872C080060B347 /* NDSSettingsViewController.m in Sources */,
+				8BEA097E17872C5E0060B347 /* main.m in Sources */,
+				8BEA098B17872CF40060B347 /* matrix_impl.c in Sources */,
+				BFCFE1A117650FB0000A70CF /* slot1.cpp in Sources */,
+				BFCFE1A217650FB0000A70CF /* SPU.cpp in Sources */,
+				BFCFE1A317650FB0000A70CF /* texcache.cpp in Sources */,
+				BFCFE1A417650FB0000A70CF /* thumb_instructions.cpp in Sources */,
+				BFCFE1A517650FB0000A70CF /* version.cpp in Sources */,
+				BFCFE1A617650FB0000A70CF /* wifi.cpp in Sources */,
+				8BEA09A017876A6B0060B347 /* mztools.c in Sources */,
+				BFCFE1B417651005000A70CF /* 2xsai.cpp in Sources */,
+				BFCFE1B517651005000A70CF /* bilinear.cpp in Sources */,
+				BFCFE1B617651005000A70CF /* epx.cpp in Sources */,
+				BFCFE1B717651005000A70CF /* hq2x.cpp in Sources */,
+				BFCFE1B817651005000A70CF /* hq4x.cpp in Sources */,
+				BFCFE1B917651005000A70CF /* lq2x.cpp in Sources */,
+				BFCFE1BA17651005000A70CF /* scanline.cpp in Sources */,
+				BFCFE1BE17651038000A70CF /* metaspu.cpp in Sources */,
+				BFCFE1D517651076000A70CF /* ConvertUTF.c in Sources */,
+				BFCFE1D617651076000A70CF /* datetime.cpp in Sources */,
+				BFCFE1D717651076000A70CF /* dlditool.cpp in Sources */,
+				BFCFE1D817651076000A70CF /* emufat.cpp in Sources */,
+				BFCFE1D917651076000A70CF /* FileMap.cpp in Sources */,
+				BFCFE1DA17651076000A70CF /* guid.cpp in Sources */,
+				8BEA096A17872C190060B347 /* NDSButtonControl.m in Sources */,
+				8BEA097017872C320060B347 /* NDSEmulatorViewController.mm in Sources */,
+				BFCFE1DB17651076000A70CF /* md5.cpp in Sources */,
+				8BEA096B17872C190060B347 /* NDSDirectionalControl.m in Sources */,
+				BFCFE1DC17651076000A70CF /* MemBuffer.cpp in Sources */,
+				BFCFE1DD17651076000A70CF /* task.cpp in Sources */,
+				8BEA097717872C3F0060B347 /* RSTFileBrowserViewController.m in Sources */,
+				BFCFE1DE17651076000A70CF /* vfat.cpp in Sources */,
+				BFCFE1DF17651076000A70CF /* xstring.cpp in Sources */,
+				BFCFE1E71765109C000A70CF /* crc.cpp in Sources */,
+				BFCFE1E81765109C000A70CF /* decrypt.cpp in Sources */,
+				8BEA09A317876A6B0060B347 /* SSZipArchive.m in Sources */,
+				BFCFE1E91765109C000A70CF /* header.cpp in Sources */,
+				BFCFE21A176634AF000A70CF /* cache.cpp in Sources */,
+				BFCFE21B176634AF000A70CF /* directory.cpp in Sources */,
+				BFCFE21C176634AF000A70CF /* disc.cpp in Sources */,
+				BFCFE21D176634AF000A70CF /* fatdir.cpp in Sources */,
+				BFCFE21E176634AF000A70CF /* fatfile.cpp in Sources */,
+				BFCFE21F176634AF000A70CF /* file_allocation_table.cpp in Sources */,
+				BFCFE220176634AF000A70CF /* filetime.cpp in Sources */,
+				BFCFE221176634AF000A70CF /* libfat_public_api.cpp in Sources */,
+				BFCFE222176634AF000A70CF /* libfat.cpp in Sources */,
+				BFCFE223176634AF000A70CF /* lock.cpp in Sources */,
+				8BEA097117872C320060B347 /* GLProgram.m in Sources */,
+				BFCFE224176634AF000A70CF /* partition.cpp in Sources */,
+				BFCFE22B176634C6000A70CF /* tinystr.cpp in Sources */,
+				BFCFE22C176634C6000A70CF /* tinyxml.cpp in Sources */,
+				BFCFE22D176634C6000A70CF /* tinyxmlerror.cpp in Sources */,
+				BFCFE22E176634C6000A70CF /* tinyxmlparser.cpp in Sources */,
+				BFCFE23C176634EE000A70CF /* slot1_none.cpp in Sources */,
+				BFCFE23D176634EE000A70CF /* slot1_r4.cpp in Sources */,
+				BFCFE23E176634EE000A70CF /* slot1_retail_nand.cpp in Sources */,
+				BFCFE23F176634EE000A70CF /* slot1_retail.cpp in Sources */,
+				8BEA098D17872CF40060B347 /* throttle.cpp in Sources */,
+				BFCFE240176634EE000A70CF /* slot2_expMemory.cpp in Sources */,
+				BFCFE241176634EE000A70CF /* slot2_gbagame.cpp in Sources */,
+				8BEA098A17872CF40060B347 /* emu.cpp in Sources */,
+				BFCFE242176634EE000A70CF /* slot2_guitarGrip.cpp in Sources */,
+				BFCFE243176634EE000A70CF /* slot2_mpcf.cpp in Sources */,
+				BFCFE244176634EE000A70CF /* slot2_none.cpp in Sources */,
+				BFCFE245176634EE000A70CF /* slot2_paddle.cpp in Sources */,
+				BFCFE246176634EE000A70CF /* slot2_piano.cpp in Sources */,
+				BFCFE247176634EE000A70CF /* slot2_rumblepak.cpp in Sources */,
+				BFCFE26B1766379F000A70CF /* addons.cpp in Sources */,
+				BF9D514317865CD800B5864B /* SndOut.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFCFE0FB1764FBD3000A70CF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCFE0FC1764FBD3000A70CF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BFCFE10A1764FBD3000A70CF /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCFE10B1764FBD3000A70CF /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFCFE1131764FBD3000A70CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					IOS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Classes",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src",
+					"$(SRCROOT)/",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DANDROID",
+					"-fexceptions",
+					"-ftree-vectorize",
+					"-fsingle-precision-constant",
+					"-fprefetch-loop-arrays",
+					"-fvariable-expansion-in-unroller",
+					"-DCOMPRESS_MT",
+					"-DIOS",
+					"-DHAVE_LIBZ",
+					"-marm",
+				);
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = Debug;
+		};
+		BFCFE1141764FBD3000A70CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Classes",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src",
+					"$(SRCROOT)/",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DANDROID",
+					"-fexceptions",
+					"-ftree-vectorize",
+					"-fsingle-precision-constant",
+					"-fprefetch-loop-arrays",
+					"-marm",
+					"-fvariable-expansion-in-unroller",
+					"-DCOMPRESS_MT",
+					"-DIOS",
+					"-DHAVE_LIBZ",
+				);
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFCFE1161764FBD3000A70CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Classes",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src",
+					"$(SRCROOT)/",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/nds4ios/support/NDS4iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = nds4ios;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BFCFE1171764FBD3000A70CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/Classes",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src",
+					"$(SRCROOT)/",
+					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/nds4ios/support/NDS4iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = nds4ios;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFCFE0EA1764FBD3000A70CF /* Build configuration list for PBXProject "nds4ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFCFE1131764FBD3000A70CF /* Debug */,
+				BFCFE1141764FBD3000A70CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFCFE1151764FBD3000A70CF /* Build configuration list for PBXNativeTarget "nds4ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFCFE1161764FBD3000A70CF /* Debug */,
+				BFCFE1171764FBD3000A70CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFCFE0E71764FBD3000A70CF /* Project object */;
+}
