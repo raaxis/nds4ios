@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet NDSDirectionalControl *directionalControl;
 @property (weak, nonatomic) IBOutlet NDSButtonControl *buttonControl;
 @property (weak, nonatomic) IBOutlet UIButton *dismissButton;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *selectButton;
 @property (strong, nonatomic) UIImageView *snapshotView;
 
 - (void)pauseEmulation;

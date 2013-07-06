@@ -131,19 +131,51 @@ const float textureVert[] =
     
     self.directionalControl.style = [defaults integerForKey:@"controlPadStyle"];
     
-    // controls position
-    CGRect frm = self.controllerContainerView.frame;
-    frm.origin.y = [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240;
-    self.controllerContainerView.frame = frm;
+    [self viewWillLayoutSubviews];
     
-    // dismiss button position
-    frm = self.dismissButton.frame;
-    frm.origin.x = [defaults integerForKey:@"controlPosition"] == 0 ? 146 : 292;
-    self.dismissButton.frame = frm;
-    
-    self.controllerContainerView.alpha = self.dismissButton.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
     
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
+    
+    self.glkView.frame = [self rectForScreenView];
+    if (isLandscape) {
+        self.controllerContainerView.frame = self.view.bounds;
+        self.dismissButton.frame = CGRectMake((self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2 + 8, 8, 28, 28);
+        self.directionalControl.center = CGPointMake(66, self.view.bounds.size.height-128);
+        self.buttonControl.center = CGPointMake(self.view.bounds.size.width-66, self.view.bounds.size.height-128);
+        self.startButton.center = CGPointMake(self.view.bounds.size.width-102, self.view.bounds.size.height-48);
+        self.selectButton.center = CGPointMake(self.view.bounds.size.width-102, self.view.bounds.size.height-16);
+        self.controllerContainerView.alpha = self.dismissButton.alpha = 1.0;
+        self.fpsLabel.frame = CGRectMake(70, 0, 70, 24);
+        self.fpsLabel.textColor = [UIColor blackColor];
+        self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    } else {
+        self.controllerContainerView.frame = CGRectMake(0, [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240, 320, 240);
+        self.dismissButton.frame = CGRectMake([defaults integerForKey:@"controlPosition"] == 0 ? 146 : 292, 0, 28, 28);
+        self.directionalControl.center = CGPointMake(60, 172);
+        self.buttonControl.center = CGPointMake(self.view.bounds.size.width-60, 172);
+        self.startButton.center = CGPointMake(187, 228);
+        self.selectButton.center = CGPointMake(133, 228);
+        self.controllerContainerView.alpha = self.dismissButton.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
+        self.fpsLabel.frame = CGRectMake(6, 0, 70, 24);
+        self.fpsLabel.textColor = [UIColor greenColor];
+        self.view.backgroundColor = [UIColor blackColor];
+    }
+}
+
+- (CGRect)rectForScreenView
+{
+    BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
+    if (isLandscape) {
+        return CGRectMake(self.view.bounds.size.width - (self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2, 0, self.view.bounds.size.height/1.5, self.view.bounds.size.height);
+    } else {
+        return CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width*1.5);
+    }
 }
 
 #pragma mark - Playing ROM
@@ -168,7 +200,7 @@ const float textureVert[] =
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [EAGLContext setCurrentContext:self.context];
     
-    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, 480.0f); // Temporarily hardcoding 480 to keep aspect ratio the same for all non-iPad iOS Devices
+    CGRect frame = [self rectForScreenView];
     
     self.glkView = [[GLKView alloc] initWithFrame:frame context:self.context];
     self.glkView.delegate = self;
