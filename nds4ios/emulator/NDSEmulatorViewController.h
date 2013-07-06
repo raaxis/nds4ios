@@ -21,5 +21,7 @@
 - (void)pauseEmulation;
 - (void)resumeEmulation;
 - (IBAction)hideEmulator:(id)sender;
+- (IBAction)onButtonUp:(UIControl*)sender;
+- (IBAction)onButtonDown:(UIControl*)sender;
 
 @end

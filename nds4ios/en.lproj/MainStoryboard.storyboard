@@ -302,7 +302,7 @@
                                 <color key="highlightedColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <view contentMode="scaleToFill" id="S6c-5v-781">
+                            <view contentMode="scaleToFill" id="S6c-5v-781" userLabel="Controls Container">
                                 <rect key="frame" x="0.0" y="240" width="320" height="240"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -322,11 +322,79 @@
                                             <action selector="pressedABXY:" destination="WRM-pR-XCP" eventType="valueChanged" id="5Rn-3B-kxl"/>
                                         </connections>
                                     </view>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="V4S-vg-8Nm">
+                                        <rect key="frame" x="109" y="214" width="48" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="Select.png">
+                                            <color key="titleColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButtonDown:" destination="WRM-pR-XCP" eventType="touchDown" id="y0V-BE-cP5"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpInside" id="7lx-KM-ry2"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpOutside" id="FJ2-Vv-RIY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="DAf-Ip-ZfX">
+                                        <rect key="frame" x="163" y="214" width="48" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="Start.png">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButtonDown:" destination="WRM-pR-XCP" eventType="touchDown" id="8jl-EE-KAf"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpInside" id="bhR-nm-NTG"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpOutside" id="zhg-6O-SkF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="BPM-bk-qVx">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="LTrigger.png">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButtonDown:" destination="WRM-pR-XCP" eventType="touchDown" id="wCh-hq-FnL"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpInside" id="JtB-gz-oiO"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpOutside" id="nWH-2D-Ecw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="YM6-fX-N4s">
+                                        <rect key="frame" x="253" y="0.0" width="67" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="RTrigger.png">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButtonDown:" destination="WRM-pR-XCP" eventType="touchDown" id="e1b-2L-kWu"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpInside" id="M8G-QI-oIZ"/>
+                                            <action selector="onButtonUp:" destination="WRM-pR-XCP" eventType="touchUpOutside" id="eXC-65-251"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VZZ-1B-BHQ">
-                                <rect key="frame" x="291" y="1" width="28" height="28"/>
+                                <rect key="frame" x="146" y="0.0" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="HideEmulator.png">
@@ -381,6 +449,10 @@
     </scenes>
     <resources>
         <image name="HideEmulator.png" width="28" height="28"/>
+        <image name="LTrigger.png" width="67" height="44"/>
+        <image name="RTrigger.png" width="67" height="44"/>
+        <image name="Select.png" width="48" height="26"/>
+        <image name="Start.png" width="48" height="26"/>
     </resources>
     <classes>
         <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
@@ -393,14 +465,13 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSEmulatorViewController.h"/>
             <relationships>
                 <relationship kind="action" name="hideEmulator:"/>
+                <relationship kind="action" name="onButtonDown:" candidateClass="UIControl"/>
+                <relationship kind="action" name="onButtonUp:" candidateClass="UIControl"/>
                 <relationship kind="action" name="pressedABXY:" candidateClass="NDSButtonControl"/>
                 <relationship kind="action" name="pressedDPad:" candidateClass="NDSDirectionalControl"/>
                 <relationship kind="outlet" name="buttonControl" candidateClass="NDSButtonControl"/>
-                <relationship kind="outlet" name="controllerContainerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="directionalControl" candidateClass="NDSDirectionalControl"/>
                 <relationship kind="outlet" name="dismissButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fpsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="glkView" candidateClass="GLKView"/>
             </relationships>
         </class>
         <class className="NDSROMTableViewController" superclassName="RSTFileBrowserViewController">
@@ -410,7 +481,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="controlChanged:"/>
-                <relationship kind="action" name="dismissSettingsViewController:"/>
                 <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="controlPadStyleControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="controlPositionControl" candidateClass="UISegmentedControl"/>

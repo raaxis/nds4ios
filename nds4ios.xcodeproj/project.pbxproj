@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28DA4A481787FD7F002236A4 /* Select.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A441787FD7F002236A4 /* Select.png */; };
+		28DA4A491787FD7F002236A4 /* Select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A451787FD7F002236A4 /* Select@2x.png */; };
+		28DA4A4A1787FD7F002236A4 /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A461787FD7F002236A4 /* Start.png */; };
+		28DA4A4B1787FD7F002236A4 /* Start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A471787FD7F002236A4 /* Start@2x.png */; };
+		28DA4A50178802FB002236A4 /* LTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A4C178802FB002236A4 /* LTrigger.png */; };
+		28DA4A51178802FB002236A4 /* LTrigger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A4D178802FB002236A4 /* LTrigger@2x.png */; };
+		28DA4A52178802FB002236A4 /* RTrigger.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A4E178802FB002236A4 /* RTrigger.png */; };
+		28DA4A53178802FB002236A4 /* RTrigger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A4F178802FB002236A4 /* RTrigger@2x.png */; };
 		28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6ED1787D110003A9C5B /* Defaults.plist */; };
 		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
 		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
@@ -149,6 +157,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28DA4A441787FD7F002236A4 /* Select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Select.png; path = Resources/Select.png; sourceTree = "<group>"; };
+		28DA4A451787FD7F002236A4 /* Select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Select@2x.png"; path = "Resources/Select@2x.png"; sourceTree = "<group>"; };
+		28DA4A461787FD7F002236A4 /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Start.png; path = Resources/Start.png; sourceTree = "<group>"; };
+		28DA4A471787FD7F002236A4 /* Start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Start@2x.png"; path = "Resources/Start@2x.png"; sourceTree = "<group>"; };
+		28DA4A4C178802FB002236A4 /* LTrigger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LTrigger.png; path = Resources/LTrigger.png; sourceTree = "<group>"; };
+		28DA4A4D178802FB002236A4 /* LTrigger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LTrigger@2x.png"; path = "Resources/LTrigger@2x.png"; sourceTree = "<group>"; };
+		28DA4A4E178802FB002236A4 /* RTrigger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RTrigger.png; path = Resources/RTrigger.png; sourceTree = "<group>"; };
+		28DA4A4F178802FB002236A4 /* RTrigger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RTrigger@2x.png"; path = "Resources/RTrigger@2x.png"; sourceTree = "<group>"; };
 		28E7A6ED1787D110003A9C5B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = nds4ios/settings/Defaults.plist; sourceTree = SOURCE_ROOT; };
 		28E7A6F31787D8D5003A9C5B /* HideEmulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideEmulator.png; path = Resources/HideEmulator.png; sourceTree = "<group>"; };
 		28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HideEmulator@2x.png"; path = "Resources/HideEmulator@2x.png"; sourceTree = "<group>"; };
@@ -509,6 +525,14 @@
 				BF9D516717867F7D00B5864B /* JoystickButton@2x.png */,
 				28E7A6F31787D8D5003A9C5B /* HideEmulator.png */,
 				28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */,
+				28DA4A4C178802FB002236A4 /* LTrigger.png */,
+				28DA4A4D178802FB002236A4 /* LTrigger@2x.png */,
+				28DA4A4E178802FB002236A4 /* RTrigger.png */,
+				28DA4A4F178802FB002236A4 /* RTrigger@2x.png */,
+				28DA4A441787FD7F002236A4 /* Select.png */,
+				28DA4A451787FD7F002236A4 /* Select@2x.png */,
+				28DA4A461787FD7F002236A4 /* Start.png */,
+				28DA4A471787FD7F002236A4 /* Start@2x.png */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -922,13 +946,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DA4A481787FD7F002236A4 /* Select.png in Resources */,
+				28DA4A52178802FB002236A4 /* RTrigger.png in Resources */,
 				8BEA093E178724E10060B347 /* Icon.png in Resources */,
+				28DA4A491787FD7F002236A4 /* Select@2x.png in Resources */,
 				8BEA093F178724E10060B347 /* Icon@2x.png in Resources */,
+				28DA4A4A1787FD7F002236A4 /* Start.png in Resources */,
 				BFCFE0FD1764FBD3000A70CF /* InfoPlist.strings in Resources */,
 				8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */,
+				28DA4A4B1787FD7F002236A4 /* Start@2x.png in Resources */,
+				28DA4A51178802FB002236A4 /* LTrigger@2x.png in Resources */,
 				8BEA093C178724E10060B347 /* Icon-Spotlight.png in Resources */,
 				28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */,
+				28DA4A53178802FB002236A4 /* RTrigger@2x.png in Resources */,
 				BFCFE10C1764FBD3000A70CF /* MainStoryboard.storyboard in Resources */,
+				28DA4A50178802FB002236A4 /* LTrigger.png in Resources */,
 				BF9D516817867F7D00B5864B /* ABXYPad.png in Resources */,
 				8BEA093A178724E10060B347 /* Default@2x.png in Resources */,
 				8BEA093D178724E10060B347 /* Icon-Spotlight@2x.png in Resources */,

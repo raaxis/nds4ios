@@ -299,14 +299,24 @@ const float textureVert[] =
 
 - (IBAction)pressedDPad:(NDSDirectionalControl *)sender
 {
-    UIControlState state = sender.direction;
+    NDSDirectionalControlDirection state = sender.direction;
     EMU_setDPad(state & NDSDirectionalControlDirectionUp, state & NDSDirectionalControlDirectionDown, state & NDSDirectionalControlDirectionLeft, state & NDSDirectionalControlDirectionRight);
 }
 
 - (IBAction)pressedABXY:(NDSButtonControl *)sender
 {
-    UIControlState state = sender.selectedButtons;
+    NDSButtonControlButton state = sender.selectedButtons;
     EMU_setABXY(state & NDSButtonControlButtonA, state & NDSButtonControlButtonB, state & NDSButtonControlButtonX, state & NDSButtonControlButtonY);
+}
+
+- (IBAction)onButtonUp:(UIControl*)sender
+{
+    EMU_buttonUp((BUTTON_ID)sender.tag);
+}
+
+- (IBAction)onButtonDown:(UIControl*)sender
+{
+    EMU_buttonDown((BUTTON_ID)sender.tag);
 }
 
 - (void)touchScreenAtPoint:(CGPoint)point
