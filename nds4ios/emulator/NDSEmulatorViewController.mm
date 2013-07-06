@@ -309,45 +309,28 @@ const float textureVert[] =
     EMU_setABXY(state & NDSButtonControlButtonA, state & NDSButtonControlButtonB, state & NDSButtonControlButtonX, state & NDSButtonControlButtonY);
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchScreenAtPoint:(CGPoint)point
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.glkView];
+    if (point.y < self.glkView.bounds.size.height/2) return;
     
-    if (point.y < self.glkView.bounds.size.height/2) {
-        return;
-    }
-    
-    NSLog(@"Touch screen tapped");
-    
-    point.x /= 1.33f;
-    point.y -= 240.0f;
-    point.y /= 1.33f;
+    CGAffineTransform t = CGAffineTransformConcat(CGAffineTransformMakeTranslation(0, -self.glkView.bounds.size.height/2), CGAffineTransformMakeScale(256/self.glkView.bounds.size.width, 192/(self.glkView.bounds.size.height/2)));
+    point = CGPointApplyAffineTransform(point, t);
     
     EMU_touchScreenTouch(point.x, point.y);
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self touchScreenAtPoint:[[touches anyObject] locationInView:self.glkView]];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.glkView];
-    
-    if (point.y < self.glkView.bounds.size.height/2) {
-        return;
-    }
-    
-    NSLog(@"Touch screen moved!");
-    
-    point.x /= 1.33f;
-    point.y -= 240.0f;
-    point.y /= 1.33f;
-    
-    EMU_touchScreenTouch(point.x, point.y);
+    [self touchScreenAtPoint:[[touches anyObject] locationInView:self.glkView]];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"Touch screen released");
     EMU_touchScreenRelease();
 }
 
