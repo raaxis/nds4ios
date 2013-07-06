@@ -100,10 +100,12 @@ const float textureVert[] =
     
     [self loadROM];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseEmulation) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeEmulation) name:UIApplicationWillEnterForegroundNotification object:nil];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(pauseEmulation) name:UIApplicationWillResignActiveNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(resumeEmulation) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
     
-    self.controllerContainerView.alpha = 0.5f;
+    [self defaultsChanged:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -118,6 +120,22 @@ const float textureVert[] =
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)defaultsChanged:(NSNotification*)notification
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    EMU_setFrameSkip([defaults integerForKey:@"frameSkip"]);
+    EMU_enableSound(![defaults boolForKey:@"disableSound"]);
+    
+    self.directionalControl.style = [defaults integerForKey:@"controlPadStyle"];
+    CGRect frm = self.controllerContainerView.frame;
+    frm.origin.y = [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240;
+    self.controllerContainerView.frame = frm;
+    self.controllerContainerView.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
+    
+    self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
 }
 
 #pragma mark - Playing ROM
@@ -332,10 +350,4 @@ const float textureVert[] =
     EMU_touchScreenRelease();
 }
 
-- (void)viewDidUnload {
-    [self setButtonControl:nil];
-    [self setDirectionalControl:nil];
-    [self setControllerContainerView:nil];
-    [super viewDidUnload];
-}
 @end

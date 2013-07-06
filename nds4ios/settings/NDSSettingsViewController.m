@@ -36,21 +36,46 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)dismissSettingsViewController:(id)sender {
+- (IBAction)dismissSettingsViewController:(id)sender
+{
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (IBAction)controlChanged:(id)sender
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (sender == self.frameSkipControl) {
+        NSInteger frameSkip = self.frameSkipControl.selectedSegmentIndex;
+        if (frameSkip == 5) frameSkip = -1;
+        [defaults setInteger:frameSkip forKey:@"frameSkip"];
+    } else if (sender == self.disableSoundSwitch) {
+        [defaults setBool:self.disableSoundSwitch.on forKey:@"disableSound"];
+    } else if (sender == self.controlPadStyleControl) {
+        [defaults setInteger:self.controlPadStyleControl.selectedSegmentIndex forKey:@"controlPadStyle"];
+    } else if (sender == self.controlPositionControl) {
+        [defaults setInteger:self.controlPadStyleControl.selectedSegmentIndex forKey:@"controlPosition"];
+    } else if (sender == self.controlOpacitySlider) {
+        [defaults setFloat:self.controlOpacitySlider.value forKey:@"controlOpacity"];
+    } else if (sender == self.showFPSSwitch) {
+        [defaults setBool:self.showFPSSwitch.on forKey:@"showFPS"];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSInteger frameSkip = [defaults integerForKey:@"frameSkip"];
+    self.frameSkipControl.selectedSegmentIndex = frameSkip < 0 ? 5 : frameSkip;
+    self.disableSoundSwitch.on = [defaults boolForKey:@"disableSound"];
+    
+    self.controlPadStyleControl.selectedSegmentIndex = [defaults integerForKey:@"controlPadStyle"];
+    self.controlPositionControl.selectedSegmentIndex = [defaults integerForKey:@"controlPosition"];
+    self.controlOpacitySlider.value = [defaults floatForKey:@"controlOpacity"];
+    
+    self.showFPSSwitch.on = [defaults boolForKey:@"showFPS"];
 }
 
 @end
