@@ -15,5 +15,9 @@
 @property (copy, nonatomic) NSString *romFilepath;
 @property (weak, nonatomic) IBOutlet NDSDirectionalControl *directionalControl;
 @property (weak, nonatomic) IBOutlet NDSButtonControl *buttonControl;
+@property (strong, nonatomic) UIImageView *snapshotView;
+
+- (void)pauseEmulation;
+- (void)resumeEmulation;
 
 @end

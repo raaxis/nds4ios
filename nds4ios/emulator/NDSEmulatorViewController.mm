@@ -78,6 +78,9 @@ const float textureVert[] =
 @end
 
 @implementation NDSEmulatorViewController
+{
+    NSLock *emuLoopLock;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -96,6 +99,9 @@ const float textureVert[] =
     self.view.multipleTouchEnabled = YES;
     
     [self loadROM];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseEmulation) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeEmulation) name:UIApplicationWillEnterForegroundNotification object:nil];
     
     self.controllerContainerView.alpha = 0.5f;
 }
@@ -126,7 +132,9 @@ const float textureVert[] =
     
     [self initGL];
     
-    [self performSelector:@selector(startEmulatorLoop) withObject:nil];
+    emuLoopLock = [NSLock new];
+    
+    [self startEmulatorLoop];
 }
 
 - (void)initGL
@@ -174,14 +182,64 @@ const float textureVert[] =
 - (void)shutdownGL
 {
     glDeleteTextures(1, &texHandle);
+    texHandle = 0;
     self.context = nil;
     self.program = nil;
+    [self.glkView removeFromSuperview];
+    self.glkView = nil;
     [EAGLContext setCurrentContext:nil];
+}
+
+- (UIImage*)screenSnapshot
+{
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CFDataRef videoData = CFDataCreate(NULL, (UInt8*)video.buffer, video.size()*4);
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithCFData(videoData);
+    CGImageRef screenImage = CGImageCreate(256, 384, 8, 32, 256*4, colorSpace, kCGBitmapByteOrderDefault, dataProvider, NULL, false, kCGRenderingIntentDefault);
+    CGColorSpaceRelease(colorSpace);
+    CGDataProviderRelease(dataProvider);
+    CFRelease(videoData);
+    
+    UIImage *image = [UIImage imageWithCGImage:screenImage];
+    CGImageRelease(screenImage);
+    return image;
+}
+
+- (void)pauseEmulation
+{
+    if (!execute) return;
+    // save snapshot of screen
+    if (self.snapshotView == nil) {
+        self.snapshotView = [[UIImageView alloc] initWithFrame:self.glkView.frame];
+        [self.view insertSubview:self.snapshotView aboveSubview:self.glkView];
+    } else {
+        self.snapshotView.hidden = NO;
+    }
+    self.snapshotView.image = [self screenSnapshot];
+    
+    // pause emulation
+    EMU_pause(true);
+    [emuLoopLock lock]; // make sure emulator loop has ended
+    [emuLoopLock unlock];
+    [self shutdownGL];
+}
+
+- (void)resumeEmulation
+{
+    if (execute) return;
+    // remove snapshot
+    self.snapshotView.hidden = YES;
+    
+    // resume emulation
+    [self initGL];
+    EMU_pause(false);
+    [self startEmulatorLoop];
 }
 
 - (void)startEmulatorLoop
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [emuLoopLock lock];
         while (execute) {
             EMU_runCore();
             fps = EMU_runOther();
@@ -189,11 +247,13 @@ const float textureVert[] =
             
             [self updateDisplay];
         }
+        [emuLoopLock unlock];
     });
 }
 
 - (void)updateDisplay
 {
+    if (texHandle == 0) return;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.fpsLabel.text = [NSString stringWithFormat:@"%d FPS",fps];
     });
