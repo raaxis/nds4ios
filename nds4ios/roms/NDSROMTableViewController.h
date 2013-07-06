@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "RSTFileBrowserViewController.h"
+#import "NDSEmulatorViewController.h"
 
 @interface NDSROMTableViewController : RSTFileBrowserViewController
+{
+    NDSEmulatorViewController *currentEmulatorViewController;
+}
 
 @end

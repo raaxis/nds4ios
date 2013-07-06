@@ -34,12 +34,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table View
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    if ([[self filepathForIndexPath:indexPath] isEqualToString:currentEmulatorViewController.romFilepath]) {
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[self filepathForIndexPath:indexPath] isEqualToString:currentEmulatorViewController.romFilepath]) {
+        [self presentViewController:currentEmulatorViewController animated:YES completion:^(){
+            [currentEmulatorViewController resumeEmulation];
+        }];
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,8 +74,8 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         NSString *filepath = [self filepathForIndexPath:indexPath];
         
-        NDSEmulatorViewController *NDSEmulatorViewControllerController = (NDSEmulatorViewController *)[segue destinationViewController];
-        NDSEmulatorViewControllerController.romFilepath = filepath;
+        currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
+        currentEmulatorViewController.romFilepath = filepath;
     }
 }
 

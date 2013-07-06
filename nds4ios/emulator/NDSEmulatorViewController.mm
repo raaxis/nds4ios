@@ -102,7 +102,7 @@ const float textureVert[] =
     
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(pauseEmulation) name:UIApplicationWillResignActiveNotification object:nil];
-    [notificationCenter addObserver:self selector:@selector(resumeEmulation) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(resumeEmulation) name:UIApplicationDidBecomeActiveNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
     
     [self defaultsChanged:nil];
@@ -133,7 +133,7 @@ const float textureVert[] =
     CGRect frm = self.controllerContainerView.frame;
     frm.origin.y = [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240;
     self.controllerContainerView.frame = frm;
-    self.controllerContainerView.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
+    self.controllerContainerView.alpha = self.dismissButton.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
     
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
 }
@@ -244,6 +244,7 @@ const float textureVert[] =
 
 - (void)resumeEmulation
 {
+    if (self.presentingViewController.presentedViewController != self) return;
     if (execute) return;
     // remove snapshot
     self.snapshotView.hidden = YES;
@@ -348,6 +349,12 @@ const float textureVert[] =
 {
     NSLog(@"Touch screen released");
     EMU_touchScreenRelease();
+}
+
+- (IBAction)hideEmulator:(id)sender
+{
+    [self pauseEmulation];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

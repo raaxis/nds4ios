@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="3">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
     </dependencies>
     <scenes>
@@ -324,6 +325,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VZZ-1B-BHQ">
+                                <rect key="frame" x="291" y="1" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="HideEmulator.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideEmulator:" destination="WRM-pR-XCP" eventType="touchUpInside" id="jm6-Tf-b3z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <gestureRecognizers/>
@@ -335,6 +351,7 @@
                         <outlet property="buttonControl" destination="wc7-x7-O1M" id="DCv-Im-2AH"/>
                         <outlet property="controllerContainerView" destination="S6c-5v-781" id="PYO-ai-9Ym"/>
                         <outlet property="directionalControl" destination="2r2-6d-4At" id="vWy-8J-bQS"/>
+                        <outlet property="dismissButton" destination="VZZ-1B-BHQ" id="mnz-cv-9tm"/>
                         <outlet property="fpsLabel" destination="mo4-qa-NUQ" id="8Zo-5a-CNQ"/>
                     </connections>
                 </viewController>
@@ -362,6 +379,9 @@
             <point key="canvasLocation" x="996" y="-606"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HideEmulator.png" width="28" height="28"/>
+    </resources>
     <classes>
         <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSButtonControl.h"/>
@@ -372,11 +392,13 @@
         <class className="NDSEmulatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSEmulatorViewController.h"/>
             <relationships>
+                <relationship kind="action" name="hideEmulator:"/>
                 <relationship kind="action" name="pressedABXY:" candidateClass="NDSButtonControl"/>
                 <relationship kind="action" name="pressedDPad:" candidateClass="NDSDirectionalControl"/>
                 <relationship kind="outlet" name="buttonControl" candidateClass="NDSButtonControl"/>
                 <relationship kind="outlet" name="controllerContainerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="directionalControl" candidateClass="NDSDirectionalControl"/>
+                <relationship kind="outlet" name="dismissButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="fpsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="glkView" candidateClass="GLKView"/>
             </relationships>

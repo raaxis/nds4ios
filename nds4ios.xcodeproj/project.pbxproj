@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6ED1787D110003A9C5B /* Defaults.plist */; };
+		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
+		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
 		8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0930178724E10060B347 /* Default-568h@2x.png */; };
 		8BEA0939178724E10060B347 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0931178724E10060B347 /* Default.png */; };
 		8BEA093A178724E10060B347 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0932178724E10060B347 /* Default@2x.png */; };
@@ -148,6 +150,8 @@
 
 /* Begin PBXFileReference section */
 		28E7A6ED1787D110003A9C5B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = nds4ios/settings/Defaults.plist; sourceTree = SOURCE_ROOT; };
+		28E7A6F31787D8D5003A9C5B /* HideEmulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideEmulator.png; path = Resources/HideEmulator.png; sourceTree = "<group>"; };
+		28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HideEmulator@2x.png"; path = "Resources/HideEmulator@2x.png"; sourceTree = "<group>"; };
 		8BEA0930178724E10060B347 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/required/Default-568h@2x.png"; sourceTree = "<group>"; };
 		8BEA0931178724E10060B347 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/required/Default.png; sourceTree = "<group>"; };
 		8BEA0932178724E10060B347 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/required/Default@2x.png"; sourceTree = "<group>"; };
@@ -503,6 +507,8 @@
 				BF9D516517867F7D00B5864B /* JoystickBackground@2x.png */,
 				BF9D516617867F7D00B5864B /* JoystickButton.png */,
 				BF9D516717867F7D00B5864B /* JoystickButton@2x.png */,
+				28E7A6F31787D8D5003A9C5B /* HideEmulator.png */,
+				28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -921,12 +927,14 @@
 				BFCFE0FD1764FBD3000A70CF /* InfoPlist.strings in Resources */,
 				8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */,
 				8BEA093C178724E10060B347 /* Icon-Spotlight.png in Resources */,
+				28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */,
 				BFCFE10C1764FBD3000A70CF /* MainStoryboard.storyboard in Resources */,
 				BF9D516817867F7D00B5864B /* ABXYPad.png in Resources */,
 				8BEA093A178724E10060B347 /* Default@2x.png in Resources */,
 				8BEA093D178724E10060B347 /* Icon-Spotlight@2x.png in Resources */,
 				8BEA093B178724E10060B347 /* Icon-Multitasker@2x.png in Resources */,
 				BF9D516917867F7D00B5864B /* ABXYPad@2x.png in Resources */,
+				28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */,
 				BF9D516A17867F7D00B5864B /* DPad.png in Resources */,
 				28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */,
 				BF9D516B17867F7D00B5864B /* DPad@2x.png in Resources */,

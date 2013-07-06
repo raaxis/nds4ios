@@ -38,7 +38,7 @@ static int curReadBuffer = 0;
 static int numFullBuffers = 0;
 static int sndBufferSize;
 static s16 *sndBuffer[NUM_BUFFERS];
-static bool currentlyPlaying = false;
+static bool audioQueueStarted = false;
 static AudioQueueBufferRef aqBuffer[NUM_BUFFERS];
 static AudioQueueRef audioQueue;
 
@@ -81,7 +81,7 @@ int SNDCoreAudioInit(int buffersize) {
         sndBuffer[i] = (s16*)malloc(sndBufferSize);
     }
     
-    currentlyPlaying = false;
+    audioQueueStarted = false;
     
     return 0;
 }
@@ -103,8 +103,8 @@ void SNDCoreAudioUpdateAudio(s16 *buffer, u32 num_samples) {
     memcpy(sndBuffer[curFillBuffer], buffer, 4 * num_samples);
     curFillBuffer = curFillBuffer ? 0 : 1;
     numFullBuffers++;
-    if (!currentlyPlaying) {
-        currentlyPlaying = true;
+    if (!audioQueueStarted) {
+        audioQueueStarted = true;
         AudioQueueStart(audioQueue, NULL);
     }
 }
@@ -115,15 +115,11 @@ u32 SNDCoreAudioGetAudioSpace() {
 }
 
 void SNDCoreAudioMuteAudio() {
-    if (!currentlyPlaying) return;
     AudioQueueStop(audioQueue, false);
-    currentlyPlaying = false;
 }
 
 void SNDCoreAudioUnMuteAudio() {
-    if (currentlyPlaying) return;
-    AudioQueueStart(audioQueue, false);
-    currentlyPlaying = true;
+    AudioQueueStart(audioQueue, NULL);
 }
 
 void SNDCoreAudioSetVolume(int volume) {
