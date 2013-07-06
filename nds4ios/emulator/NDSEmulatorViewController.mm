@@ -130,9 +130,17 @@ const float textureVert[] =
     EMU_enableSound(![defaults boolForKey:@"disableSound"]);
     
     self.directionalControl.style = [defaults integerForKey:@"controlPadStyle"];
+    
+    // controls position
     CGRect frm = self.controllerContainerView.frame;
     frm.origin.y = [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240;
     self.controllerContainerView.frame = frm;
+    
+    // dismiss button position
+    frm = self.dismissButton.frame;
+    frm.origin.x = [defaults integerForKey:@"controlPosition"] == 0 ? 146 : 292;
+    self.dismissButton.frame = frm;
+    
     self.controllerContainerView.alpha = self.dismissButton.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
     
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];

@@ -394,7 +394,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VZZ-1B-BHQ">
-                                <rect key="frame" x="146" y="0.0" width="28" height="28"/>
+                                <rect key="frame" x="292" y="0.0" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="HideEmulator.png">
@@ -470,8 +470,11 @@
                 <relationship kind="action" name="pressedABXY:" candidateClass="NDSButtonControl"/>
                 <relationship kind="action" name="pressedDPad:" candidateClass="NDSDirectionalControl"/>
                 <relationship kind="outlet" name="buttonControl" candidateClass="NDSButtonControl"/>
+                <relationship kind="outlet" name="controllerContainerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="directionalControl" candidateClass="NDSDirectionalControl"/>
                 <relationship kind="outlet" name="dismissButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fpsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="glkView" candidateClass="GLKView"/>
             </relationships>
         </class>
         <class className="NDSROMTableViewController" superclassName="RSTFileBrowserViewController">
@@ -481,6 +484,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="controlChanged:"/>
+                <relationship kind="action" name="dismissSettingsViewController:"/>
                 <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="controlPadStyleControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="controlPositionControl" candidateClass="UISegmentedControl"/>
