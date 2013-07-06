@@ -79,7 +79,6 @@ To-do
 * Fix loading game saves on some games
 * Ability to set the folder the rom chooser reads from
 * Native iPad UI
-* Use of cmake to generate Xcode project
 * Much more.
 
 Contributors
