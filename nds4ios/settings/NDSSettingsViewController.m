@@ -53,7 +53,7 @@
     } else if (sender == self.controlPadStyleControl) {
         [defaults setInteger:self.controlPadStyleControl.selectedSegmentIndex forKey:@"controlPadStyle"];
     } else if (sender == self.controlPositionControl) {
-        [defaults setInteger:self.controlPadStyleControl.selectedSegmentIndex forKey:@"controlPosition"];
+        [defaults setInteger:self.controlPositionControl.selectedSegmentIndex forKey:@"controlPosition"];
     } else if (sender == self.controlOpacitySlider) {
         [defaults setFloat:self.controlOpacitySlider.value forKey:@"controlOpacity"];
     } else if (sender == self.showFPSSwitch) {
