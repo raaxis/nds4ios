@@ -45,7 +45,7 @@ Navigate to the "nds4ios" folder in your working directory.
 
 ### Option 3
 
-1. Install it from the aXw repo if you're jailbroken: [http://cydia.angelxwind.net](http://cydia.angelxwind.net)
+1. Install it from the aXw repo if you're jailbroken. Add the following source to Cydia: [http://cydia.angelxwind.net](http://cydia.angelxwind.net)
 
 How To Load ROMs
 ------------------------
