@@ -10,15 +10,4 @@
 
 @interface NDSSettingsViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *frameSkipControl;
-@property (weak, nonatomic) IBOutlet UISwitch *disableSoundSwitch;
-
-@property (weak, nonatomic) IBOutlet UISegmentedControl *controlPadStyleControl;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *controlPositionControl;
-@property (weak, nonatomic) IBOutlet UISlider *controlOpacitySlider;
-
-@property (weak, nonatomic) IBOutlet UISwitch *showFPSSwitch;
-
-- (IBAction)controlChanged:(id)sender;
-
 @end

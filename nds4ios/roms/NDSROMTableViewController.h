@@ -11,8 +11,5 @@
 #import "NDSEmulatorViewController.h"
 
 @interface NDSROMTableViewController : RSTFileBrowserViewController
-{
-    NDSEmulatorViewController *currentEmulatorViewController;
-}
 
 @end

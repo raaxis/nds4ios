@@ -13,17 +13,8 @@
 @interface NDSEmulatorViewController : UIViewController
 
 @property (copy, nonatomic) NSString *romFilepath;
-@property (weak, nonatomic) IBOutlet NDSDirectionalControl *directionalControl;
-@property (weak, nonatomic) IBOutlet NDSButtonControl *buttonControl;
-@property (weak, nonatomic) IBOutlet UIButton *dismissButton;
-@property (weak, nonatomic) IBOutlet UIButton *startButton;
-@property (weak, nonatomic) IBOutlet UIButton *selectButton;
-@property (strong, nonatomic) UIImageView *snapshotView;
 
 - (void)pauseEmulation;
 - (void)resumeEmulation;
-- (IBAction)hideEmulator:(id)sender;
-- (IBAction)onButtonUp:(UIControl*)sender;
-- (IBAction)onButtonDown:(UIControl*)sender;
 
 @end

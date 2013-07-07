@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
-        <deployment defaultVersion="1280" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
                 <navigationController id="3" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -132,7 +130,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="WTS-jQ-bi4">
-                                                    <rect key="frame" x="51" y="36" width="199" height="30"/>
+                                                    <rect key="frame" x="20" y="36" width="260" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
                                                         <segment title="Top"/>
@@ -211,7 +209,6 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Settings" id="rWF-4U-yKM">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="CUt-bI-s8s">
                             <connections>
@@ -270,7 +267,6 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="ROMs" id="36">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="ZG8-7u-Nid">
                             <connections>
@@ -412,7 +408,6 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <gestureRecognizers/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -433,7 +428,6 @@
         <scene sceneID="GFv-R9-Giu">
             <objects>
                 <navigationController title="settingsNaviationController" id="Meh-ns-fyr" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J1j-4N-To1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -478,7 +472,6 @@
                 <relationship kind="outlet" name="fpsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="glkView" candidateClass="GLKView"/>
                 <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="NDSROMTableViewController" superclassName="RSTFileBrowserViewController">
@@ -488,7 +481,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="controlChanged:"/>
-                <relationship kind="action" name="dismissSettingsViewController:"/>
                 <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="controlPadStyleControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="controlPositionControl" candidateClass="UISegmentedControl"/>

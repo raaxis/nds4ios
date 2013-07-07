@@ -8,6 +8,7 @@
 
 #import "NDSEmulatorViewController.h"
 #import "GLProgram.h"
+#import "UIScreen+Widescreen.h"
 
 #import <GLKit/GLKit.h>
 #import <OpenGLES/ES2/gl.h>
@@ -75,6 +76,17 @@ const float textureVert[] =
 @property (strong, nonatomic) IBOutlet GLKView *glkView;
 @property (weak, nonatomic) IBOutlet UIView *controllerContainerView;
 
+@property (weak, nonatomic) IBOutlet NDSDirectionalControl *directionalControl;
+@property (weak, nonatomic) IBOutlet NDSButtonControl *buttonControl;
+@property (weak, nonatomic) IBOutlet UIButton *dismissButton;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *selectButton;
+@property (strong, nonatomic) UIImageView *snapshotView;
+
+- (IBAction)hideEmulator:(id)sender;
+- (IBAction)onButtonUp:(UIControl*)sender;
+- (IBAction)onButtonDown:(UIControl*)sender;
+
 @end
 
 @implementation NDSEmulatorViewController
@@ -141,6 +153,7 @@ const float textureVert[] =
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
+    BOOL isWidescreen = [[UIScreen mainScreen] isWidescreen];
     
     self.glkView.frame = [self rectForScreenView];
     self.snapshotView.frame = [self rectForScreenView];
@@ -153,10 +166,8 @@ const float textureVert[] =
         self.selectButton.center = CGPointMake(self.view.bounds.size.width-102, self.view.bounds.size.height-16);
         self.controllerContainerView.alpha = self.dismissButton.alpha = 1.0;
         self.fpsLabel.frame = CGRectMake(70, 0, 70, 24);
-        self.fpsLabel.textColor = [UIColor blackColor];
-        self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
     } else {
-        self.controllerContainerView.frame = CGRectMake(0, [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240, 320, 240);
+        self.controllerContainerView.frame = CGRectMake(0, [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240 + (88 * isWidescreen), 320, 240);
         self.dismissButton.frame = CGRectMake([defaults integerForKey:@"controlPosition"] == 0 ? 146 : 292, 0, 28, 28);
         self.directionalControl.center = CGPointMake(60, 172);
         self.buttonControl.center = CGPointMake(self.view.bounds.size.width-60, 172);
@@ -164,8 +175,6 @@ const float textureVert[] =
         self.selectButton.center = CGPointMake(133, 228);
         self.controllerContainerView.alpha = self.dismissButton.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
         self.fpsLabel.frame = CGRectMake(6, 0, 70, 24);
-        self.fpsLabel.textColor = [UIColor greenColor];
-        self.view.backgroundColor = [UIColor blackColor];
     }
 }
 

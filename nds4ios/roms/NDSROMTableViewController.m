@@ -9,6 +9,12 @@
 #import "NDSROMTableViewController.h"
 #import "NDSEmulatorViewController.h"
 
+@interface NDSROMTableViewController ()
+
+@property (strong, nonatomic) NDSEmulatorViewController *currentEmulatorViewController;
+
+@end
+
 @implementation NDSROMTableViewController
 
 - (void)awakeFromNib
@@ -45,7 +51,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-    if ([[self filepathForIndexPath:indexPath] isEqualToString:currentEmulatorViewController.romFilepath]) {
+    if ([[self filepathForIndexPath:indexPath] isEqualToString:self.currentEmulatorViewController.romFilepath]) {
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }
     return cell;
@@ -53,9 +59,9 @@
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[self filepathForIndexPath:indexPath] isEqualToString:currentEmulatorViewController.romFilepath]) {
-        [self presentViewController:currentEmulatorViewController animated:YES completion:^(){
-            [currentEmulatorViewController resumeEmulation];
+    if ([[self filepathForIndexPath:indexPath] isEqualToString:self.currentEmulatorViewController.romFilepath]) {
+        [self presentViewController:self.currentEmulatorViewController animated:YES completion:^(){
+            [self.currentEmulatorViewController resumeEmulation];
         }];
     }
 }
@@ -74,8 +80,8 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         NSString *filepath = [self filepathForIndexPath:indexPath];
         
-        currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
-        currentEmulatorViewController.romFilepath = filepath;
+        self.currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
+        self.currentEmulatorViewController.romFilepath = filepath;
     }
 }
 
