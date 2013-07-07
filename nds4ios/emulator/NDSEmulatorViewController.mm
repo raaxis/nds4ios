@@ -143,6 +143,7 @@ const float textureVert[] =
     BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
     
     self.glkView.frame = [self rectForScreenView];
+    self.snapshotView.frame = [self rectForScreenView];
     if (isLandscape) {
         self.controllerContainerView.frame = self.view.bounds;
         self.dismissButton.frame = CGRectMake((self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2 + 8, 8, 28, 28);
