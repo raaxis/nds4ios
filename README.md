@@ -79,6 +79,7 @@ To-do
 * Fix loading game saves on some games
 * Ability to set the folder the rom chooser reads from
 * Native iPad UI
+* Add more localizations
 * Much more.
 
 Contributors
