@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *controlOpacitySlider;
 
 @property (weak, nonatomic) IBOutlet UISwitch *showFPSSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *enableJITSwitch;
 
 - (IBAction)controlChanged:(id)sender;
 
@@ -43,6 +44,15 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIView *hiddenSettingsTapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 75, 44)];
+    
+    UIBarButtonItem *hiddenSettingsBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:hiddenSettingsTapView];
+    self.navigationItem.leftBarButtonItem = hiddenSettingsBarButtonItem;
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(revealHiddenSettings:)];
+    tapGestureRecognizer.numberOfTapsRequired = 3;
+    [hiddenSettingsTapView addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,6 +83,8 @@
         [defaults setFloat:self.controlOpacitySlider.value forKey:@"controlOpacity"];
     } else if (sender == self.showFPSSwitch) {
         [defaults setBool:self.showFPSSwitch.on forKey:@"showFPS"];
+    } else if (sender == self.enableJITSwitch) {
+        [defaults setBool:self.enableJITSwitch.on forKey:@"enableJIT"];
     }
 }
 
@@ -91,6 +103,28 @@
     self.controlOpacitySlider.value = [defaults floatForKey:@"controlOpacity"];
     
     self.showFPSSwitch.on = [defaults boolForKey:@"showFPS"];
+    
+    self.enableJITSwitch.on = [defaults boolForKey:@"enableJIT"];
+}
+
+#pragma mark - Hidden Settings
+
+- (void)revealHiddenSettings:(UITapGestureRecognizer *)tapGestureRecognizer
+{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"revealHiddenSettings"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self.tableView reloadData];
+}
+
+#pragma mark - UITableView Data Source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"revealHiddenSettings"]) {
+        return 4;
+    }
+    
+    return 3;
 }
 
 @end

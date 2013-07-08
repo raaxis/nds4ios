@@ -213,6 +213,7 @@ void EMU_loadSettings()
 	CommonSettings.wifi.infraBridgeAdapter = 0;
     autoframeskipenab = true;
 	frameskiprate = 2;
+    CommonSettings.CpuMode = 1;
 	CommonSettings.spuInterpolationMode = SPUInterpolation_None;
 	CommonSettings.GFX3D_HighResolutionInterpolateColor = 0;
 	CommonSettings.GFX3D_EdgeMark = 0;
@@ -305,6 +306,11 @@ void EMU_setFrameSkip(int skip)
         autoframeskipenab = false;
         frameskiprate = skip;
     }
+}
+
+void EMU_setCPUMode(int cpuMode)
+{
+    CommonSettings.CpuMode = cpuMode;
 }
 
 void EMU_runCore()

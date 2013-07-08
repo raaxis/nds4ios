@@ -38,6 +38,7 @@ void EMU_change3D(int type);
 void EMU_changeSound(int type);
 void EMU_enableSound(bool enable);
 void EMU_setFrameSkip(int skip);
+void EMU_setCPUMode(int cpuMode);
 void EMU_runCore();
 int EMU_runOther();
 void EMU_copyMasterBuffer();

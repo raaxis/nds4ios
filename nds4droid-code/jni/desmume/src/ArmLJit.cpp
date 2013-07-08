@@ -7430,21 +7430,11 @@ TEMPLATE static void cpuClear(u32 Addr, u32 Size)
 
 TEMPLATE static u32 cpuExecuteLJIT()
 {
-    u32 test = 1;
 	ArmOpCompiled opfun = (ArmOpCompiled)JITLUT_HANDLE(ARMPROC.instruct_adr, PROCNUM);
-	if (!opfun) {
+	if (!opfun)
 		opfun = armcpu_compile<PROCNUM>();
-    }
     
-    char buffer [50];
-    
-    sprintf(buffer, "%d", opfun);
-    
-    u32 fun = atoi(buffer);
-    
-    //printf("%d\n", fun);
-    
-	return 100;
+	return opfun();
 }
 
 static u32 cpuGetCacheReserve()

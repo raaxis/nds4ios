@@ -145,6 +145,9 @@ const float textureVert[] =
     
     [self viewWillLayoutSubviews];
     
+    // Purposefully commented out line below, as we don't want to be able to switch CPU modes in the middle of emulation
+    // EMU_setCPUMode([defaults boolForKey:@"enableJIT"] ? 2 : 1);
+    
     
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
 }
@@ -193,11 +196,10 @@ const float textureVert[] =
 - (void)loadROM {
     EMU_setWorkingDir([[self.romFilepath stringByDeletingLastPathComponent] UTF8String]);
     EMU_init();
+    EMU_setCPUMode([[NSUserDefaults standardUserDefaults] boolForKey:@"enableJIT"] ? 2 : 1);
     EMU_loadRom([self.romFilepath UTF8String]);
     EMU_change3D(1);
-    
-    EMU_enableSound(YES);
-    
+        
     [self initGL];
     
     emuLoopLock = [NSLock new];

@@ -14,5 +14,7 @@
 	<integer>0</integer>
 	<key>showFPS</key>
 	<false/>
+	<key>enableJIT</key>
+	<false/>
 </dict>
 </plist>

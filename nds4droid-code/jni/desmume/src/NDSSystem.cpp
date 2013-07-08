@@ -71,8 +71,6 @@ NDSSystem nds;
 CFIRMWARE	*firmware = NULL;
 ADVANsCEne	advsc;
 
-int riley_jit_mode = 1;
-
 using std::min;
 using std::max;
 
@@ -2145,7 +2143,7 @@ void NDS_exec(s32 nb)
 	
 #ifdef HAVE_JIT		
 			std::pair<s32,s32> arm9arm7;
-			switch(riley_jit_mode)
+			switch(CommonSettings.CpuMode)
 			{
 				case 1: arm9arm7 = armInnerLoop<true,true,1>(nds_timer_base,s32next,arm9,arm7); break;
 				case 2: arm9arm7 = armInnerLoop<true,true,2>(nds_timer_base,s32next,arm9,arm7); break;
@@ -2508,7 +2506,7 @@ void NDS_Reset()
 	MMU_Reset();
 
 #ifdef HAVE_JIT
-	armcpu_setjitmode(riley_jit_mode);
+	armcpu_setjitmode(CommonSettings.CpuMode);
 #endif
 
 	JumbleMemory();
