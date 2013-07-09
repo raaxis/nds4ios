@@ -118,14 +118,14 @@
                                                     <rect key="frame" x="20" y="36" width="260" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
-                                                        <segment title="トップ"/>
-                                                        <segment title="ボトム"/>
+                                                        <segment title="上側"/>
+                                                        <segment title="下側"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="gaO-Be-QG9"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="コントロールのポジション(直立)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h11-xO-hGl">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="コントロールのポジション" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h11-xO-hGl">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -143,7 +143,7 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="コントロールの不透明(直立)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IzY-y9-rcs">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="コントロールの不透明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IzY-y9-rcs">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
