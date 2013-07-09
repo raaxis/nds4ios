@@ -2,8 +2,6 @@ nds4ios - iOS 5 ~ 7
 =======
 ### This is not finished software. Do not open issues complaining about games being slow, we know about it already. 
 
-### PLEASE DO NOT DISTRIBUTE THIS BY CODE SIGNING IT, UPLOADING, THEN TELLING OTHERS TO DOWNLOAD IT FROM YOU. WE PROVIDE AN OFFICIAL WAY TO DISTRIBUTE ALREADY. THIS IS A FAIR WARNING.
-
 nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
 
 http://nds4ios.angelxwind.net/

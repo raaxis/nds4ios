@@ -18,7 +18,6 @@
 		28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6ED1787D110003A9C5B /* Defaults.plist */; };
 		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
 		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
-<<<<<<< HEAD
 		8B305F78178B48FD00FD010A /* SASlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F67178B48FD00FD010A /* SASlideMenuContentSegue.m */; };
 		8B305F79178B48FD00FD010A /* SASlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F6B178B48FD00FD010A /* SASlideMenuLeftMenuSegue.m */; };
 		8B305F7A178B48FD00FD010A /* SASlideMenuNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F6D178B48FD00FD010A /* SASlideMenuNavigationController.m */; };
@@ -33,9 +32,6 @@
 		8B305F94178B95EA00FD010A /* 210-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B305F92178B95E900FD010A /* 210-twitterbird.png */; };
 		8B305F95178B95EA00FD010A /* 210-twitterbird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B305F93178B95EA00FD010A /* 210-twitterbird@2x.png */; };
 		8B305F99178B998800FD010A /* NDSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F98178B998800FD010A /* NDSAboutViewController.m */; };
-=======
-		4C69CE5A178A89C800617983 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C69CE59178A89C800617983 /* Settings.bundle */; };
->>>>>>> 8447eeec8ae1c5951a88389a0d4914d2f919b315
 		8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0930178724E10060B347 /* Default-568h@2x.png */; };
 		8BEA0939178724E10060B347 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0931178724E10060B347 /* Default.png */; };
 		8BEA093A178724E10060B347 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0932178724E10060B347 /* Default@2x.png */; };
@@ -195,7 +191,6 @@
 		28E7A6ED1787D110003A9C5B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = nds4ios/settings/Defaults.plist; sourceTree = SOURCE_ROOT; };
 		28E7A6F31787D8D5003A9C5B /* HideEmulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideEmulator.png; path = Resources/HideEmulator.png; sourceTree = "<group>"; };
 		28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HideEmulator@2x.png"; path = "Resources/HideEmulator@2x.png"; sourceTree = "<group>"; };
-		4C69CE59178A89C800617983 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = nds4ios/settings/Settings.bundle; sourceTree = SOURCE_ROOT; };
 		4CEDCA53178A555D00958FF9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4CEDCA54178A556200958FF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4CEDCA55178A5E7E00958FF9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
@@ -657,7 +652,6 @@
 		BF9D51751786A60E00B5864B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				4C69CE59178A89C800617983 /* Settings.bundle */,
 				8BEA096317872C080060B347 /* NDSSettingsViewController.h */,
 				8BEA096417872C080060B347 /* NDSSettingsViewController.m */,
 				28E7A6ED1787D110003A9C5B /* Defaults.plist */,
@@ -1102,7 +1096,6 @@
 				BF9D516E17867F7D00B5864B /* JoystickButton.png in Resources */,
 				BF9D516F17867F7D00B5864B /* JoystickButton@2x.png in Resources */,
 				8BEA099017872FB50060B347 /* nds4ios-Info.plist in Resources */,
-<<<<<<< HEAD
 				8BEFF477178B458100EEE55A /* disclosure.png in Resources */,
 				8BEFF47D178B459000EEE55A /* disclosure@2x.png in Resources */,
 				8BEFF47E178B459000EEE55A /* row.png in Resources */,
@@ -1115,9 +1108,6 @@
 				8B305F91178B914E00FD010A /* drawerlogo@2x.png in Resources */,
 				8B305F94178B95EA00FD010A /* 210-twitterbird.png in Resources */,
 				8B305F95178B95EA00FD010A /* 210-twitterbird@2x.png in Resources */,
-=======
-				4C69CE5A178A89C800617983 /* Settings.bundle in Resources */,
->>>>>>> 8447eeec8ae1c5951a88389a0d4914d2f919b315
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
