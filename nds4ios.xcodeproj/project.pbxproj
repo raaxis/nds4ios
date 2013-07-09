@@ -281,6 +281,7 @@
 		8BEFF483178B468700EEE55A /* NDSSideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSSideBarViewController.m; path = nds4ios/sidedrawer/NDSSideBarViewController.m; sourceTree = SOURCE_ROOT; };
 		8BEFF489178B473E00EEE55A /* menuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuicon.png; path = Resources/menuicon.png; sourceTree = "<group>"; };
 		8BEFF48A178B473E00EEE55A /* menuicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menuicon@2x.png"; path = "Resources/menuicon@2x.png"; sourceTree = "<group>"; };
+		9C297BAF178BB97000ED14D3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmLJit.cpp; path = "nds4droid-code/jni/desmume/src/ArmLJit.cpp"; sourceTree = SOURCE_ROOT; };
 		BF2AC476177FF06600D3CF93 /* ArmLJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmLJit.h; path = "nds4droid-code/jni/desmume/src/ArmLJit.h"; sourceTree = SOURCE_ROOT; };
 		BF2AC47A177FF29000D3CF93 /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asm.h; sourceTree = "<group>"; };
@@ -1050,6 +1051,7 @@
 				"zh-Hans",
 				"zh-Hant",
 				es,
+				ja,
 			);
 			mainGroup = BFCFE0E61764FBD3000A70CF;
 			productRefGroup = BFCFE0F01764FBD3000A70CF /* Products */;
@@ -1262,6 +1264,7 @@
 				4CEDCA54178A556200958FF9 /* zh-Hans */,
 				4CEDCA55178A5E7E00958FF9 /* zh-Hant */,
 				8B305F9A178BA60200FD010A /* es */,
+				9C297BAF178BB97000ED14D3 /* ja */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";

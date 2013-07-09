@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller - Settings-->
+        <!--Settings View Controller - 設定-->
         <scene sceneID="FPw-CJ-zlO">
             <objects>
                 <tableViewController id="c3c-6p-wCh" customClass="NDSSettingsViewController" sceneMemberID="viewController">
@@ -427,10 +427,9 @@
             </objects>
             <point key="canvasLocation" x="928" y="-574"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About View Controller - アバウト-->
         <scene sceneID="prg-5R-kCK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3sW-4w-OqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="kY3-6f-RlH" customClass="NDSAboutViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="v5z-Jt-oQE">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -443,7 +442,7 @@
                                         <rect key="frame" x="0.0" y="46" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Karen Tsai (angelXwind)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAc-Kf-Dc8">
@@ -643,6 +642,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="アバウト" id="wjq-Iv-O9N"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sW-4w-OqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="443" y="60"/>
         </scene>
