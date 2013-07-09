@@ -671,15 +671,15 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.19898437499999999" alpha="1" colorSpace="calibratedWhite"/>
-                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" image="drawerlogo.png" id="zMf-gO-FPJ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" id="vB8-MS-MiC">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <sections>
                             <tableViewSection id="yiw-Oa-TVa">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RuQ-Cx-pIW" customClass="MenuCell">
-                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -715,7 +715,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Dj7-UQ-r6a" customClass="MenuCell">
-                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="54" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -751,7 +751,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eQn-e4-6Lv" customClass="MenuCell">
-                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="98" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -863,7 +863,6 @@
         <image name="Select.png" width="48" height="26"/>
         <image name="Start.png" width="48" height="26"/>
         <image name="disclosure.png" width="20" height="20"/>
-        <image name="drawerlogo.png" width="320" height="132"/>
         <image name="row.png" width="1" height="44"/>
         <image name="rowselected.png" width="1" height="44"/>
     </resources>
