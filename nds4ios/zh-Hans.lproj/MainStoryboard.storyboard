@@ -192,7 +192,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Hidden" id="6hj-4v-AQ5">
+                            <tableViewSection headerTitle="隐藏设置" id="6hj-4v-AQ5">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2wW-Bt-rB2">
                                         <rect key="frame" x="0.0" y="574" width="320" height="46"/>
@@ -208,7 +208,7 @@
                                                         <action selector="controlChanged:" destination="pOm-0a-NHv" eventType="valueChanged" id="IFG-Mr-cdk"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enable JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mv8-NB-vsS">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="开启 JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mv8-NB-vsS">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>

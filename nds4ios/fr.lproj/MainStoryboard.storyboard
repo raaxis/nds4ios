@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="005-sx-nAO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="005-sx-nAO">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller - Settings-->
+        <!--Settings View Controller - Réglages-->
         <scene sceneID="3ho-CN-I2b">
             <objects>
                 <tableViewController id="tcD-XL-fLs" customClass="NDSSettingsViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Emulator" id="8ay-Is-5cJ">
+                            <tableViewSection headerTitle="Émulateur" id="8ay-Is-5cJ">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="rfz-yS-aDr">
                                         <rect key="frame" x="0.0" y="46" width="320" height="75"/>
@@ -38,7 +38,7 @@
                                                         <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="fpR-lR-lzo"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Frame Skip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Gla-Rl-Nw8">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saut De Trame" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Gla-Rl-Nw8">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,7 +63,7 @@
                                                         <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="R2h-mP-TrF"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Disable Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r4a-k7-dDD">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Désactiver Le Son" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r4a-k7-dDD">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -76,7 +76,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Controls" id="p35-7t-JU6">
+                            <tableViewSection headerTitle="Contrôles" id="p35-7t-JU6">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="gaz-7I-Pns">
                                         <rect key="frame" x="0.0" y="212" width="320" height="75"/>
@@ -96,7 +96,7 @@
                                                         <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="rnM-oc-Aqa"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Control Pad Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Chg-wW-gej">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Style De Contrôle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Chg-wW-gej">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -125,7 +125,7 @@
                                                         <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="K32-0b-sv6"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Controls Position (Portrait)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="87x-Mv-1gG">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Position Des Contrôles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="87x-Mv-1gG">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -143,7 +143,7 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Control Opacity (Portrait)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="EYG-VE-Rr0">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="L'Opacité Des Contrôles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="EYG-VE-Rr0">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -163,7 +163,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Developer" id="8JW-YD-NYc">
+                            <tableViewSection headerTitle="Développeur" id="8JW-YD-NYc">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZIP-y6-Q5i">
                                         <rect key="frame" x="0.0" y="482" width="320" height="46"/>
@@ -179,7 +179,7 @@
                                                         <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="gvh-2p-S0E"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show FPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hz5-Hs-Nv7">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Montrer Le FPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hz5-Hs-Nv7">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -192,7 +192,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Hidden" id="Mrh-2r-rpP">
+                            <tableViewSection headerTitle="Caché" id="Mrh-2r-rpP">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="26d-k3-aBt">
                                         <rect key="frame" x="0.0" y="574" width="320" height="46"/>
@@ -208,7 +208,7 @@
                                                         <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="ny9-Mx-rPO"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enable JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nEO-JU-ynL">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Activer JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nEO-JU-ynL">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -223,7 +223,7 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="dXV-Gk-btP"/>
+                    <navigationItem key="navigationItem" title="Réglages" id="dXV-Gk-btP"/>
                     <connections>
                         <outlet property="controlOpacitySlider" destination="hJx-o2-HBt" id="hfs-js-BLE"/>
                         <outlet property="controlPadStyleControl" destination="f74-9v-4n3" id="x87-ws-ddH"/>
@@ -427,17 +427,16 @@
             </objects>
             <point key="canvasLocation" x="1436" y="842"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About View Controller - À Propos De Nous-->
         <scene sceneID="VJh-hH-7wO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x4D-c3-1UQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="kVs-Bh-yJD" customClass="NDSAboutViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="lae-fn-bab">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="InfiniDev Developers" id="lXW-ci-YBt">
+                            <tableViewSection headerTitle="Développeurs De InfiniDev" id="lXW-ci-YBt">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pA1-XL-hgn">
                                         <rect key="frame" x="0.0" y="46" width="320" height="45"/>
@@ -595,7 +594,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Contributors" footerTitle="© 2013 InfiniDev" id="zfh-wv-874">
+                            <tableViewSection headerTitle="Contributeurs" footerTitle="© 2013 InfiniDev" id="zfh-wv-874">
                                 <cells>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zaM-9N-zj7">
                                         <rect key="frame" x="0.0" y="402" width="320" height="45"/>
@@ -641,8 +640,9 @@
                             <outlet property="delegate" destination="kVs-Bh-yJD" id="mhr-G9-BAE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="About" id="Jp3-Ay-WwP"/>
+                    <navigationItem key="navigationItem" title="À Propos De Nous" id="Jp3-Ay-WwP"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4D-c3-1UQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="951" y="1476"/>
         </scene>

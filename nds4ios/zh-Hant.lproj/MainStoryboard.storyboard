@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gXv-kr-8AA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gXv-kr-8AA">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller - Settings-->
+        <!--Settings View Controller - 設置-->
         <scene sceneID="744-rC-rKK">
             <objects>
                 <tableViewController id="Zri-6G-Ouy" customClass="NDSSettingsViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Emulator" id="AFd-J8-Lhq">
+                            <tableViewSection headerTitle="模擬器設置" id="AFd-J8-Lhq">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="Gd0-TI-r8S">
                                         <rect key="frame" x="0.0" y="46" width="320" height="75"/>
@@ -32,13 +32,13 @@
                                                         <segment title="2"/>
                                                         <segment title="3"/>
                                                         <segment title="4"/>
-                                                        <segment title="Auto" width="56"/>
+                                                        <segment title="自動" width="56"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="Zri-6G-Ouy" eventType="valueChanged" id="yM2-Ew-arN"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Frame Skip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="TY3-b5-xZN">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="跳幀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="TY3-b5-xZN">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,7 +63,7 @@
                                                         <action selector="controlChanged:" destination="Zri-6G-Ouy" eventType="valueChanged" id="cbJ-IN-KRN"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Disable Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YYm-sX-Q1X">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="禁用聲音" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YYm-sX-Q1X">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -76,7 +76,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Controls" id="3CM-n7-FQh">
+                            <tableViewSection headerTitle="控制設置" id="3CM-n7-FQh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="Tqj-A6-Ifl">
                                         <rect key="frame" x="0.0" y="212" width="320" height="75"/>
@@ -89,14 +89,14 @@
                                                     <rect key="frame" x="20" y="36" width="260" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
-                                                        <segment title="D-Pad"/>
-                                                        <segment title="Joystick"/>
+                                                        <segment title="搖杆"/>
+                                                        <segment title="方向鍵"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="Zri-6G-Ouy" eventType="valueChanged" id="3AH-QW-zag"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Control Pad Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Qaa-S3-fCa">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="控制類型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Qaa-S3-fCa">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -118,14 +118,14 @@
                                                     <rect key="frame" x="20" y="36" width="260" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
-                                                        <segment title="Top"/>
-                                                        <segment title="Bottom"/>
+                                                        <segment title="頂部"/>
+                                                        <segment title="底部"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="Zri-6G-Ouy" eventType="valueChanged" id="lLg-Vp-Ukk"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Controls Position (Portrait)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jHb-nH-FhL">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="按鍵位置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jHb-nH-FhL">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -143,7 +143,7 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Control Opacity (Portrait)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qi7-BC-Cde">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="按鍵透明度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qi7-BC-Cde">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -163,7 +163,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Developer" id="yNJ-qd-oQK">
+                            <tableViewSection headerTitle="開發設置" id="yNJ-qd-oQK">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ijY-u3-Sei">
                                         <rect key="frame" x="0.0" y="482" width="320" height="46"/>
@@ -179,7 +179,7 @@
                                                         <action selector="controlChanged:" destination="Zri-6G-Ouy" eventType="valueChanged" id="dIN-eJ-rRi"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show FPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xoo-7N-zH3">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="顯示 FPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xoo-7N-zH3">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -192,7 +192,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Hidden" id="aTu-t1-MIK">
+                            <tableViewSection headerTitle="隱藏設置" id="aTu-t1-MIK">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5Fu-By-MEk">
                                         <rect key="frame" x="0.0" y="574" width="320" height="46"/>
@@ -208,7 +208,7 @@
                                                         <action selector="controlChanged:" destination="Zri-6G-Ouy" eventType="valueChanged" id="o8g-yk-20Z"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enable JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WS9-wg-YZi">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="開啟 JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WS9-wg-YZi">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -223,7 +223,7 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="lJV-A2-eXa"/>
+                    <navigationItem key="navigationItem" title="設置" id="lJV-A2-eXa"/>
                     <connections>
                         <outlet property="controlOpacitySlider" destination="K7n-Nn-6hY" id="LbL-nD-t8Z"/>
                         <outlet property="controlPadStyleControl" destination="bKC-KO-C8Z" id="vCg-jm-2Xa"/>
@@ -427,17 +427,16 @@
             </objects>
             <point key="canvasLocation" x="1436" y="842"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About View Controller - 關於我們-->
         <scene sceneID="LNu-gT-QPY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bq-Hb-hTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zia-6X-uAE" customClass="NDSAboutViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="4aa-ZR-TCk">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="InfiniDev Developers" id="2lP-du-5Tb">
+                            <tableViewSection headerTitle="InfiniDev 開發團隊" id="2lP-du-5Tb">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Y0C-hq-sls">
                                         <rect key="frame" x="0.0" y="46" width="320" height="45"/>
@@ -595,7 +594,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Contributors" footerTitle="© 2013 InfiniDev" id="Oh5-97-rAs">
+                            <tableViewSection headerTitle="貢獻者" footerTitle="© 2013 InfiniDev" id="Oh5-97-rAs">
                                 <cells>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="00b-vT-5TH">
                                         <rect key="frame" x="0.0" y="402" width="320" height="45"/>
@@ -641,8 +640,9 @@
                             <outlet property="delegate" destination="zia-6X-uAE" id="Ig8-pj-VcT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="About" id="98h-fx-nFh"/>
+                    <navigationItem key="navigationItem" title="關於我們" id="98h-fx-nFh"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bq-Hb-hTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="951" y="1476"/>
         </scene>
@@ -733,7 +733,7 @@
                                                     <rect key="frame" x="250" y="10" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="3xK-M7-p2U">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="關於我們" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="3xK-M7-p2U">
                                                     <rect key="frame" x="20" y="11" width="211" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
