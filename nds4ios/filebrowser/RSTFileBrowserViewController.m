@@ -37,7 +37,6 @@
 }
 
 - (void)initialize {
-    _showFileExtensions = YES;
     _fileDictionary = [[NSMutableDictionary alloc] init];
     _sections = [@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#" componentsSeparatedByString:@"|"];
     
@@ -47,8 +46,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self refreshDirectory];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,13 +69,11 @@
 
 - (void)refreshDirectory {
     [self.fileDictionary removeAllObjects];
-    
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSArray *contents = [fileManager contentsOfDirectoryAtPath:self.currentDirectory error:nil];
     NSArray *extensions = [self.supportedFileExtensions copy];
         
     for (NSString *filename in contents) {
-        
         BOOL fileSupported = NO;
         BOOL isDirectory = NO;
         
@@ -98,7 +93,11 @@
             {
                 for (NSString *extension in extensions)
                 {
-                    fileSupported = ([[[filename pathExtension] lowercaseString] isEqualToString:[extension lowercaseString]]);
+                    if ([[[filename pathExtension] lowercaseString] isEqualToString:[extension lowercaseString]])
+                    {
+                        fileSupported = YES;
+                        break;
+                    }
                 }
             }
         }
@@ -118,11 +117,12 @@
             [sectionArray addObject:filename];
             self.fileDictionary[characterIndex] = sectionArray;
         }
-        
     }
     
-    [self.tableView reloadData];
+    NSLog(@"%i", self.fileDictionary.count);
     
+    [self.tableView reloadData];
+        
     if ([self.delegate respondsToSelector:@selector(fileBrowserViewController:didRefreshDirectory:)]) {
         [self.delegate fileBrowserViewController:self didRefreshDirectory:self.currentDirectory];
     }

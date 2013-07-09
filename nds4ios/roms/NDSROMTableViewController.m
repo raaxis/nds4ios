@@ -9,6 +9,8 @@
 #import "NDSROMTableViewController.h"
 #import "NDSEmulatorViewController.h"
 
+#define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
 @interface NDSROMTableViewController ()
 
 @property (strong, nonatomic) NDSEmulatorViewController *currentEmulatorViewController;
@@ -20,12 +22,10 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    
-    self.currentDirectory = documentsDirectory;
+        
     self.showFileExtensions = NO;
     self.supportedFileExtensions = @[@"nds", @"zip"];
+    self.currentDirectory = DOCUMENTS_PATH();
 }
 
 - (void)viewDidLoad
