@@ -45,7 +45,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    UIView *hiddenSettingsTapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 75, 44)];
+    /*
+    UIView *hiddenSettingsTapView = [[UIView alloc] initWithFrame:CGRectMake(245, 0, 75, 44)];
     
     UIBarButtonItem *hiddenSettingsBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:hiddenSettingsTapView];
     self.navigationItem.leftBarButtonItem = hiddenSettingsBarButtonItem;
@@ -53,6 +54,7 @@
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(revealHiddenSettings:)];
     tapGestureRecognizer.numberOfTapsRequired = 3;
     [hiddenSettingsTapView addGestureRecognizer:tapGestureRecognizer];
+     */
 }
 
 - (void)didReceiveMemoryWarning
