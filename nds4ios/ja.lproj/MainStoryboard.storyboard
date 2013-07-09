@@ -118,8 +118,8 @@
                                                     <rect key="frame" x="20" y="36" width="260" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
-                                                        <segment title="Top"/>
-                                                        <segment title="Bottom"/>
+                                                        <segment title="トップ"/>
+                                                        <segment title="ボトム"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="gaO-Be-QG9"/>
