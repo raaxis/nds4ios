@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -640,7 +640,16 @@
                             <outlet property="delegate" destination="kY3-6f-RlH" id="IxX-Tf-Gs1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="About" id="wjq-Iv-O9N"/>
+                    <navigationItem key="navigationItem" title="About" id="wjq-Iv-O9N">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="7A3-nC-GqP">
+                            <connections>
+                                <action selector="sendTweet:" destination="kY3-6f-RlH" id="4rn-Zw-PT2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tweetButton" destination="7A3-nC-GqP" id="meR-P8-Gyn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sW-4w-OqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1012,6 +1021,10 @@
         </class>
         <class className="NDSAboutViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendTweet:"/>
+                <relationship kind="outlet" name="tweetButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
         <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSButtonControl.h"/>

@@ -18,6 +18,7 @@
 		28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6ED1787D110003A9C5B /* Defaults.plist */; };
 		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
 		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
+		4C3F2AED178E017600AE10B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3F2AEC178E017600AE10B8 /* Twitter.framework */; };
 		8B283050178DD27000E92785 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304E178DD27000E92785 /* 19-gear.png */; };
 		8B283051178DD27000E92785 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304F178DD27000E92785 /* 19-gear@2x.png */; };
 		8B283054178DD3CA00E92785 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B283052178DD3CA00E92785 /* 112-group.png */; };
@@ -203,6 +204,7 @@
 		28E7A6ED1787D110003A9C5B /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = nds4ios/settings/Defaults.plist; sourceTree = SOURCE_ROOT; };
 		28E7A6F31787D8D5003A9C5B /* HideEmulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideEmulator.png; path = Resources/HideEmulator.png; sourceTree = "<group>"; };
 		28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HideEmulator@2x.png"; path = "Resources/HideEmulator@2x.png"; sourceTree = "<group>"; };
+		4C3F2AEC178E017600AE10B8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		4CEDCA53178A555D00958FF9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4CEDCA54178A556200958FF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4CEDCA55178A5E7E00958FF9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3F2AED178E017600AE10B8 /* Twitter.framework in Frameworks */,
 				BF9D514817865D5100B5864B /* AudioToolbox.framework in Frameworks */,
 				BFAE6F9B17674D93000911CF /* libz.dylib in Frameworks */,
 				BFAE6F931767490A000911CF /* OpenGLES.framework in Frameworks */,
@@ -759,6 +762,7 @@
 		BFCFE0F11764FBD3000A70CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C3F2AEC178E017600AE10B8 /* Twitter.framework */,
 				BF9D514717865D5100B5864B /* AudioToolbox.framework */,
 				BFAE6F9A17674D93000911CF /* libz.dylib */,
 				BFAE6F921767490A000911CF /* OpenGLES.framework */,

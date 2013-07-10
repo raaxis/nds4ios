@@ -7,6 +7,8 @@
 //
 
 #import "NDSAboutViewController.h"
+#import "Twitter/Twitter.h"
+
 
 @interface NDSAboutViewController ()
 
@@ -42,6 +44,8 @@
 }
 
 #pragma mark - Table view delegate
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -96,6 +100,25 @@
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (IBAction)sendTweet:(id)sender {
+    //Create the tweet sheet
+    TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
+    
+    //Add a tweet message
+    [tweetSheet setInitialText:@"I love playing Nintendo DS games on my iOS device with #nds4ios from @InfiniDev_"];
+    
+    //Add a link
+    [tweetSheet addURL:[NSURL URLWithString:@"http://nds4ios.angelxwind.net"]];
+    
+    //Set a blocking handler for the tweet sheet
+    tweetSheet.completionHandler = ^(TWTweetComposeViewControllerResult result){
+        [self dismissModalViewControllerAnimated:YES];
+    };
+    
+    //Show the tweet sheet!
+    [self presentModalViewController:tweetSheet animated:YES];
 }
 
 @end

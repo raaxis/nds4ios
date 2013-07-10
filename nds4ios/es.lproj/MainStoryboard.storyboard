@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -640,7 +640,16 @@
                             <outlet property="delegate" destination="kY3-6f-RlH" id="IxX-Tf-Gs1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Acerca de Nosotros" id="wjq-Iv-O9N"/>
+                    <navigationItem key="navigationItem" title="Acerca de Nosotros" id="wjq-Iv-O9N">
+                        <barButtonItem key="rightBarButtonItem" title="Compartir" id="MdW-Lg-XgS">
+                            <connections>
+                                <action selector="sendTweet:" destination="kY3-6f-RlH" id="PBp-bD-gnE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tweetButton" destination="MdW-Lg-XgS" id="lRM-Hh-8Df"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sW-4w-OqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -666,7 +675,6 @@
         <!--Side Bar View Controller-->
         <scene sceneID="4Yv-XG-ZpS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wHS-Li-Mt9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="Static" id="G5S-J0-8NS" customClass="NDSSideBarViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PP3-CQ-U1o">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -849,6 +857,7 @@
                     </tableView>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHS-Li-Mt9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-565" y="58"/>
         </scene>
@@ -1002,6 +1011,10 @@
         </class>
         <class className="NDSAboutViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendTweet:"/>
+                <relationship kind="outlet" name="tweetButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
         <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSButtonControl.h"/>

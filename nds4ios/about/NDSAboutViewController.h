@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NDSAboutViewController : UITableViewController
+@interface NDSAboutViewController : UITableViewController {
+    BOOL _canTweet;
+    IBOutlet UIBarButtonItem *tweetButton;
+}
+- (IBAction)sendTweet:(id)sender;
 
 @end
