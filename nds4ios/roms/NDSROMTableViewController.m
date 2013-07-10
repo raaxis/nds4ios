@@ -54,6 +54,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self showAlert];
+    [AppDelegate sharedInstance].gameOpen = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
