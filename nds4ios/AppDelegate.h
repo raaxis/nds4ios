@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NDSEmulatorViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) BOOL gameOpen;
+@property (nonatomic) NSString *currentGame;
+@property (strong, nonatomic) NDSEmulatorViewController *currentEmulatorViewController;
+
 
 + (AppDelegate *)sharedInstance;
 

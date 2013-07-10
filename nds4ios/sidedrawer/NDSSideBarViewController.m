@@ -51,13 +51,10 @@
     [menuButton setImage:[UIImage imageNamed:@"menuicon.png"] forState:UIControlStateNormal];
 }
 
--(void) configureSlideLayer:(CALayer *)layer{
-    layer.shadowColor = [UIColor blackColor].CGColor;
-    layer.shadowOpacity = 0.3;
-    layer.shadowOffset = CGSizeMake(-15, 0);
-    layer.shadowRadius = 10;
-    layer.masksToBounds = NO;
-    layer.shadowPath =[UIBezierPath bezierPathWithRect:layer.bounds].CGPath;
+//restricts pan gesture interation to 50px on the left and right of the view.
+-(Boolean) shouldRespondToGesture:(UIGestureRecognizer*) gesture forIndexPath:(NSIndexPath*)indexPath {
+    CGPoint touchPosition = [gesture locationInView:self.view];
+    return (touchPosition.x < 50.0 || touchPosition.x > self.view.bounds.size.width - 50.0f);
 }
 
 -(CGFloat) leftMenuVisibleWidth{

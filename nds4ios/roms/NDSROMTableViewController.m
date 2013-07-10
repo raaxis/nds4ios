@@ -9,12 +9,11 @@
 #import "AppDelegate.h"
 #import "NDSROMTableViewController.h"
 #import "NDSEmulatorViewController.h"
+#import "OLGhostAlertView.h"
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 @interface NDSROMTableViewController ()
-
-@property (strong, nonatomic) NDSEmulatorViewController *currentEmulatorViewController;
 
 @end
 
@@ -72,10 +71,10 @@
         resumeGame.position = OLGhostAlertViewPositionBottom;
         [resumeGame show];
         resumeGame.completionBlock = ^(void) {
-            if (self.currentEmulatorViewController)
+            if ([AppDelegate sharedInstance].currentEmulatorViewController)
             {
-                [self presentViewController:self.currentEmulatorViewController animated:YES completion:^(){
-                    [self.currentEmulatorViewController resumeEmulation];
+                [self presentViewController:[AppDelegate sharedInstance].currentEmulatorViewController animated:YES completion:^(){
+                    [[AppDelegate sharedInstance].currentEmulatorViewController resumeEmulation];
                     
                 }];
             }
@@ -101,8 +100,8 @@
         NSString *filepath = [self filepathForIndexPath:indexPath];
         currentGame = cell.textLabel.text;
         [AppDelegate sharedInstance].gameOpen = YES;
-        self.currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
-        self.currentEmulatorViewController.romFilepath = filepath;
+        [AppDelegate sharedInstance].currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
+        [AppDelegate sharedInstance].currentEmulatorViewController.romFilepath = filepath;
     }
 }
 
