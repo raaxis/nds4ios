@@ -32,6 +32,8 @@
 		8B305F94178B95EA00FD010A /* 210-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B305F92178B95E900FD010A /* 210-twitterbird.png */; };
 		8B305F95178B95EA00FD010A /* 210-twitterbird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B305F93178B95EA00FD010A /* 210-twitterbird@2x.png */; };
 		8B305F99178B998800FD010A /* NDSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F98178B998800FD010A /* NDSAboutViewController.m */; };
+		8B4895C0178CCBEE00BA61C3 /* OLGhostAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4895BF178CCBEE00BA61C3 /* OLGhostAlertView.m */; };
+		8B4895C5178CE15D00BA61C3 /* NDSROMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4895C4178CE15D00BA61C3 /* NDSROMTableViewController.m */; };
 		8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0930178724E10060B347 /* Default-568h@2x.png */; };
 		8BEA0939178724E10060B347 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0931178724E10060B347 /* Default.png */; };
 		8BEA093A178724E10060B347 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0932178724E10060B347 /* Default@2x.png */; };
@@ -40,7 +42,6 @@
 		8BEA093D178724E10060B347 /* Icon-Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0935178724E10060B347 /* Icon-Spotlight@2x.png */; };
 		8BEA093E178724E10060B347 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0936178724E10060B347 /* Icon.png */; };
 		8BEA093F178724E10060B347 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA0937178724E10060B347 /* Icon@2x.png */; };
-		8BEA096217872BF90060B347 /* NDSROMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096117872BF90060B347 /* NDSROMTableViewController.m */; };
 		8BEA096517872C080060B347 /* NDSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096417872C080060B347 /* NDSSettingsViewController.m */; };
 		8BEA096A17872C190060B347 /* NDSButtonControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096717872C190060B347 /* NDSButtonControl.m */; };
 		8BEA096B17872C190060B347 /* NDSDirectionalControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096917872C190060B347 /* NDSDirectionalControl.m */; };
@@ -222,6 +223,9 @@
 		8B305F98178B998800FD010A /* NDSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSAboutViewController.m; path = nds4ios/about/NDSAboutViewController.m; sourceTree = SOURCE_ROOT; };
 		8B305F9A178BA60200FD010A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8B305F9B178BA60200FD010A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B4895BE178CCBEE00BA61C3 /* OLGhostAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OLGhostAlertView.h; path = nds4ios/resumealert/OLGhostAlertView.h; sourceTree = SOURCE_ROOT; };
+		8B4895BF178CCBEE00BA61C3 /* OLGhostAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLGhostAlertView.m; path = nds4ios/resumealert/OLGhostAlertView.m; sourceTree = SOURCE_ROOT; };
+		8B4895C4178CE15D00BA61C3 /* NDSROMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSROMTableViewController.m; path = nds4ios/roms/NDSROMTableViewController.m; sourceTree = SOURCE_ROOT; };
 		8BEA0930178724E10060B347 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/required/Default-568h@2x.png"; sourceTree = "<group>"; };
 		8BEA0931178724E10060B347 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/required/Default.png; sourceTree = "<group>"; };
 		8BEA0932178724E10060B347 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/required/Default@2x.png"; sourceTree = "<group>"; };
@@ -231,7 +235,6 @@
 		8BEA0936178724E10060B347 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/required/Icon.png; sourceTree = "<group>"; };
 		8BEA0937178724E10060B347 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/required/Icon@2x.png"; sourceTree = "<group>"; };
 		8BEA096017872BF90060B347 /* NDSROMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSROMTableViewController.h; path = nds4ios/roms/NDSROMTableViewController.h; sourceTree = SOURCE_ROOT; };
-		8BEA096117872BF90060B347 /* NDSROMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSROMTableViewController.m; path = nds4ios/roms/NDSROMTableViewController.m; sourceTree = SOURCE_ROOT; };
 		8BEA096317872C080060B347 /* NDSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSSettingsViewController.h; path = nds4ios/settings/NDSSettingsViewController.h; sourceTree = SOURCE_ROOT; };
 		8BEA096417872C080060B347 /* NDSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSSettingsViewController.m; path = nds4ios/settings/NDSSettingsViewController.m; sourceTree = SOURCE_ROOT; };
 		8BEA096617872C190060B347 /* NDSButtonControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSButtonControl.h; path = nds4ios/controls/NDSButtonControl.h; sourceTree = SOURCE_ROOT; };
@@ -532,6 +535,15 @@
 			name = About;
 			sourceTree = "<group>";
 		};
+		8B4895AC178CC67900BA61C3 /* Resume Alert */ = {
+			isa = PBXGroup;
+			children = (
+				8B4895BE178CCBEE00BA61C3 /* OLGhostAlertView.h */,
+				8B4895BF178CCBEE00BA61C3 /* OLGhostAlertView.m */,
+			);
+			name = "Resume Alert";
+			sourceTree = "<group>";
+		};
 		8BEA095217872BB50060B347 /* iOS Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,7 +733,7 @@
 				BFCFE1021764FBD3000A70CF /* AppDelegate.m */,
 				BFCFE10A1764FBD3000A70CF /* MainStoryboard.storyboard */,
 				8BEA096017872BF90060B347 /* NDSROMTableViewController.h */,
-				8BEA096117872BF90060B347 /* NDSROMTableViewController.m */,
+				8B4895C4178CE15D00BA61C3 /* NDSROMTableViewController.m */,
 				8BEFF482178B468700EEE55A /* NDSSideBarViewController.h */,
 				8BEFF483178B468700EEE55A /* NDSSideBarViewController.m */,
 				8B305F96178B996200FD010A /* About */,
@@ -734,6 +746,7 @@
 				BFCFE0F91764FBD3000A70CF /* Supporting Files */,
 				8BEA099217876A490060B347 /* Open Zip Files */,
 				8B305F65178B48E000FD010A /* Side Drawer */,
+				8B4895AC178CC67900BA61C3 /* Resume Alert */,
 			);
 			name = Main;
 			path = NDS4iOS;
@@ -1129,7 +1142,6 @@
 				BFCFE18617650FB0000A70CF /* cheatSystem.cpp in Sources */,
 				BFCFE18717650FB0000A70CF /* common.cpp in Sources */,
 				BFCFE18817650FB0000A70CF /* cp15.cpp in Sources */,
-				8BEA096217872BF90060B347 /* NDSROMTableViewController.m in Sources */,
 				BFCFE18917650FB0000A70CF /* CpuBase.cpp in Sources */,
 				BFCFE18A17650FB0000A70CF /* debug.cpp in Sources */,
 				BFCFE18B17650FB0000A70CF /* Disassembler.cpp in Sources */,
@@ -1241,6 +1253,8 @@
 				8B305F7F178B48FD00FD010A /* SASlideMenuViewController.m in Sources */,
 				8B305F85178B4A1800FD010A /* MenuCell.m in Sources */,
 				8B305F99178B998800FD010A /* NDSAboutViewController.m in Sources */,
+				8B4895C0178CCBEE00BA61C3 /* OLGhostAlertView.m in Sources */,
+				8B4895C5178CE15D00BA61C3 /* NDSROMTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

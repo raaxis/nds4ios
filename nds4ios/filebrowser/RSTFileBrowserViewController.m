@@ -118,9 +118,7 @@
             self.fileDictionary[characterIndex] = sectionArray;
         }
     }
-    
-    NSLog(@"%i", self.fileDictionary.count);
-    
+        
     [self.tableView reloadData];
         
     if ([self.delegate respondsToSelector:@selector(fileBrowserViewController:didRefreshDirectory:)]) {

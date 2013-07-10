@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "RSTFileBrowserViewController.h"
 #import "NDSEmulatorViewController.h"
+#import "OLGhostAlertView.h"
 
 @interface NDSROMTableViewController : RSTFileBrowserViewController
+{
+    NSString *currentGame;
+}
 
 @end

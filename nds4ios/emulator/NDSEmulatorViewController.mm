@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 InfiniDev. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "NDSEmulatorViewController.h"
 #import "GLProgram.h"
 #import "UIScreen+Widescreen.h"
@@ -171,7 +172,7 @@ const float textureVert[] =
         self.fpsLabel.frame = CGRectMake(70, 0, 70, 24);
     } else {
         self.controllerContainerView.frame = CGRectMake(0, [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240 + (88 * isWidescreen), 320, 240);
-        self.dismissButton.frame = CGRectMake([defaults integerForKey:@"controlPosition"] == 0 ? 146 : 292, 0, 28, 28);
+        self.dismissButton.frame = CGRectMake(146, 0, 28, 28);
         self.directionalControl.center = CGPointMake(60, 172);
         self.buttonControl.center = CGPointMake(self.view.bounds.size.width-60, 172);
         self.startButton.center = CGPointMake(187, 228);
@@ -398,8 +399,24 @@ const float textureVert[] =
 
 - (IBAction)hideEmulator:(id)sender
 {
-    [self pauseEmulation];
-    [self dismissModalViewControllerAnimated:YES];
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Background or Kill?\nBackgrounding keeps the current game alive for later, whereas killing it will completely close it." delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Kill" otherButtonTitles:@"Background", nil];
+    [sheet showInView:self.view];
+    
+}
+
+#pragma mark UIActionSheet delegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        EMU_closeRom();
+        [AppDelegate sharedInstance].gameOpen = NO;
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else if (buttonIndex == 1) {
+        [self pauseEmulation];
+        [self dismissModalViewControllerAnimated:YES];
+    }
+    
 }
 
 @end

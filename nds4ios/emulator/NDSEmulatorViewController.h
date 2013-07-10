@@ -10,7 +10,7 @@
 #import "NDSDirectionalControl.h"
 #import "NDSButtonControl.h"
 
-@interface NDSEmulatorViewController : UIViewController
+@interface NDSEmulatorViewController : UIViewController <UIActionSheetDelegate>
 
 @property (copy, nonatomic) NSString *romFilepath;
 
