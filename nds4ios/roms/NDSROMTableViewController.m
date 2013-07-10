@@ -23,7 +23,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-        
+    
     self.showFileExtensions = NO;
     self.supportedFileExtensions = @[@"nds", @"zip"];
     self.currentDirectory = DOCUMENTS_PATH();
@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getMoreROMs)];
     
     BOOL isDir;
     NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
@@ -75,7 +76,7 @@
             {
                 [self presentViewController:self.currentEmulatorViewController animated:YES completion:^(){
                     [self.currentEmulatorViewController resumeEmulation];
-                
+                    
                 }];
             }
         };
@@ -103,6 +104,32 @@
         self.currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
         self.currentEmulatorViewController.romFilepath = filepath;
     }
+}
+
+#pragma mark - Non-UITableView functions
+
+- (void)getMoreROMs
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
+                                                        message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of. You should own the actual cartridge of any ROM you download!", @"")
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
+    }
+}
+
+#pragma mark - UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
 }
 
 @end
