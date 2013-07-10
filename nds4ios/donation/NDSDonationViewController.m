@@ -46,6 +46,8 @@
 {
     if (indexPath.section == 1 && indexPath.row == 0)
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MCAFUKL3CM8QQ"]];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
