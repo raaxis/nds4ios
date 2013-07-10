@@ -18,6 +18,17 @@
 		28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6ED1787D110003A9C5B /* Defaults.plist */; };
 		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
 		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
+		8B283050178DD27000E92785 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304E178DD27000E92785 /* 19-gear.png */; };
+		8B283051178DD27000E92785 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304F178DD27000E92785 /* 19-gear@2x.png */; };
+		8B283054178DD3CA00E92785 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B283052178DD3CA00E92785 /* 112-group.png */; };
+		8B283055178DD3CA00E92785 /* 112-group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B283053178DD3CA00E92785 /* 112-group@2x.png */; };
+		8B283058178DD59700E92785 /* 24-gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B283056178DD59700E92785 /* 24-gift.png */; };
+		8B283059178DD59700E92785 /* 24-gift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B283057178DD59700E92785 /* 24-gift@2x.png */; };
+		8B28305C178DD9C700E92785 /* 240-ndscartridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28305A178DD9C700E92785 /* 240-ndscartridge.png */; };
+		8B28305D178DD9C700E92785 /* 240-ndscartridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28305B178DD9C700E92785 /* 240-ndscartridge@2x.png */; };
+		8B283060178DDBFB00E92785 /* 282-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28305E178DDBFB00E92785 /* 282-cards.png */; };
+		8B283061178DDBFB00E92785 /* 282-cards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28305F178DDBFB00E92785 /* 282-cards@2x.png */; };
+		8B28306B178DDC7F00E92785 /* NDSDonationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B28306A178DDC7F00E92785 /* NDSDonationViewController.m */; };
 		8B305F78178B48FD00FD010A /* SASlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F67178B48FD00FD010A /* SASlideMenuContentSegue.m */; };
 		8B305F79178B48FD00FD010A /* SASlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F6B178B48FD00FD010A /* SASlideMenuLeftMenuSegue.m */; };
 		8B305F7A178B48FD00FD010A /* SASlideMenuNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F6D178B48FD00FD010A /* SASlideMenuNavigationController.m */; };
@@ -195,6 +206,18 @@
 		4CEDCA53178A555D00958FF9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4CEDCA54178A556200958FF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4CEDCA55178A5E7E00958FF9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		8B28304E178DD27000E92785 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear.png"; path = "Resources/19-gear.png"; sourceTree = "<group>"; };
+		8B28304F178DD27000E92785 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear@2x.png"; path = "Resources/19-gear@2x.png"; sourceTree = "<group>"; };
+		8B283052178DD3CA00E92785 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group.png"; path = "Resources/112-group.png"; sourceTree = "<group>"; };
+		8B283053178DD3CA00E92785 /* 112-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group@2x.png"; path = "Resources/112-group@2x.png"; sourceTree = "<group>"; };
+		8B283056178DD59700E92785 /* 24-gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "24-gift.png"; path = "Resources/24-gift.png"; sourceTree = "<group>"; };
+		8B283057178DD59700E92785 /* 24-gift@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "24-gift@2x.png"; path = "Resources/24-gift@2x.png"; sourceTree = "<group>"; };
+		8B28305A178DD9C700E92785 /* 240-ndscartridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "240-ndscartridge.png"; path = "Resources/240-ndscartridge.png"; sourceTree = "<group>"; };
+		8B28305B178DD9C700E92785 /* 240-ndscartridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "240-ndscartridge@2x.png"; path = "Resources/240-ndscartridge@2x.png"; sourceTree = "<group>"; };
+		8B28305E178DDBFB00E92785 /* 282-cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "282-cards.png"; path = "Resources/282-cards.png"; sourceTree = "<group>"; };
+		8B28305F178DDBFB00E92785 /* 282-cards@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "282-cards@2x.png"; path = "Resources/282-cards@2x.png"; sourceTree = "<group>"; };
+		8B283069178DDC7F00E92785 /* NDSDonationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSDonationViewController.h; path = nds4ios/donation/NDSDonationViewController.h; sourceTree = SOURCE_ROOT; };
+		8B28306A178DDC7F00E92785 /* NDSDonationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSDonationViewController.m; path = nds4ios/donation/NDSDonationViewController.m; sourceTree = SOURCE_ROOT; };
 		8B305F66178B48FD00FD010A /* SASlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASlideMenuContentSegue.h; path = nds4ios/sidedrawer/SASlideMenuContentSegue.h; sourceTree = SOURCE_ROOT; };
 		8B305F67178B48FD00FD010A /* SASlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SASlideMenuContentSegue.m; path = nds4ios/sidedrawer/SASlideMenuContentSegue.m; sourceTree = SOURCE_ROOT; };
 		8B305F68178B48FD00FD010A /* SASlideMenuDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SASlideMenuDataSource.h; path = nds4ios/sidedrawer/SASlideMenuDataSource.h; sourceTree = SOURCE_ROOT; };
@@ -499,6 +522,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B283062178DDC4B00E92785 /* Donation */ = {
+			isa = PBXGroup;
+			children = (
+				8B283069178DDC7F00E92785 /* NDSDonationViewController.h */,
+				8B28306A178DDC7F00E92785 /* NDSDonationViewController.m */,
+			);
+			name = Donation;
+			sourceTree = "<group>";
+		};
 		8B305F65178B48E000FD010A /* Side Drawer */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,8 +638,18 @@
 		BF9D515517865E1300B5864B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8B28304E178DD27000E92785 /* 19-gear.png */,
+				8B28304F178DD27000E92785 /* 19-gear@2x.png */,
+				8B283056178DD59700E92785 /* 24-gift.png */,
+				8B283057178DD59700E92785 /* 24-gift@2x.png */,
+				8B283052178DD3CA00E92785 /* 112-group.png */,
+				8B283053178DD3CA00E92785 /* 112-group@2x.png */,
 				8B305F92178B95E900FD010A /* 210-twitterbird.png */,
 				8B305F93178B95EA00FD010A /* 210-twitterbird@2x.png */,
+				8B28305A178DD9C700E92785 /* 240-ndscartridge.png */,
+				8B28305B178DD9C700E92785 /* 240-ndscartridge@2x.png */,
+				8B28305E178DDBFB00E92785 /* 282-cards.png */,
+				8B28305F178DDBFB00E92785 /* 282-cards@2x.png */,
 				8B305F8E178B914D00FD010A /* drawerlogo.png */,
 				8B305F8F178B914D00FD010A /* drawerlogo@2x.png */,
 				8BEFF489178B473E00EEE55A /* menuicon.png */,
@@ -738,6 +780,7 @@
 				8B4895C4178CE15D00BA61C3 /* NDSROMTableViewController.m */,
 				8B305F96178B996200FD010A /* About */,
 				BF9D51751786A60E00B5864B /* Settings */,
+				8B283062178DDC4B00E92785 /* Donation */,
 				BFAE6FAB17675623000911CF /* Controls */,
 				BFAE6F8F176748CF000911CF /* Emulator View */,
 				BFCFE12F17650ED0000A70CF /* Emulator Code */,
@@ -1123,6 +1166,16 @@
 				8B305F91178B914E00FD010A /* drawerlogo@2x.png in Resources */,
 				8B305F94178B95EA00FD010A /* 210-twitterbird.png in Resources */,
 				8B305F95178B95EA00FD010A /* 210-twitterbird@2x.png in Resources */,
+				8B283050178DD27000E92785 /* 19-gear.png in Resources */,
+				8B283051178DD27000E92785 /* 19-gear@2x.png in Resources */,
+				8B283054178DD3CA00E92785 /* 112-group.png in Resources */,
+				8B283055178DD3CA00E92785 /* 112-group@2x.png in Resources */,
+				8B283058178DD59700E92785 /* 24-gift.png in Resources */,
+				8B283059178DD59700E92785 /* 24-gift@2x.png in Resources */,
+				8B28305C178DD9C700E92785 /* 240-ndscartridge.png in Resources */,
+				8B28305D178DD9C700E92785 /* 240-ndscartridge@2x.png in Resources */,
+				8B283060178DDBFB00E92785 /* 282-cards.png in Resources */,
+				8B283061178DDBFB00E92785 /* 282-cards@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1255,6 +1308,7 @@
 				8B4895C0178CCBEE00BA61C3 /* OLGhostAlertView.m in Sources */,
 				8B4895C5178CE15D00BA61C3 /* NDSROMTableViewController.m in Sources */,
 				8B489B42178DAD6C00BA61C3 /* SASlideMenuRightMenuViewController.m in Sources */,
+				8B28306B178DDC7F00E92785 /* NDSDonationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

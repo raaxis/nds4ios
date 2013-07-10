@@ -31,9 +31,11 @@
     if (indexPath.row == 0) {
         return @"romList";
     }else if (indexPath.row == 1){
-        return @"light";
-    }else{
+        return @"about";
+    }else if (indexPath.row == 2){
         return @"settings";
+    }else {
+        return @"donate";
     }
 }
 
