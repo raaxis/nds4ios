@@ -13,7 +13,8 @@
 
 @interface NDSROMTableViewController : RSTFileBrowserViewController
 {
-    NSString *currentGame;
+    OLGhostAlertView *resumeGame;
+    BOOL isAway;
 }
 
 @end

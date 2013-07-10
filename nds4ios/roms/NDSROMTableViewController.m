@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "NDSROMTableViewController.h"
 #import "NDSEmulatorViewController.h"
-#import "OLGhostAlertView.h"
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
@@ -54,25 +53,36 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self showAlert];
-    [AppDelegate sharedInstance].gameOpen = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    isAway = NO;
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if ([AppDelegate sharedInstance].gameOpen)
+    {
+        isAway = YES;
+        [resumeGame hide];
+    }
 }
 
 - (void)showAlert
 {
     if ([AppDelegate sharedInstance].gameOpen)
     {
-        OLGhostAlertView *resumeGame = [[OLGhostAlertView alloc] initWithTitle:@"Game Backgrounded" message:[NSString stringWithFormat:@"Tap here to resume:\n%@", currentGame] timeout:INFINITY dismissible:YES];
+        NSLog(@"YEAH:D");
+        resumeGame = [[OLGhostAlertView alloc] initWithTitle:@"Game Backgrounded" message:[NSString stringWithFormat:@"Tap here to resume:\n%@", [AppDelegate sharedInstance].currentGame] timeout:INFINITY dismissible:YES];
         resumeGame.position = OLGhostAlertViewPositionBottom;
         [resumeGame show];
         resumeGame.completionBlock = ^(void) {
-            if ([AppDelegate sharedInstance].currentEmulatorViewController)
+            if ([AppDelegate sharedInstance].currentEmulatorViewController && !isAway)
             {
+                NSLog(@"YEAH");
                 [self presentViewController:[AppDelegate sharedInstance].currentEmulatorViewController animated:YES completion:^(){
                     [[AppDelegate sharedInstance].currentEmulatorViewController resumeEmulation];
                     
@@ -98,7 +108,7 @@
         UITableViewCell *cell = (UITableViewCell *)sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         NSString *filepath = [self filepathForIndexPath:indexPath];
-        currentGame = cell.textLabel.text;
+        [AppDelegate sharedInstance].currentGame = cell.textLabel.text;
         [AppDelegate sharedInstance].gameOpen = YES;
         [AppDelegate sharedInstance].currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
         [AppDelegate sharedInstance].currentEmulatorViewController.romFilepath = filepath;
