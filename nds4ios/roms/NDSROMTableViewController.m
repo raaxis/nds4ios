@@ -70,9 +70,13 @@
         resumeGame.position = OLGhostAlertViewPositionBottom;
         [resumeGame show];
         resumeGame.completionBlock = ^(void) {
-            [self presentViewController:self.currentEmulatorViewController animated:YES completion:^(){
-                [self.currentEmulatorViewController resumeEmulation];
-            }];
+            if (self.currentEmulatorViewController)
+            {
+                [self presentViewController:self.currentEmulatorViewController animated:YES completion:^(){
+                    [self.currentEmulatorViewController resumeEmulation];
+                
+                }];
+            }
         };
         [resumeGame show];
     }
