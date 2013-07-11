@@ -777,8 +777,8 @@
                                                     <rect key="frame" x="250" y="12" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="240-ndscartridge.png" id="qZd-uy-eYF">
-                                                    <rect key="frame" x="11" y="10" width="22" height="24"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="240-ndscartridge.png" id="1Qp-Gz-rMF">
+                                                    <rect key="frame" x="10" y="5" width="28" height="33"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1000,7 +1000,7 @@
         <image name="19-gear.png" width="26" height="26"/>
         <image name="210-twitterbird.png" width="22" height="22"/>
         <image name="24-gift.png" width="22" height="26"/>
-        <image name="240-ndscartridge.png" width="22" height="24"/>
+        <image name="240-ndscartridge.png" width="32" height="32"/>
         <image name="282-cards.png" width="30" height="27"/>
         <image name="HideEmulator.png" width="28" height="28"/>
         <image name="LTrigger.png" width="67" height="44"/>
