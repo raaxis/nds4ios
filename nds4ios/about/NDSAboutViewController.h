@@ -11,6 +11,7 @@
 @interface NDSAboutViewController : UITableViewController {
     BOOL _canTweet;
     IBOutlet UIBarButtonItem *tweetButton;
+    IBOutlet UILabel *versionLabel;
 }
 - (IBAction)sendTweet:(id)sender;
 

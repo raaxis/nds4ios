@@ -1081,6 +1081,7 @@
 				BFCFE0EB1764FBD3000A70CF /* Sources */,
 				BFCFE0EC1764FBD3000A70CF /* Frameworks */,
 				BFCFE0ED1764FBD3000A70CF /* Resources */,
+				28CC0BE7178E46D200AE77C2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1189,6 +1190,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28CC0BE7178E46D200AE77C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which git; then\n  GIT_VERSION=`git describe --tags --always`\nelse\n  GIT_VERSION=unknown\nfi\ndefaults write $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Info GitVersionString -string $GIT_VERSION";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFCFE0EB1764FBD3000A70CF /* Sources */ = {
