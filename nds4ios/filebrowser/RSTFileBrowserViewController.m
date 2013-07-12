@@ -7,12 +7,16 @@
 
 #import "RSTFileBrowserViewController.h"
 #import "DocWatchHelper.h"
+#import <Dropbox/Dropbox.h>
 
 @interface RSTFileBrowserViewController ()
 
 @property (strong, nonatomic) NSMutableDictionary *fileDictionary;
 @property (strong, nonatomic) NSArray *sections;
 @property (strong, nonatomic) DocWatchHelper *docWatchHelper;
+@property (strong, nonatomic) NSArray *contents;
+@property (strong, nonatomic) DBAccount *account;
+@property (strong, nonatomic) DBFilesystem *fileSystem;
 
 @end
 
@@ -46,6 +50,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _account = [DBAccountManager sharedManager].linkedAccount;
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,10 +75,10 @@
 - (void)refreshDirectory {
     [self.fileDictionary removeAllObjects];
     NSFileManager *fileManager = [[NSFileManager alloc] init];
-    NSArray *contents = [fileManager contentsOfDirectoryAtPath:self.currentDirectory error:nil];
+    _contents = [fileManager contentsOfDirectoryAtPath:self.currentDirectory error:nil];
     NSArray *extensions = [self.supportedFileExtensions copy];
         
-    for (NSString *filename in contents) {
+    for (NSString *filename in _contents) {
         BOOL fileSupported = NO;
         BOOL isDirectory = NO;
         

@@ -167,7 +167,7 @@ void EMU_init()
 	for(int i = 0 ; i < fw_config.nickname_len ; ++i)
 		fw_config.nickname[i] = nickname[i];
     
-	static const char* message = "ds4droid makes you happy!";
+	static const char* message = "nds4ios makes you happy!";
 	fw_config.message_len = strlen(message);
 	for(int i = 0 ; i < fw_config.message_len ; ++i)
 		fw_config.message[i] = message[i];

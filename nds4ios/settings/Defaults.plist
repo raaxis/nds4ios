@@ -16,6 +16,8 @@
 	<false/>
 	<key>enableDropbox</key>
 	<false/>
+	<key>enableDropboxCellular</key>
+	<false/>
 	<key>enableJIT</key>
 	<false/>
 </dict>

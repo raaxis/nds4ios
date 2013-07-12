@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *enableJITSwitch;
 
 @property (weak, nonatomic) IBOutlet UISwitch *dropboxSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *cellularSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *accountLabel;
 
 - (IBAction)controlChanged:(id)sender;
 
@@ -92,16 +94,20 @@
         [defaults setBool:self.showFPSSwitch.on forKey:@"showFPS"];
     } else if (sender == self.enableJITSwitch) {
         [defaults setBool:self.enableJITSwitch.on forKey:@"enableJIT"];
-    } else if (sender == self.dropboxSwitch) {
+    } else if (sender == self.dropboxSwitch) {//i'll use a better more foolproof method later
         if ([defaults boolForKey:@"enableDropbox"] == false) {
-            [[DBAccountManager sharedManager] linkFromController:self.presentingViewController];
+            [[DBAccountManager sharedManager] linkFromController:self];
         } else {
+            NSLog(@"unlink");
             DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
             [account unlink];
-            [defaults setBool:false forKey:@"enableDropbox"];
             OLGhostAlertView *unlinkAlert = [[OLGhostAlertView alloc] initWithTitle:@"Unlinked!" message:@"Dropbox has been unlinked. Your games will no longer be synced." timeout:10 dismissible:YES];
             [unlinkAlert show];
+            [defaults setBool:false forKey:@"enableDropbox"];
+            self.accountLabel.text = @"Not Linked";
         }
+    } else if (sender == self.cellularSwitch) {
+        [defaults setBool:self.cellularSwitch.on forKey:@"enableDropboxCellular"];
     }
 }
 
@@ -124,6 +130,17 @@
     self.enableJITSwitch.on = [defaults boolForKey:@"enableJIT"];
     
     self.dropboxSwitch.on = [defaults boolForKey:@"enableDropbox"];
+    self.cellularSwitch.on = [defaults boolForKey:@"enableDropboxCellular"];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+    DBAccountInfo *info = account.info;
+    if (account) {
+        NSLog(@"account");
+        self.accountLabel.text = [NSString stringWithFormat:@"Linked: %@", info.displayName];
+    }
 }
 
 #pragma mark - Hidden Settings
@@ -143,7 +160,7 @@
         return 5;
     }
     
-    return 4;
+    return 5;//4
 }
 
 @end

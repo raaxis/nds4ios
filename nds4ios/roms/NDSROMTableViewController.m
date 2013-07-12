@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NDSROMTableViewController.h"
 #import "NDSEmulatorViewController.h"
+#import <Dropbox/Dropbox.h>
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
@@ -40,6 +41,12 @@
     if (![fm fileExistsAtPath:batteryDir isDirectory:&isDir])
         [fm createDirectoryAtPath:batteryDir withIntermediateDirectories:NO attributes:nil error:nil];
     
+    //dropbox
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+    if (account) {
+        saveDir = [[DBPath alloc] initWithString:batteryDir];
+        NSLog(@"%@", saveDir);
+    }
 	// Do any additional setup after loading the view, typically from a nib.
     //self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
@@ -119,19 +126,19 @@
 
 - (void)getMoreROMs
 {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
+    /*if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
     }
-    else {
+    else {*/
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
-                                                        message:NSLocalizedString(@"This opens Safari. Simply download the ROM you want, and then 'Open In...' nds4ios. Everything else will be taken care of. You should own the actual cartridge of any ROM you download!", @"")
+                                                        message:NSLocalizedString(@"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of ROMs and other software to use in this emulator. InfiniDev and all associated personnel is in no way affiliated with the websites resulting from this Google search.", @"")
                                                        delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                                              cancelButtonTitle:NSLocalizedString(@"Got it!", @"")
                                               otherButtonTitles:nil];
         [alert show];
         
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
-    }
+        //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
+    //}
 }
 
 #pragma mark - UIAlertView delegate

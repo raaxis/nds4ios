@@ -10,11 +10,13 @@
 #import "RSTFileBrowserViewController.h"
 #import "NDSEmulatorViewController.h"
 #import "OLGhostAlertView.h"
+#import <Dropbox/Dropbox.h>
 
 @interface NDSROMTableViewController : RSTFileBrowserViewController
 {
     OLGhostAlertView *resumeGame;
     BOOL isAway;
+    DBPath *saveDir;
 }
 
 @end
