@@ -85,7 +85,7 @@ To-do
 
 Contributors
 ------------------------
-###### We stand on the shoulders of these people
+###### We stand on the shoulders of these people.
 * [The DeSmuME developers](http://desmume.org/)
 * [Jeffrey Quesnelle (jeffq), the developer of nds4droid](http://jeffq.com/blog/nds4droid/)
 * [rock88](http://rock88dev.blogspot.com/)
