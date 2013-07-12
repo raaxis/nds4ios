@@ -72,7 +72,6 @@ How To Load ROMs
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
 
-
 To-do
 ------------------------
 ###### We'll get to these, really!
@@ -86,7 +85,7 @@ To-do
 
 Contributors
 ------------------------
-###### We stand on the shoulders of these people
+###### We stand on the shoulders of these people.
 * [The DeSmuME developers](http://desmume.org/)
 * [Jeffrey Quesnelle (jeffq), the developer of nds4droid](http://jeffq.com/blog/nds4droid/)
 * [rock88](http://rock88dev.blogspot.com/)
