@@ -7,6 +7,8 @@
 //
 
 #import "NDSSettingsViewController.h"
+#import <Dropbox/Dropbox.h>
+#import "OLGhostAlertView.h"
 
 @interface NDSSettingsViewController ()
 
@@ -19,6 +21,8 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *showFPSSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *enableJITSwitch;
+
+@property (weak, nonatomic) IBOutlet UISwitch *dropboxSwitch;
 
 - (IBAction)controlChanged:(id)sender;
 
@@ -88,6 +92,16 @@
         [defaults setBool:self.showFPSSwitch.on forKey:@"showFPS"];
     } else if (sender == self.enableJITSwitch) {
         [defaults setBool:self.enableJITSwitch.on forKey:@"enableJIT"];
+    } else if (sender == self.dropboxSwitch) {
+        if ([defaults boolForKey:@"enableDropbox"] == false) {
+            [[DBAccountManager sharedManager] linkFromController:self.presentingViewController];
+        } else {
+            DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+            [account unlink];
+            [defaults setBool:false forKey:@"enableDropbox"];
+            OLGhostAlertView *unlinkAlert = [[OLGhostAlertView alloc] initWithTitle:@"Unlinked!" message:@"Dropbox has been unlinked. Your games will no longer be synced." timeout:10 dismissible:YES];
+            [unlinkAlert show];
+        }
     }
 }
 
@@ -108,6 +122,8 @@
     self.showFPSSwitch.on = [defaults boolForKey:@"showFPS"];
     
     self.enableJITSwitch.on = [defaults boolForKey:@"enableJIT"];
+    
+    self.dropboxSwitch.on = [defaults boolForKey:@"enableDropbox"];
 }
 
 #pragma mark - Hidden Settings
@@ -124,10 +140,10 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"revealHiddenSettings"]) {
-        return 4;
+        return 5;
     }
     
-    return 3;
+    return 4;
 }
 
 @end

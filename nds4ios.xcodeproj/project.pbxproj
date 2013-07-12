@@ -190,6 +190,12 @@
 		BFCFE246176634EE000A70CF /* slot2_piano.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23A176634EE000A70CF /* slot2_piano.cpp */; };
 		BFCFE247176634EE000A70CF /* slot2_rumblepak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */; };
 		BFCFE26B1766379F000A70CF /* addons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13017650FB0000A70CF /* addons.cpp */; };
+		D32C39D1178E738100E6809E /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D0178E738100E6809E /* Dropbox.framework */; };
+		D32C39D3178E73A600E6809E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D2178E73A600E6809E /* CFNetwork.framework */; };
+		D32C39D5178E73B500E6809E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D4178E73B500E6809E /* Security.framework */; };
+		D32C39D7178E73C200E6809E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D6178E73C200E6809E /* SystemConfiguration.framework */; };
+		D32C39D9178E748000E6809E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D8178E748000E6809E /* QuartzCore.framework */; };
+		D32C39DB178E749C00E6809E /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39DA178E749C00E6809E /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -504,6 +510,12 @@
 		BFCFE239176634EE000A70CF /* slot2_paddle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_paddle.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_paddle.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23A176634EE000A70CF /* slot2_piano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_piano.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_piano.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_rumblepak.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_rumblepak.cpp"; sourceTree = SOURCE_ROOT; };
+		D32C39D0178E738100E6809E /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		D32C39D2178E73A600E6809E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D32C39D4178E73B500E6809E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D32C39D6178E73C200E6809E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D32C39D8178E748000E6809E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D32C39DA178E749C00E6809E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,6 +523,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32C39DB178E749C00E6809E /* libc++.dylib in Frameworks */,
+				D32C39D9178E748000E6809E /* QuartzCore.framework in Frameworks */,
+				D32C39D7178E73C200E6809E /* SystemConfiguration.framework in Frameworks */,
+				D32C39D5178E73B500E6809E /* Security.framework in Frameworks */,
+				D32C39D3178E73A600E6809E /* CFNetwork.framework in Frameworks */,
 				4C3F2AED178E017600AE10B8 /* Twitter.framework in Frameworks */,
 				BF9D514817865D5100B5864B /* AudioToolbox.framework in Frameworks */,
 				BFAE6F9B17674D93000911CF /* libz.dylib in Frameworks */,
@@ -518,6 +535,7 @@
 				BFAE6F9117674902000911CF /* GLKit.framework in Frameworks */,
 				BFCFE0F31764FBD3000A70CF /* UIKit.framework in Frameworks */,
 				BFCFE0F51764FBD3000A70CF /* Foundation.framework in Frameworks */,
+				D32C39D1178E738100E6809E /* Dropbox.framework in Frameworks */,
 				BFCFE0F71764FBD3000A70CF /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -762,6 +780,12 @@
 		BFCFE0F11764FBD3000A70CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D32C39DA178E749C00E6809E /* libc++.dylib */,
+				D32C39D8178E748000E6809E /* QuartzCore.framework */,
+				D32C39D6178E73C200E6809E /* SystemConfiguration.framework */,
+				D32C39D4178E73B500E6809E /* Security.framework */,
+				D32C39D2178E73A600E6809E /* CFNetwork.framework */,
+				D32C39D0178E738100E6809E /* Dropbox.framework */,
 				4C3F2AEC178E017600AE10B8 /* Twitter.framework */,
 				BF9D514717865D5100B5864B /* AudioToolbox.framework */,
 				BFAE6F9A17674D93000911CF /* libz.dylib */,
@@ -794,6 +818,7 @@
 				8BEA099217876A490060B347 /* Open Zip Files */,
 				8B305F65178B48E000FD010A /* Side Drawer */,
 				8B4895AC178CC67900BA61C3 /* Resume Alert */,
+				D32C39CF178E735600E6809E /* Dropbox */,
 			);
 			name = Main;
 			path = NDS4iOS;
@@ -1069,6 +1094,13 @@
 				BF2AC476177FF06600D3CF93 /* ArmLJit.h */,
 			);
 			name = JIT;
+			sourceTree = "<group>";
+		};
+		D32C39CF178E735600E6809E /* Dropbox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dropbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1458,6 +1490,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";
@@ -1478,6 +1514,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
