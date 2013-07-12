@@ -72,7 +72,6 @@ How To Load ROMs
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
 
-
 To-do
 ------------------------
 ###### We'll get to these, really!
