@@ -16,15 +16,20 @@ http://nds4ios.angelxwind.net/
 
 We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things.
 
-Build Instructions
+Install Instructions
 ------------------------
+
+### Option 1: Download it from aXwNET
+
+If you're jailbroken: http://nds4ios.angelxwind.net/?page/downloads#jailbroken
+
+If you're NOT jailbroken: http://nds4ios.angelxwind.net/?page/downloads#notjailbroken
+
+### Option 2: Compile it yourself
 
 IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad things will happen.
 
-### Option 1
-
-
-1.  Open Terminal and go to your working directory.
+1.  Open a Terminal instance and go to your working directory.
 
 2.  Do
 <code>git clone https://github.com/InfiniDev/nds4ios.git</code>
@@ -34,20 +39,11 @@ Navigate to the "nds4ios" folder in your working directory.
 
 4. Open "nds4ios.xcodeproj", connect your device, select it on Xcode and click the "Run" button (or Command + R). Don't build it for the iOS Simulator. IMPORTANT: Make sure you change your running scheme to Release first. Otherwise you will get errors on compile!
 
-#### Option 1a
+#### Option 2a
 1. Alternatively, run
     <code>xcodebuild -configuration Release</code>
    from Terminal and then copy the resulting *.app bundle to your /Applications directory on your device.
 
-### Option 2
-
-1. Click the button below to install it right on your device via HockeyApp. Please note that you may have to register and log in to HockeyApp to download and install.
-
-[![Install App](http://northsocial.com/images/screen/apps-install-this-app-button.png)](https://rink.hockeyapp.net/recruit/85eb802da48e40fca3762f65676c1be3)
-
-### Option 3
-
-1. Install it from the aXw repo if you're jailbroken. Add the following source to Cydia: [http://cydia.angelxwind.net](http://cydia.angelxwind.net)
 
 How To Load ROMs
 ------------------------
