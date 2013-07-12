@@ -19,8 +19,6 @@ We all work hard to make this into software that users will enjoy and love. If y
 Install Instructions
 ------------------------
 
-IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad things will happen.
-
 ### Option 1: Download it from aXwNET
 
 If you're jailbroken: http://nds4ios.angelxwind.net/?page/downloads#jailbroken
@@ -28,6 +26,8 @@ If you're jailbroken: http://nds4ios.angelxwind.net/?page/downloads#jailbroken
 If you're NOT jailbroken: http://nds4ios.angelxwind.net/?page/downloads#notjailbroken
 
 ### Option 2: Compile it yourself
+
+IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad things will happen.
 
 1.  Open a Terminal instance and go to your working directory.
 
