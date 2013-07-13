@@ -37,11 +37,9 @@
     NSLog(@"%@", url);
     if ([[[NSString stringWithFormat:@"%@", url] substringToIndex:2] isEqualToString: @"db"]/*account*/) {
         if (account) {
-            NSLog(@"App linked successfully!");
-            OLGhostAlertView *linkSuccess = [[OLGhostAlertView alloc] initWithTitle:@"Success!" message:@"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." timeout:15 dismissible:YES];//michael localize dis shit <3 also for some reason this isn't showing :/
+            OLGhostAlertView *linkSuccess = [[OLGhostAlertView alloc] initWithTitle:@"Success!" message:@"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." timeout:15 dismissible:YES];
             [linkSuccess show];
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setBool:true forKey:@"enableDropbox"];
+            [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"enableDropbox"];
             return YES;
         }
     } else if (url) {

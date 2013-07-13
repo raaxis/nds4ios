@@ -19,6 +19,7 @@
 		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
 		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
 		4C3F2AED178E017600AE10B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3F2AEC178E017600AE10B8 /* Twitter.framework */; };
+		8B2458BD1790BFB500F8C497 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2458BC1790BFB500F8C497 /* Dropbox.framework */; };
 		8B283050178DD27000E92785 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304E178DD27000E92785 /* 19-gear.png */; };
 		8B283051178DD27000E92785 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304F178DD27000E92785 /* 19-gear@2x.png */; };
 		8B283054178DD3CA00E92785 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B283052178DD3CA00E92785 /* 112-group.png */; };
@@ -190,7 +191,6 @@
 		BFCFE246176634EE000A70CF /* slot2_piano.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23A176634EE000A70CF /* slot2_piano.cpp */; };
 		BFCFE247176634EE000A70CF /* slot2_rumblepak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */; };
 		BFCFE26B1766379F000A70CF /* addons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13017650FB0000A70CF /* addons.cpp */; };
-		D30566D2178FDA8F0045E6E5 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30566D1178FDA8F0045E6E5 /* Dropbox.framework */; };
 		D32C39D3178E73A600E6809E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D2178E73A600E6809E /* CFNetwork.framework */; };
 		D32C39D5178E73B500E6809E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D4178E73B500E6809E /* Security.framework */; };
 		D32C39D7178E73C200E6809E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D6178E73C200E6809E /* SystemConfiguration.framework */; };
@@ -214,6 +214,7 @@
 		4CEDCA53178A555D00958FF9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4CEDCA54178A556200958FF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4CEDCA55178A5E7E00958FF9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		8B2458BC1790BFB500F8C497 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dropbox.framework; path = nds4ios/frameworks/Dropbox.framework; sourceTree = "<group>"; };
 		8B28304E178DD27000E92785 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear.png"; path = "Resources/19-gear.png"; sourceTree = "<group>"; };
 		8B28304F178DD27000E92785 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear@2x.png"; path = "Resources/19-gear@2x.png"; sourceTree = "<group>"; };
 		8B283052178DD3CA00E92785 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group.png"; path = "Resources/112-group.png"; sourceTree = "<group>"; };
@@ -510,7 +511,6 @@
 		BFCFE239176634EE000A70CF /* slot2_paddle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_paddle.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_paddle.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23A176634EE000A70CF /* slot2_piano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_piano.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_piano.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_rumblepak.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_rumblepak.cpp"; sourceTree = SOURCE_ROOT; };
-		D30566D1178FDA8F0045E6E5 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		D32C39D2178E73A600E6809E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D32C39D4178E73B500E6809E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D32C39D6178E73C200E6809E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -536,7 +536,7 @@
 				BFCFE0F31764FBD3000A70CF /* UIKit.framework in Frameworks */,
 				BFCFE0F51764FBD3000A70CF /* Foundation.framework in Frameworks */,
 				BFCFE0F71764FBD3000A70CF /* CoreGraphics.framework in Frameworks */,
-				D30566D2178FDA8F0045E6E5 /* Dropbox.framework in Frameworks */,
+				8B2458BD1790BFB500F8C497 /* Dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,7 +785,7 @@
 				D32C39D6178E73C200E6809E /* SystemConfiguration.framework */,
 				D32C39D4178E73B500E6809E /* Security.framework */,
 				D32C39D2178E73A600E6809E /* CFNetwork.framework */,
-				D30566D1178FDA8F0045E6E5 /* Dropbox.framework */,
+				8B2458BC1790BFB500F8C497 /* Dropbox.framework */,
 				4C3F2AEC178E017600AE10B8 /* Twitter.framework */,
 				BF9D514717865D5100B5864B /* AudioToolbox.framework */,
 				BFAE6F9A17674D93000911CF /* libz.dylib */,
@@ -1502,6 +1502,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"\"$(SRCROOT)/nds4ios/frameworks\"",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1526,6 +1527,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"\"$(SRCROOT)/nds4ios/frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";

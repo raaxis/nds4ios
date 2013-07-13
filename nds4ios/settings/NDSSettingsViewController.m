@@ -45,6 +45,7 @@
 {
     [super viewDidLoad];
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationWillEnterForegroundNotification object:nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -68,11 +69,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)dismissSettingsViewController:(id)sender
-{
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (IBAction)controlChanged:(id)sender
@@ -103,6 +99,7 @@
             [account unlink];
             OLGhostAlertView *unlinkAlert = [[OLGhostAlertView alloc] initWithTitle:@"Unlinked!" message:@"Dropbox has been unlinked. Your games will no longer be synced." timeout:10 dismissible:YES];
             [unlinkAlert show];
+
             [defaults setBool:false forKey:@"enableDropbox"];
             self.accountLabel.text = @"Not Linked";
         }
@@ -114,7 +111,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSInteger frameSkip = [defaults integerForKey:@"frameSkip"];
@@ -131,9 +127,16 @@
     
     self.dropboxSwitch.on = [defaults boolForKey:@"enableDropbox"];
     self.cellularSwitch.on = [defaults boolForKey:@"enableDropboxCellular"];
+    
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+    DBAccountInfo *info = account.info;
+    if (account) {
+        NSLog(@"account");
+        self.accountLabel.text = [NSString stringWithFormat:@"Linked: %@", info.displayName];
+    }
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)appDidBecomeActive:(NSNotification *)notification
 {
     DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
     DBAccountInfo *info = account.info;

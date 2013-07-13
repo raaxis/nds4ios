@@ -1142,6 +1142,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="controlChanged:"/>
+                <relationship kind="action" name="dismissSettingsViewController:"/>
                 <relationship kind="outlet" name="accountLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="cellularSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>

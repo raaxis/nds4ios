@@ -16,7 +16,6 @@
 @property (nonatomic) NSString *currentGame;
 @property (strong, nonatomic) NDSEmulatorViewController *currentEmulatorViewController;
 
-
 + (AppDelegate *)sharedInstance;
 
 @end
