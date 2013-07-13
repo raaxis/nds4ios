@@ -23,10 +23,8 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
     self.gameOpen = NO;
     
-    //dropbox
-    
+    // Dropbox Manager Object
     DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:@"si4f6nnhrhl1ftc" secret:@"w7c03bp86hmh54q"];
-    //please don't steal the app key and app secret <3
     [DBAccountManager setSharedManager:accountMgr];
     
     return YES;
@@ -34,8 +32,8 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
-    NSLog(@"%@", url);
-    if ([[[NSString stringWithFormat:@"%@", url] substringToIndex:2] isEqualToString: @"db"]/*account*/) {
+    
+    if ([[[NSString stringWithFormat:@"%@", url] substringToIndex:2] isEqualToString: @"db"]) {
         if (account) {
             OLGhostAlertView *linkSuccess = [[OLGhostAlertView alloc] initWithTitle:@"Success!" message:@"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." timeout:15 dismissible:YES];
             [linkSuccess show];
