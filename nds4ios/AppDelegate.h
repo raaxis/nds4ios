@@ -18,4 +18,6 @@
 
 + (AppDelegate *)sharedInstance;
 
+- (NSString *)batterDir;
+
 @end

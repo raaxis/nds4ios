@@ -9,8 +9,10 @@
 
 #import "CHBgDropboxSync.h"
 #import <QuartzCore/QuartzCore.h>
-#import "DropboxSDK.h"
+#import <DropboxSDK/DropboxSDK.h>
 #import "ConciseKit.h"
+#import "AppDelegate.h"
+#import "ZAActivityBar.h"
 
 #define lastSyncDefaultsKey @"CHBgDropboxSyncLastSyncFiles"
 
@@ -31,40 +33,11 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 #pragma mark - Showing and hiding the syncing indicator
 
 - (void)showWorking {
-    if (workingLabel) return; // Already visible
-    
-    UIWindow* w = [[[UIApplication sharedApplication] delegate] window];
-    workingLabel = [[UILabel alloc] init];
-    workingLabel.textAlignment = UITextAlignmentRight;
-    workingLabel.text = @"Syncing... ";
-    workingLabel.textColor = [UIColor whiteColor];
-    int ht = 30;
-    workingLabel.frame = CGRectMake(-120, 431-ht, 120, ht);
-    workingLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    workingLabel.layer.cornerRadius = 10;
-    
-    // Spinner
-    UIActivityIndicatorView *s = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    int gap = (workingLabel.frame.size.height - s.frame.size.height) / 2;
-    s.frame = CGRectOffset(s.frame, 10+gap, gap);
-    [s startAnimating];
-    [workingLabel addSubview:s];
-    
-    // Swoosh it in
-    [w addSubview:workingLabel];
-    [UIView animateWithDuration:0.3 animations:^{
-        workingLabel.frame = CGRectOffset(workingLabel.frame, 110, 0);
-    }];
+    [ZAActivityBar showWithStatus:@"Syncing saves..."];
 }
 
 - (void)hideWorking {
-    if (!workingLabel) return; // Already hidden
-    [UIView animateWithDuration:0.3 animations:^{
-        workingLabel.frame = CGRectMake(-workingLabel.frame.size.width, workingLabel.frame.origin.y, workingLabel.frame.size.width, workingLabel.frame.size.height);
-    } completion:^(BOOL finished) {
-        [workingLabel removeFromSuperview];
-        workingLabel = nil;
-    }];
+    [ZAActivityBar showSuccessWithStatus:@"Synced!" duration:2];
 }
 
 #pragma mark - Startup
@@ -172,7 +145,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
 - (void)startTaskLocalDelete:(NSString*)file {
     NSLog(@"Sync: Deleting local file %@", file);
-    [[NSFileManager defaultManager] removeItemAtPath:[$.documentPath stringByAppendingPathComponent:file] error:nil];
+    [[NSFileManager defaultManager] removeItemAtPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file] error:nil];
     [self stepComplete];
     anyLocalChanges = YES; // So that when we complete, we notify that there were local changes
 }
@@ -180,7 +153,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Upload
 - (void)startTaskUpload:(NSString*)file rev:(NSString*)rev {
     NSLog(@"Sync: Uploading file %@, %@", file, rev?@"overwriting":@"new");
-    [client uploadFile:file toPath:@"/" withParentRev:rev fromPath:[$.documentPath stringByAppendingPathComponent:file]];
+    [client uploadFile:file toPath:@"/" withParentRev:rev fromPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath from:(NSString *)srcPath metadata:(DBMetadata *)metadata {
     // Now the file has uploaded, we need to set its 'last modified' date locally to match the date on dropbox.
@@ -197,7 +170,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Download
 - (void)startTaskDownload:(NSString*)file {
     NSLog(@"Sync: Downloading file %@", file);
-    [client loadFile:$str(@"/%@", file) intoPath:[$.documentPath stringByAppendingPathComponent:file]];
+    [client loadFile:$str(@"/%@", file) intoPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient*)client loadedFile:(NSString*)destPath contentType:(NSString*)contentType metadata:(DBMetadata*)metadata {
     // Now the file has downloaded, we need to set its 'last modified' date locally to match the date on dropbox
@@ -231,7 +204,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Get the current status of files and folders as a dict: Path (eg 'abc.txt') => last mod date
 - (NSDictionary*)getLocalStatus {
     NSMutableDictionary* localFiles = [NSMutableDictionary dictionary];
-    NSString* root = $.documentPath; // Where are we going to sync to
+    NSString* root = [[AppDelegate sharedInstance] batterDir]; // Where are we going to sync to
     for (NSString* item in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:root error:nil]) {
         // Skip hidden/system files - you may want to change this if your files start with ., however dropbox errors on many 'ignored' files such as .DS_Store which you'll want to skip
         if ([item hasPrefix:@"."]) continue;

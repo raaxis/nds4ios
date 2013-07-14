@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DropboxSDK.h"
+#import <DropboxSDK/DropboxSDK.h>
 
 typedef void(^dropboxCleared)(BOOL success);
 

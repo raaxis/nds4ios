@@ -7,8 +7,9 @@
 //
 
 #import "NDSSettingsViewController.h"
-#import <Dropbox/Dropbox.h>
+#import <DropboxSDK/DropboxSDK.h>
 #import "OLGhostAlertView.h"
+#import "CHBgDropboxSync.h"
 
 @interface NDSSettingsViewController ()
 
@@ -93,11 +94,12 @@
         [defaults setBool:self.enableJITSwitch.on forKey:@"enableJIT"];
     } else if (sender == self.dropboxSwitch) {//i'll use a better more foolproof method later
         if ([defaults boolForKey:@"enableDropbox"] == false) {
-            [[DBAccountManager sharedManager] linkFromController:self];
+            [[DBSession sharedSession] linkFromController:self];
         } else {
             NSLog(@"unlink");
-            DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
-            [account unlink];
+            [CHBgDropboxSync forceStopIfRunning];
+            [CHBgDropboxSync clearLastSyncData];
+            [[DBSession sharedSession] unlinkAll];
             OLGhostAlertView *unlinkAlert = [[OLGhostAlertView alloc] initWithTitle:@"Unlinked!" message:@"Dropbox has been unlinked. Your games will no longer be synced." timeout:10 dismissible:YES];
             [unlinkAlert show];
 
@@ -129,11 +131,8 @@
     self.dropboxSwitch.on = [defaults boolForKey:@"enableDropbox"];
     self.cellularSwitch.on = [defaults boolForKey:@"enableDropboxCellular"];
     
-    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
-    DBAccountInfo *info = account.info;
-    if (account) {
-        NSLog(@"account");
-        self.accountLabel.text = [NSString stringWithFormat:@"Linked: %@", info.displayName];
+    if ([defaults boolForKey:@"enableDropbox"] == true) {
+        self.accountLabel.text = @"Linked";
     }
 }
 
@@ -141,11 +140,9 @@
 {
     self.dropboxSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"enableDropbox"];
     
-    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
-    DBAccountInfo *info = account.info;
-    if (account) {
-        NSLog(@"account");
-        self.accountLabel.text = [NSString stringWithFormat:@"Linked: %@", info.displayName];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"enableDropbox"] == true) {
+        self.accountLabel.text = @"Linked";
     }
 }
 
@@ -166,7 +163,7 @@
         return 5;
     }
     
-    return 5;//4
+    return 4;//4
 }
 
 @end

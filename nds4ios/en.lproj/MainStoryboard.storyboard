@@ -220,33 +220,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XZT-c4-M94">
-                                        <rect key="frame" x="0.0" y="619" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="1Xb-MW-4bj">
-                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                    <connections>
-                                                        <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="321-Nf-LwT"/>
-                                                    </connections>
-                                                </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Upload on Cellular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hm5-Tl-UZZ">
-                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BDF-ic-6kt">
-                                        <rect key="frame" x="0.0" y="663" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="619" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -268,7 +243,7 @@
                             <tableViewSection headerTitle="JIT" footerTitle="JIT makes games run faster. You must be jailbroken or nds4ios will crash." id="HQs-Z9-d7P">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xmH-De-K0j">
-                                        <rect key="frame" x="0.0" y="861" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="817" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -299,7 +274,6 @@
                     <navigationItem key="navigationItem" title="Settings" id="rWF-4U-yKM"/>
                     <connections>
                         <outlet property="accountLabel" destination="STN-h0-VIH" id="MOp-qX-Pvy"/>
-                        <outlet property="cellularSwitch" destination="1Xb-MW-4bj" id="OJR-9h-gGm"/>
                         <outlet property="controlOpacitySlider" destination="V8F-J8-cfe" id="0Ze-Q8-RGe"/>
                         <outlet property="controlPadStyleControl" destination="Aa4-Hv-ujp" id="0dI-ge-9CN"/>
                         <outlet property="controlPositionControl" destination="WTS-jQ-bi4" id="K8y-EM-EZT"/>
@@ -1142,7 +1116,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="controlChanged:"/>
-                <relationship kind="action" name="dismissSettingsViewController:"/>
                 <relationship kind="outlet" name="accountLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="cellularSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>

@@ -6,7 +6,7 @@
 //
 
 #import "DropboxClearer.h"
-#import "DropboxSDK.h"
+#import <DropboxSDK/DropboxSDK.h>
 
 @interface DropboxClearer() {
     DBRestClient* client;

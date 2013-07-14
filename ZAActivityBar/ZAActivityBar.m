@@ -174,7 +174,7 @@
     
     [UIView animateWithDuration:(shouldAnimate ? 0.1f : 0.0f)
                           delay:0.0f
-                        options:UIViewAnimationCurveEaseIn // Not required: |UIViewAnimationOptionBeginFromCurrentState
+                        options:UIViewAnimationOptionCurveEaseIn // Not required: |UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                          self.actionIndicatorView.alpha = (makeHidden ? 0.0f : 1.0f);
                          

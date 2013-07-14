@@ -7,7 +7,7 @@
 
 #import "RSTFileBrowserViewController.h"
 #import "DocWatchHelper.h"
-#import <Dropbox/Dropbox.h>
+#import <DropboxSDK/DropboxSDK.h>
 
 @interface RSTFileBrowserViewController ()
 
@@ -15,8 +15,8 @@
 @property (strong, nonatomic) NSArray *sections;
 @property (strong, nonatomic) DocWatchHelper *docWatchHelper;
 @property (strong, nonatomic) NSArray *contents;
-@property (strong, nonatomic) DBAccount *account;
-@property (strong, nonatomic) DBFilesystem *fileSystem;
+//@property (strong, nonatomic) DBAccount *account;
+//@property (strong, nonatomic) DBFilesystem *fileSystem;
 
 @end
 
@@ -50,7 +50,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _account = [DBAccountManager sharedManager].linkedAccount;
+    //_account = [DBAccountManager sharedManager].linkedAccount;
 }
 
 - (void)didReceiveMemoryWarning

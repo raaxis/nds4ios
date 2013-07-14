@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "SSZipArchive.h"
-#import <Dropbox/Dropbox.h>
+#import <DropboxSDK/DropboxSDK.h>
 #import "OLGhostAlertView.h"
+#import "CHBgDropboxSync.h"
+
+#define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 @implementation AppDelegate
 
@@ -23,21 +26,24 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
     self.gameOpen = NO;
     
-    // Dropbox Manager Object
-    DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:@"si4f6nnhrhl1ftc" secret:@"w7c03bp86hmh54q"];
-    [DBAccountManager setSharedManager:accountMgr];
+    //Dropbox DBSession Auth
+    DBSession* dbSession = [[DBSession alloc] initWithAppKey:@"si4f6nnhrhl1ftc" appSecret:@"w7c03bp86hmh54q" root:kDBRootAppFolder];
+    [DBSession setSharedSession:dbSession];
     
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
-    
     if ([[[NSString stringWithFormat:@"%@", url] substringToIndex:2] isEqualToString: @"db"]) {
-        if (account) {
-            OLGhostAlertView *linkSuccess = [[OLGhostAlertView alloc] initWithTitle:@"Success!" message:@"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." timeout:15 dismissible:YES];
-            [linkSuccess show];
-            [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"enableDropbox"];
+        if ([[DBSession sharedSession] handleOpenURL:url]) {
+            if ([[DBSession sharedSession] isLinked]) {
+                OLGhostAlertView *linkSuccess = [[OLGhostAlertView alloc] initWithTitle:@"Success!" message:@"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." timeout:15 dismissible:YES];
+                [linkSuccess show];
+                [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"enableDropbox"];
+                
+                [CHBgDropboxSync clearLastSyncData];
+                [CHBgDropboxSync start];
+            }
             return YES;
         }
     } else if (url) {
@@ -48,10 +54,17 @@
         NSFileManager *fileManager = [[NSFileManager alloc] init];
         [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"Inbox"] error:NULL];
         [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathExtension:@".html"] error:NULL];
+        return YES;
     }
-    return YES;
+    return NO;
 }
-							
+
+- (NSString *)batterDir
+{
+    NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
+    return batteryDir;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -71,7 +84,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [CHBgDropboxSync start];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

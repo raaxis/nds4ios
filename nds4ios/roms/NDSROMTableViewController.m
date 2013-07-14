@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "NDSROMTableViewController.h"
 #import "NDSEmulatorViewController.h"
-#import <Dropbox/Dropbox.h>
+#import <DropboxSDK/DropboxSDK.h>
+#import "CHBgDropboxSync.h"
 
 #define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
@@ -35,18 +36,15 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getMoreROMs)];
     
     BOOL isDir;
-    NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
     NSFileManager* fm = [NSFileManager defaultManager];
     
-    if (![fm fileExistsAtPath:batteryDir isDirectory:&isDir])
-        [fm createDirectoryAtPath:batteryDir withIntermediateDirectories:NO attributes:nil error:nil];
-    
-    //dropbox
-    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
-    if (account) {
-        saveDir = [[DBPath alloc] initWithString:batteryDir];
-        NSLog(@"%@", saveDir);
+    if (![fm fileExistsAtPath:[[AppDelegate sharedInstance] batterDir] isDirectory:&isDir])
+    {
+        [fm createDirectoryAtPath:[[AppDelegate sharedInstance] batterDir] withIntermediateDirectories:NO attributes:nil error:nil];
+        NSLog(@"Created Battery");
     }
+        
+    
 	// Do any additional setup after loading the view, typically from a nib.
     //self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
@@ -60,6 +58,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self showAlert];
+    [CHBgDropboxSync start];
+    //using file change observers will probably be better. I'll change this later on.
 }
 
 - (void)viewWillAppear:(BOOL)animated
