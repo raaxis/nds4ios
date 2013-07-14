@@ -92,3 +92,4 @@ Contributors
 * [Riley Testut (rileytestut)](https://github.com/rileytestut)
 * [David Chavez (dchavezlive)](http://dchavez.net)
 * [Michael Zhang (Malvix_)](https://twitter.com/Malvix_)
+* [Angela Tsai (vanillastar67)](https://twitter.com/vanillastar67)
