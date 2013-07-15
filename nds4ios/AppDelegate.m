@@ -27,7 +27,7 @@
     self.gameOpen = NO;
     
     //Dropbox DBSession Auth
-    DBSession* dbSession = [[DBSession alloc] initWithAppKey:@"si4f6nnhrhl1ftc" appSecret:@"w7c03bp86hmh54q" root:kDBRootAppFolder];
+    DBSession* dbSession = [[DBSession alloc] initWithAppKey:@"GetYourOwnDamnKey" appSecret:@"ItsCalledSecretForAReason" root:kDBRootAppFolder];
     [DBSession setSharedSession:dbSession];
     
     return YES;
