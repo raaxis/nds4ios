@@ -37,7 +37,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 }
 
 - (void)hideWorking {
-    [ZAActivityBar showSuccessWithStatus:@"Synced!" duration:2];
+    [ZAActivityBar dismiss];
 }
 
 #pragma mark - Startup
@@ -114,22 +114,24 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
 // For forced shutdowns eg closing the app
 - (void)internalShutdownForced {
-    [self hideWorking];
+    //[self hideWorking];
     [self internalCommonShutdown];
 }
 
 // For clean shutdowns on sync success
 - (void)internalShutdownSuccess {
     [self lastSyncCompletionRescan];
-    workingLabel.text = @"Done ";
-    [self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
+    //workingLabel.text = @"Done ";
+    [ZAActivityBar showSuccessWithStatus:@"Synced!" duration:2];
+    //[self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
     [self internalCommonShutdown];
 }
 
 // For failed shutdowns
 - (void)internalShutdownFailed {
-    workingLabel.text = @"Failed ";
-    [self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
+    //workingLabel.text = @"Failed ";
+    [ZAActivityBar showErrorWithStatus:@"Failed to sync!" duration:4];
+    //[self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
     [self internalCommonShutdown];
 }
 
@@ -145,6 +147,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
 - (void)startTaskLocalDelete:(NSString*)file {
     NSLog(@"Sync: Deleting local file %@", file);
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Removing file %@", file]];
     [[NSFileManager defaultManager] removeItemAtPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file] error:nil];
     [self stepComplete];
     anyLocalChanges = YES; // So that when we complete, we notify that there were local changes
@@ -153,6 +156,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Upload
 - (void)startTaskUpload:(NSString*)file rev:(NSString*)rev {
     NSLog(@"Sync: Uploading file %@, %@", file, rev?@"overwriting":@"new");
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Uploading file %@, %@", file, rev?@"overwriting":@"new"]];
     [client uploadFile:file toPath:@"/" withParentRev:rev fromPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath from:(NSString *)srcPath metadata:(DBMetadata *)metadata {
@@ -170,6 +174,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Download
 - (void)startTaskDownload:(NSString*)file {
     NSLog(@"Sync: Downloading file %@", file);
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Downloading file %@", file]];
     [client loadFile:$str(@"/%@", file) intoPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient*)client loadedFile:(NSString*)destPath contentType:(NSString*)contentType metadata:(DBMetadata*)metadata {
@@ -188,6 +193,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Remote delete
 - (void)startTaskRemoteDelete:(NSString*)file {
     NSLog(@"Sync: Deleting remote file %@", file);
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Removing remote file %@", file]];
     [client deletePath:$str(@"/%@", file)];
     [self stepComplete];
 }
