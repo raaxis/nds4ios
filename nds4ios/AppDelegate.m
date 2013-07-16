@@ -25,8 +25,36 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
     
     //Dropbox DBSession Auth
-    DBSession* dbSession = [[DBSession alloc] initWithAppKey:@"GetYourOwnDamnKey" appSecret:@"ItsCalledSecretForAReason" root:kDBRootAppFolder];
+    //You must insert the app key and secret here for Dropbox to work!
+    NSString* appKey = @"APP_KEY";
+	NSString* appSecret = @"APP_SECRET";
+    
+    NSString* errorMsg = nil;
+	if ([appKey rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound) {
+		errorMsg = @"You must set the App Key correctly for Dropbox to work!";
+	} else if ([appSecret rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound) {
+		errorMsg = @"You must set the App Secret correctly for Dropbox to work!";
+	} else {
+		NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+		NSData *plistData = [NSData dataWithContentsOfFile:plistPath];
+		NSDictionary *loadedPlist =
+        [NSPropertyListSerialization
+         propertyListFromData:plistData mutabilityOption:0 format:NULL errorDescription:NULL];
+		NSString *scheme = [[[[loadedPlist objectForKey:@"CFBundleURLTypes"] objectAtIndex:0] objectForKey:@"CFBundleURLSchemes"] objectAtIndex:0];
+		if ([scheme isEqual:@"db-APP_KEY"]) {
+			errorMsg = @"You must set the URL Scheme correctly in nds4ios-Info.plist for Dropbox to work!";
+		}
+	}
+    
+    DBSession* dbSession = [[DBSession alloc] initWithAppKey:appKey appSecret:appSecret root:kDBRootAppFolder];
     [DBSession setSharedSession:dbSession];
+    
+    if (errorMsg != nil) {
+		[[[UIAlertView alloc]
+		   initWithTitle:@"Error Configuring Dropbox" message:errorMsg
+		   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil]
+		 show];
+	}
     
     return YES;
 }
