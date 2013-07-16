@@ -43,6 +43,12 @@
     return YES;
 }
 
+//Enable the right menu for the the view controller in the first section
+-(Boolean) hasRightMenuForIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+}
+
 -(Boolean) disablePanGestureForIndexPath:(NSIndexPath *)indexPath{
     return NO;
 }
@@ -60,6 +66,10 @@
 }
 
 -(CGFloat) leftMenuVisibleWidth{
+    return 280;
+}
+
+-(CGFloat) rightMenuVisibleWidth{
     return 280;
 }
 
