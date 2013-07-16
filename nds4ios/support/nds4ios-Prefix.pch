@@ -26,6 +26,7 @@
 #define MAP_ANONYMOUS MAP_ANON
 #define _MAIN_H
 
+#define HAVE_NEON
 #define HAVE_JIT
 #define HAVE_CJIT
 #define TARGET_DEFS_ONLY

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2838715F17950B69009B8E84 /* math_mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = 2838715D17950B69009B8E84 /* math_mat4.c */; };
+		2838716017950B69009B8E84 /* math_sqrtf.c in Sources */ = {isa = PBXBuildFile; fileRef = 2838715E17950B69009B8E84 /* math_sqrtf.c */; };
 		28DA4A481787FD7F002236A4 /* Select.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A441787FD7F002236A4 /* Select.png */; };
 		28DA4A491787FD7F002236A4 /* Select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A451787FD7F002236A4 /* Select@2x.png */; };
 		28DA4A4A1787FD7F002236A4 /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DA4A461787FD7F002236A4 /* Start.png */; };
@@ -65,7 +67,6 @@
 		8BEA097A17872C4B0060B347 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097917872C4B0060B347 /* UIScreen+Widescreen.m */; };
 		8BEA097E17872C5E0060B347 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097B17872C5E0060B347 /* main.m */; };
 		8BEA098A17872CF40060B347 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098117872CF40060B347 /* emu.cpp */; };
-		8BEA098B17872CF40060B347 /* matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098317872CF40060B347 /* matrix_impl.c */; };
 		8BEA098C17872CF40060B347 /* sndcoreaudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098717872CF40060B347 /* sndcoreaudio.mm */; };
 		8BEA098D17872CF40060B347 /* throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098817872CF40060B347 /* throttle.cpp */; };
 		8BEA099017872FB50060B347 /* nds4ios-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BEA098E17872FB50060B347 /* nds4ios-Info.plist */; };
@@ -209,6 +210,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2838715C17950B2A009B8E84 /* math_neon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = math_neon.h; path = "nds4droid-code/jni/desmume/src/android/math-neon/math_neon.h"; sourceTree = SOURCE_ROOT; };
+		2838715D17950B69009B8E84 /* math_mat4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = math_mat4.c; path = "nds4droid-code/jni/desmume/src/android/math-neon/math_mat4.c"; sourceTree = SOURCE_ROOT; };
+		2838715E17950B69009B8E84 /* math_sqrtf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = math_sqrtf.c; path = "nds4droid-code/jni/desmume/src/android/math-neon/math_sqrtf.c"; sourceTree = SOURCE_ROOT; };
 		28DA4A441787FD7F002236A4 /* Select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Select.png; path = Resources/Select.png; sourceTree = "<group>"; };
 		28DA4A451787FD7F002236A4 /* Select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Select@2x.png"; path = "Resources/Select@2x.png"; sourceTree = "<group>"; };
 		28DA4A461787FD7F002236A4 /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Start.png; path = Resources/Start.png; sourceTree = "<group>"; };
@@ -297,8 +301,6 @@
 		8BEA097B17872C5E0060B347 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = nds4ios/support/main.m; sourceTree = SOURCE_ROOT; };
 		8BEA098117872CF40060B347 /* emu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emu.cpp; path = nds4ios/core/emu.cpp; sourceTree = SOURCE_ROOT; };
 		8BEA098217872CF40060B347 /* emu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = emu.h; path = nds4ios/core/emu.h; sourceTree = SOURCE_ROOT; };
-		8BEA098317872CF40060B347 /* matrix_impl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = matrix_impl.c; path = nds4ios/core/matrix_impl.c; sourceTree = SOURCE_ROOT; };
-		8BEA098417872CF40060B347 /* matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix_impl.h; path = nds4ios/core/matrix_impl.h; sourceTree = SOURCE_ROOT; };
 		8BEA098517872CF40060B347 /* nullJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nullJit.h; path = nds4ios/core/nullJit.h; sourceTree = SOURCE_ROOT; };
 		8BEA098617872CF40060B347 /* sndcoreaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sndcoreaudio.h; path = nds4ios/core/sndcoreaudio.h; sourceTree = SOURCE_ROOT; };
 		8BEA098717872CF40060B347 /* sndcoreaudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = sndcoreaudio.mm; path = nds4ios/core/sndcoreaudio.mm; sourceTree = SOURCE_ROOT; };
@@ -575,6 +577,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2838715B17950AF7009B8E84 /* math-neon */ = {
+			isa = PBXGroup;
+			children = (
+				2838715C17950B2A009B8E84 /* math_neon.h */,
+				2838715D17950B69009B8E84 /* math_mat4.c */,
+				2838715E17950B69009B8E84 /* math_sqrtf.c */,
+			);
+			name = "math-neon";
+			sourceTree = "<group>";
+		};
 		8B283062178DDC4B00E92785 /* Donation */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,8 +657,6 @@
 			children = (
 				8BEA098117872CF40060B347 /* emu.cpp */,
 				8BEA098217872CF40060B347 /* emu.h */,
-				8BEA098317872CF40060B347 /* matrix_impl.c */,
-				8BEA098417872CF40060B347 /* matrix_impl.h */,
 				8BEA098517872CF40060B347 /* nullJit.h */,
 				8BEA098617872CF40060B347 /* sndcoreaudio.h */,
 				8BEA098717872CF40060B347 /* sndcoreaudio.mm */,
@@ -1047,6 +1057,7 @@
 				BFCFE200176510DC000A70CF /* tinyxml */,
 				BFCFE1EA176510A1000A70CF /* libfat */,
 				BFCFE1E017651082000A70CF /* decrypt */,
+				2838715B17950AF7009B8E84 /* math-neon */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -1375,7 +1386,6 @@
 				BFCFE1A017650FB0000A70CF /* saves.cpp in Sources */,
 				8BEA096517872C080060B347 /* NDSSettingsViewController.m in Sources */,
 				8BEA097E17872C5E0060B347 /* main.m in Sources */,
-				8BEA098B17872CF40060B347 /* matrix_impl.c in Sources */,
 				BFCFE1A117650FB0000A70CF /* slot1.cpp in Sources */,
 				BFCFE1A217650FB0000A70CF /* SPU.cpp in Sources */,
 				BFCFE1A317650FB0000A70CF /* texcache.cpp in Sources */,
@@ -1465,6 +1475,8 @@
 				D3B8BB971794ACEF0061D1D8 /* ZAActivityBar.m in Sources */,
 				D3B8BB9A1794ACFE0061D1D8 /* SKBounceAnimation.m in Sources */,
 				8B7F89CB1794F35C00F3EA58 /* NDSRightMenuViewController.m in Sources */,
+				2838715F17950B69009B8E84 /* math_mat4.c in Sources */,
+				2838716017950B69009B8E84 /* math_sqrtf.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1604,7 +1616,7 @@
 		BFCFE1161764FBD3000A70CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: David Chavez (9PLWG8DGE5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -1624,6 +1636,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/nds4ios/support/NDS4iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = nds4ios;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1631,7 +1644,7 @@
 		BFCFE1171764FBD3000A70CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: David Chavez (9PLWG8DGE5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -1650,6 +1663,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/nds4ios/support/NDS4iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = nds4ios;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
