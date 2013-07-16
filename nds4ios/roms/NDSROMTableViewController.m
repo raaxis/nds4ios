@@ -11,23 +11,14 @@
 #import "NDSEmulatorViewController.h"
 #import <DropboxSDK/DropboxSDK.h>
 #import "CHBgDropboxSync.h"
-
-#define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#import "SASlideMenuRootViewController.h"
+#import "NDSRightMenuViewController.h"
 
 @interface NDSROMTableViewController ()
 
 @end
 
 @implementation NDSROMTableViewController
-
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.showFileExtensions = NO;
-    self.supportedFileExtensions = @[@"nds", @"zip"];
-    self.currentDirectory = DOCUMENTS_PATH();
-}
 
 - (void)viewDidLoad
 {
@@ -57,47 +48,16 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self showAlert];
     [CHBgDropboxSync start];
     //using file change observers will probably be better. I'll change this later on.
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    isAway = NO;
     [super viewWillAppear:animated];
+    games = [NDSGame gamesAtPath:AppDelegate.sharedInstance.documentsPath];
     [self.tableView reloadData];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    if ([AppDelegate sharedInstance].gameOpen)
-    {
-        isAway = YES;
-        [resumeGame hide];
-    }
-}
-
-- (void)showAlert
-{
-    if ([AppDelegate sharedInstance].gameOpen)
-    {
-        NSLog(@"YEAH:D");
-        resumeGame = [[OLGhostAlertView alloc] initWithTitle:@"Game Backgrounded" message:[NSString stringWithFormat:@"Tap here to resume:\n%@", [AppDelegate sharedInstance].currentGame] timeout:INFINITY dismissible:YES];
-        resumeGame.position = OLGhostAlertViewPositionBottom;
-        [resumeGame show];
-        resumeGame.completionBlock = ^(void) {
-            if ([AppDelegate sharedInstance].currentEmulatorViewController && !isAway)
-            {
-                NSLog(@"YEAH");
-                [self presentViewController:[AppDelegate sharedInstance].currentEmulatorViewController animated:YES completion:^(){
-                    [[AppDelegate sharedInstance].currentEmulatorViewController resumeEmulation];
-                    
-                }];
-            }
-        };
-        [resumeGame show];
-    }
+    //TODO: observe changes in ROMs directory to reload data when it changes
 }
 
 #pragma mark - Table View
@@ -108,17 +68,42 @@
     return YES;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return games.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    NDSGame *game = games[indexPath.row];
+    
+    cell.textLabel.text = game.title;
+    cell.accessoryType = game.numberOfSaveStates > 0 ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+    
+    return cell;
+}
+
 #pragma mark - Select ROMs
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"presentEmulator"]) {
-        UITableViewCell *cell = (UITableViewCell *)sender;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        NSString *filepath = [self filepathForIndexPath:indexPath];
-        [AppDelegate sharedInstance].currentGame = cell.textLabel.text;
-        [AppDelegate sharedInstance].gameOpen = YES;
-        [AppDelegate sharedInstance].currentEmulatorViewController = (NDSEmulatorViewController *)[segue destinationViewController];
-        [AppDelegate sharedInstance].currentEmulatorViewController.romFilepath = filepath;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NDSGame *game = games[indexPath.row];
+    if (game.numberOfSaveStates > 0) {
+        // show right menu with save states
+        SASlideMenuRootViewController *slideMenuRoot = (SASlideMenuRootViewController*)self.navigationController.parentViewController;
+        NDSRightMenuViewController *rightMenu = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"rightMenu"];
+        slideMenuRoot.rightMenu = rightMenu;
+        rightMenu.game = game;
+        [slideMenuRoot rightMenuAction];
+    } else {
+        // start new game
+        [AppDelegate.sharedInstance startGame:game withSavedState:-1];
     }
 }
 

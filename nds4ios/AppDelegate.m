@@ -11,8 +11,7 @@
 #import <DropboxSDK/DropboxSDK.h>
 #import "OLGhostAlertView.h"
 #import "CHBgDropboxSync.h"
-
-#define DOCUMENTS_PATH() [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#import "SASlideMenuRootViewController.h"
 
 @implementation AppDelegate
 
@@ -24,7 +23,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
-    self.gameOpen = NO;
     
     //Dropbox DBSession Auth
     DBSession* dbSession = [[DBSession alloc] initWithAppKey:@"GetYourOwnDamnKey" appSecret:@"ItsCalledSecretForAReason" root:kDBRootAppFolder];
@@ -61,8 +59,25 @@
 
 - (NSString *)batterDir
 {
-    NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery",DOCUMENTS_PATH()];
+    NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery", self.documentsPath];
     return batteryDir;
+}
+
+- (NSString *)documentsPath
+{
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+}
+
+- (void)startGame:(NDSGame *)game withSavedState:(NSInteger)savedState
+{
+    // TODO: check if resuming current game, also call EMU_closeRom maybe
+    NDSEmulatorViewController *emulatorViewController = (NDSEmulatorViewController *)[[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"emulatorView"];
+    emulatorViewController.game = game;
+    emulatorViewController.loadSaveState = [game pathForSaveStateAtIndex:savedState];
+    [AppDelegate sharedInstance].currentEmulatorViewController = emulatorViewController;
+    SASlideMenuRootViewController *rootViewController = (SASlideMenuRootViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [rootViewController doSlideIn:nil];
+    [rootViewController presentModalViewController:emulatorViewController animated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

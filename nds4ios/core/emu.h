@@ -10,9 +10,7 @@
 #define _EMU_H_
 
 #include <iostream>
-#include "video.h"
 
-extern VideoInfo video;
 extern volatile bool execute;
 
 typedef enum {
@@ -43,6 +41,9 @@ void EMU_runCore();
 int EMU_runOther();
 void EMU_copyMasterBuffer();
 void EMU_pause(bool pause);
+bool EMU_loadState(const char *filename);
+bool EMU_saveState(const char *filename);
+void* EMU_getVideoBuffer(size_t *outSize);
 
 void EMU_touchScreenTouch(int x, int y);
 void EMU_touchScreenRelease();
@@ -52,8 +53,8 @@ void EMU_closeRom();
 
 void EMU_buttonDown(BUTTON_ID button);
 void EMU_buttonUp(BUTTON_ID button);
-void EMU_setDPad(BOOL up, BOOL down, BOOL left, BOOL right);
-void EMU_setABXY(BOOL a, BOOL b, BOOL x, BOOL y);
+void EMU_setDPad(bool up, bool down, bool left, bool right);
+void EMU_setABXY(bool a, bool b, bool x, bool y);
 
 #endif /* defined(__nds4ios__emu__) */
 

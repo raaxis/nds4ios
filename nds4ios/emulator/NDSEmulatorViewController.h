@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NDSDirectionalControl.h"
-#import "NDSButtonControl.h"
+#import "NDSGame.h"
 
-@interface NDSEmulatorViewController : UIViewController <UIActionSheetDelegate>
+@interface NDSEmulatorViewController : UIViewController
 
-@property (copy, nonatomic) NSString *romFilepath;
+@property (strong, nonatomic) NDSGame *game;
+@property (copy, nonatomic) NSString *loadSaveState;
 
 - (void)pauseEmulation;
 - (void)resumeEmulation;
+- (void)saveStateWithName:(NSString*)saveStateName;
 
 @end

@@ -28,9 +28,6 @@
 
 #define HAVE_NEON
 #define HAVE_JIT
-#define HAVE_CJIT
-#define TARGET_DEFS_ONLY
-#define USE_EXOPHASEJIT
 
 // Necessary #defines
 
@@ -42,7 +39,7 @@
 #include <mach/mach_time.h>
 #include <strings.h>
 
-#include "types.h"
-#include "nullJit.h"
+//#include "types.h"
+//#include "nullJit.h"
 
 #endif

@@ -43,12 +43,6 @@
     return YES;
 }
 
-//Enable the right menu for the the view controller in the first section
--(Boolean) hasRightMenuForIndexPath:(NSIndexPath *)indexPath{
-    
-    return YES;
-}
-
 -(Boolean) disablePanGestureForIndexPath:(NSIndexPath *)indexPath{
     return NO;
 }

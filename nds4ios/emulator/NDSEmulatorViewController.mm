@@ -10,6 +10,8 @@
 #import "NDSEmulatorViewController.h"
 #import "GLProgram.h"
 #import "UIScreen+Widescreen.h"
+#import "NDSDirectionalControl.h"
+#import "NDSButtonControl.h"
 
 #import <GLKit/GLKit.h>
 #import <OpenGLES/ES2/gl.h>
@@ -111,8 +113,6 @@ const float textureVert[] =
     
     self.view.multipleTouchEnabled = YES;
     
-    [self loadROM];
-    
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(pauseEmulation) name:UIApplicationWillResignActiveNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(resumeEmulation) name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -122,11 +122,27 @@ const float textureVert[] =
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [UIApplication sharedApplication].statusBarHidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self pauseEmulation];
     [UIApplication sharedApplication].statusBarHidden = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self loadROM];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+    EMU_saveState([[self.game pathForSaveStateWithName:@"pause"] fileSystemRepresentation]);
+    [self.game reloadSaveStates];
 }
 
 - (void)didReceiveMemoryWarning
@@ -195,16 +211,17 @@ const float textureVert[] =
 #pragma mark - Playing ROM
 
 - (void)loadROM {
-    EMU_setWorkingDir([[self.romFilepath stringByDeletingLastPathComponent] UTF8String]);
+    EMU_setWorkingDir([[self.game.path stringByDeletingLastPathComponent] fileSystemRepresentation]);
     EMU_init();
     EMU_setCPUMode([[NSUserDefaults standardUserDefaults] boolForKey:@"enableJIT"] ? 2 : 1);
-    EMU_loadRom([self.romFilepath UTF8String]);
+    EMU_loadRom([self.game.path fileSystemRepresentation]);
     EMU_change3D(1);
         
     [self initGL];
     
     emuLoopLock = [NSLock new];
     
+    if (self.loadSaveState) EMU_loadState(self.loadSaveState.fileSystemRepresentation);
     [self startEmulatorLoop];
 }
 
@@ -264,7 +281,9 @@ const float textureVert[] =
 - (UIImage*)screenSnapshot
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CFDataRef videoData = CFDataCreate(NULL, (UInt8*)video.buffer, video.size()*4);
+    size_t dataSize = 0;
+    UInt8 *dataBytes = (UInt8*)EMU_getVideoBuffer(&dataSize);
+    CFDataRef videoData = CFDataCreate(NULL, dataBytes, dataSize*4);
     CGDataProviderRef dataProvider = CGDataProviderCreateWithCFData(videoData);
     CGImageRef screenImage = CGImageCreate(256, 384, 8, 32, 256*4, colorSpace, kCGBitmapByteOrderDefault, dataProvider, NULL, false, kCGRenderingIntentDefault);
     CGColorSpaceRelease(colorSpace);
@@ -323,6 +342,12 @@ const float textureVert[] =
     });
 }
 
+- (void)saveStateWithName:(NSString*)saveStateName
+{
+    EMU_saveState([self.game pathForSaveStateWithName:saveStateName].fileSystemRepresentation);
+    [self.game reloadSaveStates];
+}
+
 - (void)updateDisplay
 {
     if (texHandle == 0) return;
@@ -331,7 +356,7 @@ const float textureVert[] =
     });
     
     glBindTexture(GL_TEXTURE_2D, texHandle);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 256, 384, 0, GL_RGBA, GL_UNSIGNED_BYTE, &video.buffer);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 256, 384, 0, GL_RGBA, GL_UNSIGNED_BYTE, EMU_getVideoBuffer(NULL));
     
     [self.glkView display];
 }
@@ -399,24 +424,7 @@ const float textureVert[] =
 
 - (IBAction)hideEmulator:(id)sender
 {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Background or Kill?\nBackgrounding keeps the current game alive for later, whereas killing it will completely close it." delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Kill" otherButtonTitles:@"Background", nil];
-    [sheet showInView:self.view];
-    
-}
-
-#pragma mark UIActionSheet delegate
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 0)
-    {
-        EMU_closeRom();
-        [AppDelegate sharedInstance].gameOpen = NO;
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } else if (buttonIndex == 1) {
-        [self pauseEmulation];
-        [self dismissModalViewControllerAnimated:YES];
-    }
-    
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

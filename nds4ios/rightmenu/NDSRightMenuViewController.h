@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SASlideMenuRootViewController.h"
+#import "NDSGame.h"
 
 @interface NDSRightMenuViewController : UITableViewController
 
-@property (nonatomic,strong) SASlideMenuRootViewController* rootController;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) NDSGame *game;
 
 @end

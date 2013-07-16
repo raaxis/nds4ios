@@ -7,6 +7,7 @@
 //
 
 #import "NDSRightMenuViewController.h"
+#import "AppDelegate.h"
 
 @interface NDSRightMenuViewController ()
 
@@ -19,38 +20,62 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [super viewWillAppear:animated];
+    self.titleLabel.text = self.game.title;
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Table View data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 1 + self.game.numberOfSaveStates;
 }
 
-#pragma mark - Table view delegate
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell"];
+    
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"row"]];
+    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selectedrow"]];
+    cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure"]];
+    
+    // text
+    cell.textLabel.text = @"Start Game";
+    cell.detailTextLabel.text = @"new game";
+    
+    // detail
+    if (indexPath.row > 0) {
+        cell.textLabel.text = indexPath.row == 1 ? @"Resume Game" : [self.game nameOfSaveStateAtIndex:indexPath.row - 1];
+        cell.detailTextLabel.text = [[self.game dateOfSaveStateAtIndex:indexPath.row -1] descriptionWithLocale:[NSLocale currentLocale]];
+    }
+    
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return indexPath.row > 0;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        if ([self.game deleteSaveStateAtIndex:indexPath.row - 1]) [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        if (self.game.numberOfSaveStates == 0) [(SASlideMenuRootViewController*)self.parentViewController doSlideIn:nil];
+    }
+}
+
+#pragma mark - Table View delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [AppDelegate.sharedInstance startGame:self.game withSavedState:indexPath.row - 1];
 }
 
 @end

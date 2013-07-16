@@ -7,16 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RSTFileBrowserViewController.h"
 #import "NDSEmulatorViewController.h"
 #import "OLGhostAlertView.h"
 #import <DropboxSDK/DropboxSDK.h>
 
-@interface NDSROMTableViewController : RSTFileBrowserViewController
+@interface NDSROMTableViewController : UITableViewController
 {
-    OLGhostAlertView *resumeGame;
-    BOOL isAway;
-    //DBPath *saveDir;
+    NSArray *games;
 }
 
 @end
