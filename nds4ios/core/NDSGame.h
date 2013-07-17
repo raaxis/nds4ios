@@ -14,6 +14,8 @@ FOUNDATION_EXPORT NSString * const NDSGameSaveStatesChangedNotification;
 
 @property (strong, nonatomic) NSString *path;
 @property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readonly) NSString *gameTitle;
+@property (nonatomic, readonly) UIImage *icon;
 @property (nonatomic, readonly) NSInteger numberOfSaveStates;
 @property (strong, nonatomic) NSString *pathForSavedStates;
 

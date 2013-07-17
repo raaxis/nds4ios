@@ -69,7 +69,6 @@
 
 - (void)reloadGames:(NSNotification*)aNotification
 {
-    NSLog(@"reloading games: %@", aNotification);
     NSUInteger row = [aNotification.object isKindOfClass:[NDSGame class]] ? [games indexOfObject:aNotification.object] : NSNotFound;
     if (aNotification == nil || row == NSNotFound) {
         // reload all games
@@ -103,7 +102,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     NDSGame *game = games[indexPath.row];
     
-    cell.textLabel.text = game.title;
+    if (game.gameTitle) {
+        // use title from ROM
+        NSArray *titleLines = [game.gameTitle componentsSeparatedByString:@"\n"];
+        cell.textLabel.text = titleLines[0];
+        cell.detailTextLabel.text = titleLines.count >= 1 ? titleLines[1] : nil;
+    } else {
+        // use filename
+        cell.textLabel.text = game.title;
+        cell.detailTextLabel.text = nil;
+    }
+    
+    cell.imageView.image = game.icon;
     cell.accessoryType = game.numberOfSaveStates > 0 ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
     
     return cell;
