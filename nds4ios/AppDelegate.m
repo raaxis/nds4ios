@@ -82,10 +82,9 @@
     return NO;
 }
 
-- (NSString *)batterDir
+- (NSString *)batteryDir
 {
-    NSString* batteryDir = [NSString stringWithFormat:@"%@/Battery", self.documentsPath];
-    return batteryDir;
+    return [self.documentsPath stringByAppendingPathComponent:@"Battery"];
 }
 
 - (NSString *)documentsPath

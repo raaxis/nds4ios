@@ -18,7 +18,7 @@
 
 + (AppDelegate *)sharedInstance;
 
-- (NSString *)batterDir;
+- (NSString *)batteryDir;
 - (NSString *)documentsPath;
 
 - (void)startGame:(NDSGame *)game withSavedState:(NSInteger)savedState;

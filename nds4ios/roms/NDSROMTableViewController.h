@@ -16,4 +16,6 @@
     NSArray *games;
 }
 
+- (void)reloadGames:(NSNotification*)aNotification;
+
 @end

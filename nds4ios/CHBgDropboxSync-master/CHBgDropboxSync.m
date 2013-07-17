@@ -148,7 +148,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 - (void)startTaskLocalDelete:(NSString*)file {
     NSLog(@"Sync: Deleting local file %@", file);
     [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Removing file %@", file]];
-    [[NSFileManager defaultManager] removeItemAtPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file] error:nil];
+    [[NSFileManager defaultManager] removeItemAtPath:[[[AppDelegate sharedInstance] batteryDir] stringByAppendingPathComponent:file] error:nil];
     [self stepComplete];
     anyLocalChanges = YES; // So that when we complete, we notify that there were local changes
 }
@@ -157,7 +157,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 - (void)startTaskUpload:(NSString*)file rev:(NSString*)rev {
     NSLog(@"Sync: Uploading file %@, %@", file, rev?@"overwriting":@"new");
     [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Uploading file %@, %@", file, rev?@"overwriting":@"new"]];
-    [client uploadFile:file toPath:@"/" withParentRev:rev fromPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
+    [client uploadFile:file toPath:@"/" withParentRev:rev fromPath:[[[AppDelegate sharedInstance] batteryDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath from:(NSString *)srcPath metadata:(DBMetadata *)metadata {
     // Now the file has uploaded, we need to set its 'last modified' date locally to match the date on dropbox.
@@ -175,7 +175,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 - (void)startTaskDownload:(NSString*)file {
     NSLog(@"Sync: Downloading file %@", file);
     [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Downloading file %@", file]];
-    [client loadFile:$str(@"/%@", file) intoPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
+    [client loadFile:$str(@"/%@", file) intoPath:[[[AppDelegate sharedInstance] batteryDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient*)client loadedFile:(NSString*)destPath contentType:(NSString*)contentType metadata:(DBMetadata*)metadata {
     // Now the file has downloaded, we need to set its 'last modified' date locally to match the date on dropbox
@@ -210,7 +210,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Get the current status of files and folders as a dict: Path (eg 'abc.txt') => last mod date
 - (NSDictionary*)getLocalStatus {
     NSMutableDictionary* localFiles = [NSMutableDictionary dictionary];
-    NSString* root = [[AppDelegate sharedInstance] batterDir]; // Where are we going to sync to
+    NSString* root = [[AppDelegate sharedInstance] batteryDir]; // Where are we going to sync to
     for (NSString* item in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:root error:nil]) {
         // Skip hidden/system files - you may want to change this if your files start with ., however dropbox errors on many 'ignored' files such as .DS_Store which you'll want to skip
         if ([item hasPrefix:@"."]) continue;

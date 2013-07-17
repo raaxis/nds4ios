@@ -8,15 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+FOUNDATION_EXPORT NSString * const NDSGameSaveStatesChangedNotification;
+
 @interface NDSGame : NSObject
 
 @property (strong, nonatomic) NSString *path;
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) NSInteger numberOfSaveStates;
+@property (strong, nonatomic) NSString *pathForSavedStates;
 
-+ (NSArray*)gamesAtPath:(NSString*)path;
-+ (NDSGame*)gameWithPath:(NSString*)path;
-- (NDSGame*)initWithPath:(NSString*)path;
++ (NSArray*)gamesAtPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;
++ (NDSGame*)gameWithPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;
+- (NDSGame*)initWithPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;
 - (NSString*)pathForSaveStateWithName:(NSString*)name;
 - (NSString*)pathForSaveStateAtIndex:(NSInteger)idx;
 - (NSString*)nameOfSaveStateAtIndex:(NSInteger)idx;

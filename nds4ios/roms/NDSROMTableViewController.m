@@ -28,15 +28,24 @@
     BOOL isDir;
     NSFileManager* fm = [NSFileManager defaultManager];
     
-    if (![fm fileExistsAtPath:[[AppDelegate sharedInstance] batterDir] isDirectory:&isDir])
+    if (![fm fileExistsAtPath:AppDelegate.sharedInstance.batteryDir isDirectory:&isDir])
     {
-        [fm createDirectoryAtPath:[[AppDelegate sharedInstance] batterDir] withIntermediateDirectories:NO attributes:nil error:nil];
+        [fm createDirectoryAtPath:AppDelegate.sharedInstance.batteryDir withIntermediateDirectories:NO attributes:nil error:nil];
         NSLog(@"Created Battery");
+    } else {
+        // move saved states from documents into battery directory
+        for (NSString *file in [fm contentsOfDirectoryAtPath:AppDelegate.sharedInstance.documentsPath error:NULL]) {
+            if ([file.pathExtension isEqualToString:@"dsv"]) {
+                NSError *err = nil;
+                [fm moveItemAtPath:[AppDelegate.sharedInstance.documentsPath stringByAppendingPathComponent:file]
+                            toPath:[AppDelegate.sharedInstance.batteryDir stringByAppendingPathComponent:file]
+                             error:&err];
+                if (err) NSLog(@"Could not move %@ to battery dir: %@", file, err);
+            }
+        }
     }
-        
     
-	// Do any additional setup after loading the view, typically from a nib.
-    //self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadGames:) name:NDSGameSaveStatesChangedNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,9 +63,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    games = [NDSGame gamesAtPath:AppDelegate.sharedInstance.documentsPath];
+    [self reloadGames:nil];
+}
+
+- (void)reloadGames:(NSNotification*)aNotification
+{
+    if (aNotification == nil || ![aNotification.object isKindOfClass:[NDSGame class]]) {
+        games = [NDSGame gamesAtPath:AppDelegate.sharedInstance.documentsPath saveStateDirectoryPath:AppDelegate.sharedInstance.batteryDir];
+    }
     [self.tableView reloadData];
-    //TODO: observe changes in ROMs directory to reload data when it changes
 }
 
 #pragma mark - Table View
