@@ -88,11 +88,6 @@ bool enableMicrophone = false;
 volatile bool pausedByMinimize = false;
 volatile bool soundEnabled = true;
 
-static bool android_opengl_init() {
-    LOGI("android_opengl_init");
-    return true;
-}
-
 void EMU_init()
 {
 	//oglrender_init = android_opengl_init;
