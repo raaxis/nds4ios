@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getMoreROMs)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getMoreROMs)];
     
     BOOL isDir;
     NSFileManager* fm = [NSFileManager defaultManager];
@@ -109,7 +109,7 @@
 
 #pragma mark - Non-UITableView functions
 
-- (void)getMoreROMs
+- (IBAction)getMoreRoms:(id)sender
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
                                                         message:NSLocalizedString(@"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of ROMs and other software to use in this emulator. InfiniDev and all associated personnel is in no way affiliated with the websites resulting from this Google search.", @"")
