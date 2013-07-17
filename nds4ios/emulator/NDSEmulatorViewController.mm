@@ -129,6 +129,7 @@ const float textureVert[] =
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self pauseEmulation];
+    [self saveStateWithName:@"pause"];
     [UIApplication sharedApplication].statusBarHidden = NO;
 }
 
@@ -136,13 +137,6 @@ const float textureVert[] =
 {
     [super viewDidAppear:animated];
     [self loadROM];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:YES];
-    EMU_saveState([[self.game pathForSaveStateWithName:@"pause"] fileSystemRepresentation]);
-    [self.game reloadSaveStates];
 }
 
 - (void)didReceiveMemoryWarning
@@ -206,6 +200,11 @@ const float textureVert[] =
     } else {
         return CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width*1.5);
     }
+}
+
+- (void)dealloc
+{
+    EMU_closeRom();
 }
 
 #pragma mark - Playing ROM

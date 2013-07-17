@@ -44,12 +44,12 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
     if ((self = [super init])) {
         self.path = path;
         self.pathForSavedStates = saveStatePath;
-        [self reloadSaveStates];
+        [self _loadSaveStates];
     }
     return self;
 }
 
-- (void)reloadSaveStates
+- (void)_loadSaveStates
 {
     // get save states (<ROM name without extension>.<save state name>.dsv)
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.pathForSavedStates error:NULL];
@@ -66,7 +66,11 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
         NSDate *date2 = [fm attributesOfItemAtPath:[self.pathForSavedStates stringByAppendingPathComponent:s1] error:NULL].fileModificationDate;
         return [date1 compare:date2];
     }];
-    
+}
+
+- (void)reloadSaveStates
+{
+    [self _loadSaveStates];
     [[NSNotificationCenter defaultCenter] postNotificationName:NDSGameSaveStatesChangedNotification object:self userInfo:nil];
 }
 

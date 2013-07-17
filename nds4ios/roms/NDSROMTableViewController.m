@@ -46,6 +46,8 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadGames:) name:NDSGameSaveStatesChangedNotification object:nil];
+    
+    [self reloadGames:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,22 +65,26 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self reloadGames:nil];
 }
 
 - (void)reloadGames:(NSNotification*)aNotification
 {
-    if (aNotification == nil || ![aNotification.object isKindOfClass:[NDSGame class]]) {
+    NSLog(@"reloading games: %@", aNotification);
+    NSUInteger row = [aNotification.object isKindOfClass:[NDSGame class]] ? [games indexOfObject:aNotification.object] : NSNotFound;
+    if (aNotification == nil || row == NSNotFound) {
+        // reload all games
         games = [NDSGame gamesAtPath:AppDelegate.sharedInstance.documentsPath saveStateDirectoryPath:AppDelegate.sharedInstance.batteryDir];
+        [self.tableView reloadData];
+    } else {
+        // reload single row
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
-    [self.tableView reloadData];
 }
 
 #pragma mark - Table View
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
     return YES;
 }
 
