@@ -25,14 +25,11 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
     
     //Dropbox DBSession Auth
-    //You must insert the app key and secret here for Dropbox to work!
-    NSString* appKey = @"APP_KEY";
-	NSString* appSecret = @"APP_SECRET";
     
     NSString* errorMsg = nil;
-	if ([appKey rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound) {
+	if ([[self appKey] rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound) {
 		errorMsg = @"You must set the App Key correctly for Dropbox to work!";
-	} else if ([appSecret rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound) {
+	} else if ([[self appSecret] rangeOfCharacterFromSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]].location != NSNotFound) {
 		errorMsg = @"You must set the App Secret correctly for Dropbox to work!";
 	} else {
 		NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
@@ -46,7 +43,7 @@
 		}
 	}
     
-    DBSession* dbSession = [[DBSession alloc] initWithAppKey:appKey appSecret:appSecret root:kDBRootAppFolder];
+    DBSession* dbSession = [[DBSession alloc] initWithAppKey:[self appKey] appSecret:[self appSecret] root:kDBRootAppFolder];
     [DBSession setSharedSession:dbSession];
     
     if (errorMsg != nil) {
@@ -94,6 +91,16 @@
 - (NSString *)documentsPath
 {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+}
+
+- (NSString *)appKey
+{
+    return [[NSUserDefaults standardUserDefaults] stringForKey:@"dbAppKey"];
+}
+
+- (NSString *)appSecret
+{
+    return [[NSUserDefaults standardUserDefaults] stringForKey:@"dbAppSecret"];
 }
 
 - (void)startGame:(NDSGame *)game withSavedState:(NSInteger)savedState

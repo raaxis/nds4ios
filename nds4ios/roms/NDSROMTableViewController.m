@@ -111,19 +111,12 @@
 
 - (void)getMoreROMs
 {
-    /*if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showedROMAlert"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
-    }
-    else {*/
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
                                                         message:NSLocalizedString(@"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of ROMs and other software to use in this emulator. InfiniDev and all associated personnel is in no way affiliated with the websites resulting from this Google search.", @"")
                                                        delegate:self
                                               cancelButtonTitle:NSLocalizedString(@"Got it!", @"")
                                               otherButtonTitles:nil];
-        [alert show];
-        
-        //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedROMAlert"];
-    //}
+    [alert show];
 }
 
 #pragma mark - UIAlertView delegate
