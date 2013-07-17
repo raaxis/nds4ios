@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NDSEmulatorViewController.h"
-#import "OLGhostAlertView.h"
 #import <DropboxSDK/DropboxSDK.h>
+#import "DocWatchHelper.h"
 
 @interface NDSROMTableViewController : UITableViewController
 {
     NSArray *games;
+    DocWatchHelper *docWatchHelper;
 }
 
 - (void)reloadGames:(NSNotification*)aNotification;

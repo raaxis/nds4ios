@@ -227,7 +227,7 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
         // read location of icon+title
         [fh seekToFileOffset:0x68];
         data = [fh readDataOfLength:4];
-        if (data == nil) return;
+        if (data.length != 4) return;
         uint32_t iconOffset = OSReadLittleInt32(data.bytes, 0);
         if (iconOffset == 0) return;
         

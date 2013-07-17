@@ -64,7 +64,6 @@
 		8BEA097017872C320060B347 /* NDSEmulatorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096D17872C320060B347 /* NDSEmulatorViewController.mm */; };
 		8BEA097117872C320060B347 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA096F17872C320060B347 /* GLProgram.m */; };
 		8BEA097617872C3F0060B347 /* DocWatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097317872C3F0060B347 /* DocWatchHelper.m */; };
-		8BEA097717872C3F0060B347 /* RSTFileBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097517872C3F0060B347 /* RSTFileBrowserViewController.m */; };
 		8BEA097A17872C4B0060B347 /* UIScreen+Widescreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097917872C4B0060B347 /* UIScreen+Widescreen.m */; };
 		8BEA097E17872C5E0060B347 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA097B17872C5E0060B347 /* main.m */; };
 		8BEA098A17872CF40060B347 /* emu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BEA098117872CF40060B347 /* emu.cpp */; };
@@ -297,8 +296,6 @@
 		8BEA096F17872C320060B347 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLProgram.m; path = nds4ios/emulator/GLProgram.m; sourceTree = SOURCE_ROOT; };
 		8BEA097217872C3F0060B347 /* DocWatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocWatchHelper.h; path = nds4ios/filebrowser/DocWatchHelper.h; sourceTree = SOURCE_ROOT; };
 		8BEA097317872C3F0060B347 /* DocWatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocWatchHelper.m; path = nds4ios/filebrowser/DocWatchHelper.m; sourceTree = SOURCE_ROOT; };
-		8BEA097417872C3F0060B347 /* RSTFileBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTFileBrowserViewController.h; path = nds4ios/filebrowser/RSTFileBrowserViewController.h; sourceTree = SOURCE_ROOT; };
-		8BEA097517872C3F0060B347 /* RSTFileBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTFileBrowserViewController.m; path = nds4ios/filebrowser/RSTFileBrowserViewController.m; sourceTree = SOURCE_ROOT; };
 		8BEA097817872C4B0060B347 /* UIScreen+Widescreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Widescreen.h"; path = "nds4ios/categories/UIScreen+Widescreen.h"; sourceTree = SOURCE_ROOT; };
 		8BEA097917872C4B0060B347 /* UIScreen+Widescreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Widescreen.m"; path = "nds4ios/categories/UIScreen+Widescreen.m"; sourceTree = SOURCE_ROOT; };
 		8BEA097B17872C5E0060B347 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = nds4ios/support/main.m; sourceTree = SOURCE_ROOT; };
@@ -637,13 +634,13 @@
 			name = About;
 			sourceTree = "<group>";
 		};
-		8B4895AC178CC67900BA61C3 /* Resume Alert */ = {
+		8B4895AC178CC67900BA61C3 /* OLGhostAlertView */ = {
 			isa = PBXGroup;
 			children = (
 				8B4895BE178CCBEE00BA61C3 /* OLGhostAlertView.h */,
 				8B4895BF178CCBEE00BA61C3 /* OLGhostAlertView.m */,
 			);
-			name = "Resume Alert";
+			name = OLGhostAlertView;
 			sourceTree = "<group>";
 		};
 		8B7F89C51794F26200F3EA58 /* Right Sidebar */ = {
@@ -868,13 +865,13 @@
 				BFAE6FAB17675623000911CF /* Controls */,
 				BFAE6F8F176748CF000911CF /* Emulator View */,
 				BFCFE12F17650ED0000A70CF /* Emulator Code */,
-				BFCFE12E17650D3F000A70CF /* File Browser */,
+				BFCFE12E17650D3F000A70CF /* DocWatchHelper */,
 				8B7F89C51794F26200F3EA58 /* Right Sidebar */,
 				BFCFE1191764FCDE000A70CF /* Categories */,
 				BFCFE0F91764FBD3000A70CF /* Supporting Files */,
 				8BEA099217876A490060B347 /* Open Zip Files */,
 				8B305F65178B48E000FD010A /* Side Drawer */,
-				8B4895AC178CC67900BA61C3 /* Resume Alert */,
+				8B4895AC178CC67900BA61C3 /* OLGhostAlertView */,
 				D31CC89F17927BCB0098FB9C /* Dropbox */,
 				D31CC8B617927E840098FB9C /* ZAActivityBar */,
 			);
@@ -902,15 +899,13 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		BFCFE12E17650D3F000A70CF /* File Browser */ = {
+		BFCFE12E17650D3F000A70CF /* DocWatchHelper */ = {
 			isa = PBXGroup;
 			children = (
 				8BEA097217872C3F0060B347 /* DocWatchHelper.h */,
 				8BEA097317872C3F0060B347 /* DocWatchHelper.m */,
-				8BEA097417872C3F0060B347 /* RSTFileBrowserViewController.h */,
-				8BEA097517872C3F0060B347 /* RSTFileBrowserViewController.m */,
 			);
-			name = "File Browser";
+			name = DocWatchHelper;
 			sourceTree = "<group>";
 		};
 		BFCFE12F17650ED0000A70CF /* Emulator Code */ = {
@@ -1418,7 +1413,6 @@
 				8BEA096B17872C190060B347 /* NDSDirectionalControl.m in Sources */,
 				BFCFE1DC17651076000A70CF /* MemBuffer.cpp in Sources */,
 				BFCFE1DD17651076000A70CF /* task.cpp in Sources */,
-				8BEA097717872C3F0060B347 /* RSTFileBrowserViewController.m in Sources */,
 				BFCFE1DE17651076000A70CF /* vfat.cpp in Sources */,
 				BFCFE1DF17651076000A70CF /* xstring.cpp in Sources */,
 				BFCFE1E71765109C000A70CF /* crc.cpp in Sources */,

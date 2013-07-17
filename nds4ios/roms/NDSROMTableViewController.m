@@ -45,7 +45,13 @@
         }
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadGames:) name:NDSGameSaveStatesChangedNotification object:nil];
+    // watch for changes in documents folder
+    docWatchHelper = [DocWatchHelper watcherForPath:AppDelegate.sharedInstance.documentsPath];
+    
+    // register for notifications
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(reloadGames:) name:NDSGameSaveStatesChangedNotification object:nil];
+    [nc addObserver:self selector:@selector(reloadGames:) name:kDocumentChanged object:docWatchHelper];
     
     [self reloadGames:nil];
 }
@@ -70,6 +76,10 @@
 - (void)reloadGames:(NSNotification*)aNotification
 {
     NSUInteger row = [aNotification.object isKindOfClass:[NDSGame class]] ? [games indexOfObject:aNotification.object] : NSNotFound;
+    if (aNotification.object == docWatchHelper) {
+        // do it later, the file may not be written yet
+        [self performSelector:_cmd withObject:nil afterDelay:2.5];
+    }
     if (aNotification == nil || row == NSNotFound) {
         // reload all games
         games = [NDSGame gamesAtPath:AppDelegate.sharedInstance.documentsPath saveStateDirectoryPath:AppDelegate.sharedInstance.batteryDir];
