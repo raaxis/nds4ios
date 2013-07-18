@@ -212,6 +212,11 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
     return [[NSFileManager defaultManager] attributesOfItemAtPath:[self pathForSaveStateAtIndex:idx] error:NULL].fileModificationDate;
 }
 
+- (BOOL)hasPauseState
+{
+    return [[self nameOfSaveStateAtIndex:0] isEqualToString:@"pause"];
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<NDSGame 0x%p: %@>", self, self.path];

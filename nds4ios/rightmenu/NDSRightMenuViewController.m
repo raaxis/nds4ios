@@ -59,7 +59,7 @@
     
     // detail
     if (indexPath.row > 0) {
-        cell.textLabel.text = indexPath.row == 1 ? @"Resume Game" : [self.game nameOfSaveStateAtIndex:indexPath.row - 1];
+        cell.textLabel.text = (indexPath.row == 1 && self.game.hasPauseState) ? @"Resume Game" : [self.game nameOfSaveStateAtIndex:indexPath.row - 1];
         cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:[self.game dateOfSaveStateAtIndex:indexPath.row -1]
                                                                    dateStyle:NSDateFormatterMediumStyle
                                                                    timeStyle:NSDateFormatterMediumStyle];

@@ -18,6 +18,7 @@ FOUNDATION_EXPORT NSString * const NDSGameSaveStatesChangedNotification;
 @property (nonatomic, readonly) UIImage *icon;
 @property (nonatomic, readonly) NSInteger numberOfSaveStates;
 @property (strong, nonatomic) NSString *pathForSavedStates;
+@property (nonatomic, readonly) BOOL hasPauseState;
 
 + (NSArray*)gamesAtPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;
 + (NDSGame*)gameWithPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;
