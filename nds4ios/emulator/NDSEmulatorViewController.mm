@@ -426,4 +426,29 @@ const float textureVert[] =
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction)doSaveState:(UILongPressGestureRecognizer*)sender
+{
+    if (![sender isKindOfClass:[UILongPressGestureRecognizer class]] || sender.state != UIGestureRecognizerStateBegan) return;
+    UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Save State" message:@"Name for save state:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
+    saveAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [saveAlert show];
+}
+
+#pragma mark Alert View Delegate
+
+- (void)willPresentAlertView:(UIAlertView *)alertView
+{
+    [self pauseEmulation];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        // save
+        NSString *saveStateName = [alertView textFieldAtIndex:0].text;
+        [self saveStateWithName:saveStateName];
+    }
+    [self resumeEmulation];
+}
+
 @end

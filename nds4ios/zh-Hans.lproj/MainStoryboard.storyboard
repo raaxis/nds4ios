@@ -417,6 +417,7 @@
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bYe-4E-SeX">
                                 <rect key="frame" x="292" y="0.0" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="HideEmulator.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -427,6 +428,7 @@
                                 </state>
                                 <connections>
                                     <action selector="hideEmulator:" destination="iZB-B7-Ef4" eventType="touchUpInside" id="ZRx-QK-dh0"/>
+                                    <outletCollection property="gestureRecognizers" destination="gDU-yB-Hzw" appends="YES" id="Kdq-qD-ma4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -446,6 +448,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6Z-75-Efg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gDU-yB-Hzw">
+                    <connections>
+                        <action selector="doSaveState:" destination="iZB-B7-Ef4" id="4xT-Gy-RzW"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1705" y="535"/>
         </scene>
@@ -1188,6 +1195,79 @@
         <image name="row.png" width="1" height="44"/>
         <image name="rowselected.png" width="1" height="44"/>
     </resources>
+    <classes>
+        <class className="MenuCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="disclosureImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="itemDescription" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSAboutViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendTweet:"/>
+                <relationship kind="outlet" name="tweetButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSButtonControl.h"/>
+        </class>
+        <class className="NDSDirectionalControl" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDirectionalControl.h"/>
+        </class>
+        <class className="NDSDonationViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDonationViewController.h"/>
+        </class>
+        <class className="NDSEmulatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSEmulatorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="buttonControl" candidateClass="NDSButtonControl"/>
+                <relationship kind="outlet" name="controllerContainerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="directionalControl" candidateClass="NDSDirectionalControl"/>
+                <relationship kind="outlet" name="dismissButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fpsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="glkView" candidateClass="GLKView"/>
+                <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NDSROMTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSROMTableViewController.h"/>
+        </class>
+        <class className="NDSRightMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSRightMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="controlChanged:"/>
+                <relationship kind="outlet" name="accountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cellularSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="controlPadStyleControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="controlPositionControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="disableSoundSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="dropboxSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="enableJITSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="frameSkipControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="showFPSSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="NDSSideBarViewController" superclassName="SASlideMenuViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSideBarViewController.h"/>
+        </class>
+        <class className="SASlideMenuRootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuRootViewController.h"/>
+        </class>
+        <class className="SASlideMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NDSGame.h"
 
-@interface NDSEmulatorViewController : UIViewController
+@interface NDSEmulatorViewController : UIViewController <UIAlertViewDelegate>
 
 @property (strong, nonatomic) NDSGame *game;
 @property (copy, nonatomic) NSString *loadSaveState;
