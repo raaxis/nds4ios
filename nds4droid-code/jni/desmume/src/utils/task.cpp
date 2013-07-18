@@ -24,7 +24,6 @@
 #else
 #include <pthread.h>
 #include <sched.h>
-#include <android/log.h>
 #include <unistd.h>
 #endif
 

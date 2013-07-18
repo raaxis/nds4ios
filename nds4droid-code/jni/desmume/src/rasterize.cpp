@@ -47,7 +47,6 @@
 #include "utils/task.h"
 
 #ifdef ANDROID
-#include <android/log.h>
 #endif
 
 //#undef FORCEINLINE
