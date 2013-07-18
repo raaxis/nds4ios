@@ -23,8 +23,6 @@ Install Instructions
 
 If you're jailbroken: http://nds4ios.angelxwind.net/?page/downloads#jailbroken
 
-If you're NOT jailbroken: http://nds4ios.angelxwind.net/?page/downloads#notjailbroken
-
 ### Option 2: Compile it yourself
 
 IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad things will happen.
