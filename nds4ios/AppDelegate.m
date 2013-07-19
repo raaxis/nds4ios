@@ -69,14 +69,43 @@
             }
             return YES;
         }
-    } else if (url) {
-        NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    } else if (url.isFileURL && [[NSFileManager defaultManager] fileExistsAtPath:url.path] && [url.path.stringByDeletingLastPathComponent.lastPathComponent isEqualToString:@"Inbox"]) {
+        NSFileManager *fm = [NSFileManager defaultManager];
+        NSError *err = nil;
+        if ([url.pathExtension.lowercaseString isEqualToString:@"zip"]) {
+            // expand zip
+            // create directory to expand
+            NSString *dstDir = [NSTemporaryDirectory() stringByAppendingPathComponent:url.path.lastPathComponent];
+            if ([fm createDirectoryAtPath:dstDir withIntermediateDirectories:YES attributes:nil error:&err] == NO) {
+                NSLog(@"Could not create directory to expand zip: %@ %@", dstDir, err);
+                [fm removeItemAtURL:url error:NULL];
+                return NO;
+            }
+            
+            // expand
+            [SSZipArchive unzipFileAtPath:url.path toDestination:dstDir];
+            
+            // move .nds to documents and .dsv to battery
+            for (NSString *path in [fm subpathsAtPath:dstDir]) {
+                if ([path.pathExtension.lowercaseString isEqualToString:@"nds"]) {
+                    NSLog(@"found ROM in zip: %@", path);
+                    [fm moveItemAtPath:[dstDir stringByAppendingPathComponent:path] toPath:[self.documentsPath stringByAppendingPathComponent:path.lastPathComponent] error:NULL];
+                } else if ([path.pathExtension.lowercaseString isEqualToString:@"dsv"]) {
+                    NSLog(@"found save in zip: %@", path);
+                    [fm moveItemAtPath:[dstDir stringByAppendingPathComponent:path] toPath:[self.batteryDir stringByAppendingPathComponent:path.lastPathComponent] error:NULL];
+                }
+            }
+            
+            // remove unzip dir
+            [fm removeItemAtPath:dstDir error:NULL];
+        } else if ([url.pathExtension.lowercaseString isEqualToString:@"nds"]) {
+            // move to documents
+            [fm moveItemAtPath:url.path toPath:[self.documentsPath stringByAppendingPathComponent:url.lastPathComponent] error:&err];
+        }
         
-        [SSZipArchive unzipFileAtPath:[url path] toDestination:documentsDirectory];
+        // remove inbox (shouldn't be needed)
+        [fm removeItemAtPath:[self.documentsPath stringByAppendingPathComponent:@"Inbox"] error:NULL];
         
-        NSFileManager *fileManager = [[NSFileManager alloc] init];
-        [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"Inbox"] error:NULL];
-        [fileManager removeItemAtPath:[documentsDirectory stringByAppendingPathExtension:@".html"] error:NULL];
         return YES;
     }
     return NO;
