@@ -1335,7 +1335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which git; then\n  GIT_VERSION=`git describe --tags --always`\nelse\n  GIT_VERSION=unknown\nfi\ndefaults write $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Info GitVersionString -string $GIT_VERSION";
+			shellScript = "GIT=`which git`\nif [ \"$GIT\" -a -d .git ]; then\n  GIT_VERSION=`$GIT describe --tags --always`\nelse\n  GIT_VERSION=unknown\nfi\ndefaults write $BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Info GitVersionString -string $GIT_VERSION";
 		};
 /* End PBXShellScriptBuildPhase section */
 
