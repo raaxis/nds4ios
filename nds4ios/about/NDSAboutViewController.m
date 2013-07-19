@@ -72,21 +72,18 @@
 }
 
 - (IBAction)sendTweet:(id)sender {
-    //Create the tweet sheet
+    //New tweet sheet
     TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
     
-    //Add a tweet message
+    //Preloaded message
     [tweetSheet setInitialText:@"I love playing Nintendo DS games on my iOS device with #nds4ios from @InfiniDev_"];
-    
-    //Add a link
-    [tweetSheet addURL:[NSURL URLWithString:@"http://nds4ios.angelxwind.net"]];
-    
+        
     //Set a blocking handler for the tweet sheet
     tweetSheet.completionHandler = ^(TWTweetComposeViewControllerResult result){
         [self dismissModalViewControllerAnimated:YES];
     };
     
-    //Show the tweet sheet!
+    //Show the tweet sheet
     [self presentModalViewController:tweetSheet animated:YES];
 }
 
