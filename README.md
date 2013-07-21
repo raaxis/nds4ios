@@ -21,7 +21,7 @@ Install Instructions
 
 ### Option 1: Download it from aXwNET
 
-If you're jailbroken: http://nds4ios.angelxwind.net/?page/downloads#jailbroken
+If you're jailbroken, add the following source in Cydia: http://cydia.angelxwind.net/
 
 ### Option 2: Compile it yourself
 
