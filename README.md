@@ -1,6 +1,6 @@
 nds4ios - iOS 5 ~ 7
 =======
-### This is not finished software. Do not open issues complaining about games being slow, we know about it already. 
+### This is not finished software. Do not open issues complaining about games being slow, crashing on the iPod Touch 4 and below, and crashing on the iPhone 3GS and below; we know about it already.
 
 ### PLEASE DO NOT DISTRIBUTE THIS BY CODE SIGNING IT, UPLOADING, THEN TELLING OTHERS TO DOWNLOAD IT FROM YOU. WE PROVIDE AN OFFICIAL WAY TO DISTRIBUTE ALREADY. THIS IS A FAIR WARNING.
 
