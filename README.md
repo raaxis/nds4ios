@@ -51,9 +51,9 @@ How To Load ROMs
 
 ### Option 1 (Preferred Option)
 1. In nds4ios, tap on the button in the upper right hand corner.
-2. Download a ROM package of a ROM that you own the actual game cartridge for from a site such as CoolROM. It will come in a zip file. You do not have to have any sort of download manager for this, Safari will download zip files.
+2. Download a ROM package of a ROM that you own the actual game cartridge for from a site such as CoolROM. It may come in a zip file. You do not have to have any sort of download manager for this, Safari will download zip files.
 3. Tap the "Open in..." button in the top left hand corner, and select nds4ios.
-4. nds4ios will automatically unzip the file, delete the readme, and refresh itself. Your ROM should show up in the list. Magic!
+4. nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
 
 ### Option 2
 1. Plug your device into your computer and launch iTunes.
@@ -75,8 +75,8 @@ To-do
 * OpenGL ES rendering
 * Fix loading game saves on some games
 * Ability to set the folder the rom chooser reads from
-* Native iPad UI
-* Add more localizations
+* Native iPad UI (in progress)
+* Add more localizations (currently have: English, Traditional Chinese, Simplified Chinese, Spanish, French, Japanese)
 * Much more.
 
 Contributors
