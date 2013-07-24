@@ -524,6 +524,7 @@
 		BFCFE239176634EE000A70CF /* slot2_paddle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_paddle.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_paddle.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23A176634EE000A70CF /* slot2_piano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_piano.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_piano.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_rumblepak.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_rumblepak.cpp"; sourceTree = SOURCE_ROOT; };
+		CC56EB1E179F9AD70060FB6D /* nds4ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = nds4ios.entitlements; path = nds4ios/nds4ios.entitlements; sourceTree = "<group>"; };
 		D31CC8A017927BCB0098FB9C /* CHBgDropboxSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBgDropboxSync.h; sourceTree = "<group>"; };
 		D31CC8A117927BCB0098FB9C /* CHBgDropboxSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBgDropboxSync.m; sourceTree = "<group>"; };
 		D31CC8A217927BCB0098FB9C /* DropboxClearer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxClearer.h; sourceTree = "<group>"; };
@@ -815,6 +816,7 @@
 		BFCFE0E61764FBD3000A70CF = {
 			isa = PBXGroup;
 			children = (
+				CC56EB1E179F9AD70060FB6D /* nds4ios.entitlements */,
 				BFCFE0F81764FBD3000A70CF /* Main */,
 				BF9D515517865E1300B5864B /* Resources */,
 				BFCFE0F11764FBD3000A70CF /* Frameworks */,
@@ -1234,7 +1236,7 @@
 				ORGANIZATIONNAME = "DS Team";
 				TargetAttributes = {
 					BFCFE0EE1764FBD3000A70CF = {
-						DevelopmentTeam = QH4C67H626;
+						DevelopmentTeam = 6XVY5G3U44;
 					};
 				};
 			};
@@ -1616,6 +1618,7 @@
 		BFCFE1161764FBD3000A70CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = nds4ios/nds4ios.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1644,6 +1647,7 @@
 		BFCFE1171764FBD3000A70CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = nds4ios/nds4ios.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>34F94233-65FC-4216-A525-68D765E76194</string>
+	<string>02C38914-2D92-4430-847B-A5983763F560</string>
 	<key>IDESourceControlProjectName</key>
 	<string>nds4ios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8B54E17F-DAD0-4A2C-A53D-4E06AF0C9708</key>
-		<string>https://github.com/InfiniDev/nds4ios.git</string>
+		<key>E3CB1F93-3107-4B83-90AD-F3313EF3C493</key>
+		<string>ssh://github.com/InfiniDev/nds4ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>nds4ios.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8B54E17F-DAD0-4A2C-A53D-4E06AF0C9708</key>
+		<key>E3CB1F93-3107-4B83-90AD-F3313EF3C493</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/InfiniDev/nds4ios.git</string>
+	<string>ssh://github.com/InfiniDev/nds4ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8B54E17F-DAD0-4A2C-A53D-4E06AF0C9708</string>
+	<string>E3CB1F93-3107-4B83-90AD-F3313EF3C493</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8B54E17F-DAD0-4A2C-A53D-4E06AF0C9708</string>
+			<string>E3CB1F93-3107-4B83-90AD-F3313EF3C493</string>
 			<key>IDESourceControlWCCName</key>
 			<string>nds4ios</string>
 		</dict>

@@ -55,16 +55,16 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    /*
+    
     UIView *hiddenSettingsTapView = [[UIView alloc] initWithFrame:CGRectMake(245, 0, 75, 44)];
     
     UIBarButtonItem *hiddenSettingsBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:hiddenSettingsTapView];
-    self.navigationItem.leftBarButtonItem = hiddenSettingsBarButtonItem;
+    self.navigationItem.rightBarButtonItem = hiddenSettingsBarButtonItem;
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(revealHiddenSettings:)];
     tapGestureRecognizer.numberOfTapsRequired = 3;
     [hiddenSettingsTapView addGestureRecognizer:tapGestureRecognizer];
-     */
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,7 +91,7 @@
     } else if (sender == self.showFPSSwitch) {
         [defaults setBool:self.showFPSSwitch.on forKey:@"showFPS"];
     } else if (sender == self.enableJITSwitch) {
-        [defaults setBool:self.enableJITSwitch.on forKey:@"enableJIT"];
+        [defaults setBool:self.enableJITSwitch.on forKey:@"enableLightningJIT"];
     } else if (sender == self.dropboxSwitch) {//i'll use a better more foolproof method later
         if ([defaults boolForKey:@"enableDropbox"] == false) {
             [[DBSession sharedSession] linkFromController:self];
@@ -126,7 +126,7 @@
     
     self.showFPSSwitch.on = [defaults boolForKey:@"showFPS"];
     
-    self.enableJITSwitch.on = [defaults boolForKey:@"enableJIT"];
+    self.enableJITSwitch.on = [defaults boolForKey:@"enableLightningJIT"];
     
     self.dropboxSwitch.on = [defaults boolForKey:@"enableDropbox"];
     self.cellularSwitch.on = [defaults boolForKey:@"enableDropboxCellular"];
