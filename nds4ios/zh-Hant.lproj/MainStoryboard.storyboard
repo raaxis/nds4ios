@@ -1055,7 +1055,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection footerTitle="我們很努力的使用戶可享受和愛這個軟件。如果你喜歡這個軟件，請考慮捐助，以幫助我們創建和提供更好的東西。" id="kwR-Vl-yWR">
+                            <tableViewSection footerTitle="我們很努力的使用戶可以享受和喜愛這個軟件。如果你喜歡這個軟件，請考慮捐助，以幫助我們做的更好。" id="kwR-Vl-yWR">
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection id="Hb2-aa-wjb">
