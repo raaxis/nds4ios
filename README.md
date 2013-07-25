@@ -41,8 +41,6 @@ Navigate to the "nds4ios" folder in your working directory.
 
 4. Open "nds4ios.xcodeproj", connect your device, select it on Xcode and click the "Run" button (or Command + R). Don't build it for the iOS Simulator. IMPORTANT: Make sure you change your running scheme to Release first. Otherwise you will get errors on compile!
 
-* A note on Dropbox integration if you're building it yourself: Due to Dropbox's request, we cannot provide the App Key and App Secret in the source code. You must either set one up youself or obtain it from us. Official releases from us will use the official key. We will try to make this easier to handle in the future.
-
 #### Option 2a
 1. Alternatively, run
     <code>xcodebuild -configuration Release</code>
