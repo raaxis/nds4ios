@@ -74,7 +74,7 @@ const float textureVert[] =
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *fpsLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *retroView;
+@property (weak, nonatomic) IBOutlet UIImageView *pixelGrid;
 @property (strong, nonatomic) GLProgram *program;
 @property (strong, nonatomic) EAGLContext *context;
 @property (strong, nonatomic) IBOutlet GLKView *glkView;
@@ -162,7 +162,7 @@ const float textureVert[] =
     
     
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
-    self.retroView.hidden = ![defaults integerForKey:@"showRetroView"];
+    self.pixelGrid.hidden = ![defaults integerForKey:@"showPixelGrid"];
 }
 
 - (void)viewWillLayoutSubviews
@@ -454,7 +454,6 @@ const float textureVert[] =
 }
 
 - (void)viewDidUnload {
-    [self setRetroView:nil];
     [super viewDidUnload];
 }
 @end

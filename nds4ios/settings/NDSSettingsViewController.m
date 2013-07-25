@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *controlOpacitySlider;
 
 @property (weak, nonatomic) IBOutlet UISwitch *showFPSSwitch;
-@property (weak, nonatomic) IBOutlet UISwitch *showRetroViewSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *showPixelGridSwitch;
 
 @property (weak, nonatomic) IBOutlet UISwitch *enableJITSwitch;
 
@@ -84,8 +84,8 @@
         [defaults setInteger:frameSkip forKey:@"frameSkip"];
     } else if (sender == self.disableSoundSwitch) {
         [defaults setBool:self.disableSoundSwitch.on forKey:@"disableSound"];
-    } else if (sender == self.showRetroViewSwitch) {
-        [defaults setBool:self.showRetroViewSwitch.on forKey:@"showRetroView"];
+    } else if (sender == self.showPixelGridSwitch) {
+        [defaults setBool:self.showPixelGridSwitch.on forKey:@"showPixelGrid"];
     } else if (sender == self.controlPadStyleControl) {
         [defaults setInteger:self.controlPadStyleControl.selectedSegmentIndex forKey:@"controlPadStyle"];
     } else if (sender == self.controlPositionControl) {
@@ -129,7 +129,7 @@
     self.controlOpacitySlider.value = [defaults floatForKey:@"controlOpacity"];
     
     self.showFPSSwitch.on = [defaults boolForKey:@"showFPS"];
-    self.showRetroViewSwitch.on = [defaults boolForKey:@"showRetroView"];
+    self.showPixelGridSwitch.on = [defaults boolForKey:@"showPixelGrid"];
     
     self.enableJITSwitch.on = [defaults boolForKey:@"enableLightningJIT"];
     

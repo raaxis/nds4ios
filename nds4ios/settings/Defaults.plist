@@ -14,7 +14,7 @@
 	<integer>0</integer>
 	<key>showFPS</key>
 	<false/>
-	<key>showRetroView</key>
+	<key>showPixelGrid</key>
 	<false/>
 	<key>enableDropbox</key>
 	<false/>

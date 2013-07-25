@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Emulator" footerTitle="Retro Display makes games appear less blurry but reduces brightness." id="Zfz-To-hqF">
+                            <tableViewSection headerTitle="Emulator" footerTitle="A pixel grid makes games appear less blurry but reduces brightness." id="Zfz-To-hqF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="PGZ-yw-RwN">
                                         <rect key="frame" x="0.0" y="46" width="320" height="75"/>
@@ -85,10 +85,10 @@
                                                     <rect key="frame" x="203" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="tOg-8Z-iow"/>
+                                                        <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="QgR-yJ-K4E"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Retro Display" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1H-5W-GBv">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Overlay Pixel Grid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1H-5W-GBv">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -307,7 +307,7 @@
                         <outlet property="enableJITSwitch" destination="biu-A3-Eay" id="tPu-JV-VAY"/>
                         <outlet property="frameSkipControl" destination="2i9-9X-BIw" id="ogK-NA-DyZ"/>
                         <outlet property="showFPSSwitch" destination="hjj-DU-8Z8" id="oa2-4w-1fP"/>
-                        <outlet property="showRetroViewSwitch" destination="U7N-Jx-IWl" id="6RE-oo-fDC"/>
+                        <outlet property="showPixelGridSwitch" destination="U7N-Jx-IWl" id="do9-tv-emX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjl-tV-jFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -388,8 +388,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="retrodisplay.png" id="DP7-yE-vFs">
-                                <rect key="frame" x="0.0" y="-1" width="320" height="480"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="pixelgrid.png" id="DP7-yE-vFs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="60 FPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mo4-qa-NUQ">
@@ -523,7 +523,7 @@
                         <outlet property="directionalControl" destination="2r2-6d-4At" id="vWy-8J-bQS"/>
                         <outlet property="dismissButton" destination="VZZ-1B-BHQ" id="mnz-cv-9tm"/>
                         <outlet property="fpsLabel" destination="mo4-qa-NUQ" id="8Zo-5a-CNQ"/>
-                        <outlet property="retroView" destination="DP7-yE-vFs" id="BgZ-mI-3Vh"/>
+                        <outlet property="pixelGrid" destination="DP7-yE-vFs" id="sx0-c5-FQe"/>
                         <outlet property="selectButton" destination="V4S-vg-8Nm" id="tBb-zg-QsY"/>
                         <outlet property="startButton" destination="DAf-Ip-ZfX" id="p1g-5Z-VZV"/>
                     </connections>
@@ -1274,7 +1274,7 @@
         <image name="Select.png" width="48" height="26"/>
         <image name="Start.png" width="48" height="26"/>
         <image name="disclosure.png" width="20" height="20"/>
-        <image name="retrodisplay.png" width="640" height="960"/>
+        <image name="pixelgrid.png" width="640" height="960"/>
         <image name="row.png" width="1" height="44"/>
         <image name="rowselected.png" width="1" height="44"/>
     </resources>
@@ -1329,7 +1329,7 @@
                 <relationship kind="outlet" name="enableJITSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="frameSkipControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="showFPSSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="showRetroViewSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="showPixelGridSwitch" candidateClass="UISwitch"/>
             </relationships>
         </class>
         <class className="NDSSideBarViewController" superclassName="SASlideMenuViewController">
