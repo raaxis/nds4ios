@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A524d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -632,7 +632,7 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Peter Wang (W.MS)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D6G-uU-KW3">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pluto Wang (W.MS)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D6G-uU-KW3">
                                                     <rect key="frame" x="12" y="11" width="246" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -1196,79 +1196,6 @@
         <image name="row.png" width="1" height="44"/>
         <image name="rowselected.png" width="1" height="44"/>
     </resources>
-    <classes>
-        <class className="MenuCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="disclosureImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="itemDescription" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NDSAboutViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSAboutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendTweet:"/>
-                <relationship kind="outlet" name="tweetButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSButtonControl.h"/>
-        </class>
-        <class className="NDSDirectionalControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDirectionalControl.h"/>
-        </class>
-        <class className="NDSDonationViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDonationViewController.h"/>
-        </class>
-        <class className="NDSEmulatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSEmulatorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="buttonControl" candidateClass="NDSButtonControl"/>
-                <relationship kind="outlet" name="controllerContainerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="directionalControl" candidateClass="NDSDirectionalControl"/>
-                <relationship kind="outlet" name="dismissButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fpsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="glkView" candidateClass="GLKView"/>
-                <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NDSROMTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSROMTableViewController.h"/>
-        </class>
-        <class className="NDSRightMenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSRightMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NDSSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="controlChanged:"/>
-                <relationship kind="outlet" name="accountLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cellularSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="controlPadStyleControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="controlPositionControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="disableSoundSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="dropboxSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="enableJITSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="frameSkipControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="showFPSSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="NDSSideBarViewController" superclassName="SASlideMenuViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSideBarViewController.h"/>
-        </class>
-        <class className="SASlideMenuRootViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuRootViewController.h"/>
-        </class>
-        <class className="SASlideMenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
