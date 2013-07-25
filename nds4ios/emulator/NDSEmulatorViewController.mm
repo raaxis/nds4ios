@@ -74,6 +74,7 @@ const float textureVert[] =
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *fpsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *pixelGrid;
 @property (strong, nonatomic) GLProgram *program;
 @property (strong, nonatomic) EAGLContext *context;
 @property (strong, nonatomic) IBOutlet GLKView *glkView;
@@ -161,6 +162,7 @@ const float textureVert[] =
     
     
     self.fpsLabel.hidden = ![defaults integerForKey:@"showFPS"];
+    self.pixelGrid.hidden = ![defaults integerForKey:@"showPixelGrid"];
 }
 
 - (void)viewWillLayoutSubviews
@@ -451,4 +453,7 @@ const float textureVert[] =
     [self resumeEmulation];
 }
 
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
 @end
