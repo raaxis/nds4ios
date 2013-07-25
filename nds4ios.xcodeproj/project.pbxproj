@@ -198,6 +198,8 @@
 		D31CC8B317927C3B0098FB9C /* NSArray+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8AD17927C3B0098FB9C /* NSArray+ConciseKit.m */; };
 		D31CC8B417927C3B0098FB9C /* NSDictionary+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8AF17927C3B0098FB9C /* NSDictionary+ConciseKit.m */; };
 		D31CC8B517927C3B0098FB9C /* NSString+ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8B117927C3B0098FB9C /* NSString+ConciseKit.m */; };
+		D325821217A1D69B0009C84B /* pixelgrid.png in Resources */ = {isa = PBXBuildFile; fileRef = D325821017A1D69B0009C84B /* pixelgrid.png */; };
+		D325821317A1D69B0009C84B /* pixelgrid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D325821117A1D69B0009C84B /* pixelgrid@2x.png */; };
 		D32C39D3178E73A600E6809E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D2178E73A600E6809E /* CFNetwork.framework */; };
 		D32C39D5178E73B500E6809E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D4178E73B500E6809E /* Security.framework */; };
 		D32C39D7178E73C200E6809E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D6178E73C200E6809E /* SystemConfiguration.framework */; };
@@ -540,6 +542,8 @@
 		D31CC8AF17927C3B0098FB9C /* NSDictionary+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConciseKit.m"; sourceTree = "<group>"; };
 		D31CC8B017927C3B0098FB9C /* NSString+ConciseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ConciseKit.h"; sourceTree = "<group>"; };
 		D31CC8B117927C3B0098FB9C /* NSString+ConciseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ConciseKit.m"; sourceTree = "<group>"; };
+		D325821017A1D69B0009C84B /* pixelgrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pixelgrid.png; path = Resources/pixelgrid.png; sourceTree = "<group>"; };
+		D325821117A1D69B0009C84B /* pixelgrid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pixelgrid@2x.png"; path = "Resources/pixelgrid@2x.png"; sourceTree = "<group>"; };
 		D32C39D2178E73A600E6809E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D32C39D4178E73B500E6809E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D32C39D6178E73C200E6809E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -735,6 +739,8 @@
 				8BEFF47A178B459000EEE55A /* row@2x.png */,
 				8BEFF47B178B459000EEE55A /* rowselected.png */,
 				8BEFF47C178B459000EEE55A /* rowselected@2x.png */,
+				D325821017A1D69B0009C84B /* pixelgrid.png */,
+				D325821117A1D69B0009C84B /* pixelgrid@2x.png */,
 				BF9D517017867F8200B5864B /* Controls */,
 				BF9D515617865E1D00B5864B /* Required */,
 			);
@@ -1320,6 +1326,8 @@
 				8B58A60C178E361A00BA0593 /* 240-ndscartridge.png in Resources */,
 				8B58A60D178E361A00BA0593 /* 240-ndscartridge@2x.png in Resources */,
 				D3B8BB961794ACEF0061D1D8 /* ZAActivityBar.bundle in Resources */,
+				D325821217A1D69B0009C84B /* pixelgrid.png in Resources */,
+				D325821317A1D69B0009C84B /* pixelgrid@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
