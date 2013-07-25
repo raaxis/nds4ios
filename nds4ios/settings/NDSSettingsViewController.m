@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UISlider *controlOpacitySlider;
 
 @property (weak, nonatomic) IBOutlet UISwitch *showFPSSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *showRetroViewSwitch;
+
 @property (weak, nonatomic) IBOutlet UISwitch *enableJITSwitch;
 
 @property (weak, nonatomic) IBOutlet UISwitch *dropboxSwitch;
@@ -48,10 +50,10 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -82,6 +84,8 @@
         [defaults setInteger:frameSkip forKey:@"frameSkip"];
     } else if (sender == self.disableSoundSwitch) {
         [defaults setBool:self.disableSoundSwitch.on forKey:@"disableSound"];
+    } else if (sender == self.showRetroViewSwitch) {
+        [defaults setBool:self.showRetroViewSwitch.on forKey:@"showRetroView"];
     } else if (sender == self.controlPadStyleControl) {
         [defaults setInteger:self.controlPadStyleControl.selectedSegmentIndex forKey:@"controlPadStyle"];
     } else if (sender == self.controlPositionControl) {
@@ -102,7 +106,7 @@
             [[DBSession sharedSession] unlinkAll];
             OLGhostAlertView *unlinkAlert = [[OLGhostAlertView alloc] initWithTitle:@"Unlinked!" message:@"Dropbox has been unlinked. Your games will no longer be synced." timeout:10 dismissible:YES];
             [unlinkAlert show];
-
+            
             [defaults setBool:false forKey:@"enableDropbox"];
             self.accountLabel.text = @"Not Linked";
         }
@@ -125,6 +129,7 @@
     self.controlOpacitySlider.value = [defaults floatForKey:@"controlOpacity"];
     
     self.showFPSSwitch.on = [defaults boolForKey:@"showFPS"];
+    self.showRetroViewSwitch.on = [defaults boolForKey:@"showRetroView"];
     
     self.enableJITSwitch.on = [defaults boolForKey:@"enableLightningJIT"];
     

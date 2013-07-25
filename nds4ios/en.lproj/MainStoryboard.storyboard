@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A524d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="RwU-Ga-Til">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Emulator" id="Zfz-To-hqF">
+                            <tableViewSection headerTitle="Emulator" footerTitle="Retro Display makes games appear less blurry but reduces brightness." id="Zfz-To-hqF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="PGZ-yw-RwN">
                                         <rect key="frame" x="0.0" y="46" width="320" height="75"/>
@@ -50,7 +50,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rLx-Zb-3lK">
-                                        <rect key="frame" x="0.0" y="121" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="121" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -74,12 +74,37 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9Hh-4E-N3U">
+                                        <rect key="frame" x="0.0" y="165" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="U7N-Jx-IWl">
+                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="tOg-8Z-iow"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Retro Display" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1H-5W-GBv">
+                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Controls" id="Y6o-vJ-AvE">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="hWj-GE-tqt">
-                                        <rect key="frame" x="0.0" y="212" width="320" height="75"/>
+                                        <rect key="frame" x="0.0" y="306" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="73"/>
@@ -108,7 +133,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="e4q-fe-GNL">
-                                        <rect key="frame" x="0.0" y="287" width="320" height="74"/>
+                                        <rect key="frame" x="0.0" y="381" width="320" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="73"/>
@@ -137,7 +162,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="WGw-2a-Cx6">
-                                        <rect key="frame" x="0.0" y="361" width="320" height="75"/>
+                                        <rect key="frame" x="0.0" y="455" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="73"/>
@@ -166,7 +191,7 @@
                             <tableViewSection headerTitle="Developer" id="O9Q-KX-eTM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="reo-6x-MNx">
-                                        <rect key="frame" x="0.0" y="482" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="576" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -193,10 +218,10 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Dropbox" id="0Py-uK-oNg">
-                                <string key="footerTitle">Enabling Dropbox will add an nds4ios folder to your dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone -&gt; iPad -&gt; PC, etc).</string>
+                                <string key="footerTitle">Enabling Dropbox will add an nds4ios folder to your dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone -> iPad -> PC, etc).</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AeV-QE-SJw">
-                                        <rect key="frame" x="0.0" y="574" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="668" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -221,7 +246,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BDF-ic-6kt">
-                                        <rect key="frame" x="0.0" y="619" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="713" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -243,7 +268,7 @@
                             <tableViewSection headerTitle="JIT" footerTitle="JIT makes games run faster. You must be jailbroken or nds4ios will crash." id="HQs-Z9-d7P">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xmH-De-K0j">
-                                        <rect key="frame" x="0.0" y="817" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="911" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -282,6 +307,7 @@
                         <outlet property="enableJITSwitch" destination="biu-A3-Eay" id="tPu-JV-VAY"/>
                         <outlet property="frameSkipControl" destination="2i9-9X-BIw" id="ogK-NA-DyZ"/>
                         <outlet property="showFPSSwitch" destination="hjj-DU-8Z8" id="oa2-4w-1fP"/>
+                        <outlet property="showRetroViewSwitch" destination="U7N-Jx-IWl" id="6RE-oo-fDC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjl-tV-jFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -362,6 +388,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="retrodisplay.png" id="DP7-yE-vFs">
+                                <rect key="frame" x="0.0" y="-1" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="60 FPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mo4-qa-NUQ">
                                 <rect key="frame" x="6" y="0.0" width="70" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -493,6 +523,7 @@
                         <outlet property="directionalControl" destination="2r2-6d-4At" id="vWy-8J-bQS"/>
                         <outlet property="dismissButton" destination="VZZ-1B-BHQ" id="mnz-cv-9tm"/>
                         <outlet property="fpsLabel" destination="mo4-qa-NUQ" id="8Zo-5a-CNQ"/>
+                        <outlet property="retroView" destination="DP7-yE-vFs" id="BgZ-mI-3Vh"/>
                         <outlet property="selectButton" destination="V4S-vg-8Nm" id="tBb-zg-QsY"/>
                         <outlet property="startButton" destination="DAf-Ip-ZfX" id="p1g-5Z-VZV"/>
                     </connections>
@@ -1243,9 +1274,74 @@
         <image name="Select.png" width="48" height="26"/>
         <image name="Start.png" width="48" height="26"/>
         <image name="disclosure.png" width="20" height="20"/>
+        <image name="retrodisplay.png" width="640" height="960"/>
         <image name="row.png" width="1" height="44"/>
         <image name="rowselected.png" width="1" height="44"/>
     </resources>
+    <classes>
+        <class className="MenuCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="disclosureImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="itemDescription" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSAboutViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendTweet:"/>
+                <relationship kind="outlet" name="tweetButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSButtonControl.h"/>
+        </class>
+        <class className="NDSDirectionalControl" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDirectionalControl.h"/>
+        </class>
+        <class className="NDSDonationViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDonationViewController.h"/>
+        </class>
+        <class className="NDSEmulatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSEmulatorViewController.h"/>
+        </class>
+        <class className="NDSROMTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSROMTableViewController.h"/>
+        </class>
+        <class className="NDSRightMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSRightMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="controlChanged:"/>
+                <relationship kind="outlet" name="accountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cellularSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="controlPadStyleControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="controlPositionControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="disableSoundSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="dropboxSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="enableJITSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="frameSkipControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="showFPSSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="showRetroViewSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="NDSSideBarViewController" superclassName="SASlideMenuViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSideBarViewController.h"/>
+        </class>
+        <class className="SASlideMenuRootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuRootViewController.h"/>
+        </class>
+        <class className="SASlideMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
