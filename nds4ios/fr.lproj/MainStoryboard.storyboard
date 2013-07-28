@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A524d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="005-sx-nAO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="005-sx-nAO">
     <dependencies>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -14,16 +14,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Émulateur" id="8ay-Is-5cJ">
+                            <tableViewSection headerTitle="Émulateur" footerTitle="La grille de pixels donne les jeux l'apparence d'être moins floue, mais en même temps, réduit la luminosité." id="mEL-Yn-xCj">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="rfz-yS-aDr">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="lof-4H-sKM">
                                         <rect key="frame" x="0.0" y="46" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="DIg-MO-Zo9">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="6kp-fD-Ntk">
                                                     <rect key="frame" x="20" y="36" width="260" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
@@ -35,10 +35,10 @@
                                                         <segment title="Auto" width="56"/>
                                                     </segments>
                                                     <connections>
-                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="fpR-lR-lzo"/>
+                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="dqP-YV-xU2"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saut De Trame" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Gla-Rl-Nw8">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saut De Trame" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IHW-bL-x1X">
                                                     <rect key="frame" x="20" y="7" width="260" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -49,21 +49,46 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f69-Jc-Ig7">
-                                        <rect key="frame" x="0.0" y="121" width="320" height="45"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bcH-NY-oTi">
+                                        <rect key="frame" x="0.0" y="121" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="uEd-Ek-s88">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Mo5-Ly-3DH">
                                                     <rect key="frame" x="203" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="R2h-mP-TrF"/>
+                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="d4X-7p-aT8"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Désactiver Le Son" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r4a-k7-dDD">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Désactiver Le Son" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OjB-dn-amm">
+                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qlZ-uB-tCN">
+                                        <rect key="frame" x="0.0" y="165" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="tDi-To-yL7">
+                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="A2a-yU-mgL"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Grille De Pixels" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1yq-66-8A6">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -79,7 +104,7 @@
                             <tableViewSection headerTitle="Contrôles" id="p35-7t-JU6">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="gaz-7I-Pns">
-                                        <rect key="frame" x="0.0" y="212" width="320" height="75"/>
+                                        <rect key="frame" x="0.0" y="325" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="73"/>
@@ -108,7 +133,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="prn-La-kdi">
-                                        <rect key="frame" x="0.0" y="287" width="320" height="74"/>
+                                        <rect key="frame" x="0.0" y="400" width="320" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="73"/>
@@ -137,7 +162,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="rNW-qX-QtR">
-                                        <rect key="frame" x="0.0" y="361" width="320" height="75"/>
+                                        <rect key="frame" x="0.0" y="474" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="73"/>
@@ -163,10 +188,58 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Dropbox" id="Gpy-JE-pMU">
+                                <string key="footerTitle">L'activation de Dropbox va ajouter un dossier pour nds4ios à votre compte pour Dropbox. Vos sauvegardes de jeu sera synchronisé à ce dossier afin qu'il portera à travers les dispositifs (iPhone -> iPad -> PC, etc.)</string>
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zgi-jf-DEd">
+                                        <rect key="frame" x="0.0" y="595" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="3zC-F5-4qE">
+                                                    <rect key="frame" x="203" y="8" width="79" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="VSg-AL-qQi"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Synchronisation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmD-Bz-gtj">
+                                                    <rect key="frame" x="20" y="11" width="175" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kna-2c-K4X">
+                                        <rect key="frame" x="0.0" y="640" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Non Lié" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HIy-ic-XES">
+                                                    <rect key="frame" x="63" y="11" width="175" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Développeur" id="8JW-YD-NYc">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZIP-y6-Q5i">
-                                        <rect key="frame" x="0.0" y="482" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="857" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -192,23 +265,23 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Caché" id="Mrh-2r-rpP">
+                            <tableViewSection headerTitle="Expérimental" footerTitle="JIT rend les jeux s'exécuter plus rapidement. Vous devez être jailbreaké, ou nds4ios va planter." id="niB-5t-Cn3">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="26d-k3-aBt">
-                                        <rect key="frame" x="0.0" y="574" width="320" height="46"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CT9-mZ-Zlm">
+                                        <rect key="frame" x="0.0" y="949" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="lel-5N-4Hp">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Fxk-IU-xEA">
                                                     <rect key="frame" x="203" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="ny9-Mx-rPO"/>
+                                                        <action selector="controlChanged:" destination="tcD-XL-fLs" eventType="valueChanged" id="GmB-iS-vCf"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Activer JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nEO-JU-ynL">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lightning JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PIh-e4-uLN">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -225,13 +298,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Réglages" id="dXV-Gk-btP"/>
                     <connections>
+                        <outlet property="accountLabel" destination="HIy-ic-XES" id="qx6-Km-LDC"/>
                         <outlet property="controlOpacitySlider" destination="hJx-o2-HBt" id="hfs-js-BLE"/>
                         <outlet property="controlPadStyleControl" destination="f74-9v-4n3" id="x87-ws-ddH"/>
                         <outlet property="controlPositionControl" destination="kXi-QM-jVm" id="SIa-kK-BUr"/>
-                        <outlet property="disableSoundSwitch" destination="uEd-Ek-s88" id="ikr-aE-iZc"/>
-                        <outlet property="enableJITSwitch" destination="lel-5N-4Hp" id="AuG-5Z-LbZ"/>
-                        <outlet property="frameSkipControl" destination="DIg-MO-Zo9" id="1nZ-RT-OqA"/>
+                        <outlet property="disableSoundSwitch" destination="Mo5-Ly-3DH" id="jYn-52-gwl"/>
+                        <outlet property="dropboxSwitch" destination="3zC-F5-4qE" id="E0T-r5-DJd"/>
+                        <outlet property="enableJITSwitch" destination="Fxk-IU-xEA" id="Tey-P1-f2G"/>
+                        <outlet property="frameSkipControl" destination="6kp-fD-Ntk" id="VLc-t2-tFt"/>
                         <outlet property="showFPSSwitch" destination="6J5-Wo-w8b" id="Sk3-bU-aNt"/>
+                        <outlet property="showPixelGridSwitch" destination="tDi-To-yL7" id="V3W-mS-3o9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dma-c0-0op" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1196,6 +1272,70 @@
         <image name="row.png" width="1" height="44"/>
         <image name="rowselected.png" width="1" height="44"/>
     </resources>
+    <classes>
+        <class className="MenuCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="disclosureImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="itemDescription" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSAboutViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendTweet:"/>
+                <relationship kind="outlet" name="tweetButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSButtonControl" superclassName="NDSDirectionalControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSButtonControl.h"/>
+        </class>
+        <class className="NDSDirectionalControl" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDirectionalControl.h"/>
+        </class>
+        <class className="NDSDonationViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSDonationViewController.h"/>
+        </class>
+        <class className="NDSEmulatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSEmulatorViewController.h"/>
+        </class>
+        <class className="NDSROMTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSROMTableViewController.h"/>
+        </class>
+        <class className="NDSRightMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSRightMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NDSSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="controlChanged:"/>
+                <relationship kind="outlet" name="accountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cellularSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="controlOpacitySlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="controlPadStyleControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="controlPositionControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="disableSoundSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="dropboxSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="enableJITSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="frameSkipControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="showFPSSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="showPixelGridSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="NDSSideBarViewController" superclassName="SASlideMenuViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NDSSideBarViewController.h"/>
+        </class>
+        <class className="SASlideMenuRootViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuRootViewController.h"/>
+        </class>
+        <class className="SASlideMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SASlideMenuViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -147,7 +147,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults boolForKey:@"enableDropbox"] == true) {
-        self.accountLabel.text = @"Linked";
+        self.accountLabel.text = NSLocalizedString(@"Linked", @"");
     }
 }
 
