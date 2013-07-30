@@ -65,7 +65,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [CHBgDropboxSync start];
-    //using file change observers will probably be better. I'll change this later on.
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -155,6 +154,7 @@
         // start new game
         [AppDelegate.sharedInstance startGame:game withSavedState:-1];
     }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Non-UITableView functions
