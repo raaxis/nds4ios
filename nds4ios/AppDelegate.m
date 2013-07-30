@@ -136,7 +136,7 @@
     // TODO: check if resuming current game, also call EMU_closeRom maybe
     NDSEmulatorViewController *emulatorViewController = (NDSEmulatorViewController *)[[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"emulatorView"];
     emulatorViewController.game = game;
-    emulatorViewController.loadSaveState = [game pathForSaveStateAtIndex:savedState];
+    emulatorViewController.saveState = [game pathForSaveStateAtIndex:savedState];
     [AppDelegate sharedInstance].currentEmulatorViewController = emulatorViewController;
     SASlideMenuRootViewController *rootViewController = (SASlideMenuRootViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
     [rootViewController doSlideIn:nil];

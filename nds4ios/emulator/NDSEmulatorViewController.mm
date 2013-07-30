@@ -130,7 +130,7 @@ const float textureVert[] =
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self pauseEmulation];
-    [self saveStateWithName:@"pause"];
+    [self saveStateWithName:nil];
     [UIApplication sharedApplication].statusBarHidden = NO;
 }
 
@@ -222,7 +222,7 @@ const float textureVert[] =
     
     emuLoopLock = [NSLock new];
     
-    if (self.loadSaveState) EMU_loadState(self.loadSaveState.fileSystemRepresentation);
+    if (self.saveState) EMU_loadState(self.saveState.fileSystemRepresentation);
     [self startEmulatorLoop];
 }
 
@@ -345,7 +345,8 @@ const float textureVert[] =
 
 - (void)saveStateWithName:(NSString*)saveStateName
 {
-    EMU_saveState([self.game pathForSaveStateWithName:saveStateName].fileSystemRepresentation);
+    if (self.saveState == nil || saveStateName != nil) self.saveState = [self.game pathForSaveStateWithName:saveStateName ? saveStateName : @"pause"];
+    EMU_saveState(self.saveState.fileSystemRepresentation);
     [self.game reloadSaveStates];
 }
 

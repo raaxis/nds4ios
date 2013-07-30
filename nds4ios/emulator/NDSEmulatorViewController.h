@@ -12,7 +12,7 @@
 @interface NDSEmulatorViewController : UIViewController <UIAlertViewDelegate>
 
 @property (strong, nonatomic) NDSGame *game;
-@property (copy, nonatomic) NSString *loadSaveState;
+@property (copy, nonatomic) NSString *saveState;
 
 - (void)pauseEmulation;
 - (void)resumeEmulation;
