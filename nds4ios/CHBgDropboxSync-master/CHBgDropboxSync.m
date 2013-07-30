@@ -34,6 +34,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
 - (void)showWorking {
     [ZAActivityBar showWithStatus:@"Syncing saves..."];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 
 - (void)hideWorking {
@@ -121,17 +122,15 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // For clean shutdowns on sync success
 - (void)internalShutdownSuccess {
     [self lastSyncCompletionRescan];
-    //workingLabel.text = @"Done ";
     [ZAActivityBar showSuccessWithStatus:@"Synced!" duration:2];
-    //[self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self internalCommonShutdown];
 }
 
 // For failed shutdowns
 - (void)internalShutdownFailed {
-    //workingLabel.text = @"Failed ";
     [ZAActivityBar showErrorWithStatus:@"Failed to sync!" duration:4];
-    //[self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self internalCommonShutdown];
 }
 
