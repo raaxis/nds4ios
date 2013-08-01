@@ -25,7 +25,7 @@ Install Instructions
 
 If you're jailbroken, add the following source in Cydia: http://cydia.angelxwind.net/
 
-If you're NOT jailbroken, then you're going to have to make some compromises. Check the following link for details: http://nds4ios.infinidev.org/temp
+If you're NOT jailbroken, then you're going to have to make some compromises. Check the following link for details: http://nds4ios.infinidev.org/i/?page/downloads#notjailbroken
 
 ### Option 2: Compile it yourself
 
