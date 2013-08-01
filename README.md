@@ -8,7 +8,7 @@ nds4ios - iOS 5 ~ 7
 
 nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
 
-http://nds4ios.angelxwind.net/
+http://nds4ios.infinidev.org/
 
 [DeSmuME](http://desmume.org/) 
 
@@ -25,7 +25,7 @@ Install Instructions
 
 If you're jailbroken, add the following source in Cydia: http://cydia.angelxwind.net/
 
-If you're NOT jailbroken, then you're going to have to make some compromises. Check the following link for details: http://nds4ios.infinidev.org
+If you're NOT jailbroken, then you're going to have to make some compromises. Check the following link for details: http://nds4ios.infinidev.org/temp
 
 ### Option 2: Compile it yourself
 
