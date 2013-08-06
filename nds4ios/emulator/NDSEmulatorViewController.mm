@@ -446,12 +446,15 @@ const float textureVert[] =
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    if (buttonIndex == 0) {
+        [self resumeEmulation];
+    }
     if (buttonIndex == 1) {
         // save
         NSString *saveStateName = [alertView textFieldAtIndex:0].text;
         [self saveStateWithName:saveStateName];
+        [self dismissModalViewControllerAnimated:YES];
     }
-    [self resumeEmulation];
 }
 
 - (void)viewDidUnload {
