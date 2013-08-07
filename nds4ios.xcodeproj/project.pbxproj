@@ -205,6 +205,10 @@
 		D32C39D7178E73C200E6809E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D6178E73C200E6809E /* SystemConfiguration.framework */; };
 		D32C39D9178E748000E6809E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D8178E748000E6809E /* QuartzCore.framework */; };
 		D32C39DB178E749C00E6809E /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39DA178E749C00E6809E /* libc++.dylib */; };
+		D370361F17B1C339001C1E15 /* iOS 6.png in Resources */ = {isa = PBXBuildFile; fileRef = D370361B17B1C339001C1E15 /* iOS 6.png */; };
+		D370362017B1C339001C1E15 /* iOS 6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D370361C17B1C339001C1E15 /* iOS 6@2x.png */; };
+		D370362117B1C339001C1E15 /* iOS 7.png in Resources */ = {isa = PBXBuildFile; fileRef = D370361D17B1C339001C1E15 /* iOS 7.png */; };
+		D370362217B1C339001C1E15 /* iOS 7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D370361E17B1C339001C1E15 /* iOS 7@2x.png */; };
 		D3B8BB921794ACCE0061D1D8 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B8BB911794ACCE0061D1D8 /* DropboxSDK.framework */; };
 		D3B8BB961794ACEF0061D1D8 /* ZAActivityBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3B8BB931794ACEF0061D1D8 /* ZAActivityBar.bundle */; };
 		D3B8BB971794ACEF0061D1D8 /* ZAActivityBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8BB951794ACEF0061D1D8 /* ZAActivityBar.m */; };
@@ -549,6 +553,10 @@
 		D32C39D6178E73C200E6809E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D32C39D8178E748000E6809E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D32C39DA178E749C00E6809E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D370361B17B1C339001C1E15 /* iOS 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6.png"; path = "Resources/iOS 6.png"; sourceTree = "<group>"; };
+		D370361C17B1C339001C1E15 /* iOS 6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6@2x.png"; path = "Resources/iOS 6@2x.png"; sourceTree = "<group>"; };
+		D370361D17B1C339001C1E15 /* iOS 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 7.png"; path = "Resources/iOS 7.png"; sourceTree = "<group>"; };
+		D370361E17B1C339001C1E15 /* iOS 7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 7@2x.png"; path = "Resources/iOS 7@2x.png"; sourceTree = "<group>"; };
 		D3B8BB911794ACCE0061D1D8 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = nds4ios/dropbox/DropboxSDK.framework; sourceTree = "<group>"; };
 		D3B8BB931794ACEF0061D1D8 /* ZAActivityBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ZAActivityBar.bundle; path = nds4ios/ZAActivityBar/ZAActivityBar.bundle; sourceTree = SOURCE_ROOT; };
 		D3B8BB941794ACEF0061D1D8 /* ZAActivityBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAActivityBar.h; path = nds4ios/ZAActivityBar/ZAActivityBar.h; sourceTree = SOURCE_ROOT; };
@@ -758,6 +766,10 @@
 				8BEA0935178724E10060B347 /* Icon-Spotlight@2x.png */,
 				8BEA0936178724E10060B347 /* Icon.png */,
 				8BEA0937178724E10060B347 /* Icon@2x.png */,
+				D370361B17B1C339001C1E15 /* iOS 6.png */,
+				D370361C17B1C339001C1E15 /* iOS 6@2x.png */,
+				D370361D17B1C339001C1E15 /* iOS 7.png */,
+				D370361E17B1C339001C1E15 /* iOS 7@2x.png */,
 			);
 			name = Required;
 			sourceTree = "<group>";
@@ -1328,6 +1340,10 @@
 				D3B8BB961794ACEF0061D1D8 /* ZAActivityBar.bundle in Resources */,
 				D325821217A1D69B0009C84B /* pixelgrid.png in Resources */,
 				D325821317A1D69B0009C84B /* pixelgrid@2x.png in Resources */,
+				D370361F17B1C339001C1E15 /* iOS 6.png in Resources */,
+				D370362017B1C339001C1E15 /* iOS 6@2x.png in Resources */,
+				D370362117B1C339001C1E15 /* iOS 7.png in Resources */,
+				D370362217B1C339001C1E15 /* iOS 7@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1555,7 +1571,7 @@
 					"$(SRCROOT)/",
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DANDROID",
@@ -1603,7 +1619,7 @@
 					"$(SRCROOT)/",
 					"$(SRCROOT)/nds4droid-code/jni/desmume/src/android",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DANDROID",
@@ -1634,6 +1650,7 @@
 					"\"$(SRCROOT)/nds4ios/frameworks\"",
 					"\"$(SRCROOT)/nds4ios\"",
 					"\"$(SRCROOT)/nds4ios/dropbox\"",
+					"\"$(SRCROOT)/nds4ios/Reveal\"",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1646,8 +1663,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/nds4ios/support/NDS4iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = nds4ios;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1663,6 +1682,7 @@
 					"\"$(SRCROOT)/nds4ios/frameworks\"",
 					"\"$(SRCROOT)/nds4ios\"",
 					"\"$(SRCROOT)/nds4ios/dropbox\"",
+					"\"$(SRCROOT)/nds4ios/Reveal\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";
@@ -1674,8 +1694,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/nds4ios/support/NDS4iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = nds4ios;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

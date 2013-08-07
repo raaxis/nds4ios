@@ -38,6 +38,8 @@
 				<string>Icon-Multitasker</string>
 				<string>Icon.png</string>
 				<string>Icon@2x.png</string>
+				<string>iOS 6.png</string>
+				<string>iOS 6@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

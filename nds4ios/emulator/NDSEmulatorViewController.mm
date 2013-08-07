@@ -174,21 +174,42 @@ const float textureVert[] =
     self.glkView.frame = [self rectForScreenView];
     self.snapshotView.frame = [self rectForScreenView];
     if (isLandscape) {
-        self.controllerContainerView.frame = self.view.bounds;
         self.dismissButton.frame = CGRectMake((self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2 + 8, 8, 28, 28);
-        self.directionalControl.center = CGPointMake(66, self.view.bounds.size.height-128);
-        self.buttonControl.center = CGPointMake(self.view.bounds.size.width-66, self.view.bounds.size.height-128);
-        self.startButton.center = CGPointMake(self.view.bounds.size.width-102, self.view.bounds.size.height-48);
-        self.selectButton.center = CGPointMake(self.view.bounds.size.width-102, self.view.bounds.size.height-16);
-        self.controllerContainerView.alpha = self.dismissButton.alpha = 1.0;
-        self.fpsLabel.frame = CGRectMake(70, 0, 70, 24);
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+        {
+            self.controllerContainerView.frame = self.view.bounds;
+            self.directionalControl.center = CGPointMake(66, self.view.bounds.size.height-128);
+            self.buttonControl.center = CGPointMake(self.view.bounds.size.width-66, self.view.bounds.size.height-128);
+            self.startButton.center = CGPointMake(self.view.bounds.size.width-102, self.view.bounds.size.height-48);
+            self.selectButton.center = CGPointMake(self.view.bounds.size.width-102, self.view.bounds.size.height-16);
+            self.controllerContainerView.alpha = self.dismissButton.alpha = 1.0;
+            self.fpsLabel.frame = CGRectMake(70, 0, 70, 24);
+        } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+        {
+            self.controllerContainerView.frame = CGRectMake(0, (self.view.bounds.size.height/2)-150, self.view.bounds.size.width, 300);
+            self.directionalControl.center = CGPointMake(66, 150);
+            self.buttonControl.center = CGPointMake(self.view.bounds.size.width-66, 150);
+            self.startButton.center = CGPointMake(self.view.bounds.size.width-102, 258);
+            self.selectButton.center = CGPointMake(self.view.bounds.size.width-102, 226);
+            self.controllerContainerView.alpha = self.dismissButton.alpha = 1.0;
+            self.fpsLabel.frame = CGRectMake(185, 5, 70, 24);
+        }
     } else {
-        self.controllerContainerView.frame = CGRectMake(0, [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240 + (88 * isWidescreen), 320, 240);
-        self.dismissButton.frame = CGRectMake(146, 0, 28, 28);
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+        {
+            self.controllerContainerView.frame = CGRectMake(0, [defaults integerForKey:@"controlPosition"] == 0 ? 0 : 240 + (88 * isWidescreen), self.view.bounds.size.width, 240);
+            self.startButton.center = CGPointMake((self.view.bounds.size.width/2)-40, 228);
+            self.selectButton.center = CGPointMake((self.view.bounds.size.width/2)+40, 228);
+            self.dismissButton.frame = CGRectMake((self.view.bounds.size.width/2)-14, 0, 28, 28);
+        } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+        {
+            self.controllerContainerView.frame = CGRectMake(0, [defaults integerForKey:@"controlPosition"] == 0? 230 : 660 + (88 * isWidescreen), self.view.bounds.size.width, 360);
+            self.startButton.center = CGPointMake(25, 300);
+            self.selectButton.center = CGPointMake(self.view.bounds.size.width-25, 300);
+            self.dismissButton.frame = CGRectMake(self.view.bounds.size.width-35, 5, 28, 28);
+        }
         self.directionalControl.center = CGPointMake(60, 172);
         self.buttonControl.center = CGPointMake(self.view.bounds.size.width-60, 172);
-        self.startButton.center = CGPointMake(187, 228);
-        self.selectButton.center = CGPointMake(133, 228);
         self.controllerContainerView.alpha = self.dismissButton.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
         self.fpsLabel.frame = CGRectMake(6, 0, 70, 24);
     }
@@ -199,7 +220,11 @@ const float textureVert[] =
     BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
     if (isLandscape) {
         return CGRectMake(self.view.bounds.size.width - (self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2, 0, self.view.bounds.size.height/1.5, self.view.bounds.size.height);
-    } else {
+    } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        return CGRectMake(50, 0, self.view.bounds.size.width-100, self.view.bounds.size.height);
+    } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    {
         return CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width*1.5);
     }
 }
