@@ -77,7 +77,6 @@ To-do
 * OpenGL ES rendering
 * Fix loading game saves on some games
 * Ability to set the folder the rom chooser reads from
-* Native iPad UI (in progress)
 * Add more localizations (currently have: English, Traditional Chinese, Simplified Chinese, Spanish, French, Japanese)
 * Much more.
 
