@@ -22,6 +22,10 @@
 		28E7A6F51787D8D5003A9C5B /* HideEmulator.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F31787D8D5003A9C5B /* HideEmulator.png */; };
 		28E7A6F61787D8D5003A9C5B /* HideEmulator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */; };
 		4C3F2AED178E017600AE10B8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3F2AEC178E017600AE10B8 /* Twitter.framework */; };
+		4CA7846817B31BA000097BC4 /* Default-Landscape@2x~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7846717B31BA000097BC4 /* Default-Landscape@2x~iPad.png */; };
+		4CA7846A17B31BA500097BC4 /* Default-Landscape~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7846917B31BA500097BC4 /* Default-Landscape~iPad.png */; };
+		4CA7846C17B31BB300097BC4 /* Default-Portrait@2x~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7846B17B31BB300097BC4 /* Default-Portrait@2x~iPad.png */; };
+		4CA7846E17B31BB600097BC4 /* Default-Portrait~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA7846D17B31BB600097BC4 /* Default-Portrait~iPad.png */; };
 		8B283050178DD27000E92785 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304E178DD27000E92785 /* 19-gear.png */; };
 		8B283051178DD27000E92785 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B28304F178DD27000E92785 /* 19-gear@2x.png */; };
 		8B283054178DD3CA00E92785 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B283052178DD3CA00E92785 /* 112-group.png */; };
@@ -233,6 +237,10 @@
 		28E7A6F31787D8D5003A9C5B /* HideEmulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideEmulator.png; path = Resources/HideEmulator.png; sourceTree = "<group>"; };
 		28E7A6F41787D8D5003A9C5B /* HideEmulator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HideEmulator@2x.png"; path = "Resources/HideEmulator@2x.png"; sourceTree = "<group>"; };
 		4C3F2AEC178E017600AE10B8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		4CA7846717B31BA000097BC4 /* Default-Landscape@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~iPad.png"; path = "Resources/required/Default-Landscape@2x~iPad.png"; sourceTree = "<group>"; };
+		4CA7846917B31BA500097BC4 /* Default-Landscape~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~iPad.png"; path = "Resources/required/Default-Landscape~iPad.png"; sourceTree = "<group>"; };
+		4CA7846B17B31BB300097BC4 /* Default-Portrait@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~iPad.png"; path = "Resources/required/Default-Portrait@2x~iPad.png"; sourceTree = "<group>"; };
+		4CA7846D17B31BB600097BC4 /* Default-Portrait~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~iPad.png"; path = "Resources/required/Default-Portrait~iPad.png"; sourceTree = "<group>"; };
 		4CEDCA53178A555D00958FF9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4CEDCA54178A556200958FF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4CEDCA55178A5E7E00958FF9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
@@ -553,10 +561,10 @@
 		D32C39D6178E73C200E6809E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D32C39D8178E748000E6809E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D32C39DA178E749C00E6809E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		D370361B17B1C339001C1E15 /* iOS 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6.png"; path = "Resources/iOS 6.png"; sourceTree = "<group>"; };
-		D370361C17B1C339001C1E15 /* iOS 6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6@2x.png"; path = "Resources/iOS 6@2x.png"; sourceTree = "<group>"; };
-		D370361D17B1C339001C1E15 /* iOS 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 7.png"; path = "Resources/iOS 7.png"; sourceTree = "<group>"; };
-		D370361E17B1C339001C1E15 /* iOS 7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 7@2x.png"; path = "Resources/iOS 7@2x.png"; sourceTree = "<group>"; };
+		D370361B17B1C339001C1E15 /* iOS 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6.png"; path = "Resources/required/iOS 6.png"; sourceTree = "<group>"; };
+		D370361C17B1C339001C1E15 /* iOS 6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6@2x.png"; path = "Resources/required/iOS 6@2x.png"; sourceTree = "<group>"; };
+		D370361D17B1C339001C1E15 /* iOS 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 7.png"; path = "Resources/required/iOS 7.png"; sourceTree = "<group>"; };
+		D370361E17B1C339001C1E15 /* iOS 7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 7@2x.png"; path = "Resources/required/iOS 7@2x.png"; sourceTree = "<group>"; };
 		D3B8BB911794ACCE0061D1D8 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = nds4ios/dropbox/DropboxSDK.framework; sourceTree = "<group>"; };
 		D3B8BB931794ACEF0061D1D8 /* ZAActivityBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ZAActivityBar.bundle; path = nds4ios/ZAActivityBar/ZAActivityBar.bundle; sourceTree = SOURCE_ROOT; };
 		D3B8BB941794ACEF0061D1D8 /* ZAActivityBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAActivityBar.h; path = nds4ios/ZAActivityBar/ZAActivityBar.h; sourceTree = SOURCE_ROOT; };
@@ -770,6 +778,10 @@
 				D370361C17B1C339001C1E15 /* iOS 6@2x.png */,
 				D370361D17B1C339001C1E15 /* iOS 7.png */,
 				D370361E17B1C339001C1E15 /* iOS 7@2x.png */,
+				4CA7846D17B31BB600097BC4 /* Default-Portrait~iPad.png */,
+				4CA7846B17B31BB300097BC4 /* Default-Portrait@2x~iPad.png */,
+				4CA7846917B31BA500097BC4 /* Default-Landscape~iPad.png */,
+				4CA7846717B31BA000097BC4 /* Default-Landscape@2x~iPad.png */,
 			);
 			name = Required;
 			sourceTree = "<group>";
@@ -1251,7 +1263,7 @@
 			attributes = {
 				CLASSPREFIX = NDS;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "DS Team";
+				ORGANIZATIONNAME = InfiniDev;
 				TargetAttributes = {
 					BFCFE0EE1764FBD3000A70CF = {
 						DevelopmentTeam = 6XVY5G3U44;
@@ -1344,6 +1356,10 @@
 				D370362017B1C339001C1E15 /* iOS 6@2x.png in Resources */,
 				D370362117B1C339001C1E15 /* iOS 7.png in Resources */,
 				D370362217B1C339001C1E15 /* iOS 7@2x.png in Resources */,
+				4CA7846817B31BA000097BC4 /* Default-Landscape@2x~iPad.png in Resources */,
+				4CA7846A17B31BA500097BC4 /* Default-Landscape~iPad.png in Resources */,
+				4CA7846C17B31BB300097BC4 /* Default-Portrait@2x~iPad.png in Resources */,
+				4CA7846E17B31BB600097BC4 /* Default-Portrait~iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
