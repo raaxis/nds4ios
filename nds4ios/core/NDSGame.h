@@ -3,7 +3,7 @@
 //  nds4ios
 //
 //  Created by Zydeco on 16/7/2013.
-//  Copyright (c) 2013 DS Team. All rights reserved.
+//  Copyright (c) 2013 InfiniDev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
