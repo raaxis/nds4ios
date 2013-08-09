@@ -27,6 +27,8 @@ If you're jailbroken, add the following source in Cydia: http://cydia.angelxwind
 
 If you're NOT jailbroken, then you're going to have to make some compromises. Check the following link for details: http://nds4ios.infinidev.org/i/?page/downloads#notjailbroken
 
+### IMPORTANT: THE NON-JAILBROKEN VERSION OF THE APP IS EXTREMELY OUTDATED, AND WILL NOT, AND CANNOT BE UPDATED ANY TIME SOON. 
+
 ### Option 2: Compile it yourself
 
 IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad things will happen.
