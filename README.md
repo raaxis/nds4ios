@@ -65,6 +65,8 @@ How To Load ROMs
 3. drag and drop .nds files that you have (preferably ones you legally own the actual game cartridge for) into the iTunes file sharing box for nds4ios.
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
+## NOTE: THIS METHOD ONLY WORKS ON THE NON-CYDIA VERSIONS.
+
 ### Option 3
 1. If you're jailbroken, grab one of the many download tweaks available for Mobile Safari or Chrome for iOS, or grab one of the many web browsers available with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) (This is totally not a shameless plug).
 2. With the new browser or tweak, download a rom, preferably one you own the actual cartridge for.
