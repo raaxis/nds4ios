@@ -77,7 +77,9 @@
     
     //Preloaded message
     [tweetSheet setInitialText:@"I love playing Nintendo DS games on my iOS device with #nds4ios from @InfiniDev_"];
-        
+    
+    [tweetSheet addURL:[NSURL URLWithString:@"http://nds4ios.infinidev.org"]];
+    
     //Set a blocking handler for the tweet sheet
     tweetSheet.completionHandler = ^(TWTweetComposeViewControllerResult result){
         [self dismissModalViewControllerAnimated:YES];
