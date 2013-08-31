@@ -15,6 +15,7 @@
 
 #import <GLKit/GLKit.h>
 #import <OpenGLES/ES2/gl.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 #include "emu.h"
 
@@ -71,6 +72,9 @@ const float textureVert[] =
     GLint attribPos;
     GLint attribTexCoord;
     GLint texUniform;
+    
+    NDSButtonControlButton _previousButtons;
+    NDSDirectionalControlDirection _previousDirection;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *fpsLabel;
@@ -405,13 +409,35 @@ const float textureVert[] =
 - (IBAction)pressedDPad:(NDSDirectionalControl *)sender
 {
     NDSDirectionalControlDirection state = sender.direction;
+    
+    if (state != _previousDirection && state != 0)
+    {
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"vibrate"])
+        {
+            [self vibrate];
+        }
+    }
+    
     EMU_setDPad(state & NDSDirectionalControlDirectionUp, state & NDSDirectionalControlDirectionDown, state & NDSDirectionalControlDirectionLeft, state & NDSDirectionalControlDirectionRight);
+    
+    _previousDirection = state;
 }
 
 - (IBAction)pressedABXY:(NDSButtonControl *)sender
 {
     NDSButtonControlButton state = sender.selectedButtons;
+    
+    if (state != _previousButtons && state != 0)
+    {
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"vibrate"])
+        {
+            [self vibrate];
+        }
+    }
+    
     EMU_setABXY(state & NDSButtonControlButtonA, state & NDSButtonControlButtonB, state & NDSButtonControlButtonX, state & NDSButtonControlButtonY);
+    
+    _previousButtons = state;
 }
 
 - (IBAction)onButtonUp:(UIControl*)sender
@@ -421,7 +447,27 @@ const float textureVert[] =
 
 - (IBAction)onButtonDown:(UIControl*)sender
 {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"vibrate"])
+    {
+        [self vibrate];
+    }
     EMU_buttonDown((BUTTON_ID)sender.tag);
+}
+
+FOUNDATION_EXTERN void AudioServicesStopSystemSound(int);
+FOUNDATION_EXTERN void AudioServicesPlaySystemSoundWithVibration(unsigned long, objc_object*, NSDictionary*);
+
+- (void)vibrate
+{
+    AudioServicesStopSystemSound(kSystemSoundID_Vibrate);
+    
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    NSArray *pattern = @[@YES, @30, @NO, @1];
+    
+    dictionary[@"VibePattern"] = pattern;
+    dictionary[@"Intensity"] = @1;
+    
+    AudioServicesPlaySystemSoundWithVibration(kSystemSoundID_Vibrate, nil, dictionary);
 }
 
 - (void)touchScreenAtPoint:(CGPoint)point
