@@ -189,7 +189,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Dropbox" id="6Q2-y1-WYo">
-                                <string key="footerTitle">Enabling Dropbox will add an nds4ios folder to your dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone -> iPad -> PC, etc).</string>
+                                <string key="footerTitle">有効化Dropbox同期はあなたのDropboxアカウントに「nds4ios」フォルダを追加します。あなたのセーブデータ（DSV）はそのDropboxフォルダに同期されます。 したがって、あなたのセーブデータはすべてのデバイスで利用できるようになります。（iPhone、iPad、iPod touch、Android、PC）</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wfg-ON-bdW">
                                         <rect key="frame" x="0.0" y="595" width="320" height="45"/>
@@ -205,7 +205,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="CDc-98-xME"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enable Dropbox Sync" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xmD-mx-A8N">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dropbox同期を有効" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xmD-mx-A8N">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -223,7 +223,7 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Not Linked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CG0-OS-r15">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="リンクされていません" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CG0-OS-r15">
                                                     <rect key="frame" x="63" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -239,7 +239,7 @@
                             <tableViewSection headerTitle="開発者" id="O9Q-KX-eTM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="reo-6x-MNx">
-                                        <rect key="frame" x="0.0" y="838" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="895" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -265,10 +265,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Experimental" footerTitle="JIT makes games run faster. You must be jailbroken or nds4ios will crash." id="5fE-Dc-smb">
+                            <tableViewSection headerTitle="実験的" footerTitle="GNU Lightning JITはエミュレーションが速くなります。" id="5fE-Dc-smb">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Yxa-zs-y24">
-                                        <rect key="frame" x="0.0" y="930" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="987" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -281,7 +281,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="4Wl-6T-SXp"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lightning JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vN9-eo-Of3">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GNU Lightning JIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vN9-eo-Of3">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -293,7 +293,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8Zm-rf-zX7">
-                                        <rect key="frame" x="0.0" y="975" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="1032" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -306,7 +306,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="CwK-xK-bE1"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Vibration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTD-vo-quj">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="振動" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dTD-vo-quj">
                                                     <rect key="frame" x="20" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1168,7 +1168,7 @@
             </objects>
             <point key="canvasLocation" x="-587" y="65"/>
         </scene>
-        <!--Donation View Controller - Donate-->
+        <!--Donation View Controller - 寄付-->
         <scene sceneID="Yu0-a7-5z7">
             <objects>
                 <tableViewController id="JLw-7l-4Kg" customClass="NDSDonationViewController" sceneMemberID="viewController">
@@ -1177,8 +1177,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="JRr-bh-Mx4">
-                                <string key="footerTitle">We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things.</string>
+                            <tableViewSection footerTitle="InfiniDevはユーザーが楽しむためにこのエミュレータを作成するために懸命に働く。このエミュレーターが好きなら、InfiniDevをサポートするために寄付をご検討ください。" id="JRr-bh-Mx4">
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection id="UEW-28-Hp5">
@@ -1194,8 +1193,8 @@
                                                     <rect key="frame" x="20" y="8" width="30" height="27"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Donate with PayPal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lWl-xU-nst">
-                                                    <rect key="frame" x="58" y="11" width="149" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PayPalを使って寄付する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lWl-xU-nst">
+                                                    <rect key="frame" x="58" y="11" width="190" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1213,7 +1212,7 @@
                             <outlet property="delegate" destination="JLw-7l-4Kg" id="ER2-vE-pGG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Donate" id="mKV-n5-xhg"/>
+                    <navigationItem key="navigationItem" title="寄付" id="mKV-n5-xhg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sD-O3-rYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
