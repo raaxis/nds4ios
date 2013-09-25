@@ -102,6 +102,8 @@ const float textureVert[] =
     NSLock *emuLoopLock;
 }
 
+#pragma mark - UIViewController
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -148,6 +150,11 @@ const float textureVert[] =
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (void)defaultsChanged:(NSNotification*)notification
@@ -231,6 +238,8 @@ const float textureVert[] =
     {
         return CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width*1.5);
     }
+    
+    return CGRectZero;
 }
 
 - (void)dealloc
