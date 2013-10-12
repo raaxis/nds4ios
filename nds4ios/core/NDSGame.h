@@ -20,6 +20,7 @@ FOUNDATION_EXPORT NSString * const NDSGameSaveStatesChangedNotification;
 @property (strong, nonatomic) NSString *pathForSavedStates;
 @property (nonatomic, readonly) BOOL hasPauseState;
 
++ (int)preferredLanguage; // returns a NDS_FW_LANG_ constant
 + (NSArray*)gamesAtPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;
 + (NDSGame*)gameWithPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;
 - (NDSGame*)initWithPath:(NSString*)path saveStateDirectoryPath:(NSString*)saveStatePath;

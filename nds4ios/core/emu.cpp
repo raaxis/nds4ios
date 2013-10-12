@@ -88,7 +88,7 @@ bool enableMicrophone = false;
 volatile bool pausedByMinimize = false;
 volatile bool soundEnabled = true;
 
-void EMU_init()
+void EMU_init(int lang)
 {
 	//oglrender_init = android_opengl_init;
 	
@@ -170,7 +170,7 @@ void EMU_init()
 	for(int i = 0 ; i < fw_config.message_len ; ++i)
 		fw_config.message[i] = message[i];
 	
-	fw_config.language = 1;
+	fw_config.language = lang < 0 ? NDS_FW_LANG_ENG : lang;
     
 	video.setfilter(video.NONE);
 	

@@ -28,7 +28,7 @@ typedef enum {
 	BUTTON_R = 11,
 } BUTTON_ID;
 
-void EMU_init();
+void EMU_init(int lang = -1);
 void EMU_loadSettings();
 bool EMU_doRomLoad(const char* path, const char* logical);
 bool EMU_loadRom(const char* path);

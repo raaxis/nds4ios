@@ -83,6 +83,16 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
     return self.path.lastPathComponent.stringByDeletingPathExtension;
 }
 
++ (int)preferredLanguage
+{
+    NSString *preferredLanguage = [[NSUserDefaults standardUserDefaults] stringForKey:@"ndsLanguage"];
+    // find preferred language from system
+    if (preferredLanguage == nil) preferredLanguage = [[NSLocale preferredLanguages][0] substringToIndex:2];
+    NSUInteger pos = [@[@"ja",@"en",@"fr",@"de",@"it",@"es",@"zh"] indexOfObject:preferredLanguage];
+    if (pos == NSNotFound) return 1; // NDS_FW_LANG_ENG
+    return pos;
+}
+
 - (NSString*)gameTitle
 {
     if (iconTitleData == nil) return nil;
@@ -90,18 +100,9 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
         uint16_t version = OSReadLittleInt16(iconTitleData.bytes, 0x000);
         
         // find preferred language
-        NSString *preferredLanguage = [[NSLocale preferredLanguages][0] substringToIndex:2];
-        NSDictionary *titleOffsets = @{@"ja": @0x240,
-                                       @"en": @0x340,
-                                       @"fr": @0x440,
-                                       @"de": @0x540,
-                                       @"it": @0x640,
-                                       @"es": @0x740,
-                                       @"zh": @0x840};
-        
-        uint32_t titleOffset = [titleOffsets[preferredLanguage] unsignedIntValue];
-        // version 1 doesn't have chinese
-        if ((titleOffset == 0x840 && version < 2) || titleOffset == 0) titleOffset = 0x340;
+        uint32_t titleOffset = 0x240 + 0x100 * [NDSGame preferredLanguage];
+        // version 1 doesn't have chinese, use english
+        if ((titleOffset == 0x840 && version < 2)) titleOffset = 0x340;
         
         NSData *titleData = [iconTitleData subdataWithRange:NSMakeRange(titleOffset, 0x100)];
         title = [[NSString alloc] initWithData:titleData encoding:NSUTF16LittleEndianStringEncoding];
