@@ -68,20 +68,25 @@ const float textureVert[] =
 @interface NDSEmulatorViewController () <GLKViewDelegate> {
     int fps;
     
-    GLuint texHandle;
+    GLuint texHandle[2];
     GLint attribPos;
     GLint attribTexCoord;
     GLint texUniform;
     
+    GLKView *glkView[2];
+    
     NDSButtonControlButton _previousButtons;
     NDSDirectionalControlDirection _previousDirection;
+    
+    NSLock *emuLoopLock;
+    
+    UIWindow *extWindow;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *fpsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *pixelGrid;
 @property (strong, nonatomic) GLProgram *program;
 @property (strong, nonatomic) EAGLContext *context;
-@property (strong, nonatomic) IBOutlet GLKView *glkView;
 @property (weak, nonatomic) IBOutlet UIView *controllerContainerView;
 
 @property (weak, nonatomic) IBOutlet NDSDirectionalControl *directionalControl;
@@ -98,9 +103,6 @@ const float textureVert[] =
 @end
 
 @implementation NDSEmulatorViewController
-{
-    NSLock *emuLoopLock;
-}
 
 #pragma mark - UIViewController
 
@@ -124,6 +126,8 @@ const float textureVert[] =
     [notificationCenter addObserver:self selector:@selector(pauseEmulation) name:UIApplicationWillResignActiveNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(resumeEmulation) name:UIApplicationDidBecomeActiveNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(screenChanged:) name:UIScreenDidConnectNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(screenChanged:) name:UIScreenDidDisconnectNotification object:nil];
     
     [self defaultsChanged:nil];
 }
@@ -182,8 +186,9 @@ const float textureVert[] =
     BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
     BOOL isWidescreen = [[UIScreen mainScreen] isWidescreen];
     
-    self.glkView.frame = [self rectForScreenView];
-    self.snapshotView.frame = [self rectForScreenView];
+    glkView[0].frame = [self rectForScreenView:0];
+    glkView[1].frame = [self rectForScreenView:1];
+    self.snapshotView.frame = glkView[extWindow?1:0].frame;
     if (isLandscape) {
         self.dismissButton.frame = CGRectMake((self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2 + 8, 8, 28, 28);
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
@@ -205,6 +210,7 @@ const float textureVert[] =
             self.controllerContainerView.alpha = self.dismissButton.alpha = 1.0;
             self.fpsLabel.frame = CGRectMake(185, 5, 70, 24);
         }
+        if ([UIScreen screens].count > 1) self.controllerContainerView.alpha = self.dismissButton.alpha = MAX(0.1, [defaults floatForKey:@"controlOpacity"]);
     } else {
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
         {
@@ -226,25 +232,35 @@ const float textureVert[] =
     }
 }
 
-- (CGRect)rectForScreenView
+- (CGRect)rectForScreenView:(NSInteger)screen
 {
+    if (extWindow && screen == 0) return extWindow.bounds;
+    CGRect rect = CGRectZero;
     BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
     if (isLandscape) {
-        return CGRectMake(self.view.bounds.size.width - (self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2, 0, self.view.bounds.size.height/1.5, self.view.bounds.size.height);
-    } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-    {
-        return CGRectMake(50, 0, self.view.bounds.size.width-100, self.view.bounds.size.height);
-    } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-    {
-        return CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width*1.5);
+        if (extWindow) rect = CGRectMake(self.view.bounds.size.width - (self.view.bounds.size.width + self.view.bounds.size.height/0.75)/2, 0, self.view.bounds.size.height/0.75, self.view.bounds.size.height);
+        else rect = CGRectMake(self.view.bounds.size.width - (self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2, 0, self.view.bounds.size.height/1.5, self.view.bounds.size.height);
+    } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        rect = CGRectMake(self.view.bounds.size.width - (self.view.bounds.size.width + self.view.bounds.size.height/1.5)/2, 0, self.view.bounds.size.height/1.5, self.view.bounds.size.height);
+        if (extWindow) rect.size.height /= 2;
+    } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        rect = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width*1.5);
+        if (extWindow) rect.size.height /= 2;
     }
     
-    return CGRectZero;
+    return rect;
 }
 
 - (void)dealloc
 {
     EMU_closeRom();
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)screenChanged:(NSNotification*)notification
+{
+    [self pauseEmulation];
+    [self performSelector:@selector(resumeEmulation) withObject:nil afterDelay:0.5];
 }
 
 #pragma mark - Playing ROM
@@ -269,11 +285,24 @@ const float textureVert[] =
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     [EAGLContext setCurrentContext:self.context];
     
-    CGRect frame = [self rectForScreenView];
-    
-    self.glkView = [[GLKView alloc] initWithFrame:frame context:self.context];
-    self.glkView.delegate = self;
-    [self.view insertSubview:self.glkView atIndex:0];
+    if ([UIScreen screens].count > 1) {
+        UIScreen *extScreen = [UIScreen screens][1];
+        extScreen.currentMode = extScreen.availableModes[0];
+        extWindow = [[UIWindow alloc] initWithFrame:extScreen.bounds];
+        extWindow.screen = extScreen;
+        extWindow.backgroundColor = [UIColor orangeColor];
+        glkView[0] = [[GLKView alloc] initWithFrame:[self rectForScreenView:0] context:self.context];
+        glkView[1] = [[GLKView alloc] initWithFrame:[self rectForScreenView:1] context:self.context];
+        glkView[0].delegate = self;
+        glkView[1].delegate = self;
+        [self.view insertSubview:glkView[1] atIndex:0];
+        [extWindow addSubview:glkView[0]];
+        [extWindow makeKeyAndVisible];
+    } else {
+        glkView[0] = [[GLKView alloc] initWithFrame:[self rectForScreenView:0] context:self.context];
+        glkView[0].delegate = self;
+        [self.view insertSubview:glkView[0] atIndex:0];
+    }
     
     self.program = [[GLProgram alloc] initWithVertexShaderString:kVertShader fragmentShaderString:kFragShader];
     
@@ -291,40 +320,55 @@ const float textureVert[] =
     glEnableVertexAttribArray(attribTexCoord);
     
     float scale = [UIScreen mainScreen].scale;
-    CGSize size = CGSizeMake(self.glkView.bounds.size.width * scale, self.glkView.bounds.size.height * scale);
+    CGSize size = CGSizeMake(glkView[1].bounds.size.width * scale, glkView[1].bounds.size.height * scale);
     
     glViewport(0, 0, size.width, size.height);
     
     [self.program use];
     
-    glGenTextures(1, &texHandle);
+    glGenTextures(extWindow ? 2 : 1, texHandle);
     glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, texHandle);
+    glBindTexture(GL_TEXTURE_2D, texHandle[0]);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    if (extWindow) {
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, texHandle[1]);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    } else {
+        texHandle[1] = 0;
+    }
 }
 
 - (void)shutdownGL
 {
-    glDeleteTextures(1, &texHandle);
-    texHandle = 0;
+    glDeleteTextures(texHandle[1] ? 2 : 1, texHandle);
+    texHandle[0] = 0;
+    texHandle[1] = 0;
     self.context = nil;
     self.program = nil;
-    [self.glkView removeFromSuperview];
-    self.glkView = nil;
+    [glkView[0] removeFromSuperview];
+    [glkView[1] removeFromSuperview];
+    glkView[0] = glkView[1] = nil;
     [EAGLContext setCurrentContext:nil];
+    extWindow = nil;
 }
 
-- (UIImage*)screenSnapshot
+- (UIImage*)screenSnapshot:(NSInteger)num
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     size_t dataSize = 0;
     UInt8 *dataBytes = (UInt8*)EMU_getVideoBuffer(&dataSize);
+    if (num >= 0) dataSize /= 2;
+    if (num == 1) dataBytes += dataSize;
     CFDataRef videoData = CFDataCreate(NULL, dataBytes, dataSize*4);
     CGDataProviderRef dataProvider = CGDataProviderCreateWithCFData(videoData);
-    CGImageRef screenImage = CGImageCreate(256, 384, 8, 32, 256*4, colorSpace, kCGBitmapByteOrderDefault, dataProvider, NULL, false, kCGRenderingIntentDefault);
+    CGImageRef screenImage = CGImageCreate(256, num < 0 ? 384 : 192, 8, 32, 256*4, colorSpace, kCGBitmapByteOrderDefault, dataProvider, NULL, false, kCGRenderingIntentDefault);
     CGColorSpaceRelease(colorSpace);
     CGDataProviderRelease(dataProvider);
     CFRelease(videoData);
@@ -339,12 +383,12 @@ const float textureVert[] =
     if (!execute) return;
     // save snapshot of screen
     if (self.snapshotView == nil) {
-        self.snapshotView = [[UIImageView alloc] initWithFrame:self.glkView.frame];
-        [self.view insertSubview:self.snapshotView aboveSubview:self.glkView];
+        self.snapshotView = [[UIImageView alloc] initWithFrame:glkView[extWindow?1:0].frame];
+        [self.view insertSubview:self.snapshotView aboveSubview:glkView[extWindow?1:0]];
     } else {
         self.snapshotView.hidden = NO;
     }
-    self.snapshotView.image = [self screenSnapshot];
+    self.snapshotView.image = [self screenSnapshot:extWindow?1:-1];
     
     // pause emulation
     EMU_pause(true);
@@ -390,21 +434,26 @@ const float textureVert[] =
 
 - (void)updateDisplay
 {
-    if (texHandle == 0) return;
+    if (texHandle[0] == 0) return;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.fpsLabel.text = [NSString stringWithFormat:@"%d FPS",fps];
     });
     
-    glBindTexture(GL_TEXTURE_2D, texHandle);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 256, 384, 0, GL_RGBA, GL_UNSIGNED_BYTE, EMU_getVideoBuffer(NULL));
-    
-    [self.glkView display];
+    GLubyte *screenBuffer = (GLubyte*)EMU_getVideoBuffer(NULL);
+    glBindTexture(GL_TEXTURE_2D, texHandle[0]);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 256, texHandle[1] ? 192 : 384, 0, GL_RGBA, GL_UNSIGNED_BYTE, screenBuffer);
+    [glkView[0] display];
+    if (texHandle[1]) {
+        glBindTexture(GL_TEXTURE_2D, texHandle[1]);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 256, 192, 0, GL_RGBA, GL_UNSIGNED_BYTE, screenBuffer + 256*192*4);
+        [glkView[1] display];
+    }
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
     glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_2D, texHandle);
+    glBindTexture(GL_TEXTURE_2D, (view == glkView[0]) ? texHandle[0] : texHandle[1]);
     glUniform1i(texUniform, 1);
     
     glVertexAttribPointer(attribPos, 2, GL_FLOAT, 0, 0, (const GLfloat*)&positionVert);
@@ -481,22 +530,26 @@ FOUNDATION_EXTERN void AudioServicesPlaySystemSoundWithVibration(unsigned long, 
 
 - (void)touchScreenAtPoint:(CGPoint)point
 {
-    if (point.y < self.glkView.bounds.size.height/2) return;
-    
-    CGAffineTransform t = CGAffineTransformConcat(CGAffineTransformMakeTranslation(0, -self.glkView.bounds.size.height/2), CGAffineTransformMakeScale(256/self.glkView.bounds.size.width, 192/(self.glkView.bounds.size.height/2)));
-    point = CGPointApplyAffineTransform(point, t);
-    
+    if (glkView[1] != nil) {
+        // glkView[1] is touch screen
+        point = CGPointApplyAffineTransform(point, CGAffineTransformMakeScale(256/glkView[1].bounds.size.width, 192/glkView[1].bounds.size.height));
+    } else {
+        // bottom half of glkView[0] is touch screen
+        if (point.y < glkView[0].bounds.size.height/2) return;
+        CGAffineTransform t = CGAffineTransformConcat(CGAffineTransformMakeTranslation(0, -glkView[0].bounds.size.height/2), CGAffineTransformMakeScale(256/glkView[0].bounds.size.width, 192/(glkView[0].bounds.size.height/2)));
+        point = CGPointApplyAffineTransform(point, t);
+    }
     EMU_touchScreenTouch(point.x, point.y);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self touchScreenAtPoint:[[touches anyObject] locationInView:self.glkView]];
+    [self touchScreenAtPoint:[[touches anyObject] locationInView:glkView[extWindow?1:0]]];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self touchScreenAtPoint:[[touches anyObject] locationInView:self.glkView]];
+    [self touchScreenAtPoint:[[touches anyObject] locationInView:glkView[extWindow?1:0]]];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
