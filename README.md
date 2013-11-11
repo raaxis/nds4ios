@@ -4,7 +4,7 @@ nds4ios
 
 nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
 
-http://nds4ios.angelxwind.org/
+http://nds4ios.angelxwind.net/
 
 [DeSmuME](http://desmume.org/) 
 
