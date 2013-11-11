@@ -23,11 +23,11 @@ We all work hard to make this into software that users will enjoy and love. If y
 Install Instructions
 ------------------------
 
-### Option 1: Download it from Karen's Pineapple (aXwNET)
+### Option 1: Download it from Karen's Pineapple (KarenP/Flame)
 
-If you're jailbroken, please follow the instructions here: http://nds4ios.infinidev.org/i/?page/downloads#jailbroken
+If you're jailbroken, please follow the instructions here: http://nds4ios.angelxwind.org/i/?page/downloads#jailbroken
 
-If you're NOT jailbroken, please follow the instructions here: http://nds4ios.infinidev.org/i/?page/downloads#notjailbroken
+If you're NOT jailbroken, please follow the instructions here: http://nds4ios.angelxwind.org/i/?page/downloads#notjailbroken
 
 ### IMPORTANT: THE NON-JAILBROKEN VERSION OF THE APP IS EXTREMELY OUTDATED, AND WILL NOT, AND CANNOT BE UPDATED ANY TIME SOON. 
 
