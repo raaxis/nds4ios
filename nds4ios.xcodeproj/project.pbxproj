@@ -196,6 +196,7 @@
 		BFCFE246176634EE000A70CF /* slot2_piano.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23A176634EE000A70CF /* slot2_piano.cpp */; };
 		BFCFE247176634EE000A70CF /* slot2_rumblepak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */; };
 		BFCFE26B1766379F000A70CF /* addons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13017650FB0000A70CF /* addons.cpp */; };
+		C345B67218906BB40065A795 /* NDSMFIControllerSupport.mm in Sources */ = {isa = PBXBuildFile; fileRef = C345B67118906BB40065A795 /* NDSMFIControllerSupport.mm */; };
 		D31CC8A417927BCB0098FB9C /* CHBgDropboxSync.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8A117927BCB0098FB9C /* CHBgDropboxSync.m */; };
 		D31CC8A517927BCB0098FB9C /* DropboxClearer.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8A317927BCB0098FB9C /* DropboxClearer.m */; };
 		D31CC8B217927C3B0098FB9C /* ConciseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D31CC8AB17927C3B0098FB9C /* ConciseKit.m */; };
@@ -538,6 +539,8 @@
 		BFCFE239176634EE000A70CF /* slot2_paddle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_paddle.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_paddle.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23A176634EE000A70CF /* slot2_piano.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_piano.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_piano.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE23B176634EE000A70CF /* slot2_rumblepak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = slot2_rumblepak.cpp; path = "nds4droid-code/jni/desmume/src/addons/slot2_rumblepak.cpp"; sourceTree = SOURCE_ROOT; };
+		C345B67018906BB40065A795 /* NDSMFIControllerSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSMFIControllerSupport.h; path = nds4ios/controls/NDSMFIControllerSupport.h; sourceTree = SOURCE_ROOT; };
+		C345B67118906BB40065A795 /* NDSMFIControllerSupport.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NDSMFIControllerSupport.mm; path = nds4ios/controls/NDSMFIControllerSupport.mm; sourceTree = SOURCE_ROOT; };
 		CC56EB1E179F9AD70060FB6D /* nds4ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = nds4ios.entitlements; path = nds4ios/nds4ios.entitlements; sourceTree = "<group>"; };
 		D31CC8A017927BCB0098FB9C /* CHBgDropboxSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHBgDropboxSync.h; sourceTree = "<group>"; };
 		D31CC8A117927BCB0098FB9C /* CHBgDropboxSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBgDropboxSync.m; sourceTree = "<group>"; };
@@ -835,6 +838,8 @@
 		BFAE6FAB17675623000911CF /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				C345B67018906BB40065A795 /* NDSMFIControllerSupport.h */,
+				C345B67118906BB40065A795 /* NDSMFIControllerSupport.mm */,
 				8BEA096617872C190060B347 /* NDSButtonControl.h */,
 				8BEA096717872C190060B347 /* NDSButtonControl.m */,
 				8BEA096817872C190060B347 /* NDSDirectionalControl.h */,
@@ -1460,6 +1465,7 @@
 				BFCFE1E71765109C000A70CF /* crc.cpp in Sources */,
 				BFCFE1E81765109C000A70CF /* decrypt.cpp in Sources */,
 				8BEA09A317876A6B0060B347 /* SSZipArchive.m in Sources */,
+				C345B67218906BB40065A795 /* NDSMFIControllerSupport.mm in Sources */,
 				BFCFE1E91765109C000A70CF /* header.cpp in Sources */,
 				BFCFE21A176634AF000A70CF /* cache.cpp in Sources */,
 				BFCFE21B176634AF000A70CF /* directory.cpp in Sources */,

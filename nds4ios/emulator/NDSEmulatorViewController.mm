@@ -19,6 +19,8 @@
 
 #include "emu.h"
 
+#import "NDSMFIControllerSupport.h"
+
 #define STRINGIZE(x) #x
 #define STRINGIZE2(x) STRINGIZE(x)
 #define SHADER_STRING(text) @ STRINGIZE2(text)
@@ -414,6 +416,8 @@ const float textureVert[] =
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [emuLoopLock lock];
+        [[NDSMFIControllerSupport instance] startMonitoringGamePad];
+        
         while (execute) {
             EMU_runCore();
             fps = EMU_runOther();
@@ -421,6 +425,8 @@ const float textureVert[] =
             
             [self updateDisplay];
         }
+        
+        [[NDSMFIControllerSupport instance] stopMonitoringGamePad];
         [emuLoopLock unlock];
     });
 }
