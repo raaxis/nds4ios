@@ -89,7 +89,7 @@
 		8BEFF484178B468700EEE55A /* NDSSideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEFF483178B468700EEE55A /* NDSSideBarViewController.m */; };
 		8BEFF48F178B473E00EEE55A /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFF489178B473E00EEE55A /* menuicon.png */; };
 		8BEFF490178B473E00EEE55A /* menuicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEFF48A178B473E00EEE55A /* menuicon@2x.png */; };
-		9C4DD2861891E5390075B66C /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4DD2851891E5390075B66C /* GameController.framework */; };
+		9C4DD2861891E5390075B66C /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4DD2851891E5390075B66C /* GameController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BF2AC478177FF0B700D3CF93 /* ArmLJit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */; };
 		BF9D514317865CD800B5864B /* SndOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF9D514117865CD800B5864B /* SndOut.cpp */; };
 		BF9D516817867F7D00B5864B /* ABXYPad.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9D516017867F7D00B5864B /* ABXYPad.png */; };
