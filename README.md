@@ -17,7 +17,7 @@ http://nds4ios.angelxwind.net/
 Installing nds4ios
 ------------------------
 ##### Do not redistribute code-signed copies nds4ios on other sites. We already provide official ways to download nds4ios below. THIS IS A FAIR WARNING.
-#### Option 1: Download nds4ios from Karen's Pineapple (KarenP/Flame)
+#### Option 1: Download nds4ios from Karen's Pineapple (KarenP/88888888)
 
 If you're jailbroken, please follow the instructions here: http://nds4ios.angelxwind.org/i/?page/downloads#jailbroken
 
