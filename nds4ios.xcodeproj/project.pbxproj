@@ -1678,7 +1678,7 @@
 					"\"$(SRCROOT)/nds4ios/dropbox\"",
 					"\"$(SRCROOT)/nds4ios/Reveal\"",
 				);
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1710,6 +1710,7 @@
 					"\"$(SRCROOT)/nds4ios/dropbox\"",
 					"\"$(SRCROOT)/nds4ios/Reveal\"",
 				);
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nds4ios/support/nds4ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
