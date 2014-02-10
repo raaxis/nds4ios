@@ -41,13 +41,17 @@
     }
 }
 
--(void) onControllerConnected:(GCController *) controller {
-    NSLog(@"Controller connected: %@", [controller vendorName]);
-    
+-(void) onControllerConnected:(NSNotification *)notification {
     // If we already have a controller, we shouldn't be using this new one.
     if (_controller != nil) return;
     
-    _controller = controller;
+    if (notification) {
+        _controller = notification.object;
+    } else
+    {
+        _controller = [[GCController controllers] firstObject];
+    }
+    NSLog(@"Connected controller %@", _controller);
     
     // Basic control mapping.
     // TODO: Allow users to modify this.
@@ -83,16 +87,16 @@
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
--(void) onControllerDisconnected:(GCController *) controller {
-    NSLog(@"Controller disconnected: %@", [controller vendorName]);
+-(void) onControllerDisconnected:(NSNotification *)notification {
+    NSLog(@"Controller disconnected: %@", [_controller vendorName]);
     
-    if (controller == _controller) {
+    if ([[GCController controllers] firstObject] == _controller) {
         _controller = nil;
         _controllerElementToButtonIdMapping = nil;
         
-        if ([[GCController controllers] count]) {
+        if ([GCController controllers].count > 0) {
             // Connect the next controller in-line
-            [self onControllerConnected:[[GCController controllers] firstObject]];
+            [self onControllerConnected:nil];
         }
     }
 }
