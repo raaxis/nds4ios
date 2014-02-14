@@ -76,11 +76,11 @@
                                         <rect key="frame" x="0.0" y="237" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Hh-4E-N3U" id="IAa-7C-JMP">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="U7N-Jx-IWl">
-                                                    <rect key="frame" x="231" y="6" width="51" height="31"/>
+                                                    <rect key="frame" x="251" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="QgR-yJ-K4E"/>
@@ -836,7 +836,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Special Thanks To" footerTitle="" id="Iv8-eM-IZX" userLabel="DeSmuME">
+                            <tableViewSection headerTitle="Emulator Core Code" footerTitle="" id="Iv8-eM-IZX" userLabel="DeSmuME">
                                 <cells>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3XD-Uh-dc4">
                                         <rect key="frame" x="0.0" y="835" width="320" height="44"/>
@@ -857,7 +857,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="About nds4ios" footerTitle="© 2013 InfiniDev" id="zoU-Tc-bmD" userLabel="Version">
+                            <tableViewSection headerTitle="About nds4ios" footerTitle="© 2013-2014 InfiniDev" id="zoU-Tc-bmD" userLabel="Version">
                                 <cells>
                                     <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bi4-Qs-TgE">
                                         <rect key="frame" x="0.0" y="927" width="320" height="44"/>
