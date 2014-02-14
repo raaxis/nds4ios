@@ -49,7 +49,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *screenNames = @[@"angelXwind", @"iPlop", @"maczydeco", @"rileytestut", @"dchavezlive", @"Malvix_", @"wj82315", @"vanillastar67", @"winocm"];
+    NSArray *screenNames = @[@"angelXwind", @"iPlop", @"maczydeco", @"rileytestut", @"dchavezlive", @"Malvix_", @"wj82315", @"vanillastar67", @"winocm", @"GranPC"];
     
     if (indexPath.section == 1 && indexPath.row < screenNames.count)
     {
