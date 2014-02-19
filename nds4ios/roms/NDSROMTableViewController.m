@@ -162,7 +162,7 @@
 - (IBAction)getMoreRoms:(id)sender
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey You! Yes, You!", @"")
-                                                        message:NSLocalizedString(@"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of ROMs and other software to use in this emulator. InfiniDev and all associated personnel is in no way affiliated with the websites resulting from this Google search.", @"")
+                                                        message:NSLocalizedString(@"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy.", @"")
                                                        delegate:self
                                               cancelButtonTitle:NSLocalizedString(@"Got it!", @"")
                                               otherButtonTitles:nil];
@@ -173,7 +173,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0)
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/search?hl=en&source=hp&q=download+ROMs+nds+nintendo+ds&aq=f&oq=&aqi="]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://m.coolrom.com/roms/nds/?utm_source=nds4ios&utm_medium=partnerships&utm_campaign=nds4ios"]];
 }
 
 @end
