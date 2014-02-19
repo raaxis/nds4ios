@@ -914,6 +914,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Acerca de" id="wjq-Iv-O9N">
                         <barButtonItem key="rightBarButtonItem" title="Compartir" id="MdW-Lg-XgS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="sendTweet:" destination="kY3-6f-RlH" id="PBp-bD-gnE"/>
                             </connections>

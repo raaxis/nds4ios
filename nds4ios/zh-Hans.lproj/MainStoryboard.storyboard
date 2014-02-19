@@ -913,6 +913,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="关于nds4ios" id="xLW-Zg-KVr">
                         <barButtonItem key="rightBarButtonItem" title="分享" id="6lY-oU-e8D">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="sendTweet:" destination="GFR-ef-nR2" id="fbO-Ms-URV"/>
                             </connections>
