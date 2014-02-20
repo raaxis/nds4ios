@@ -560,7 +560,7 @@
             </objects>
             <point key="canvasLocation" x="1376" y="-934"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About View Controller - About nds4ios-->
         <scene sceneID="prg-5R-kCK">
             <objects>
                 <tableViewController id="kY3-6f-RlH" customClass="NDSAboutViewController" sceneMemberID="viewController">
@@ -916,7 +916,7 @@
                             <outlet property="delegate" destination="kY3-6f-RlH" id="IxX-Tf-Gs1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="About" id="wjq-Iv-O9N">
+                    <navigationItem key="navigationItem" title="About nds4ios" id="wjq-Iv-O9N">
                         <barButtonItem key="rightBarButtonItem" title="Share" id="7A3-nC-GqP">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -1023,7 +1023,7 @@
                                                     <rect key="frame" x="250" y="10" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jfi-JX-LAK">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About nds4ios" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jfi-JX-LAK">
                                                     <rect key="frame" x="43" y="11" width="211" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
