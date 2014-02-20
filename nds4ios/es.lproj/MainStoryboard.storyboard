@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725496529999996" green="0.93725496529999996" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Emulador" footerTitle="The pixel grid makes games appear less blurry, but at the same time, reduces brightness." id="Zfz-To-hqF">
+                            <tableViewSection headerTitle="Emulador" footerTitle="La cuadrícula de píxeles hace que los juegos se vean menos borrosos, pero a la vez reduce el brillo." id="Zfz-To-hqF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="PGZ-yw-RwN">
                                         <rect key="frame" x="0.0" y="119" width="320" height="74"/>
@@ -38,7 +38,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="uoV-mL-ahu"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Salta Marcos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Mdm-Bf-hXu">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saltar Fotogramas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Mdm-Bf-hXu">
                                                     <rect key="frame" x="20" y="7" width="280" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,7 +88,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="QgR-yJ-K4E"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Overlay Pixel Grid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1H-5W-GBv">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mostrar Cuadrícula" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1H-5W-GBv">
                                                     <rect key="frame" x="17" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -189,7 +189,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Dropbox" id="0Py-uK-oNg">
-                                <string key="footerTitle">Enabling Dropbox will add an "nds4ios" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc).</string>
+                                <string key="footerTitle">Activar Dropbox creará una carpeta llamada "nds4ios" en tu cuenta de Dropbox. Tus partidas se sincronizarán a esa carpeta para que puedas seguirla en todos tus dispositivos (iPhone, iPad, iPod touch, Android, PC, etc).</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AeV-QE-SJw">
                                         <rect key="frame" x="0.0" y="659" width="320" height="44"/>
@@ -205,7 +205,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="ZW0-f5-lWM"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enable Dropbox Sync" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M3y-fK-XWf">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sincronización" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M3y-fK-XWf">
                                                     <rect key="frame" x="17" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -223,7 +223,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Not Linked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="STN-h0-VIH">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No Vinculado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="STN-h0-VIH">
                                                     <rect key="frame" x="63" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -236,10 +236,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Developer" id="O9Q-KX-eTM">
+                            <tableViewSection headerTitle="Desarrollador" id="O9Q-KX-eTM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="reo-6x-MNx">
-                                        <rect key="frame" x="0.0" y="889" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="906" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="reo-6x-MNx" id="vMq-QA-o3d">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -268,7 +268,7 @@
                             <tableViewSection headerTitle="Experimental" footerTitle="JIT makes games run faster. You must be jailbroken or nds4ios will crash." id="HQs-Z9-d7P">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xmH-De-K0j">
-                                        <rect key="frame" x="0.0" y="981" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="998" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmH-De-K0j" id="iY1-jK-HhM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -293,7 +293,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gaP-db-aFa">
-                                        <rect key="frame" x="0.0" y="1025" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1042" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gaP-db-aFa" id="km9-XY-fyU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -347,6 +347,7 @@
                     <tableView key="view" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" detailTextLabel="MdE-38-mM4" style="IBUITableViewCellStyleSubtitle" id="lJ0-d7-vTF">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -380,7 +381,7 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lista ROM" id="36">
+                    <navigationItem key="navigationItem" title="Lista de ROMs" id="36">
                         <barButtonItem key="rightBarButtonItem" id="St3-9D-WCq">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Tfv-eb-wYb">
                                 <rect key="frame" x="252" y="19" width="52" height="5"/>
@@ -980,7 +981,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lista ROM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GCc-cx-jVv">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lista de ROMs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GCc-cx-jVv">
                                                     <rect key="frame" x="43" y="11" width="211" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
