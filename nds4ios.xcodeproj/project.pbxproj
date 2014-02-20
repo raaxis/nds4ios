@@ -346,8 +346,6 @@
 		9CFFEB7B18B59B9500F80903 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		9CFFEB7C18B59B9B00F80903 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		9CFFEB7D18B59BA200F80903 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9CFFEB7E18B59BAF00F80903 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = pt; path = pt.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9CFFEB7F18B59BB500F80903 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-PT"; path = "pt-PT.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		9CFFEB8018B59BC300F80903 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9CFFEB8118B59C3B00F80903 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmLJit.cpp; path = "nds4droid-code/jni/desmume/src/ArmLJit.cpp"; sourceTree = SOURCE_ROOT; };
@@ -1545,8 +1543,6 @@
 				9CFFEB7B18B59B9500F80903 /* zh-Hant */,
 				9CFFEB7C18B59B9B00F80903 /* zh-Hans */,
 				9CFFEB7D18B59BA200F80903 /* fr */,
-				9CFFEB7E18B59BAF00F80903 /* pt */,
-				9CFFEB7F18B59BB500F80903 /* pt-PT */,
 				9CFFEB8018B59BC300F80903 /* es */,
 				9CFFEB8118B59C3B00F80903 /* en */,
 			);
