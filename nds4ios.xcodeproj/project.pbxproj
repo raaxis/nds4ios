@@ -107,7 +107,6 @@
 		BFCFE0F31764FBD3000A70CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCFE0F21764FBD3000A70CF /* UIKit.framework */; };
 		BFCFE0F51764FBD3000A70CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCFE0F41764FBD3000A70CF /* Foundation.framework */; };
 		BFCFE0F71764FBD3000A70CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCFE0F61764FBD3000A70CF /* CoreGraphics.framework */; };
-		BFCFE0FD1764FBD3000A70CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFCFE0FB1764FBD3000A70CF /* InfoPlist.strings */; };
 		BFCFE1031764FBD3000A70CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE1021764FBD3000A70CF /* AppDelegate.m */; };
 		BFCFE10C1764FBD3000A70CF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCFE10A1764FBD3000A70CF /* MainStoryboard.storyboard */; };
 		BFCFE18017650FB0000A70CF /* arm_instructions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFCFE13217650FB0000A70CF /* arm_instructions.cpp */; };
@@ -244,9 +243,6 @@
 		4CA7846917B31BA500097BC4 /* Default-Landscape~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~iPad.png"; path = "Resources/required/Default-Landscape~iPad.png"; sourceTree = "<group>"; };
 		4CA7846B17B31BB300097BC4 /* Default-Portrait@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~iPad.png"; path = "Resources/required/Default-Portrait@2x~iPad.png"; sourceTree = "<group>"; };
 		4CA7846D17B31BB600097BC4 /* Default-Portrait~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~iPad.png"; path = "Resources/required/Default-Portrait~iPad.png"; sourceTree = "<group>"; };
-		4CEDCA53178A555D00958FF9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		4CEDCA54178A556200958FF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
-		4CEDCA55178A5E7E00958FF9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		8B28304E178DD27000E92785 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear.png"; path = "Resources/19-gear.png"; sourceTree = "<group>"; };
 		8B28304F178DD27000E92785 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gear@2x.png"; path = "Resources/19-gear@2x.png"; sourceTree = "<group>"; };
 		8B283052178DD3CA00E92785 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group.png"; path = "Resources/112-group.png"; sourceTree = "<group>"; };
@@ -281,8 +277,6 @@
 		8B305F93178B95EA00FD010A /* 210-twitterbird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "210-twitterbird@2x.png"; path = "Resources/210-twitterbird@2x.png"; sourceTree = "<group>"; };
 		8B305F97178B998800FD010A /* NDSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSAboutViewController.h; path = nds4ios/about/NDSAboutViewController.h; sourceTree = SOURCE_ROOT; };
 		8B305F98178B998800FD010A /* NDSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSAboutViewController.m; path = nds4ios/about/NDSAboutViewController.m; sourceTree = SOURCE_ROOT; };
-		8B305F9A178BA60200FD010A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8B305F9B178BA60200FD010A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B4895BE178CCBEE00BA61C3 /* OLGhostAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OLGhostAlertView.h; path = nds4ios/resumealert/OLGhostAlertView.h; sourceTree = SOURCE_ROOT; };
 		8B4895BF178CCBEE00BA61C3 /* OLGhostAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLGhostAlertView.m; path = nds4ios/resumealert/OLGhostAlertView.m; sourceTree = SOURCE_ROOT; };
 		8B4895C4178CE15D00BA61C3 /* NDSROMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSROMTableViewController.m; path = nds4ios/roms/NDSROMTableViewController.m; sourceTree = SOURCE_ROOT; };
@@ -346,11 +340,16 @@
 		8BEFF483178B468700EEE55A /* NDSSideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSSideBarViewController.m; path = nds4ios/sidedrawer/NDSSideBarViewController.m; sourceTree = SOURCE_ROOT; };
 		8BEFF489178B473E00EEE55A /* menuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuicon.png; path = Resources/menuicon.png; sourceTree = "<group>"; };
 		8BEFF48A178B473E00EEE55A /* menuicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menuicon@2x.png"; path = "Resources/menuicon@2x.png"; sourceTree = "<group>"; };
-		9C297BAF178BB97000ED14D3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9C4DD2851891E5390075B66C /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
-		9CFF00BB18ADC88600820B6D /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-PT"; path = "pt-PT.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
-		9CFF00BC18ADC8DB00820B6D /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = pt; path = pt.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9CFFEB7518B48C7C00F80903 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nds4ios/Images.xcassets; sourceTree = "<group>"; };
+		9CFFEB7A18B59B8E00F80903 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9CFFEB7B18B59B9500F80903 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		9CFFEB7C18B59B9B00F80903 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		9CFFEB7D18B59BA200F80903 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9CFFEB7E18B59BAF00F80903 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = pt; path = pt.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9CFFEB7F18B59BB500F80903 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-PT"; path = "pt-PT.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		9CFFEB8018B59BC300F80903 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9CFFEB8118B59C3B00F80903 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmLJit.cpp; path = "nds4droid-code/jni/desmume/src/ArmLJit.cpp"; sourceTree = SOURCE_ROOT; };
 		BF2AC476177FF06600D3CF93 /* ArmLJit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmLJit.h; path = "nds4droid-code/jni/desmume/src/ArmLJit.h"; sourceTree = SOURCE_ROOT; };
 		BF2AC47A177FF29000D3CF93 /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asm.h; sourceTree = "<group>"; };
@@ -382,10 +381,8 @@
 		BFCFE0F21764FBD3000A70CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFCFE0F41764FBD3000A70CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFCFE0F61764FBD3000A70CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BFCFE0FC1764FBD3000A70CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BFCFE1011764FBD3000A70CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFCFE1021764FBD3000A70CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFCFE10B1764FBD3000A70CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BFCFE13017650FB0000A70CF /* addons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = addons.cpp; path = "nds4droid-code/jni/desmume/src/addons.cpp"; sourceTree = SOURCE_ROOT; };
 		BFCFE13117650FB0000A70CF /* addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addons.h; path = "nds4droid-code/jni/desmume/src/addons.h"; sourceTree = SOURCE_ROOT; };
 		BFCFE13217650FB0000A70CF /* arm_instructions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arm_instructions.cpp; path = "nds4droid-code/jni/desmume/src/arm_instructions.cpp"; sourceTree = SOURCE_ROOT; };
@@ -931,7 +928,6 @@
 				8BEA0991178733DB0060B347 /* nds4ios-Prefix.pch */,
 				8BEA098E17872FB50060B347 /* nds4ios-Info.plist */,
 				8BEA097B17872C5E0060B347 /* main.m */,
-				BFCFE0FB1764FBD3000A70CF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1320,7 +1316,6 @@
 				28DA4A491787FD7F002236A4 /* Select@2x.png in Resources */,
 				8BEA093F178724E10060B347 /* Icon@2x.png in Resources */,
 				28DA4A4A1787FD7F002236A4 /* Start.png in Resources */,
-				BFCFE0FD1764FBD3000A70CF /* InfoPlist.strings in Resources */,
 				8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */,
 				28DA4A4B1787FD7F002236A4 /* Start@2x.png in Resources */,
 				28DA4A51178802FB002236A4 /* LTrigger@2x.png in Resources */,
@@ -1543,26 +1538,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BFCFE0FB1764FBD3000A70CF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFCFE0FC1764FBD3000A70CF /* en */,
-				8B305F9B178BA60200FD010A /* es */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		BFCFE10A1764FBD3000A70CF /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFCFE10B1764FBD3000A70CF /* en */,
-				4CEDCA53178A555D00958FF9 /* fr */,
-				4CEDCA54178A556200958FF9 /* zh-Hans */,
-				4CEDCA55178A5E7E00958FF9 /* zh-Hant */,
-				8B305F9A178BA60200FD010A /* es */,
-				9C297BAF178BB97000ED14D3 /* ja */,
-				9CFF00BB18ADC88600820B6D /* pt-PT */,
-				9CFF00BC18ADC8DB00820B6D /* pt */,
+				9CFFEB7A18B59B8E00F80903 /* ja */,
+				9CFFEB7B18B59B9500F80903 /* zh-Hant */,
+				9CFFEB7C18B59B9B00F80903 /* zh-Hans */,
+				9CFFEB7D18B59BA200F80903 /* fr */,
+				9CFFEB7E18B59BAF00F80903 /* pt */,
+				9CFFEB7F18B59BB500F80903 /* pt-PT */,
+				9CFFEB8018B59BC300F80903 /* es */,
+				9CFFEB8118B59C3B00F80903 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
