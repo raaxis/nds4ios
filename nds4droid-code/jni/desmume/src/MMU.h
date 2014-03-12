@@ -965,7 +965,7 @@ FORCEINLINE u8* _MMU_write_getrawptr32(const u32 addr_s, const u32 addr_e)
 
 	if (PROCNUM==ARMCPU_ARM9)
 		if((addr_s&(~0x3FFF)) == MMU.DTCMRegion && 
-			(addr_s&(~0x3FFF)) == MMU.DTCMRegion)
+			(addr_e&(~0x3FFF)) == MMU.DTCMRegion)
 		{
 			return &MMU.ARM9_DTCM[addr_s & 0x3FFC];
 		}
