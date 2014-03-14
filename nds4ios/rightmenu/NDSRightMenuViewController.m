@@ -50,7 +50,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell"];
     
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"row"]];
-    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"selectedrow"]];
+    cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rowselected"]];
     cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure"]];
     
     // text
