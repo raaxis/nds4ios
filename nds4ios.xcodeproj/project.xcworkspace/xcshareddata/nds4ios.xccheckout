@@ -2,35 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>02C38914-2D92-4430-847B-A5983763F560</string>
+	<string>8A05DA46-92C5-4484-A1D5-9EDCBFA29A9D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>nds4ios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E3CB1F93-3107-4B83-90AD-F3313EF3C493</key>
-		<string>ssh://github.com/InfiniDev/nds4ios.git</string>
+		<key>A6CE10D5-7510-4BD0-80DC-E62817D87D93</key>
+		<string>ssh://github.com/iain-benson/nds4ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>nds4ios.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E3CB1F93-3107-4B83-90AD-F3313EF3C493</key>
+		<key>A6CE10D5-7510-4BD0-80DC-E62817D87D93</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/InfiniDev/nds4ios.git</string>
+	<string>ssh://github.com/iain-benson/nds4ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E3CB1F93-3107-4B83-90AD-F3313EF3C493</string>
+	<string>A6CE10D5-7510-4BD0-80DC-E62817D87D93</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E3CB1F93-3107-4B83-90AD-F3313EF3C493</string>
+			<string>A6CE10D5-7510-4BD0-80DC-E62817D87D93</string>
 			<key>IDESourceControlWCCName</key>
 			<string>nds4ios</string>
 		</dict>
