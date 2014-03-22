@@ -8323,7 +8323,7 @@ static void* AllocCache(u32 size)
 
 static void* AllocCacheAlign(u32 size)
 {
-	static const u32 align = 4 - 1;
+	static const uintptr_t align = 4 - 1;
 
 	u32 size_new = size + align;
 

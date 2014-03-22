@@ -7471,7 +7471,7 @@ TEMPLATE static u32 cpuExecuteLJIT()
     
     printf("Malloced\n");
     
-    p = (uint32_t *)(((int)p + PAGESIZE-1) & ~(PAGESIZE-1));
+    p = (uint32_t *)(((uintptr_t)p + PAGESIZE-1) & ~(PAGESIZE-1));
     
     printf("Before Compiling\n");
     
