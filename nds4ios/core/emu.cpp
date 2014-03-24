@@ -22,6 +22,7 @@
 #include "sndcoreaudio.h"
 #include "cheatSystem.h"
 #include "slot1.h"
+#include "version.h"
 
 #define LOGI(...) printf(__VA_ARGS__);printf("\n")
 
@@ -557,3 +558,9 @@ void EMU_setABXY(bool a, bool b, bool x, bool y)
     _b[BUTTON_Y] = !!y;
     NDS_setPad(all_button, false, false);
 }
+
+const char* EMU_version()
+{
+    return EMU_DESMUME_VERSION_STRING();
+}
+

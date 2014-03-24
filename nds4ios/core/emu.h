@@ -56,5 +56,7 @@ void EMU_buttonUp(BUTTON_ID button);
 void EMU_setDPad(bool up, bool down, bool left, bool right);
 void EMU_setABXY(bool a, bool b, bool x, bool y);
 
+const char *EMU_version();
+
 #endif /* defined(__nds4ios__emu__) */
 

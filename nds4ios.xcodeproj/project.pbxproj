@@ -48,7 +48,7 @@
 		8B305F91178B914E00FD010A /* drawerlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B305F8F178B914D00FD010A /* drawerlogo@2x.png */; };
 		8B305F94178B95EA00FD010A /* 210-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B305F92178B95E900FD010A /* 210-twitterbird.png */; };
 		8B305F95178B95EA00FD010A /* 210-twitterbird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B305F93178B95EA00FD010A /* 210-twitterbird@2x.png */; };
-		8B305F99178B998800FD010A /* NDSAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F98178B998800FD010A /* NDSAboutViewController.m */; };
+		8B305F99178B998800FD010A /* NDSAboutViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B305F98178B998800FD010A /* NDSAboutViewController.mm */; };
 		8B4895C0178CCBEE00BA61C3 /* OLGhostAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4895BF178CCBEE00BA61C3 /* OLGhostAlertView.m */; };
 		8B4895C5178CE15D00BA61C3 /* NDSROMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4895C4178CE15D00BA61C3 /* NDSROMTableViewController.m */; };
 		8B489B42178DAD6C00BA61C3 /* SASlideMenuRightMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B489B41178DAD6A00BA61C3 /* SASlideMenuRightMenuViewController.m */; };
@@ -276,7 +276,7 @@
 		8B305F92178B95E900FD010A /* 210-twitterbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "210-twitterbird.png"; path = "Resources/210-twitterbird.png"; sourceTree = "<group>"; };
 		8B305F93178B95EA00FD010A /* 210-twitterbird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "210-twitterbird@2x.png"; path = "Resources/210-twitterbird@2x.png"; sourceTree = "<group>"; };
 		8B305F97178B998800FD010A /* NDSAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDSAboutViewController.h; path = nds4ios/about/NDSAboutViewController.h; sourceTree = SOURCE_ROOT; };
-		8B305F98178B998800FD010A /* NDSAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSAboutViewController.m; path = nds4ios/about/NDSAboutViewController.m; sourceTree = SOURCE_ROOT; };
+		8B305F98178B998800FD010A /* NDSAboutViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NDSAboutViewController.mm; path = nds4ios/about/NDSAboutViewController.mm; sourceTree = SOURCE_ROOT; };
 		8B4895BE178CCBEE00BA61C3 /* OLGhostAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OLGhostAlertView.h; path = nds4ios/resumealert/OLGhostAlertView.h; sourceTree = SOURCE_ROOT; };
 		8B4895BF178CCBEE00BA61C3 /* OLGhostAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLGhostAlertView.m; path = nds4ios/resumealert/OLGhostAlertView.m; sourceTree = SOURCE_ROOT; };
 		8B4895C4178CE15D00BA61C3 /* NDSROMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDSROMTableViewController.m; path = nds4ios/roms/NDSROMTableViewController.m; sourceTree = SOURCE_ROOT; };
@@ -655,7 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				8B305F97178B998800FD010A /* NDSAboutViewController.h */,
-				8B305F98178B998800FD010A /* NDSAboutViewController.m */,
+				8B305F98178B998800FD010A /* NDSAboutViewController.mm */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -1513,7 +1513,7 @@
 				8B305F7E178B48FD00FD010A /* SASlideMenuRootViewController.m in Sources */,
 				8B305F7F178B48FD00FD010A /* SASlideMenuViewController.m in Sources */,
 				8B305F85178B4A1800FD010A /* MenuCell.m in Sources */,
-				8B305F99178B998800FD010A /* NDSAboutViewController.m in Sources */,
+				8B305F99178B998800FD010A /* NDSAboutViewController.mm in Sources */,
 				8B4895C0178CCBEE00BA61C3 /* OLGhostAlertView.m in Sources */,
 				8B4895C5178CE15D00BA61C3 /* NDSROMTableViewController.m in Sources */,
 				8B489B42178DAD6C00BA61C3 /* SASlideMenuRightMenuViewController.m in Sources */,
