@@ -8,7 +8,7 @@
 
 #import "NDSAboutViewController.h"
 #import "Twitter/Twitter.h"
-
+#import "emu.h"
 
 @interface NDSAboutViewController ()
 
@@ -31,6 +31,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
     
     versionLabel.text = [NSBundle mainBundle].infoDictionary[@"GitVersionString"];
+    desmumeVersion.text = [NSString stringWithCString:EMU_version() encoding:NSASCIIStringEncoding];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

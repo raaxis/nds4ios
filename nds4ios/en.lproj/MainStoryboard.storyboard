@@ -876,6 +876,12 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Ib-Ge-gJv">
+                                                    <rect key="frame" x="104" y="0.0" width="207" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -926,6 +932,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="desmumeVersion" destination="0Ib-Ge-gJv" id="niT-vX-XR5"/>
                         <outlet property="tweetButton" destination="7A3-nC-GqP" id="meR-P8-Gyn"/>
                         <outlet property="versionLabel" destination="zt4-NA-0xW" id="JbO-fV-0RI"/>
                     </connections>

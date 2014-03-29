@@ -12,6 +12,7 @@
     BOOL _canTweet;
     IBOutlet UIBarButtonItem *tweetButton;
     IBOutlet UILabel *versionLabel;
+    IBOutlet UILabel *desmumeVersion;
 }
 - (IBAction)sendTweet:(id)sender;
 
