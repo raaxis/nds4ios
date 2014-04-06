@@ -35,9 +35,9 @@
     NSLog(@"Starting controller discovery...");
     [GCController startWirelessControllerDiscoveryWithCompletionHandler:nil];
     
-    if ([[GCController controllers] count]) {
+    if ([[GCController controllers] count] > 0) {
         // We already have a connected controller, jump directly to our connected method.
-        [self onControllerConnected:[[GCController controllers] firstObject]];
+        [self onControllerConnected:nil];
     }
 }
 
@@ -47,8 +47,7 @@
     
     if (notification) {
         _controller = notification.object;
-    } else
-    {
+    } else {
         _controller = [[GCController controllers] firstObject];
     }
     NSLog(@"Connected controller %@", _controller);
