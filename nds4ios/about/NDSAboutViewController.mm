@@ -30,6 +30,8 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
     
+    aboutTitle.title = NSLocalizedString(@"About nds4ios", nil);
+    tweetButton.title = NSLocalizedString(@"Share", nil);
     versionLabel.text = [NSBundle mainBundle].infoDictionary[@"GitVersionString"];
     desmumeVersion.text = [NSString stringWithCString:EMU_version() encoding:NSASCIIStringEncoding];
     
@@ -47,6 +49,33 @@
 }
 
 #pragma mark - Table view delegate
+
+- (NSString *)tableView:(UITableView *)tableView  titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = @"InfiniDev";
+            break;
+        case 1:
+            sectionName = NSLocalizedString(@"InfiniDev Developers", nil);
+            break;
+        case 2:
+            sectionName = NSLocalizedString(@"Contributors", nil);
+            break;
+        case 3:
+            sectionName = NSLocalizedString(@"Emulator Core Code", nil);
+            break;
+        case 4:
+            sectionName = NSLocalizedString(@"About nds4ios", nil);
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

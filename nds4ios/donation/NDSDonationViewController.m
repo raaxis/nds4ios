@@ -28,17 +28,30 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    donateTitle.title = NSLocalizedString(@"Donate", nil);
+    donateLabel.text = NSLocalizedString(@"Donate using PayPal", nil);
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSString *)tableView:(UITableView *)tableView  titleForFooterInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = NSLocalizedString(@"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things.", nil);
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
 }
 
 #pragma mark - Table view delegate

@@ -1,0 +1,42 @@
+"ROM List" = "Lista de ROMs";
+"About nds4ios" = "Acerca de nds4ios";
+"Settings" = "Ajustes";
+"Donate" = "Donar";
+
+"Share" = "Compartir";
+
+"InfiniDev Developers" = "Desarolladores de InfiniDev";
+"Contributors" = "Contribuyentes";
+"Emulator Core Code" = "Emulador de código de la base";
+
+"Donate using PayPal" = "Donar con PayPal";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "Todos trabajamos duro para crear una aplicación que nuestros usarios disfruten y amen. Si te encanta esta aplicación, por favor consider hacer una aportacion para ayudarnos a poder crear mejores cosas.";
+
+"Emulator" = "Emulador";
+"Controls" = "Controles";
+"Developer" = "Desarrollador";
+"Experimental" = "Experimental";
+
+"The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "La cuadrícula de píxeles hace que los juegos se vean menos borrosos, pero a la vez reduce el brillo.";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "Activar Dropbox creará una carpeta llamada \"nds4ios\" en tu cuenta de Dropbox. Tus partidas se sincronizarán a esa carpeta para que puedas seguirla en todos tus dispositivos (iPhone, iPad, iPod touch, Android, PC, etc).";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lighting JIT hace que los juegos funcionen más rápido. Usted debe estar jailbroken o nds4ios se estrellará.";
+
+"Auto" = "Auto";
+"D-Pad" = "D-Pad";
+"Joystick" = "Joystick";
+"Top" = "Arriba";
+"Bottom" = "Abajo";
+
+"Frame Skip" = "Saltar Fotogramas";
+"Disable Sound" = "Desactivar Sonido";
+"Overlay Pixel Grid" = "Mostrar Cuadrícula";
+
+"Control Pad Style" = "Estilo de Controles";
+"Controls Position (Portrait)" = "Posicion de Controles (Vertical)";
+"Control Opacity (Portrait)" = "Opacidad de Controles (Vertical)";
+
+"Enable Dropbox Sync" = "Sincronización";
+"Not Linked" = "No Vinculado";
+
+"Show FPS" = "Mostrar FPS";
+"Vibration" = "Vibración";

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller - 設定-->
+        <!--Settings View Controller - <Settings>-->
         <scene sceneID="FPw-CJ-zlO">
             <objects>
                 <tableViewController id="c3c-6p-wCh" customClass="NDSSettingsViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725496529999996" green="0.93725496529999996" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="エミュレータ" footerTitle="ピクセルグリッドはゲームブラーを低減します。でも、ピクセルグリッドは明るさを低減します。" id="Zfz-To-hqF">
+                            <tableViewSection headerTitle="&lt;Emulator>" footerTitle="&lt;The pixel grid makes games appear less blurry, but at the same time, reduces brightness.>" id="Zfz-To-hqF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="PGZ-yw-RwN">
                                         <rect key="frame" x="0.0" y="119" width="320" height="74"/>
@@ -32,13 +32,13 @@
                                                         <segment title="2"/>
                                                         <segment title="3"/>
                                                         <segment title="4"/>
-                                                        <segment title="オート" width="56"/>
+                                                        <segment title="&lt;Auto>" width="56"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="uoV-mL-ahu"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="フレームスキップ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Mdm-Bf-hXu">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Frame Skip>" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Mdm-Bf-hXu">
                                                     <rect key="frame" x="20" y="7" width="280" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,7 +63,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="Zae-Ls-3hQ"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="フレームスキップ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gJw-qx-K1N">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Disable Sound>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gJw-qx-K1N">
                                                     <rect key="frame" x="17" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,7 +88,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="QgR-yJ-K4E"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ピクセルグリッド" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1H-5W-GBv">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Overlay Pixel Grid>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1H-5W-GBv">
                                                     <rect key="frame" x="17" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,7 +101,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="コントロール" id="Y6o-vJ-AvE">
+                            <tableViewSection headerTitle="&lt;Controls>" id="Y6o-vJ-AvE">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="hWj-GE-tqt">
                                         <rect key="frame" x="0.0" y="389" width="320" height="74"/>
@@ -114,14 +114,14 @@
                                                     <rect key="frame" x="20" y="36" width="279" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
-                                                        <segment title="Dパッド"/>
-                                                        <segment title="ジョイスティック"/>
+                                                        <segment title="&lt;D-Pad>"/>
+                                                        <segment title="&lt;Joystick>"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="a84-8d-mfc"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="コントロールパッドスタイル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="628-xJ-TE3">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Control Pad Style>" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="628-xJ-TE3">
                                                     <rect key="frame" x="20" y="7" width="279" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -140,17 +140,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="WTS-jQ-bi4">
-                                                    <rect key="frame" x="20" y="36" width="280" height="29"/>
+                                                    <rect key="frame" x="20" y="36" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <segments>
-                                                        <segment title="上側"/>
-                                                        <segment title="下側"/>
+                                                        <segment title="&lt;Top>"/>
+                                                        <segment title="&lt;Bottom>"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="gaO-Be-QG9"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="コントロールのポジション" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h11-xO-hGl">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Controls Position (Portrait)>" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h11-xO-hGl">
                                                     <rect key="frame" x="20" y="7" width="280" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -168,7 +168,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="コントロールの不透明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IzY-y9-rcs">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Control Opacity (Portrait)>" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IzY-y9-rcs">
                                                     <rect key="frame" x="20" y="7" width="280" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -188,8 +188,8 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Dropbox" id="0Py-uK-oNg">
-                                <string key="footerTitle">有効化Dropbox同期はあなたのDropboxアカウントに「nds4ios」フォルダを追加します。あなたのセーブデータ（DSV）はそのDropboxフォルダに同期されます。 したがって、あなたのセーブデータはすべてのデバイスで利用できるようになります。（iPhone、iPad、iPod touch、Android、PC）</string>
+                            <tableViewSection headerTitle="&lt;Dropbox>" id="0Py-uK-oNg">
+                                <string key="footerTitle">&lt;Enabling Dropbox will add an "nds4ios" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc).&gt;</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AeV-QE-SJw">
                                         <rect key="frame" x="0.0" y="659" width="320" height="44"/>
@@ -205,8 +205,8 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="ZW0-f5-lWM"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dropbox同期を有効" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M3y-fK-XWf">
-                                                    <rect key="frame" x="17" y="11" width="175" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Enable Dropbox Sync>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M3y-fK-XWf">
+                                                    <rect key="frame" x="17" y="11" width="188" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -223,7 +223,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="リンクされていません" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="STN-h0-VIH">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Not Linked>" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="STN-h0-VIH">
                                                     <rect key="frame" x="63" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -236,10 +236,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="開発者" id="O9Q-KX-eTM">
+                            <tableViewSection headerTitle="&lt;Developer>" id="O9Q-KX-eTM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="reo-6x-MNx">
-                                        <rect key="frame" x="0.0" y="921" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="889" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="reo-6x-MNx" id="vMq-QA-o3d">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -252,7 +252,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="jvf-s4-N2b"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FPSを表示" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RV9-0b-oWH">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Show FPS>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RV9-0b-oWH">
                                                     <rect key="frame" x="17" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -265,10 +265,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="実験的" footerTitle="GNU Lightning JITはエミュレーションが速くなります。" id="HQs-Z9-d7P">
+                            <tableViewSection headerTitle="&lt;Experimental>" footerTitle="&lt;GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash.>" id="HQs-Z9-d7P">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xmH-De-K0j">
-                                        <rect key="frame" x="0.0" y="1013" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="981" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmH-De-K0j" id="iY1-jK-HhM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -293,7 +293,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gaP-db-aFa">
-                                        <rect key="frame" x="0.0" y="1057" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1025" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gaP-db-aFa" id="km9-XY-fyU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -306,7 +306,7 @@
                                                         <action selector="controlChanged:" destination="c3c-6p-wCh" eventType="valueChanged" id="gYi-6d-k5X"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="振動" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cNL-IT-Ar0">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Vibration>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cNL-IT-Ar0">
                                                     <rect key="frame" x="17" y="11" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -321,18 +321,28 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="設定" id="rWF-4U-yKM"/>
+                    <navigationItem key="navigationItem" title="&lt;Settings>" id="rWF-4U-yKM"/>
                     <connections>
                         <outlet property="accountLabel" destination="STN-h0-VIH" id="MOp-qX-Pvy"/>
+                        <outlet property="controlOpacityLabel" destination="IzY-y9-rcs" id="Agw-V7-b0V"/>
                         <outlet property="controlOpacitySlider" destination="V8F-J8-cfe" id="0Ze-Q8-RGe"/>
                         <outlet property="controlPadStyleControl" destination="Aa4-Hv-ujp" id="0dI-ge-9CN"/>
+                        <outlet property="controlPadStyleLabel" destination="628-xJ-TE3" id="sAS-XY-Sss"/>
                         <outlet property="controlPositionControl" destination="WTS-jQ-bi4" id="K8y-EM-EZT"/>
+                        <outlet property="controlPositionLabel" destination="h11-xO-hGl" id="tsD-eH-IVN"/>
+                        <outlet property="disableSoundLabel" destination="gJw-qx-K1N" id="1Pc-wq-hjU"/>
                         <outlet property="disableSoundSwitch" destination="sVG-X5-2PK" id="9B9-L4-Tf8"/>
+                        <outlet property="dropboxLabel" destination="M3y-fK-XWf" id="VQf-OI-P5y"/>
                         <outlet property="dropboxSwitch" destination="HNO-BF-gvX" id="TOU-A3-57A"/>
                         <outlet property="enableJITSwitch" destination="biu-A3-Eay" id="tPu-JV-VAY"/>
                         <outlet property="frameSkipControl" destination="2i9-9X-BIw" id="ogK-NA-DyZ"/>
+                        <outlet property="frameSkipLabel" destination="Mdm-Bf-hXu" id="3Bp-3Z-vL9"/>
+                        <outlet property="settingsTitle" destination="rWF-4U-yKM" id="0sN-Ui-PuW"/>
+                        <outlet property="showFPSLabel" destination="RV9-0b-oWH" id="1h1-gt-fEG"/>
                         <outlet property="showFPSSwitch" destination="hjj-DU-8Z8" id="oa2-4w-1fP"/>
+                        <outlet property="showPixelGridLabel" destination="i1H-5W-GBv" id="4w0-2q-gTw"/>
                         <outlet property="showPixelGridSwitch" destination="U7N-Jx-IWl" id="do9-tv-emX"/>
+                        <outlet property="vibrateLabel" destination="cNL-IT-Ar0" id="1CC-ba-efi"/>
                         <outlet property="vibrateSwitch" destination="bp0-zJ-1yS" id="Fh5-fN-3Jp"/>
                     </connections>
                 </tableViewController>
@@ -340,10 +350,10 @@
             </objects>
             <point key="canvasLocation" x="451" y="374"/>
         </scene>
-        <!--ROMリスト-->
+        <!--ROM List View Controller-->
         <scene sceneID="18">
             <objects>
-                <tableViewController title="Master" id="12" userLabel="ROMリスト" customClass="NDSROMTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Master" id="12" userLabel="ROM List View Controller" customClass="NDSROMTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,7 +391,7 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ROMリスト" id="36">
+                    <navigationItem key="navigationItem" title="&lt;ROM List>" id="36">
                         <barButtonItem key="rightBarButtonItem" id="St3-9D-WCq">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="Tfv-eb-wYb">
                                 <rect key="frame" x="252" y="19" width="52" height="5"/>
@@ -400,6 +410,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="romListTitle" destination="36" id="d6k-fd-Xf1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
@@ -561,7 +574,7 @@
             </objects>
             <point key="canvasLocation" x="1376" y="-934"/>
         </scene>
-        <!--About View Controller - nds4iosについて-->
+        <!--About View Controller - <About nds4ios>-->
         <scene sceneID="prg-5R-kCK">
             <objects>
                 <tableViewController id="kY3-6f-RlH" customClass="NDSAboutViewController" sceneMemberID="viewController">
@@ -596,7 +609,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="InfiniDevの開発者" id="SF3-AI-Qqv" userLabel="InfiniDev">
+                            <tableViewSection headerTitle="&lt;InfiniDev Developers>" id="SF3-AI-Qqv" userLabel="InfiniDev">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="yv5-13-ZPv" style="IBUITableViewCellStyleDefault" id="O4X-VK-QjV">
                                         <rect key="frame" x="0.0" y="211" width="320" height="44"/>
@@ -820,7 +833,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="貢献者" footerTitle="" id="oNt-fv-07h" userLabel="Contributors">
+                            <tableViewSection headerTitle="&lt;Contributors>" footerTitle="" id="oNt-fv-07h" userLabel="Contributors">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bh8-WB-hUD" style="IBUITableViewCellStyleDefault" id="gz3-tq-Ijd">
                                         <rect key="frame" x="0.0" y="699" width="320" height="44"/>
@@ -860,7 +873,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="エミュレータコアコード" footerTitle="" id="Iv8-eM-IZX" userLabel="DeSmuME">
+                            <tableViewSection headerTitle="&lt;Emulator Core Code>" footerTitle="" id="Iv8-eM-IZX" userLabel="DeSmuME">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="e63-3V-ruV" style="IBUITableViewCellStyleDefault" id="vmr-UF-N8x">
                                         <rect key="frame" x="0.0" y="835" width="320" height="44"/>
@@ -876,8 +889,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d2Z-pG-sjv">
-                                                    <rect key="frame" x="95" y="0.0" width="215" height="43"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Ib-Ge-gJv">
+                                                    <rect key="frame" x="96.000000352682861" y="0.0" width="215" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
@@ -888,7 +901,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="nds4iosについて" footerTitle="© 2013-2014 InfiniDev" id="zoU-Tc-bmD" userLabel="Version">
+                            <tableViewSection headerTitle="&lt;About nds4ios>" footerTitle="© 2013-2014 InfiniDev" id="zoU-Tc-bmD" userLabel="Version">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Oph-va-v9C" style="IBUITableViewCellStyleDefault" id="dMh-Oa-8e4">
                                         <rect key="frame" x="0.0" y="927" width="320" height="44"/>
@@ -923,8 +936,8 @@
                             <outlet property="delegate" destination="kY3-6f-RlH" id="IxX-Tf-Gs1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="nds4iosについて" id="wjq-Iv-O9N">
-                        <barButtonItem key="rightBarButtonItem" title="シェア" id="7A3-nC-GqP">
+                    <navigationItem key="navigationItem" title="&lt;About nds4ios>" id="wjq-Iv-O9N">
+                        <barButtonItem key="rightBarButtonItem" title="&lt;Share>" id="7A3-nC-GqP">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="sendTweet:" destination="kY3-6f-RlH" id="4rn-Zw-PT2"/>
@@ -932,6 +945,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="aboutTitle" destination="wjq-Iv-O9N" id="w2h-hy-gmh"/>
+                        <outlet property="desmumeVersion" destination="0Ib-Ge-gJv" id="niT-vX-XR5"/>
                         <outlet property="tweetButton" destination="7A3-nC-GqP" id="meR-P8-Gyn"/>
                         <outlet property="versionLabel" destination="zt4-NA-0xW" id="JbO-fV-0RI"/>
                     </connections>
@@ -987,7 +1002,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ROMリスト" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GCc-cx-jVv">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;ROM List>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GCc-cx-jVv">
                                                     <rect key="frame" x="43" y="11" width="211" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1030,7 +1045,7 @@
                                                     <rect key="frame" x="250" y="10" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="nds4iosについて" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jfi-JX-LAK">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;About nds4ios>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jfi-JX-LAK">
                                                     <rect key="frame" x="43" y="11" width="211" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1069,7 +1084,7 @@
                                                     <rect key="frame" x="250" y="10" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="設定" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zr6-zi-kgl">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Settings>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zr6-zi-kgl">
                                                     <rect key="frame" x="43" y="11" width="211" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1108,7 +1123,7 @@
                                                     <rect key="frame" x="250" y="10" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="寄付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7rs-Ee-hYD">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Donate>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7rs-Ee-hYD">
                                                     <rect key="frame" x="43" y="11" width="211" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1137,6 +1152,12 @@
                         </connections>
                     </tableView>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="aboutLabel" destination="jfi-JX-LAK" id="z01-pD-knC"/>
+                        <outlet property="donateLabel" destination="7rs-Ee-hYD" id="N6y-lx-WQ1"/>
+                        <outlet property="romListLabel" destination="GCc-cx-jVv" id="tMr-TK-30Y"/>
+                        <outlet property="settingsLabel" destination="zr6-zi-kgl" id="3Ag-Fg-qUQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHS-Li-Mt9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1208,7 +1229,7 @@
             </objects>
             <point key="canvasLocation" x="-11" y="374"/>
         </scene>
-        <!--Donation View Controller - 寄付-->
+        <!--Donation View Controller - <Donate>-->
         <scene sceneID="B9d-x4-GUQ">
             <objects>
                 <tableViewController id="XzS-kx-tLR" customClass="NDSDonationViewController" sceneMemberID="viewController">
@@ -1217,13 +1238,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725496529999996" green="0.93725496529999996" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
                         <sections>
-                            <tableViewSection footerTitle="InfiniDevはユーザーが楽しむためにこのエミュレータを作成するために懸命に働く。このエミュレーターが好きなら、InfiniDevをサポートするために寄付をご検討ください。" id="PmD-1Z-6xs">
+                            <tableViewSection id="PmD-1Z-6xs">
+                                <string key="footerTitle">&lt;We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things.&gt;</string>
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection id="JdM-Sw-BUf">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FVr-2J-aIF">
-                                        <rect key="frame" x="0.0" y="189" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="206" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FVr-2J-aIF" id="Ine-tg-M6I">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -1233,8 +1255,8 @@
                                                     <rect key="frame" x="13" y="8" width="30" height="27"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PayPalを使って寄付する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1M7-Sa-5aC">
-                                                    <rect key="frame" x="51" y="11" width="199" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Donate using PayPal>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1M7-Sa-5aC">
+                                                    <rect key="frame" x="51" y="11" width="178" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1252,7 +1274,11 @@
                             <outlet property="delegate" destination="XzS-kx-tLR" id="Xzw-oN-oCX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="寄付" id="Xrj-DG-nws"/>
+                    <navigationItem key="navigationItem" title="&lt;Donate>" id="Xrj-DG-nws"/>
+                    <connections>
+                        <outlet property="donateLabel" destination="1M7-Sa-5aC" id="kkG-at-Ptb"/>
+                        <outlet property="donateTitle" destination="Xrj-DG-nws" id="82J-Kt-i1E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lR4-4L-ckg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
