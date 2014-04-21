@@ -18,6 +18,15 @@
     return YES;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    romListLabel.text = NSLocalizedString(@"ROM List", "ROM List menu item");
+    aboutLabel.text = NSLocalizedString(@"About nds4ios", "About nds4ios menu item");
+    settingsLabel.text = NSLocalizedString(@"Settings", "Settings menu item");
+    donateLabel.text = NSLocalizedString(@"Donate", "Donate menu item");
+}
+
 #pragma mark -
 #pragma mark SASlideMenuDataSource
 // The SASlideMenuDataSource is used to provide the initial segueid that represents the initial visibile view controller and to provide eventual additional configuration to the menu button

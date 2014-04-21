@@ -10,6 +10,7 @@
 
 @interface NDSAboutViewController : UITableViewController {
     BOOL _canTweet;
+    IBOutlet UINavigationItem *aboutTitle;    
     IBOutlet UIBarButtonItem *tweetButton;
     IBOutlet UILabel *versionLabel;
     IBOutlet UILabel *desmumeVersion;

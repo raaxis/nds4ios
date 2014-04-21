@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NDSDonationViewController : UITableViewController
-
+@interface NDSDonationViewController : UITableViewController {
+    IBOutlet UINavigationItem *donateTitle;
+    IBOutlet UILabel *donateLabel;
+}
 @end

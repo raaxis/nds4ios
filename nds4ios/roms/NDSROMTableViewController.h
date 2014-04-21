@@ -14,6 +14,8 @@
 {
     NSArray *games;
     DocWatchHelper *docWatchHelper;
+    
+    IBOutlet UINavigationItem *romListTitle;
 }
 
 - (void)reloadGames:(NSNotification*)aNotification;

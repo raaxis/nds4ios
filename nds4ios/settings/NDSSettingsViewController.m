@@ -13,18 +13,34 @@
 
 @interface NDSSettingsViewController ()
 
+@property (weak, nonatomic) IBOutlet UINavigationItem *settingsTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *frameSkipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *disableSoundLabel;
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *frameSkipControl;
 @property (weak, nonatomic) IBOutlet UISwitch *disableSoundSwitch;
+
+@property (weak, nonatomic) IBOutlet UILabel *controlPadStyleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *controlPositionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *controlOpacityLabel;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *controlPadStyleControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *controlPositionControl;
 @property (weak, nonatomic) IBOutlet UISlider *controlOpacitySlider;
 
+@property (weak, nonatomic) IBOutlet UILabel *showFPSLabel;
+@property (weak, nonatomic) IBOutlet UILabel *showPixelGridLabel;
+
 @property (weak, nonatomic) IBOutlet UISwitch *showFPSSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *showPixelGridSwitch;
 
 @property (weak, nonatomic) IBOutlet UISwitch *enableJITSwitch;
+
+@property (weak, nonatomic) IBOutlet UILabel *vibrateLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *vibrateSwitch;
+
+@property (weak, nonatomic) IBOutlet UILabel *dropboxLabel;
 
 @property (weak, nonatomic) IBOutlet UISwitch *dropboxSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *cellularSwitch;
@@ -51,12 +67,29 @@
     [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:78.0/255.0 green:156.0/255.0 blue:206.0/255.0 alpha:1.0]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
+    self.settingsTitle.title = NSLocalizedString(@"Settings", nil);
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.frameSkipLabel.text = NSLocalizedString(@"Frame Skip", nil);
+    self.disableSoundLabel.text = NSLocalizedString(@"Disable Sound", nil);
+    self.showPixelGridLabel.text = NSLocalizedString(@"Overlay Pixel Grid", nil);
+
+    self.controlPadStyleLabel.text = NSLocalizedString(@"Control Pad Style", nil);
+    self.controlPositionLabel.text = NSLocalizedString(@"Controls Position (Portrait)", nil);
+    self.controlOpacityLabel.text = NSLocalizedString(@"Control Opacity (Portrait)", nil);
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.dropboxLabel.text = NSLocalizedString(@"Enable Dropbox Sync", nil);
+    self.accountLabel.text = NSLocalizedString(@"Not Linked", nil);
+    
+    self.showFPSLabel.text = NSLocalizedString(@"Show FPS", nil);
+    self.vibrateLabel.text = NSLocalizedString(@"Vibration", nil);
+
+    [self.frameSkipControl setTitle:NSLocalizedString(@"Auto", nil) forSegmentAtIndex:5];
+
+    [self.controlPadStyleControl setTitle:NSLocalizedString(@"D-Pad", nil) forSegmentAtIndex:0];
+    [self.controlPadStyleControl setTitle:NSLocalizedString(@"Joystick", nil) forSegmentAtIndex:1];
+
+    [self.controlPositionControl setTitle:NSLocalizedString(@"Top", nil) forSegmentAtIndex:0];
+    [self.controlPositionControl setTitle:NSLocalizedString(@"Bottom", nil) forSegmentAtIndex:1];
     
     
     UIView *hiddenSettingsTapView = [[UIView alloc] initWithFrame:CGRectMake(245, 0, 75, 44)];
@@ -68,6 +101,54 @@
     tapGestureRecognizer.numberOfTapsRequired = 3;
     [hiddenSettingsTapView addGestureRecognizer:tapGestureRecognizer];
     
+}
+
+- (NSString *)tableView:(UITableView *)tableView  titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = NSLocalizedString(@"Emulator", nil);
+            break;
+        case 1:
+            sectionName = NSLocalizedString(@"Controls", nil);
+            break;
+        case 2:
+            sectionName = @"Dropbox";
+            break;
+        case 3:
+            sectionName = NSLocalizedString(@"Developer", nil);
+            break;
+        case 4:
+            sectionName = NSLocalizedString(@"Experimental", nil);
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
+}
+
+- (NSString *)tableView:(UITableView *)tableView  titleForFooterInSection:(NSInteger)section
+{
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = NSLocalizedString(@"The pixel grid makes games appear less blurry, but at the same time, reduces brightness.", nil);
+            break;
+        case 2:
+            sectionName = NSLocalizedString(@"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc).", nil);
+            break;
+        case 4:
+            sectionName = NSLocalizedString(@"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash.", nil);
+            break;
+        default:
+            sectionName = @"";
+            break;
+    }
+    return sectionName;
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,7 +192,7 @@
             [unlinkAlert show];
             
             [defaults setBool:false forKey:@"enableDropbox"];
-            self.accountLabel.text = @"Not Linked";
+            self.accountLabel.text = NSLocalizedString(@"Not Linked", nil);
         }
     } else if (sender == self.cellularSwitch) {
         [defaults setBool:self.cellularSwitch.on forKey:@"enableDropboxCellular"];

@@ -1,0 +1,42 @@
+"ROM List" = "ROM List";
+"About nds4ios" = "About nds4ios";
+"Settings" = "Settings";
+"Donate" = "Donate";
+
+"Share" = "Share";
+
+"InfiniDev Developers" = "InfiniDev Developers";
+"Contributors" = "Contributors";
+"Emulator Core Code" = "Emulator Core Code";
+
+"Donate using PayPal" = "Donate using PayPal";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things.";
+
+"Emulator" = "Emulator";
+"Controls" = "Controls";
+"Developer" = "Developer";
+"Experimental" = "Experimental";
+
+"The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "The pixel grid makes games appear less blurry, but at the same time, reduces brightness.";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc).";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash.";
+
+"Auto" = "Auto";
+"D-Pad" = "D-Pad";
+"Joystick" = "Joystick";
+"Top" = "Top";
+"Bottom" = "Bottom";
+
+"Frame Skip" = "Frame Skip";
+"Disable Sound" = "Disable Sound";
+"Overlay Pixel Grid" = "Overlay Pixel Grid";
+
+"Control Pad Style" = "Control Pad Style";
+"Controls Position (Portrait)" = "Controls Position (Portrait)";
+"Control Opacity (Portrait)" = "Control Opacity (Portrait)";
+
+"Enable Dropbox Sync" = "Enable Dropbox Sync";
+"Not Linked" = "Not Linked";
+
+"Show FPS" = "Show FPS";
+"Vibration" = "Vibration";

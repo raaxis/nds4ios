@@ -1,0 +1,42 @@
+"ROM List" = "ROMリスト";
+"About nds4ios" = "nds4iosについて";
+"Settings" = "設定";
+"Donate" = "寄付";
+
+"Share" = "シェア";
+
+"InfiniDev Developers" = "InfiniDevの開発者";
+"Contributors" = "貢献者";
+"Emulator Core Code" = "エミュレータコアコード";
+
+"Donate using PayPal" = "PayPalを使って寄付する";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "InfiniDevはユーザーが楽しむためにこのエミュレータを作成するために懸命に働く。このエミュレーターが好きなら、InfiniDevをサポートするために寄付をご検討ください。";
+
+"Emulator" = "エミュレータ";
+"Controls" = "コントロール";
+"Developer" = "開発者";
+"Experimental" = "実験的";
+
+"The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "ピクセルグリッドはゲームブラーを低減します。でも、ピクセルグリッドは明るさを低減します。";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "有効化Dropbox同期はあなたのDropboxアカウントに「nds4ios」フォルダを追加します。あなたのセーブデータ（DSV）はそのDropboxフォルダに同期されます。 したがって、あなたのセーブデータはすべてのデバイスで利用できるようになります。（iPhone、iPad、iPod touch、Android、PC）";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lightning JITはエミュレーションが速くなります。";
+
+"Auto" = "オート";
+"D-Pad" = "Dパッド";
+"Joystick" = "ジョイスティック";
+"Top" = "上側";
+"Bottom" = "下側";
+
+"Frame Skip" = "フレームスキップ";
+"Disable Sound" = "サウンドを無効にする";
+"Overlay Pixel Grid" = "ピクセルグリッド";
+
+"Control Pad Style" = "コントロールパッドスタイル";
+"Controls Position (Portrait)" = "コントロールのポジション";
+"Control Opacity (Portrait)" = "コントロールの不透明";
+
+"Enable Dropbox Sync" = "Dropbox同期を有効";
+"Not Linked" = "リンクされていません";
+
+"Show FPS" = "FPSを表示";
+"Vibration" = "振動";

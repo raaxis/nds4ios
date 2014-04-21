@@ -45,6 +45,9 @@
         }
     }
     
+    // Localize the title
+    romListTitle.title = NSLocalizedString(@"ROM List", nil);
+    
     // watch for changes in documents folder
     docWatchHelper = [DocWatchHelper watcherForPath:AppDelegate.sharedInstance.documentsPath];
     
