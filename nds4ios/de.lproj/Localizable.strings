@@ -1,0 +1,42 @@
+"ROM List" = "ROM-Liste";
+"About nds4ios" = "Über nds4ios";
+"Settings" = "Einstellungen";
+"Donate" = "Spenden";
+
+"Share" = "Teilen";
+
+"InfiniDev Developers" = "InfiniDev Developers";
+"Contributors" = "Contributors";
+"Emulator Core Code" = "Emulator Core Code";
+
+"Donate using PayPal" = "Mit PayPal Spenden";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "Wir arbeiten alle hart daran, dass den Benutzern das hier gefällt und sie es lieben. Falls dir diese Software gefällt, denk doch über eine Spende nach, damit wir weiterhin neue und bessere Funktionen entwickeln können.";
+
+"Emulator" = "Emulator";
+"Controls" = "Steuerung";
+"Developer" = "Entwickler";
+"Experimental" = "Experimentel";
+
+"The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "Das Pixel-Raster erscheint weniger unscharf, reduziert jedoch auch die Helligkeit.";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "Das Aktivieren von Dropbox fügt einen \"nds4ios\"-Ordner deiner Dropbox hinzu. Deine Spielstände werden in die Dropbox synchronisiert und auf deine Geräte verteilt (iPhone, iPad, iPod Touch, Androidm PC, etc).";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lightning JITはエミュレーションが速くなります。";
+
+"Auto" = "Auto";
+"D-Pad" = "D-Pad";
+"Joystick" = "Joystick";
+"Top" = "Top";
+"Bottom" = "Bottom";
+
+"Frame Skip" = "Bildüberspringung";
+"Disable Sound" = "Musik deaktivieren";
+"Overlay Pixel Grid" = "Pixel-Raster anzeigen";
+
+"Control Pad Style" = "Steuerungstyp";
+"Controls Position (Portrait)" = "Steuerungsposition (Portrait)";
+"Control Opacity (Portrait)" = "Steuerungstransparenz (Portrait)";
+
+"Enable Dropbox Sync" = "Dropbox-Sync aktivieren";
+"Not Linked" = "Nicht verbunden";
+
+"Show FPS" = "FPS anzeigen";
+"Vibration" = "Vibration";
