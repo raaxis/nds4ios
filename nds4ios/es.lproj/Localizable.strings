@@ -36,8 +36,9 @@
 "Control Opacity (Portrait)" = "Opacidad de Controles (Vertical)";
 
 "Enable Dropbox Sync" = "Sincronización";
-"Linked" = "Linked";
 "Not Linked" = "No Vinculado";
+"Linked" = "Linked";
+"Unlinked!" = "Unlinked!";
 "Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox has been unlinked. Your save files will no longer be synced.";
 "Success!" = "Success";
 "Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder.";
