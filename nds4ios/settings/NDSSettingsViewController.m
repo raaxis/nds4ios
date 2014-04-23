@@ -188,7 +188,7 @@
             [CHBgDropboxSync forceStopIfRunning];
             [CHBgDropboxSync clearLastSyncData];
             [[DBSession sharedSession] unlinkAll];
-            OLGhostAlertView *unlinkAlert = [[OLGhostAlertView alloc] initWithTitle:@"Unlinked!" message:@"Dropbox has been unlinked. Your games will no longer be synced." timeout:10 dismissible:YES];
+            OLGhostAlertView *unlinkAlert = [[OLGhostAlertView alloc] initWithTitle:NSLocalizedString(@"Unlinked!", @"") message:NSLocalizedString(@"Dropbox has been unlinked. Your games will no longer be synced.", @"") timeout:10 dismissible:YES];
             [unlinkAlert show];
             
             [defaults setBool:false forKey:@"enableDropbox"];
@@ -222,7 +222,7 @@
     self.cellularSwitch.on = [defaults boolForKey:@"enableDropboxCellular"];
     
     if ([defaults boolForKey:@"enableDropbox"] == true) {
-        self.accountLabel.text = @"Linked";
+        self.accountLabel.text = NSLocalizedString(@"Linked", @"");
     }
 }
 

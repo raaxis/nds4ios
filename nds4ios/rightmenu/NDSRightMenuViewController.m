@@ -54,12 +54,12 @@
     cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"disclosure"]];
     
     // text
-    cell.textLabel.text = @"Launch Game";
-    cell.detailTextLabel.text = @"Start this ROM";
+    cell.textLabel.text = NSLocalizedString(@"Launch Game", @"");
+    cell.detailTextLabel.text = NSLocalizedString(@"Start this ROM", @"");
     
     // detail
     if (indexPath.row > 0) {
-        cell.textLabel.text = (indexPath.row == 1 && self.game.hasPauseState) ? @"Resume from Save State" : [self.game nameOfSaveStateAtIndex:indexPath.row - 1];
+        cell.textLabel.text = (indexPath.row == 1 && self.game.hasPauseState) ? NSLocalizedString(@"Resume from Save State", @"") : [self.game nameOfSaveStateAtIndex:indexPath.row - 1];
         cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:[self.game dateOfSaveStateAtIndex:indexPath.row -1]
                                                                    dateStyle:NSDateFormatterMediumStyle
                                                                    timeStyle:NSDateFormatterMediumStyle];
