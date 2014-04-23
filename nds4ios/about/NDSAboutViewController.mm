@@ -80,6 +80,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *screenNames = @[@"angelXwind", @"iPlop", @"maczydeco", @"rileytestut", @"dchavezlive", @"Malvix_", @"wj82315", @"vanillastar67", @"winocm", @"GranPC"];
+    NSArray *contributors = @[@"", @"jquesnelle", @"einfallstoll"];
     if (indexPath.section == 0)
     {
         NSURL *twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=InfiniDev_"]];
@@ -90,6 +91,13 @@
     } else if (indexPath.section == 1 && indexPath.row < screenNames.count)
     {
         NSURL *twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@", screenNames[indexPath.row]]];
+        if ([[UIApplication sharedApplication] canOpenURL:twitterURL])
+            [[UIApplication sharedApplication] openURL:twitterURL];
+        else
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/%@", screenNames[indexPath.row]]]];
+    } else if (indexPath.section == 2 && indexPath.row < screenNames.count && [((NSString *)contributors[indexPath.row]) length] > 0)
+    {
+        NSURL *twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@", contributors[indexPath.row]]];
         if ([[UIApplication sharedApplication] canOpenURL:twitterURL])
             [[UIApplication sharedApplication] openURL:twitterURL];
         else

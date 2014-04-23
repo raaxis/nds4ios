@@ -54,7 +54,7 @@
     
     if (errorMsg != nil) {
 		[[[UIAlertView alloc]
-		   initWithTitle:@"Error Configuring Dropbox" message:errorMsg
+		   initWithTitle:NSLocalizedString(@"Error Configuring Dropbox", @"") message:errorMsg
 		   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil]
 		 show];
 	}
@@ -66,7 +66,7 @@
     if ([[[NSString stringWithFormat:@"%@", url] substringToIndex:2] isEqualToString: @"db"]) {
         if ([[DBSession sharedSession] handleOpenURL:url]) {
             if ([[DBSession sharedSession] isLinked]) {
-                OLGhostAlertView *linkSuccess = [[OLGhostAlertView alloc] initWithTitle:@"Success!" message:@"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." timeout:15 dismissible:YES];
+                OLGhostAlertView *linkSuccess = [[OLGhostAlertView alloc] initWithTitle:NSLocalizedString(@"Success!", @"") message:NSLocalizedString(@"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder.", @"") timeout:15 dismissible:YES];
                 [linkSuccess show];
                 [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"enableDropbox"];
                 

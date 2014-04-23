@@ -37,6 +37,20 @@
 
 "Enable Dropbox Sync" = "Enable Dropbox Sync";
 "Not Linked" = "Not Linked";
+"Linked" = "Linked";
+"Unlinked!" = "Unlinked!";
+"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox has been unlinked. Your games will no longer be synced.";
+"Success!" = "Success";
+"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder.";
+"Error Configuring Dropbox" = "Error Configuring Dropbox";
 
 "Show FPS" = "Show FPS";
 "Vibration" = "Vibration";
+
+"Hey You! Yes, You!" = "Hey You! Yes, You!";
+"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy.";
+"Got it!" = "Got it!";
+
+"Launch Game" = "Launch Game";
+"Start this ROM" = "Start this ROM";
+"Resume from Save State" = "Resume from Save State";
