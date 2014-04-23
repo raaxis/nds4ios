@@ -39,7 +39,7 @@
 "Not Linked" = "Not Linked";
 "Linked" = "Linked";
 "Unlinked!" = "Unlinked!";
-"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox has been unlinked. Your games will no longer be synced.";
+"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox has been unlinked. Your save files will no longer be synced.";
 "Success!" = "Success";
 "Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder.";
 "Error Configuring Dropbox" = "Error Configuring Dropbox";
@@ -52,5 +52,5 @@
 "Got it!" = "Got it!";
 
 "Launch Game" = "Launch Game";
-"Start this ROM" = "Start this ROM";
-"Resume from Save State" = "Resume from Save State";
+"Start this ROM" = "Boots the game normally";
+"Resume from Save State" = "Resume from Autosave";
