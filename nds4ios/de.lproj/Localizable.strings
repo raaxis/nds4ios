@@ -5,8 +5,8 @@
 
 "Share" = "Teilen";
 
-"InfiniDev Developers" = "InfiniDev Developers";
-"Contributors" = "Contributors";
+"InfiniDev Developers" = "InfiniDev Entwickler";
+"Contributors" = "Mitwirkende";
 "Emulator Core Code" = "Emulator Core Code";
 
 "Donate using PayPal" = "Mit PayPal Spenden";
@@ -15,11 +15,11 @@
 "Emulator" = "Emulator";
 "Controls" = "Steuerung";
 "Developer" = "Entwickler";
-"Experimental" = "Experimentel";
+"Experimental" = "Experimentell";
 
 "The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "Das Pixel-Raster erscheint weniger unscharf, reduziert jedoch auch die Helligkeit.";
 "Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "Das Aktivieren von Dropbox fügt einen \"nds4ios\"-Ordner deiner Dropbox hinzu. Deine Spielstände werden in die Dropbox synchronisiert und auf deine Geräte verteilt (iPhone, iPad, iPod Touch, Androidm PC, etc).";
-"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lightning JITはエミュレーションが速くなります。";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lightning JIT macht das Ausführen von Spielen schneller. Dein iPhone muss gejailbreaked sein oder nds4ios wird abstürzen.";
 
 "Auto" = "Auto";
 "D-Pad" = "D-Pad";
