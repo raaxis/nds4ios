@@ -37,20 +37,20 @@
 
 "Enable Dropbox Sync" = "开启Dropbox同步";
 "Not Linked" = "未链接";
-"Linked" = "Linked";
-"Unlinked!" = "Unlinked!";
-"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox has been unlinked. Your save files will no longer be synced.";
-"Success!" = "Success";
-"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder.";
-"Error Configuring Dropbox" = "Error Configuring Dropbox";
+"Linked" = "已连接";
+"Unlinked!" = "链接断开!";
+"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox 的连接已经断开。已储存的文件将停止同步。";
+"Success!" = "成功！";
+"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox 连接成功！ nds4ios 将会把已储存的文件同步到Dropbox 根目录里的文件夹 ’nds4ios’ 里面。";
+"Error Configuring Dropbox" = "Dropbox配置错误";
 
 "Show FPS" = "显示FPS";
 "Vibration" = "振动";
 
-"Hey You! Yes, You!" = "Hey You! Yes, You!";
-"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "By using this button, we at InfiniDev are assuming that you have already bought the game you are about to obtain a ROM image of. Please refrain from illegally downloading game software that you do not own. Please support the software developers and do not pirate their hard work. Remember, InfiniDev and all associated personnel do not condone the act of piracy. By pressing the below button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator.";
-"Got it!" = "Got it!";
+"Hey You! Yes, You!" = "嗨！您好！";
+"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "当您使用此按钮时，InfiniDev正假设著您已经购买了您将要获取ROM 映像的遊戏。请勿非法下载不属於您的游戯软件。请支持软件开发者们，不要盗取他们的劳动。InfiniDev 与所有相关人物是不会纵容盗取行爲的。如果您按下该按钮，您将同意承担一切有关於下载Nintendo DS 软件并在这个模拟器里使用该软件的责任，与其後果。";
+"Got it!" = "好的!";
 
-"Launch Game" = "Launch Game";
-"Start this ROM" = "Boots the game normally";
-"Resume from Save State" = "Resume from Autosave";
+"Launch Game" = "开啓遊戏";
+"Start this ROM" = "正常开啓遊戏";
+"Resume from Save State" = "从自动保存中继续遊戏";
