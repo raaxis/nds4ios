@@ -287,7 +287,7 @@
 
 - (void)didFinishLoadingAllForManager:(DownloadManager *)downloadManager
 {
-    [ZAActivityBar showSuccessWithStatus:[NSString stringWithFormat:@"%i %@ downloaded successfully!", self.downloadCount, (self.downloadCount > 1)?@"files":@"file"] duration:3];
+    [ZAActivityBar showSuccessWithStatus:[NSString stringWithFormat:@"All files downloaded successfully!"] duration:3];
     self.isDownloading = NO;
     self.downloadCount = 0;
 }
