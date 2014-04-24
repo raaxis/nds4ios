@@ -212,6 +212,22 @@
 		D32C39D7178E73C200E6809E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D6178E73C200E6809E /* SystemConfiguration.framework */; };
 		D32C39D9178E748000E6809E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39D8178E748000E6809E /* QuartzCore.framework */; };
 		D32C39DB178E749C00E6809E /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C39DA178E749C00E6809E /* libc++.dylib */; };
+		D344580C1908849D009BFB70 /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D34457FD1908849D009BFB70 /* back_button.png */; };
+		D344580D1908849D009BFB70 /* back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34457FE1908849D009BFB70 /* back_button@2x.png */; };
+		D344580E1908849D009BFB70 /* forward_button.png in Resources */ = {isa = PBXBuildFile; fileRef = D34457FF1908849D009BFB70 /* forward_button.png */; };
+		D344580F1908849D009BFB70 /* forward_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34458001908849D009BFB70 /* forward_button@2x.png */; };
+		D34458101908849D009BFB70 /* RSTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D34458021908849D009BFB70 /* RSTWebViewController.m */; };
+		D34458111908849D009BFB70 /* chrome_activity.png in Resources */ = {isa = PBXBuildFile; fileRef = D34458041908849D009BFB70 /* chrome_activity.png */; };
+		D34458121908849D009BFB70 /* chrome_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34458051908849D009BFB70 /* chrome_activity@2x.png */; };
+		D34458131908849D009BFB70 /* RSTChromeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D34458071908849D009BFB70 /* RSTChromeActivity.m */; };
+		D34458141908849D009BFB70 /* RSTSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = D34458091908849D009BFB70 /* RSTSafariActivity.m */; };
+		D34458151908849D009BFB70 /* safari_activity.png in Resources */ = {isa = PBXBuildFile; fileRef = D344580A1908849D009BFB70 /* safari_activity.png */; };
+		D34458161908849D009BFB70 /* safari_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D344580B1908849D009BFB70 /* safari_activity@2x.png */; };
+		D3445823190891D6009BFB70 /* Download.m in Sources */ = {isa = PBXBuildFile; fileRef = D3445820190891D6009BFB70 /* Download.m */; };
+		D3445824190891D6009BFB70 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3445822190891D6009BFB70 /* DownloadManager.m */; };
+		D3445827190898EC009BFB70 /* DownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3445826190898EC009BFB70 /* DownloadCell.m */; };
+		D344582D19089B7F009BFB70 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = D344582A19089B7F009BFB70 /* NJKWebViewProgress.m */; };
+		D344582E19089B7F009BFB70 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D344582C19089B7F009BFB70 /* NJKWebViewProgressView.m */; };
 		D370361F17B1C339001C1E15 /* iOS 6.png in Resources */ = {isa = PBXBuildFile; fileRef = D370361B17B1C339001C1E15 /* iOS 6.png */; };
 		D370362017B1C339001C1E15 /* iOS 6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D370361C17B1C339001C1E15 /* iOS 6@2x.png */; };
 		D370362117B1C339001C1E15 /* iOS 7.png in Resources */ = {isa = PBXBuildFile; fileRef = D370361D17B1C339001C1E15 /* iOS 7.png */; };
@@ -567,6 +583,30 @@
 		D32C39D6178E73C200E6809E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D32C39D8178E748000E6809E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D32C39DA178E749C00E6809E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D34457FD1908849D009BFB70 /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
+		D34457FE1908849D009BFB70 /* back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_button@2x.png"; sourceTree = "<group>"; };
+		D34457FF1908849D009BFB70 /* forward_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward_button.png; sourceTree = "<group>"; };
+		D34458001908849D009BFB70 /* forward_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward_button@2x.png"; sourceTree = "<group>"; };
+		D34458011908849D009BFB70 /* RSTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTWebViewController.h; sourceTree = "<group>"; };
+		D34458021908849D009BFB70 /* RSTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTWebViewController.m; sourceTree = "<group>"; };
+		D34458041908849D009BFB70 /* chrome_activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chrome_activity.png; sourceTree = "<group>"; };
+		D34458051908849D009BFB70 /* chrome_activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chrome_activity@2x.png"; sourceTree = "<group>"; };
+		D34458061908849D009BFB70 /* RSTChromeActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTChromeActivity.h; sourceTree = "<group>"; };
+		D34458071908849D009BFB70 /* RSTChromeActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTChromeActivity.m; sourceTree = "<group>"; };
+		D34458081908849D009BFB70 /* RSTSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTSafariActivity.h; sourceTree = "<group>"; };
+		D34458091908849D009BFB70 /* RSTSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTSafariActivity.m; sourceTree = "<group>"; };
+		D344580A1908849D009BFB70 /* safari_activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = safari_activity.png; sourceTree = "<group>"; };
+		D344580B1908849D009BFB70 /* safari_activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safari_activity@2x.png"; sourceTree = "<group>"; };
+		D344581F190891D6009BFB70 /* Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Download.h; sourceTree = "<group>"; };
+		D3445820190891D6009BFB70 /* Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Download.m; sourceTree = "<group>"; };
+		D3445821190891D6009BFB70 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		D3445822190891D6009BFB70 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		D3445825190898EC009BFB70 /* DownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
+		D3445826190898EC009BFB70 /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
+		D344582919089B7F009BFB70 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		D344582A19089B7F009BFB70 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		D344582B19089B7F009BFB70 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		D344582C19089B7F009BFB70 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		D370361B17B1C339001C1E15 /* iOS 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6.png"; path = "Resources/required/iOS 6.png"; sourceTree = "<group>"; };
 		D370361C17B1C339001C1E15 /* iOS 6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 6@2x.png"; path = "Resources/required/iOS 6@2x.png"; sourceTree = "<group>"; };
 		D370361D17B1C339001C1E15 /* iOS 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS 7.png"; path = "Resources/required/iOS 7.png"; sourceTree = "<group>"; };
@@ -904,6 +944,9 @@
 				8B305F96178B996200FD010A /* About */,
 				BF9D51751786A60E00B5864B /* Settings */,
 				8B283062178DDC4B00E92785 /* Donation */,
+				D34457FC1908849D009BFB70 /* RSTWebViewController */,
+				D344582819089B7F009BFB70 /* NJKWebViewProgress */,
+				D344581E190891CB009BFB70 /* Downloader */,
 				BFAE6FAB17675623000911CF /* Controls */,
 				BFAE6F8F176748CF000911CF /* Emulator View */,
 				BFCFE12F17650ED0000A70CF /* Emulator Code */,
@@ -1244,6 +1287,60 @@
 			path = SKBounceAnimation;
 			sourceTree = "<group>";
 		};
+		D34457FC1908849D009BFB70 /* RSTWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D34457FD1908849D009BFB70 /* back_button.png */,
+				D34457FE1908849D009BFB70 /* back_button@2x.png */,
+				D34457FF1908849D009BFB70 /* forward_button.png */,
+				D34458001908849D009BFB70 /* forward_button@2x.png */,
+				D34458011908849D009BFB70 /* RSTWebViewController.h */,
+				D34458021908849D009BFB70 /* RSTWebViewController.m */,
+				D34458031908849D009BFB70 /* UIActivities */,
+			);
+			name = RSTWebViewController;
+			path = RSTWebViewController/RSTWebViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		D34458031908849D009BFB70 /* UIActivities */ = {
+			isa = PBXGroup;
+			children = (
+				D34458041908849D009BFB70 /* chrome_activity.png */,
+				D34458051908849D009BFB70 /* chrome_activity@2x.png */,
+				D34458061908849D009BFB70 /* RSTChromeActivity.h */,
+				D34458071908849D009BFB70 /* RSTChromeActivity.m */,
+				D34458081908849D009BFB70 /* RSTSafariActivity.h */,
+				D34458091908849D009BFB70 /* RSTSafariActivity.m */,
+				D344580A1908849D009BFB70 /* safari_activity.png */,
+				D344580B1908849D009BFB70 /* safari_activity@2x.png */,
+			);
+			path = UIActivities;
+			sourceTree = "<group>";
+		};
+		D344581E190891CB009BFB70 /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				D344581F190891D6009BFB70 /* Download.h */,
+				D3445820190891D6009BFB70 /* Download.m */,
+				D3445821190891D6009BFB70 /* DownloadManager.h */,
+				D3445822190891D6009BFB70 /* DownloadManager.m */,
+				D3445825190898EC009BFB70 /* DownloadCell.h */,
+				D3445826190898EC009BFB70 /* DownloadCell.m */,
+			);
+			name = Downloader;
+			sourceTree = "<group>";
+		};
+		D344582819089B7F009BFB70 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				D344582919089B7F009BFB70 /* NJKWebViewProgress.h */,
+				D344582A19089B7F009BFB70 /* NJKWebViewProgress.m */,
+				D344582B19089B7F009BFB70 /* NJKWebViewProgressView.h */,
+				D344582C19089B7F009BFB70 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1316,6 +1413,7 @@
 				8BEA093E178724E10060B347 /* Icon.png in Resources */,
 				28DA4A491787FD7F002236A4 /* Select@2x.png in Resources */,
 				8BEA093F178724E10060B347 /* Icon@2x.png in Resources */,
+				D344580F1908849D009BFB70 /* forward_button@2x.png in Resources */,
 				28DA4A4A1787FD7F002236A4 /* Start.png in Resources */,
 				8BEA0938178724E10060B347 /* Default-568h@2x.png in Resources */,
 				28DA4A4B1787FD7F002236A4 /* Start@2x.png in Resources */,
@@ -1326,6 +1424,7 @@
 				28DA4A50178802FB002236A4 /* LTrigger.png in Resources */,
 				BF9D516817867F7D00B5864B /* ABXYPad.png in Resources */,
 				8BEA093A178724E10060B347 /* Default@2x.png in Resources */,
+				D344580E1908849D009BFB70 /* forward_button.png in Resources */,
 				8BEA093D178724E10060B347 /* Icon-Spotlight@2x.png in Resources */,
 				8BEA093B178724E10060B347 /* Icon-Multitasker@2x.png in Resources */,
 				BF9D516917867F7D00B5864B /* ABXYPad@2x.png in Resources */,
@@ -1333,6 +1432,7 @@
 				BF9D516A17867F7D00B5864B /* DPad.png in Resources */,
 				28E7A6EE1787D110003A9C5B /* Defaults.plist in Resources */,
 				BF9D516B17867F7D00B5864B /* DPad@2x.png in Resources */,
+				D344580D1908849D009BFB70 /* back_button@2x.png in Resources */,
 				8BEA0939178724E10060B347 /* Default.png in Resources */,
 				BF9D516C17867F7D00B5864B /* JoystickBackground.png in Resources */,
 				BF9D516D17867F7D00B5864B /* JoystickBackground@2x.png in Resources */,
@@ -1344,6 +1444,8 @@
 				8BEFF47E178B459000EEE55A /* row.png in Resources */,
 				8BEFF47F178B459000EEE55A /* row@2x.png in Resources */,
 				8BEFF480178B459000EEE55A /* rowselected.png in Resources */,
+				D34458151908849D009BFB70 /* safari_activity.png in Resources */,
+				D34458111908849D009BFB70 /* chrome_activity.png in Resources */,
 				8BEFF481178B459000EEE55A /* rowselected@2x.png in Resources */,
 				8BEFF48F178B473E00EEE55A /* menuicon.png in Resources */,
 				8BEFF490178B473E00EEE55A /* menuicon@2x.png in Resources */,
@@ -1361,12 +1463,15 @@
 				8B283060178DDBFB00E92785 /* 282-cards.png in Resources */,
 				8B283061178DDBFB00E92785 /* 282-cards@2x.png in Resources */,
 				8B58A60C178E361A00BA0593 /* 240-ndscartridge.png in Resources */,
+				D34458121908849D009BFB70 /* chrome_activity@2x.png in Resources */,
 				8B58A60D178E361A00BA0593 /* 240-ndscartridge@2x.png in Resources */,
 				D3B8BB961794ACEF0061D1D8 /* ZAActivityBar.bundle in Resources */,
 				D325821217A1D69B0009C84B /* pixelgrid.png in Resources */,
 				D325821317A1D69B0009C84B /* pixelgrid@2x.png in Resources */,
+				D34458161908849D009BFB70 /* safari_activity@2x.png in Resources */,
 				D370361F17B1C339001C1E15 /* iOS 6.png in Resources */,
 				D370362017B1C339001C1E15 /* iOS 6@2x.png in Resources */,
+				D344580C1908849D009BFB70 /* back_button.png in Resources */,
 				D370362117B1C339001C1E15 /* iOS 7.png in Resources */,
 				D370362217B1C339001C1E15 /* iOS 7@2x.png in Resources */,
 				4CA7846817B31BA000097BC4 /* Default-Landscape@2x~iPad.png in Resources */,
@@ -1415,6 +1520,7 @@
 				8BEA097617872C3F0060B347 /* DocWatchHelper.m in Sources */,
 				BFCFE18C17650FB0000A70CF /* driver.cpp in Sources */,
 				8BEA098C17872CF40060B347 /* sndcoreaudio.mm in Sources */,
+				D34458141908849D009BFB70 /* RSTSafariActivity.m in Sources */,
 				BFCFE18D17650FB0000A70CF /* emufile.cpp in Sources */,
 				BFCFE18E17650FB0000A70CF /* FIFO.cpp in Sources */,
 				8BEA09A117876A6B0060B347 /* unzip.c in Sources */,
@@ -1428,6 +1534,7 @@
 				BFCFE19417650FB0000A70CF /* JitCommon.cpp in Sources */,
 				BF2AC478177FF0B700D3CF93 /* ArmLJit.cpp in Sources */,
 				BFCFE19517650FB0000A70CF /* matrix.cpp in Sources */,
+				D3445827190898EC009BFB70 /* DownloadCell.m in Sources */,
 				BFCFE19617650FB0000A70CF /* mc.cpp in Sources */,
 				8BEA09A217876A6B0060B347 /* zip.c in Sources */,
 				BFCFE19717650FB0000A70CF /* MMU.cpp in Sources */,
@@ -1451,6 +1558,7 @@
 				8BEA09A017876A6B0060B347 /* mztools.c in Sources */,
 				BFCFE1B417651005000A70CF /* 2xsai.cpp in Sources */,
 				BFCFE1B517651005000A70CF /* bilinear.cpp in Sources */,
+				D34458101908849D009BFB70 /* RSTWebViewController.m in Sources */,
 				BFCFE1B617651005000A70CF /* epx.cpp in Sources */,
 				BFCFE1B717651005000A70CF /* hq2x.cpp in Sources */,
 				BFCFE1B817651005000A70CF /* hq4x.cpp in Sources */,
@@ -1460,6 +1568,7 @@
 				BFCFE1D517651076000A70CF /* ConvertUTF.c in Sources */,
 				BFCFE1D617651076000A70CF /* datetime.cpp in Sources */,
 				BFCFE1D717651076000A70CF /* dlditool.cpp in Sources */,
+				D344582E19089B7F009BFB70 /* NJKWebViewProgressView.m in Sources */,
 				BFCFE1D817651076000A70CF /* emufat.cpp in Sources */,
 				BFCFE1D917651076000A70CF /* FileMap.cpp in Sources */,
 				BFCFE1DA17651076000A70CF /* guid.cpp in Sources */,
@@ -1479,6 +1588,7 @@
 				BFCFE21A176634AF000A70CF /* cache.cpp in Sources */,
 				BFCFE21B176634AF000A70CF /* directory.cpp in Sources */,
 				BFCFE21C176634AF000A70CF /* disc.cpp in Sources */,
+				D3445823190891D6009BFB70 /* Download.m in Sources */,
 				BFCFE21D176634AF000A70CF /* fatdir.cpp in Sources */,
 				BFCFE21E176634AF000A70CF /* fatfile.cpp in Sources */,
 				BFCFE21F176634AF000A70CF /* file_allocation_table.cpp in Sources */,
@@ -1503,6 +1613,7 @@
 				BFCFE242176634EE000A70CF /* slot2_guitarGrip.cpp in Sources */,
 				BFCFE243176634EE000A70CF /* slot2_mpcf.cpp in Sources */,
 				BFCFE244176634EE000A70CF /* slot2_none.cpp in Sources */,
+				D3445824190891D6009BFB70 /* DownloadManager.m in Sources */,
 				BFCFE245176634EE000A70CF /* slot2_paddle.cpp in Sources */,
 				BFCFE246176634EE000A70CF /* slot2_piano.cpp in Sources */,
 				BFCFE247176634EE000A70CF /* slot2_rumblepak.cpp in Sources */,
@@ -1513,6 +1624,7 @@
 				8B305F79178B48FD00FD010A /* SASlideMenuLeftMenuSegue.m in Sources */,
 				8B305F7A178B48FD00FD010A /* SASlideMenuNavigationController.m in Sources */,
 				8B305F7B178B48FD00FD010A /* SASlideMenuPushSegue.m in Sources */,
+				D34458131908849D009BFB70 /* RSTChromeActivity.m in Sources */,
 				8B305F7C178B48FD00FD010A /* SASlideMenuRightMenuSegue.m in Sources */,
 				8B305F7E178B48FD00FD010A /* SASlideMenuRootViewController.m in Sources */,
 				8B305F7F178B48FD00FD010A /* SASlideMenuViewController.m in Sources */,
@@ -1521,6 +1633,7 @@
 				8B4895C0178CCBEE00BA61C3 /* OLGhostAlertView.m in Sources */,
 				8B4895C5178CE15D00BA61C3 /* NDSROMTableViewController.m in Sources */,
 				8B489B42178DAD6C00BA61C3 /* SASlideMenuRightMenuViewController.m in Sources */,
+				D344582D19089B7F009BFB70 /* NJKWebViewProgress.m in Sources */,
 				8B28306B178DDC7F00E92785 /* NDSDonationViewController.m in Sources */,
 				D31CC8A417927BCB0098FB9C /* CHBgDropboxSync.m in Sources */,
 				D31CC8A517927BCB0098FB9C /* DropboxClearer.m in Sources */,
@@ -1570,8 +1683,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Karen Tsai (937V37268G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karen Tsai (937V37268G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1607,6 +1720,7 @@
 					"-DHAVE_LIBZ",
 					"-marm",
 				);
+				PROVISIONING_PROFILE = "1BCF6A95-590E-428C-A1CD-12AE1BF279EE";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
@@ -1625,8 +1739,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Karen Tsai (937V37268G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karen Tsai (937V37268G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1654,6 +1768,7 @@
 					"-DIOS",
 					"-DHAVE_LIBZ",
 				);
+				PROVISIONING_PROFILE = "1BCF6A95-590E-428C-A1CD-12AE1BF279EE";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VALIDATE_PRODUCT = YES;
@@ -1666,8 +1781,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Karen Tsai (937V37268G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karen Tsai (937V37268G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -1689,7 +1804,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = nds4ios;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1BCF6A95-590E-428C-A1CD-12AE1BF279EE";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1701,8 +1816,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Karen Tsai (937V37268G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Karen Tsai (937V37268G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -1724,7 +1839,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = nds4ios;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1BCF6A95-590E-428C-A1CD-12AE1BF279EE";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
