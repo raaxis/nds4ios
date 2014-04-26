@@ -32,8 +32,8 @@
 "Overlay Pixel Grid" = "픽셀 격자";
 
 "Control Pad Style" = "컨트롤 패드 스타일";
-"Controls Position (Portrait)" = "컨트롤 방향 (가로 모드)";
-"Control Opacity (Portrait)" = "컨트롤 투명도 (가로 모드)";
+"Controls Position (Portrait)" = "컨트롤 방향 (세로 모드)";
+"Control Opacity (Portrait)" = "컨트롤 투명도 (세로 모드)";
 
 "Enable Dropbox Sync" = "Dropbox 동기화 사용";
 "Not Linked" = "연결되지 않음";
