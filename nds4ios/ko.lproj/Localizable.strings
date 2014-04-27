@@ -1,0 +1,56 @@
+"ROM List" = "ROM 목록";
+"About nds4ios" = "nds4ios 정보";
+"Settings" = "설정";
+"Donate" = "후원";
+
+"Share" = "공유";
+
+"InfiniDev Developers" = "InfiniDev 개발자들";
+"Contributors" = "도움을 주신 분들";
+"Emulator Core Code" = "에뮬레이터 코어 코드";
+
+"Donate using PayPal" = "PayPal을 이용하여 후원";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "우리는 사용자들이 원하고 즐길 수 있는 소프트웨어를 만들기 위해 노력하고 있습니다. 이 소프트웨어가 마음에 드셨다면, 더 좋은 소프트웨어를 만들기 위한 후원을 부탁드립니다.";
+
+"Emulator" = "에뮬레이터";
+"Controls" = "컨트롤";
+"Developer" = "개발자";
+"Experimental" = "실험적";
+
+"The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "픽셀 격자를 사용하면 게임이 흐릿함이 줄어들지만, 동시에 밝기도 감소됩니다.";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "드롭박스를 활성화하면 당신의 드롭박스 계정에 \"nds4ios\" 폴더를 추가합니다. 당신의 게임 저장은 해당 폴더에 저장되며 다른 기기와도 연동됩니다.(iPhone, iPad, iPod touch, Android, PC 및 기타)";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lighting JIT는 게임을 빠르게 해줍니다. 기기가 탈옥되어 있어야 사용 가능합니다.";
+
+"Auto" = "자동";
+"D-Pad" = "십자패드";
+"Joystick" = "조이스틱";
+"Top" = "위";
+"Bottom" = "아래";
+
+"Frame Skip" = "프레임 스킵";
+"Disable Sound" = "사운드 끄기";
+"Overlay Pixel Grid" = "픽셀 격자";
+
+"Control Pad Style" = "컨트롤 패드 스타일";
+"Controls Position (Portrait)" = "컨트롤 방향 (세로 모드)";
+"Control Opacity (Portrait)" = "컨트롤 투명도 (세로 모드)";
+
+"Enable Dropbox Sync" = "Dropbox 동기화 사용";
+"Not Linked" = "연결되지 않음";
+"Linked" = "연결됨";
+"Unlinked!" = "연결 해제됨!";
+"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox가 연결 해제되었습니다. 저장 파일이 더이상 동기화 되지 않습니다.";
+"Success!" = "Success";
+"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder.";
+"Error Configuring Dropbox" = "Error Configuring Dropbox";
+
+"Show FPS" = "FPS 표시";
+"Vibration" = "진동";
+
+"Hey You! Yes, You!" = "네네, 당신!";
+"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "이 버튼을 누르면 닌텐도 DS 소프트웨어를 이 에뮬레이터를 통해 사용하는 것에 대한 모든 책임을 지는 것으로 간주합니다. 소프트웨어 개발자를 지원하고, 그들의 노력을 약탈하지 마십시오. ROM을 직접 덤프하는 것이 가장 바람직하며, 추천하는 방법입니다. InfiniDev와 그 관련자들은 저작권 침해를 용납하지 않습니다..";
+"Got it!" = "알겠습니다!";
+
+"Launch Game" = "게임 시작";
+"Start this ROM" = "게임 구동";
+"Resume from Save State" = "자동 저장으로 재개";
