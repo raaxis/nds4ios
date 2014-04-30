@@ -2,13 +2,21 @@ nds4ios
 =======
 ###### Supports iOS 5 to iOS 7.
 
-nds4ios is a port of nds4droid to iOS, which is based on DeSmuME.
+nds4ios is a port of the multi-platform Nintendo DS emulator, DeSmuME to iOS.
 
-http://nds4ios.angelxwind.net/
+Currently, emulation is powered by a threaded ARM interpreter. As a result, emulation is rather slow on older devices, like the iPhone 4S and below.
 
-[DeSmuME](http://desmume.org/) 
+nds4ios runs at nearly full speed on the iPhone 5 and above, and achieves full speed on devices using the A7-S5L8960X SoC (iPhone 5s, iPad Air, iPad mini Retina, and anything newer than these devices).
+
+Due to the need to mmap the entire ROM into memory, older devices with only 256MB of RAM are not supported by nds4ios. These devices include the iPod touch 4, iPad 1G, iPhone 3GS, and anything below those devices.
+
+ROMs must be placed in /User/Documents (or /private/var/mobile/Documents, it's a symbolic link).
+
+[nds4ios](http://nds4ios.angelxwind.net/)
 
 [nds4droid](http://jeffq.com/blog/nds4droid/)
+
+[DeSmuME](http://desmume.org/) 
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MCAFUKL3CM8QQ)
 
@@ -49,13 +57,18 @@ Adding ROMs
 ------------------------
 ###### Since this apparently needs explaining
 
-#### Option 1 - Via Safari (All versions)
-1. In nds4ios, tap on the button in the upper right hand corner.
-2. Download a ROM package of a ROM that you own the actual game cartridge for from a site such as CoolROM. It may come in a zip file. You do not have to have any sort of download manager for this, Safari will download zip files.
+#### Option 1 - Via RSTWebViewController (iOS 7 and above)
+1. In nds4ios, tap on the + button in the upper right hand corner.
+2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM. It may come in a zip file. You do not have to have any sort of download manager for this, nds4ios will download zip files.
+3. Wait patiently, watch the progress bar, and nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
+
+#### Option 2 - Via Safari (iOS 6 and iOS 5)
+1. In nds4ios, tap on the + button in the upper right hand corner.
+2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM. It may come in a zip file. You do not have to have any sort of download manager for this, Safari will download zip files.
 3. Tap the "Open in..." button in the top left hand corner, and select nds4ios.
 4. nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
 
-#### Option 2 - Via iTunes File Sharing / iFunBox / iExplorer (Non-jailbroken version ONLY)
+#### Option 3 - Via iTunes File Sharing / iFunBox / iExplorer (Non-jailbroken version ONLY)
 1. Plug your device into your computer and launch iTunes.
 2. Go to your iDevice's info page, then the apps tab.
 3. drag and drop .nds files that you have (preferably ones you legally own the actual game cartridge for) into the iTunes file sharing box for nds4ios.
