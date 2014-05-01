@@ -74,13 +74,13 @@ Adding ROMs
 3. drag and drop .nds files that you have (preferably ones you legally own the actual game cartridge for) into the iTunes file sharing box for nds4ios.
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
-#### Option 3 - Via Safari Download Enabler/Chrome Downloader (Jailbroken version ONLY)
+#### Option 4 - Via Safari Download Enabler/Chrome Downloader (Jailbroken version ONLY)
 1. If you're jailbroken, grab one of the many download tweaks available for Mobile Safari or Chrome for iOS, or grab one of the many web browsers available with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) (This is totally not a shameless plug).
 2. With the new browser or tweak, download a rom, preferably one you own the actual cartridge for.
 3. Using iFile or similar too, move the .nds file to the nds4ios directory, into the documents folder.
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
-### Option 4 - Via AFC2 / OpenSSH / iFunBox / iExplorer (Jailbroken verison ONLY)
+#### Option 5 - Via AFC2 / OpenSSH / iFunBox / iExplorer (Jailbroken verison ONLY)
 1. Install OpenSSH if you plan to utilise SCP (SSH) to transfer ROMs.
 2. If you do not wish to utilise SCP, then download iFunBox/iExplorer/similar tool that uses AFC2 over USB and install it on your computer.
 3. Drag your ROMs into the directory: /User/Documents/
