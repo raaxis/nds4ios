@@ -53,36 +53,41 @@ Navigate to the "nds4ios" folder in your working directory.
 
 Adding ROMs
 ------------------------
-###### Since this apparently needs explaining
 
-#### Option 1 - Via RSTWebViewController (iOS 7 and above)
+#### Option 1 - On-device via RSTWebViewController (iOS 7 and above)
 1. In nds4ios, tap on the + button in the upper right hand corner.
-2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM. It may come in a zip file. You do not have to have any sort of download manager for this, nds4ios will download zip files.
+2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
 3. Wait patiently, watch the progress bar, and nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
 
-#### Option 2 - Via Safari (iOS 6 and iOS 5)
+#### Option 2 - On-device via Safari (iOS 6 and iOS 5)
 1. In nds4ios, tap on the + button in the upper right hand corner.
-2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM. It may come in a zip file. You do not have to have any sort of download manager for this, Safari will download zip files.
+2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
 3. Tap the "Open in..." button in the top left hand corner, and select nds4ios.
 4. nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
 
-#### Option 3 - Via iTunes File Sharing / iFunBox / iExplorer (Non-jailbroken version ONLY)
+#### Option 3 - On-device via browser with download capabilities (iOS 6 and 5)
+1. Download one of the many web browsers available on the App Store with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) or [Dolphin Browser](https://itunes.apple.com/us/app/dolphin-browser/id452204407?mt=8).
+2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
+3. From the app's list of downloaded files, tap on the ROM, and select nds4ios in the "Open in..." menu.
+4. nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
+
+#### Option 4 - On-device via Safari Downloader+/Chrome Downloader+ or browser with download capabilities (Jailbroken version ONLY)
+1. If you're jailbroken, grab one of the many download tweaks available for Mobile Safari or Chrome for iOS, or grab one of the many web browsers available with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) or [Dolphin Browser](https://itunes.apple.com/us/app/dolphin-browser/id452204407?mt=8).
+2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
+3. Using iFile or another filesystem explorer, move the .nds file to /User/Documents/.
+4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
+
+#### Option 4 - Using a computer via iTunes File Sharing / iFunBox / iExplorer (Non-jailbroken version ONLY)
 1. Plug your device into your computer and launch iTunes.
 2. Go to your iDevice's info page, then the apps tab.
-3. drag and drop .nds files that you have (preferably ones you legally own the actual game cartridge for) into the iTunes file sharing box for nds4ios.
+3. Drag and drop \*.nds ROM images that you **own the actual game cartridge for** into the iTunes file sharing box for nds4ios.
 4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
 
-#### Option 4 - Via Safari Download Enabler/Chrome Downloader (Jailbroken version ONLY)
-1. If you're jailbroken, grab one of the many download tweaks available for Mobile Safari or Chrome for iOS, or grab one of the many web browsers available with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) (This is totally not a shameless plug).
-2. With the new browser or tweak, download a rom, preferably one you own the actual cartridge for.
-3. Using iFile or similar too, move the .nds file to the nds4ios directory, into the documents folder.
-4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
-
-#### Option 5 - Via AFC2 / OpenSSH / iFunBox / iExplorer (Jailbroken verison ONLY)
+#### Option 5 - Via AFC2 / OpenSSH / iFunBox / iExplorer (Jailbroken version ONLY)
 1. Install OpenSSH if you plan to utilise SCP (SSH) to transfer ROMs.
 2. If you do not wish to utilise SCP, then download iFunBox/iExplorer/similar tool that uses AFC2 over USB and install it on your computer.
 3. Drag your ROMs into the directory: /User/Documents/
-4. Saves go in: /var/mobile/Documents/Battery/
+4. Saves go in: /User/Documents/Battery/
 
 Reporting Bugs
 ------------------------
@@ -96,7 +101,7 @@ Reporting Bugs
 
 ##### Please do not open issues about the following topics:
 * Slow performance
-* Crashing on older devices with 256MB of RAM (iPod Touch 4, iPhone 3GS, iPad 1, and anything released prior to those devices.)
+* Crashing on older devices with 256MB of RAM (iPod touch 4, iPhone 3GS, iPad 1, and anything released prior to those devices.)
 
 
 To-do
@@ -108,14 +113,14 @@ To-do
 * Automatically fix permissions of crucial folders on the jailbroken distribution
 * Ability to change the folder the ROM chooser reads from
 * Minimise memory footprint (which will fix support for devices with low RAM)
-* Add more localizations (currently have: English, Traditional Chinese, Simplified Chinese, Spanish, French, Japanese)
+* Add more localizations (currently have: English, Traditional Chinese, Simplified Chinese, Spanish, French, Japanese, German)
 * Much more.
 
 Contributors
 ------------------------
-###### We stand on the shoulders of these people.
-* [The DeSmuME developers](http://desmume.org/)
-* [Jeffrey Quesnelle (jeffq), the developer of nds4droid](http://jeffq.com/blog/nds4droid/)
+
+* [DeSmuME](http://desmume.org/)
+* [Jeffrey Quesnelle (jeffq)](http://jeffq.com/blog/nds4droid/)
 * [rock88](http://rock88dev.blogspot.com/)
 * [Karen Tsai (angelXwind)](http://angelxwind.net/)
 * [Brian Tung (inb4ohnoes)](http://brian.weareflame.co/)
@@ -127,3 +132,5 @@ Contributors
 * [Angela Tsai (vanillastar67)](https://twitter.com/vanillastar67)
 * [winocm (winocm)](https://twitter.com/winocm)
 * [Jesús Higueras (GranPC)](https://twitter.com/GranPC)
+* [Fabio Poloni (einfallstoll)](https://twitter.com/einfallstoll)
+* [iain-benson](https://twitter.com/iain_benson)
