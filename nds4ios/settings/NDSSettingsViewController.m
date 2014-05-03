@@ -142,7 +142,7 @@
             sectionName = NSLocalizedString(@"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc).", nil);
             break;
         case 4:
-            sectionName = NSLocalizedString(@"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash.", nil);
+            sectionName = NSLocalizedString(@"GNU Lightning JIT makes games run faster. You must be jailbroken or nds4ios will crash.", nil);
             break;
         default:
             sectionName = @"";

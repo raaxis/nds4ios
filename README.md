@@ -4,11 +4,11 @@ nds4ios
 
 nds4ios is a port of the multi-platform Nintendo DS emulator, DeSmuME to iOS.
 
-Currently, emulation is powered by a threaded ARM interpreter. As a result, emulation is rather slow on older devices, like the iPhone 4S and below.
+Currently, emulation is powered by a threaded ARM interpreter. As a result, emulation is rather slow on older devices, like the iPhone 4s and below.
 
 nds4ios runs at nearly full speed on the iPhone 5 and above, and achieves full speed on devices using the A7-S5L8960X SoC (iPhone 5s, iPad Air, iPad mini Retina, and anything newer than these devices).
 
-Due to the need to mmap the entire ROM into memory, older devices with only 256MB of RAM are not supported by nds4ios. These devices include the iPod touch 4, iPad 1G, iPhone 3GS, and anything below those devices.
+Due to the need to mmap the entire ROM into memory, older devices with only 256MB of RAM are not supported by nds4ios. These devices include the iPod Touch 4, iPad 1, iPhone 3GS, and anything below those devices.
 
 ROMs must be placed in /User/Documents (or /private/var/mobile/Documents, it's a symbolic link).
 
@@ -30,8 +30,6 @@ Installing nds4ios
 If you're jailbroken, please follow the instructions here: http://nds4ios.angelxwind.net/i/?page/downloads#jailbroken
 
 If you're NOT jailbroken, please follow the instructions here: http://nds4ios.angelxwind.net/i/?page/downloads#notjailbroken
-
-##### Please note that the non-jailbroken distribution of nds4ios is extremely outdated, and can no longer be updated. It's either this, or nothing.
 
 #### Option 2: Compile nds4ios yourself
 
@@ -98,13 +96,13 @@ Reporting Bugs
 
 ##### Please do not open issues about the following topics:
 * Slow performance
-* Crashing on older devices with 256MB of RAM (iPod touch 4, iPhone 3GS, iPad 1, and anything released prior to those devices.)
+* Crashing on older devices with 256MB of RAM (iPod Touch 4, iPhone 3GS, iPad 1, and anything released prior to those devices.)
 
 
 To-do
 ------------------------
 ###### We'll get to these, really!
-* GNU LIghtning JIT (Currently running into pointer corruption issues.)
+* GNU Lightning JIT (Currently running into pointer corruption issues.)
 * Paravirtualisation (far-off goal, only after GNU Lightning JIT works)
 * OpenGL ES rendering
 * Automatically fix permissions of crucial folders on the jailbroken distribution
