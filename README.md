@@ -8,7 +8,7 @@ Currently, emulation is powered by a threaded ARM interpreter. As a result, emul
 
 nds4ios runs at nearly full speed on the iPhone 5 and above, and achieves full speed on devices using the A7-S5L8960X SoC (iPhone 5s, iPad Air, iPad mini Retina, and anything newer than these devices).
 
-Due to the need to mmap the entire ROM into memory, older devices with only 256MB of RAM are not supported by nds4ios. These devices include the iPod Touch 4, iPad 1, iPhone 3GS, and anything below those devices.
+Due to the need to mmap the entire ROM into memory, older devices with only 256MB of RAM are not supported by nds4ios. These devices include the iPod touch 4, iPad 1, iPhone 3GS, and anything below those devices.
 
 ROMs must be placed in /User/Documents (or /private/var/mobile/Documents, it's a symbolic link).
 
