@@ -31,8 +31,6 @@ If you're jailbroken, please follow the instructions here: http://nds4ios.angelx
 
 If you're NOT jailbroken, please follow the instructions here: http://nds4ios.angelxwind.net/i/?page/downloads#notjailbroken
 
-##### Please note that the non-jailbroken distribution of nds4ios is extremely outdated, and can no longer be updated. It's either this, or nothing.
-
 #### Option 2: Compile nds4ios yourself
 
 ##### IMPORTANT: Make sure your working directory is devoid of spaces. Otherwise, bad things will happen.
