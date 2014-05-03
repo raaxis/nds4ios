@@ -102,7 +102,7 @@ Reporting Bugs
 To-do
 ------------------------
 ###### We'll get to these, really!
-* GNU LIghtning JIT (Currently running into pointer corruption issues.)
+* GNU Lightning JIT (Currently running into pointer corruption issues.)
 * Paravirtualisation (far-off goal, only after GNU Lightning JIT works)
 * OpenGL ES rendering
 * Automatically fix permissions of crucial folders on the jailbroken distribution
