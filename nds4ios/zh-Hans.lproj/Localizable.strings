@@ -1,5 +1,5 @@
-"ROM List" = "ROM表";
-"About nds4ios" = "关於nds4ios";
+"ROM List" = "ROM列表";
+"About nds4ios" = "关于nds4ios";
 "Settings" = "设置";
 "Donate" = "捐助";
 
@@ -10,7 +10,7 @@
 "Emulator Core Code" = "特别感谢";
 
 "Donate using PayPal" = "使用PayPal捐助";
-"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "我们很努力的使用户可以享受和喜爱这个软件。如果你喜欢这个软件，请考虑捐助，以帮助我们做的更好。";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "我们很努力地使用户可以享受和喜爱这个软件。如果您喜欢这个软件，请考虑捐助，以帮助我们做的更好。";
 
 "Emulator" = "模拟器设置";
 "Controls" = "控制设置";
@@ -18,7 +18,7 @@
 "Experimental" = "实验设置";
 
 "The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "像素网格会使画面看上去更清晰，但是黑色的网格会降低一半的亮度。";
-"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "启用Dropbox将会增加一个「nds4ios」文件夹到您的Dropbox帐户。这将同步您的游戏保存到该文件夹，它会进行跨设备同步。（iPhone、iPad、iPod touch、Android、PC）。";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "启用Dropbox将会在您的Dropbox帐户里增加一个“nds4ios”文件夹。您的游戏存档将会保存到该文件夹，它会进行跨设备同步。（iPhone、iPad、iPod touch、Android、PC）。";
 "GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lighting JIT将让游戏运行得更快。您必须越狱您的iOS设备，否则nds4ios会崩溃。";
 
 "Auto" = "自动";
@@ -29,28 +29,28 @@
 
 "Frame Skip" = "跳帧";
 "Disable Sound" = "禁用声音";
-"Overlay Pixel Grid" = "附叠网格";
+"Overlay Pixel Grid" = "显示网格";
 
 "Control Pad Style" = "控制类型";
 "Controls Position (Portrait)" = "按键位置";
 "Control Opacity (Portrait)" = "按键透明度";
 
 "Enable Dropbox Sync" = "开启Dropbox同步";
-"Not Linked" = "未链接";
+"Not Linked" = "未连接";
 "Linked" = "已连接";
-"Unlinked!" = "链接断开!";
-"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox 的连接已经断开。已储存的文件将停止同步。";
+"Unlinked!" = "连接断开!";
+"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox 的连接已经断开。已保存的文件将停止同步。";
 "Success!" = "成功！";
-"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox 连接成功！ nds4ios 将会把已储存的文件同步到Dropbox 根目录里的文件夹 ’nds4ios’ 里面。";
+"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox 连接成功！ nds4ios 将会把已保存的文件同步到Dropbox 根目录里的文件夹“nds4ios”中。";
 "Error Configuring Dropbox" = "Dropbox配置错误";
 
 "Show FPS" = "显示FPS";
 "Vibration" = "振动";
 
 "Hey You! Yes, You!" = "嗨！您好！";
-"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "当您使用此按钮时，InfiniDev正假设著您已经购买了您将要获取ROM 映像的遊戏。请勿非法下载不属於您的游戯软件。请支持软件开发者们，不要盗取他们的劳动。InfiniDev 与所有相关人物是不会纵容盗取行爲的。如果您按下该按钮，您将同意承担一切有关於下载Nintendo DS 软件并在这个模拟器里使用该软件的责任，与其後果。";
-"Got it!" = "好的!";
+"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "当您使用此按钮时，您将同意承担一切有关于下载Nintendo DS 软件并在本模拟器里使用该软件的责任与其后果。请支持软件开发者们，不要使用盗版。提取您自己的ROM是最好的，也是我们所建议的。InfiniDev 与所有相关人物不会纵容盗版行为。";
+"Got it!" = "好的！";
 
-"Launch Game" = "开啓遊戏";
-"Start this ROM" = "正常开啓遊戏";
-"Resume from Save State" = "从自动保存中继续遊戏";
+"Launch Game" = "加载游戏";
+"Start this ROM" = "正常开始游戏";
+"Resume from Save State" = "从自动存档中继续游戏";
