@@ -169,7 +169,7 @@ public:
 				{
 					GFX_FIFOsend(commands[i], 0);
 
-					while ((i < 4) && commands[i+1] != 0 && gfx3d_commandTypes[commands[i+1]] == GFX_NOARG_COMMAND)
+					while ((i < 3) && commands[i+1] != 0 && gfx3d_commandTypes[commands[i+1]] == GFX_NOARG_COMMAND)
 						GFX_FIFOsend(commands[++i], 0);
 				}
 				else
