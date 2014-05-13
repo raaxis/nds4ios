@@ -26,7 +26,7 @@ typedef u64 uint64;
 
 extern CACHE_ALIGN u16 fadeOutColors[17][0x8000];
 
-extern int scanline_filter_a, scanline_filter_b;
+int scanline_filter_a = 0, scanline_filter_b = 2;
 static int fac_a, fac_b;
 
 FORCEINLINE void ScanLine16( uint16 *lpDst, uint16 *lpSrc, unsigned int Width){

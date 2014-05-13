@@ -360,6 +360,19 @@
 		9C2ADAAE190717F500BECACF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C4DD2851891E5390075B66C /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		9CFFEB7518B48C7C00F80903 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nds4ios/Images.xcassets; sourceTree = "<group>"; };
+		AE20890E1916401400E2CB33 /* asm-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "asm-32.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/asm-32.h"; sourceTree = SOURCE_ROOT; };
+		AE20890F1916401400E2CB33 /* asm-64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "asm-64.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/asm-64.h"; sourceTree = SOURCE_ROOT; };
+		AE2089101916401400E2CB33 /* asm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = asm.h; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/asm.h"; sourceTree = SOURCE_ROOT; };
+		AE2089111916401400E2CB33 /* core-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "core-32.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/core-32.h"; sourceTree = SOURCE_ROOT; };
+		AE2089121916401400E2CB33 /* core-64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "core-64.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/core-64.h"; sourceTree = SOURCE_ROOT; };
+		AE2089131916401400E2CB33 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = core.h; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/core.h"; sourceTree = SOURCE_ROOT; };
+		AE2089141916401400E2CB33 /* fp-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "fp-32.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/fp-32.h"; sourceTree = SOURCE_ROOT; };
+		AE2089151916401400E2CB33 /* fp-64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "fp-64.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/fp-64.h"; sourceTree = SOURCE_ROOT; };
+		AE2089161916401400E2CB33 /* fp-sse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "fp-sse.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/fp-sse.h"; sourceTree = SOURCE_ROOT; };
+		AE2089171916401400E2CB33 /* fp-x87.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "fp-x87.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/fp-x87.h"; sourceTree = SOURCE_ROOT; };
+		AE2089181916401400E2CB33 /* fp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fp.h; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/fp.h"; sourceTree = SOURCE_ROOT; };
+		AE2089191916401400E2CB33 /* funcs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = funcs.h; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/funcs.h"; sourceTree = SOURCE_ROOT; };
+		AE20891A1916496300E2CB33 /* lightning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lightning.h; path = "nds4droid-code/jni/desmume/src/utils/lightning/lightning.h"; sourceTree = SOURCE_ROOT; };
 		AE2F3B5F18EF7F5A007A4BA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = nds4ios/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		AE2F3B6118EF7F64007A4BA0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = nds4ios/es.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		AE2F3B6218EF7F6C007A4BA0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = nds4ios/fr.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
@@ -763,6 +776,25 @@
 			name = minizip;
 			path = nds4ios/openzip/minizip;
 			sourceTree = SOURCE_ROOT;
+		};
+		AE20890D19163FF700E2CB33 /* i386 */ = {
+			isa = PBXGroup;
+			children = (
+				AE20890E1916401400E2CB33 /* asm-32.h */,
+				AE20890F1916401400E2CB33 /* asm-64.h */,
+				AE2089101916401400E2CB33 /* asm.h */,
+				AE2089111916401400E2CB33 /* core-32.h */,
+				AE2089121916401400E2CB33 /* core-64.h */,
+				AE2089131916401400E2CB33 /* core.h */,
+				AE2089141916401400E2CB33 /* fp-32.h */,
+				AE2089151916401400E2CB33 /* fp-64.h */,
+				AE2089161916401400E2CB33 /* fp-sse.h */,
+				AE2089171916401400E2CB33 /* fp-x87.h */,
+				AE2089181916401400E2CB33 /* fp.h */,
+				AE2089191916401400E2CB33 /* funcs.h */,
+			);
+			name = i386;
+			sourceTree = "<group>";
 		};
 		BF2AC479177FF29000D3CF93 /* arm */ = {
 			isa = PBXGroup;
@@ -1224,12 +1256,14 @@
 		BFCFE24817663521000A70CF /* JIT */ = {
 			isa = PBXGroup;
 			children = (
+				AE20890D19163FF700E2CB33 /* i386 */,
 				BF2AC479177FF29000D3CF93 /* arm */,
 				BF2AC482177FF29000D3CF93 /* asm-common.h */,
 				BF2AC483177FF29000D3CF93 /* config_lightning.h */,
 				BF2AC484177FF29000D3CF93 /* core-common.h */,
 				BF2AC485177FF29000D3CF93 /* fp-common.h */,
 				BF2AC486177FF29000D3CF93 /* funcs-common.h */,
+				AE20891A1916496300E2CB33 /* lightning.h */,
 				BF2AC475177FF06600D3CF93 /* ArmLJit.cpp */,
 				BF2AC476177FF06600D3CF93 /* ArmLJit.h */,
 			);

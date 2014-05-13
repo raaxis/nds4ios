@@ -26,7 +26,10 @@
 #define MAP_ANONYMOUS MAP_ANON
 #define _MAIN_H
 
+#if defined(__arm__) || defined(__arm64__)
 #define HAVE_NEON
+#endif
+
 #define HAVE_JIT
 
 // Necessary #defines

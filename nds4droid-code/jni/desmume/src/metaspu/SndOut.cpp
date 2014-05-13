@@ -117,6 +117,8 @@ s32 SndBuffer::m_wpos;
 s32 SndBuffer::m_data;
 
 bool SndBuffer::m_underrun_freeze;
+s32 SndBuffer::m_predictData;
+float SndBuffer::lastPct;
 StereoOut32* SndBuffer::sndTempBuffer = NULL;
 StereoOut16* SndBuffer::sndTempBuffer16 = NULL;
 int SndBuffer::sndTempProgress = 0;
@@ -125,6 +127,13 @@ static int GetAlignedBufferSize( int comp )
 {
 	return (comp + SndOutPacketSize-1) & ~(SndOutPacketSize-1);
 }
+
+void SndBuffer::soundtouchInit() {}
+void SndBuffer::soundtouchClearContents() {}
+void SndBuffer::soundtouchCleanup() {}
+void SndBuffer::timeStretchWrite() {}
+void SndBuffer::timeStretchUnderrun() {}
+s32 SndBuffer::timeStretchOverrun() {return 0;}
 
 // Returns TRUE if there is data to be output, or false if no data
 // is available to be copied.

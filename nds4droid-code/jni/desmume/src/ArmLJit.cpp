@@ -22,15 +22,20 @@
 #include "instructions.h"
 #include "Disassembler.h"
 
-#import "core.h"
+#include "utils/lightning/lightning.h"
+#if defined(__arm__) || defined(__arm64__)
+#import "utils/lightning/arm/funcs.h"
+#import "utils/lightning/arm/core.h"
+#else
+#import "utils/lightning/i386/funcs.h"
+#import "utils/lightning/i386/core.h"
+#endif
 
 #include "armcpu.h"
 #include "MMU.h"
 #include "MMU_timing.h"
 #include "JitCommon.h"
 #include "utils/MemBuffer.h"
-#include "utils/lightning/lightning.h"
-#import "utils/lightning/arm/funcs.h"
 
 #include <stdio.h>
 #include <stdlib.h>
