@@ -51,43 +51,38 @@ Navigate to the "nds4ios" folder in your working directory.
    from Terminal and then copy the resulting *.app bundle to your /Applications directory on your device.
 
 
-Adding ROMs
+Adding ROMs to nds4ios
 ------------------------
 
-#### Option 1 - On-device via RSTWebViewController (iOS 7 and above)
-1. In nds4ios, tap on the + button in the upper right hand corner.
-2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
-3. Wait patiently, watch the progress bar, and nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
-
-#### Option 2 - On-device via Safari (iOS 6 and iOS 5)
-1. In nds4ios, tap on the + button in the upper right hand corner.
-2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
+#### Option 1 - On-device via Safari (All devices)
+1. Open Safari.
+2. Download a ROM image of a Nintendo DS game that you **legally own the actual game cartridge for.**
 3. Tap the "Open in..." button in the top left hand corner, and select nds4ios.
-4. nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
+4. nds4ios will automatically unzip the file, delete the readme, find the \*.nds file, and refresh itself. Your ROM should show up in the list.
 
-#### Option 3 - On-device via browser with download capabilities (iOS 6 and 5)
+#### Option 2 - On-device via browser with download capabilities (All devices)
 1. Download one of the many web browsers available on the App Store with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) or [Dolphin Browser](https://itunes.apple.com/us/app/dolphin-browser/id452204407?mt=8).
-2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
-3. From the app's list of downloaded files, tap on the ROM, and select nds4ios in the "Open in..." menu.
-4. nds4ios will automatically unzip the file, delete the readme, find the .nds file, and refresh itself. Your ROM should show up in the list. Magic!
+2. Download a ROM image of a Nintendo DS game that you **legally own the actual game cartridge for.**
+3. From the app's list of downloaded files, tap on the downloaded file, and select nds4ios in the "Open in..." menu.
+4. nds4ios will automatically unzip the file, delete the readme, find the \*.nds file, and refresh itself. Your ROM should show up in the list.
 
-#### Option 4 - On-device via Safari Downloader+/Chrome Downloader+ or browser with download capabilities (Jailbroken version ONLY)
-1. If you're jailbroken, grab one of the many download tweaks available for Mobile Safari or Chrome for iOS, or grab one of the many web browsers available with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) or [Dolphin Browser](https://itunes.apple.com/us/app/dolphin-browser/id452204407?mt=8).
-2. Download a ROM package of a ROM that you **own the actual game cartridge for** from a site such as CoolROM.
-3. Using iFile or another filesystem explorer, move the .nds file to /User/Documents/.
-4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
+#### Option 3 - Using a computer via iFunBox Classic (Non-jailbroken devices ONLY)
+1. Plug your device into your computer and launch [iFunBox Classic](http://dl.i-funbox.com/).
+2. Go to [device name] -> iTunes File Sharing -> nds4ios
+3. Drag and drop \*.nds ROM images of Nintendo DS games that you **legally own the actual game cartridge for** into iFunBox.
+4. Restart nds4ios to see the changes.
 
-#### Option 4 - Using a computer via iTunes File Sharing / iFunBox / iExplorer (Non-jailbroken version ONLY)
-1. Plug your device into your computer and launch iTunes.
-2. Go to your iDevice's info page, then the apps tab.
-3. Drag and drop \*.nds ROM images that you **own the actual game cartridge for** into the iTunes file sharing box for nds4ios.
-4. Kill nds4ios from the app switcher if it's backgrounded, and launch it again to see changes.
+#### Option 4 - On-device via Safari Downloader+/Chrome Downloader+ (Jailbroken devices)
+1. Download a download manager tweak from Cydia like Safari Downloader+ or Chrome Downloader+.
+2. Download a ROM image of a Nintendo DS game that you **legally own the actual game cartridge for.**
+3. Using iFile or another filesystem explorer, move the downloaded .nds file to /User/Documents/. Alternatively, you can also tap on the downloaded file in the download manager's list of files, and select nds4ios in the "Open in..." menu.
+4. nds4ios will automatically unzip the file, delete the readme, find the *.nds file, and refresh itself. Your ROM should show up in the list.
 
-#### Option 5 - Via AFC2 / OpenSSH / iFunBox / iExplorer (Jailbroken version ONLY)
-1. Install OpenSSH if you plan to utilise SCP (SSH) to transfer ROMs.
-2. If you do not wish to utilise SCP, then download iFunBox/iExplorer/similar tool that uses AFC2 over USB and install it on your computer.
-3. Drag your ROMs into the directory: /User/Documents/
-4. Saves go in: /User/Documents/Battery/
+#### Option 5 - Via OpenSSH / iFunBox Classic (Jailbroken devices)
+1. Install OpenSSH from Cydia if you plan to utilise SCP (SSH) to transfer ROMs.
+2. If you do not wish to utilise SCP, then download [iFunBox Classic](http://dl.i-funbox.com/) and install it on your computer.
+3. ROMs (\*.nds) go in the directory: /User/Documents/
+4. Saves (in DeSmuME's \*.dsv format) go in: /User/Documents/Battery/
 
 Reporting Bugs
 ------------------------
