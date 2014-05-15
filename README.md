@@ -10,8 +10,6 @@ nds4ios runs at nearly full speed on the iPhone 5 and above, and achieves full s
 
 Due to the need to mmap the entire ROM into memory, older devices with only 256MB of RAM are not supported by nds4ios. These devices include the iPod touch 4, iPad 1, iPhone 3GS, and anything below those devices.
 
-ROMs must be placed in /User/Documents (or /private/var/mobile/Documents, it's a symbolic link).
-
 [nds4ios](http://nds4ios.angelxwind.net/)
 
 [nds4droid](http://jeffq.com/blog/nds4droid/)
@@ -24,7 +22,7 @@ ROMs must be placed in /User/Documents (or /private/var/mobile/Documents, it's a
 
 Installing nds4ios
 ------------------------
-##### Do not redistribute code-signed copies nds4ios on other sites. We already provide official ways to download nds4ios below. THIS IS A FAIR WARNING.
+##### Do not redistribute nds4ios on other sites. We already provide official ways to download nds4ios below. THIS IS A FAIR WARNING.
 #### Option 1: Download nds4ios from Karen's Pineapple (KarenP/88888888)
 
 If you're jailbroken, please follow the instructions here: http://nds4ios.angelxwind.net/i/?page/downloads#jailbroken
@@ -61,7 +59,7 @@ Adding ROMs to nds4ios
 4. nds4ios will automatically unzip the file, delete the readme, find the \*.nds file, and refresh itself. Your ROM should show up in the list.
 
 #### Option 2 - On-device via browser with download capabilities (All devices)
-1. Download one of the many web browsers available on the App Store with download managers built in, such as [Cobium](https://itunes.apple.com/us/app/cobium-simple-browsing/id502426780?mt=8) or [Dolphin Browser](https://itunes.apple.com/us/app/dolphin-browser/id452204407?mt=8).
+1. Download one of the many web browsers available on the App Store with download managers built in, such as [Dolphin Browser](https://itunes.apple.com/us/app/dolphin-browser/id452204407?mt=8).
 2. Download a ROM image of a Nintendo DS game that you **legally own the actual game cartridge for.**
 3. From the app's list of downloaded files, tap on the downloaded file, and select nds4ios in the "Open in..." menu.
 4. nds4ios will automatically unzip the file, delete the readme, find the \*.nds file, and refresh itself. Your ROM should show up in the list.
