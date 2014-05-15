@@ -47,10 +47,6 @@
 "Show FPS" = "Show FPS";
 "Vibration" = "Vibration";
 
-"Hey You! Yes, You!" = "Hey You! Yes, You!";
-"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "By using this button, we at InfiniDev are assuming that you have already bought the game you are about to obtain a ROM image of. Please refrain from illegally downloading game software that you do not own. Please support the software developers and do not pirate their hard work. Remember, InfiniDev and all associated personnel do not condone the act of piracy. By pressing the below button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator.";
-"Got it!" = "Got it!";
-
 "Launch Game" = "Launch Game";
 "Start this ROM" = "Boots the game normally";
 "Resume from Save State" = "Resume from Autosave";

@@ -47,10 +47,6 @@
 "Show FPS" = "顯示FPS";
 "Vibration" = "振動";
 
-"Hey You! Yes, You!" = "嗨！您好！";
-"By using this button, you agree to take all responsibility regarding and resulting in, but not limited to, the downloading of Nintendo DS software to use in this emulator. Please support the software developers and do not pirate their hard work. Dumping ROMs yourself is still the best, and recommended way to go. InfiniDev and all associated personnel do not condone the act of piracy." = "當您使用此按鈕時，InfiniDev正假設著您已經購買了您將要獲取ROM 映像的遊戲。請勿非法下載不屬於您的游戯軟件。請支持軟件開發者們，不要盜取他們的勞動。InfiniDev 與所有相關人物是不會縱容盜取行爲的。如果您按下該按鈕，您將同意承擔一切有關於下載Nintendo DS 軟件並在這個模擬器裡使用該軟件的責任，與其後果。";
-"Got it!" = "好的!";
-
 "Launch Game" = "開啓遊戲";
 "Start this ROM" = "正常開啓遊戲";
 "Resume from Save State" = "從自動保存中繼續遊戲";
