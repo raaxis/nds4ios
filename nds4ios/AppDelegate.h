@@ -24,3 +24,7 @@
 - (void)startGame:(NDSGame *)game withSavedState:(NSInteger)savedState;
 
 @end
+
+@interface myViewController: UIViewController <UIAlertViewDelegate>
+
+@end

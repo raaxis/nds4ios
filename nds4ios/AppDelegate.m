@@ -20,10 +20,29 @@
     return [[UIApplication sharedApplication] delegate];
 }
 
-
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if( buttonIndex == 1 )
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/InfiniDev/nds4ios/blob/master/Adding%20Roms.md"]];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults boolForKey:@"firstLaunch"]) {
+        [defaults setBool:YES forKey:@"firstLaunch"];
+        UIAlertView*_alert = [[UIAlertView alloc] initWithTitle:@"IMPORTANT"
+                                                        message:@"We have recently removed the '+' button from the application due to legal reasons. If you need to add ROMs to nds4ios, and do not know how to do so, please tap on 'Tutorial'. Otherwise, Tap on 'Ok'."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:@"Tutorial", nil];
+        [_alert show];
+    }
+    
+    
     if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     else
