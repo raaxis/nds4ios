@@ -68,6 +68,16 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [CHBgDropboxSync start];
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"IMPORTANT"
+                                                        message:@"We have recently removed the '+' button from the application due to legal reasons. If you need to add ROMs to nds4ios, and do not know how to do so, please tap on 'Tutorial'. Otherwise, Tap on 'Ok'."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:@"Tutorial", nil];
+        [alert show];
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -162,6 +172,16 @@
 
 //#pragma mark - Non-UITableView functions
 
-//#pragma mark - UIAlertView delegate
+#pragma mark - UIAlertView delegate
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+    if( buttonIndex == 1 )
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/InfiniDev/nds4ios/blob/master/Adding%20Roms.md"]];
+    }
+}
+
 
 @end

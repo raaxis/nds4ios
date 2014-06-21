@@ -10,7 +10,7 @@
 #import <DropboxSDK/DropboxSDK.h>
 #import "DocWatchHelper.h"
 
-@interface NDSROMTableViewController : UITableViewController
+@interface NDSROMTableViewController : UITableViewController <UIAlertViewDelegate>
 {
     NSArray *games;
     DocWatchHelper *docWatchHelper;
