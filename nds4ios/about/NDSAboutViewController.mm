@@ -80,7 +80,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *screenNames = @[@"angelXwind", @"iPlop", @"maczydeco", @"rileytestut", @"davidiox", @"Malvix_", @"wj82315", @"vanillastar67", @"winocm", @"GranPC"];
-    NSArray *contributors = @[@"", @"jquesnelle", @"einfallstoll"];
+    NSArray *contributors = @[@"", @"jquesnelle", @"einfallstoll", @"iain_benson", @""];
     if (indexPath.section == 0)
     {
         NSURL *twitterURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=InfiniDev_"]];
