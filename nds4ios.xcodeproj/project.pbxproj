@@ -343,6 +343,7 @@
 		8BEFF48A178B473E00EEE55A /* menuicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menuicon@2x.png"; path = "Resources/menuicon@2x.png"; sourceTree = "<group>"; };
 		9C2ADAAE190717F500BECACF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C4DD2851891E5390075B66C /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		9CD33115196393E000CCBDEF /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9CFFEB7518B48C7C00F80903 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nds4ios/Images.xcassets; sourceTree = "<group>"; };
 		AE20890E1916401400E2CB33 /* asm-32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "asm-32.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/asm-32.h"; sourceTree = SOURCE_ROOT; };
 		AE20890F1916401400E2CB33 /* asm-64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "asm-64.h"; path = "nds4droid-code/jni/desmume/src/utils/lightning/i386/asm-64.h"; sourceTree = SOURCE_ROOT; };
@@ -1330,6 +1331,7 @@
 				pt,
 				de,
 				ko,
+				vi,
 			);
 			mainGroup = BFCFE0E61764FBD3000A70CF;
 			productRefGroup = BFCFE0F01764FBD3000A70CF /* Products */;
@@ -1587,6 +1589,7 @@
 				AE2F3B6518EF7F88007A4BA0 /* zh-Hant */,
 				9C2ADAAE190717F500BECACF /* de */,
 				EE9CCDC6190BDBFB000875C4 /* ko */,
+				9CD33115196393E000CCBDEF /* vi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
