@@ -16,6 +16,7 @@
 #import <GLKit/GLKit.h>
 #import <OpenGLES/ES2/gl.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <GameController/GameController.h>
 
 #include "emu.h"
 
@@ -89,7 +90,7 @@ const float textureVert[] =
 @property (weak, nonatomic) IBOutlet UIImageView *pixelGrid;
 @property (strong, nonatomic) GLProgram *program;
 @property (strong, nonatomic) EAGLContext *context;
-@property (weak, nonatomic) IBOutlet UIView *controllerContainerView;
+@property (strong, nonatomic) IBOutlet UIView *controllerContainerView;
 
 @property (weak, nonatomic) IBOutlet NDSDirectionalControl *directionalControl;
 @property (weak, nonatomic) IBOutlet NDSButtonControl *buttonControl;
@@ -130,6 +131,12 @@ const float textureVert[] =
     [notificationCenter addObserver:self selector:@selector(defaultsChanged:) name:NSUserDefaultsDidChangeNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(screenChanged:) name:UIScreenDidConnectNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(screenChanged:) name:UIScreenDidDisconnectNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(controllerActivated:) name:GCControllerDidConnectNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(controllerDeactivated:) name:GCControllerDidDisconnectNotification object:nil];
+    
+    if ([[GCController controllers] count] > 0) {
+        [self controllerActivated:nil];
+    }
     
     [self defaultsChanged:nil];
 }
@@ -469,6 +476,23 @@ const float textureVert[] =
 }
 
 #pragma mark - Controls
+
+- (void)controllerActivated:(NSNotification *)notification {
+    if (_controllerContainerView.superview) {
+        [_controllerContainerView removeFromSuperview];
+    }
+}
+
+- (void)controllerDeactivated:(NSNotification *)notification {
+    if ([[GCController controllers] count] == 0) {
+        CGRect controllerContainerFrame = _controllerContainerView.frame;
+        controllerContainerFrame.origin.x = 0;
+        controllerContainerFrame.origin.y = self.view.frame.size.height-controllerContainerFrame.size.height;
+        controllerContainerFrame.size.width = self.view.frame.size.width;
+        _controllerContainerView.frame = controllerContainerFrame;
+        [self.view addSubview:_controllerContainerView];
+    }
+}
 
 - (IBAction)pressedDPad:(NDSDirectionalControl *)sender
 {

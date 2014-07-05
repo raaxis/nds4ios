@@ -89,7 +89,7 @@
 -(void) onControllerDisconnected:(NSNotification *)notification {
     NSLog(@"Controller disconnected: %@", [_controller vendorName]);
     
-    if ([[GCController controllers] firstObject] == _controller) {
+    if (notification.object == _controller) {
         _controller = nil;
         _controllerElementToButtonIdMapping = nil;
         
