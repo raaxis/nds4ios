@@ -28,6 +28,8 @@
 // Singleton instance
 CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
+static UIBackgroundTaskIdentifier backTask = 0;
+
 @implementation CHBgDropboxSync
 
 #pragma mark - Showing and hiding the syncing indicator
@@ -35,10 +37,14 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 - (void)showWorking {
     [ZAActivityBar showWithStatus:@"Syncing saves..."];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    backTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [self internalShutdownForced];
+    }];
 }
 
 - (void)hideWorking {
     [ZAActivityBar dismiss];
+    [[UIApplication sharedApplication] endBackgroundTask: backTask];
 }
 
 #pragma mark - Startup
