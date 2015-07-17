@@ -67,9 +67,19 @@ NSString * const NDSGameSaveStatesChangedNotification = @"NDSGameSaveStatesChang
         if ([s1 hasSuffix:@".pause.dsv"]) return NSOrderedAscending;
         if ([s2 hasSuffix:@".pause.dsv"]) return NSOrderedDescending;
         NSDate *date1 = [fm attributesOfItemAtPath:[self.pathForSavedStates stringByAppendingPathComponent:s1] error:NULL].fileModificationDate;
-        NSDate *date2 = [fm attributesOfItemAtPath:[self.pathForSavedStates stringByAppendingPathComponent:s1] error:NULL].fileModificationDate;
-        return [date1 compare:date2];
+        NSDate *date2 = [fm attributesOfItemAtPath:[self.pathForSavedStates stringByAppendingPathComponent:s2] error:NULL].fileModificationDate;
+        return [date2 compare:date1];
     }];
+    
+    NSArray * autoSaves = [saveStates filteredArrayUsingPredicate: [NSPredicate predicateWithBlock:^BOOL(NSString * fn, id bindings) {
+        return [fn hasPrefix: [NSString stringWithFormat:@"%@.auto-", self.path.lastPathComponent.stringByDeletingPathExtension]];
+    }]];
+    if (autoSaves.count > 20) {
+        NSLog(@"Deleting %@", autoSaves.lastObject);
+        NSError * outError = nil;
+        [fm removeItemAtPath: [self.pathForSavedStates stringByAppendingPathComponent: autoSaves.lastObject] error: &outError];
+        if (!outError) [self _loadSaveStates];
+    }
 }
 
 - (void)reloadSaveStates
