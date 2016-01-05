@@ -88,8 +88,8 @@
 #else
 #include <alloca.h>
 #define _alloca			alloca
-#define _alloca16(x)	((void *)((((int)alloca( (x)+15 )) + 15) & ~15))
-#define _alloca32(x)	((void *)((((int)_alloca( (x)+31 )) + 31) & ~31))
+#define _alloca16(x)	((void *)((((uintptr_t)alloca( (x)+15 )) + 15) & ~15))
+#define _alloca32(x)	((void *)((((uintptr_t)_alloca( (x)+31 )) + 31) & ~31))
 #endif
 
 #if defined(_MSC_VER) || defined(__INTEL_COMPILER)

@@ -7,6 +7,7 @@
 //
 
 #include "emu.h"
+#include "types.h"
 #include "render3D.h"
 #include "rasterize.h"
 #include "SPU.h"
@@ -16,15 +17,18 @@
 #include "addons.h"
 #include "slot1.h"
 #include "saves.h"
-//#include "video.h"
+#include "video.h"
 #include "throttle.h"
 #include "sndcoreaudio.h"
 #include "cheatSystem.h"
 #include "slot1.h"
+#include "version.h"
 
 #define LOGI(...) printf(__VA_ARGS__);printf("\n")
 
 CACHE_ALIGN u8 __GPU_screen[4*256*192];
+
+extern VideoInfo video;
 
 bool NDS_Pause(bool showMsg = true);
 void NDS_UnPause(bool showMsg = true);
@@ -85,12 +89,7 @@ bool enableMicrophone = false;
 volatile bool pausedByMinimize = false;
 volatile bool soundEnabled = true;
 
-static bool android_opengl_init() {
-    LOGI("android_opengl_init");
-    return true;
-}
-
-void EMU_init()
+void EMU_init(int lang)
 {
 	//oglrender_init = android_opengl_init;
 	
@@ -172,7 +171,7 @@ void EMU_init()
 	for(int i = 0 ; i < fw_config.message_len ; ++i)
 		fw_config.message[i] = message[i];
 	
-	fw_config.language = 1;
+	fw_config.language = lang < 0 ? NDS_FW_LANG_ENG : lang;
     
 	video.setfilter(video.NONE);
 	
@@ -466,40 +465,35 @@ int EMU_runOther()
 	return 1;
 }
 
-static void DoDisplay_DrawHud()
+bool EMU_loadState(const char *filename)
 {
-	/*
-    osd->update();
-	DrawHUD();
-	osd->clear();
-    */
+    return savestate_load(filename);
+}
+
+bool EMU_saveState(const char *filename)
+{
+    return savestate_save(filename);
+}
+
+void* EMU_getVideoBuffer(size_t *outSize)
+{
+    if (outSize) *outSize = video.size();
+    return video.buffer;
 }
 
 void EMU_copyMasterBuffer()
 {
 	video.srcBuffer = (u8*)GPU_screen;
 	
-	//draw directly to the gpu screen
-	//aggDraw.hud->attach((u8*)video.srcBuffer, 256, 384, 512);
-	DoDisplay_DrawHud();
-	
 	//convert pixel format to 32bpp for compositing
 	//why do we do this over and over? well, we are compositing to
 	//filteredbuffer32bpp, and it needs to get refreshed each frame..
 	const int size = video.size();
 	u16* src = (u16*)video.srcBuffer;
-	if(1)
-	{
-		u32* dest = video.buffer;
-		for(int i=0;i<size;++i)
-			*dest++ = 0xFF000000 | RGB15TO32_NOALPHA(src[i]);
-	}
-	else if(1/*bitmapInfo.format == ANDROID_BITMAP_FORMAT_RGB_565*/)
-	{
-		u16* dest = (u16*)video.buffer;
-		for(int i=0;i<size;++i)
-			*dest++ = RGB15TO16_REVERSE(src[i]);
-	}
+    u32* dest = video.buffer;
+    for(int i=0;i<size;++i)
+        *dest++ = 0xFF000000 | RGB15TO32_NOALPHA(src[i]);
+	
 }
 
 void EMU_touchScreenTouch(int x, int y)
@@ -547,7 +541,7 @@ void EMU_buttonUp(BUTTON_ID button)
     NDS_setPad(all_button, false, false);
 }
 
-void EMU_setDPad(BOOL up, BOOL down, BOOL left, BOOL right)
+void EMU_setDPad(bool up, bool down, bool left, bool right)
 {
     _b[BUTTON_UP] = !!up;
     _b[BUTTON_DOWN] = !!down;
@@ -556,7 +550,7 @@ void EMU_setDPad(BOOL up, BOOL down, BOOL left, BOOL right)
     NDS_setPad(all_button, false, false);
 }
 
-void EMU_setABXY(BOOL a, BOOL b, BOOL x, BOOL y)
+void EMU_setABXY(bool a, bool b, bool x, bool y)
 {
     _b[BUTTON_A] = !!a;
     _b[BUTTON_B] = !!b;
@@ -564,3 +558,9 @@ void EMU_setABXY(BOOL a, BOOL b, BOOL x, BOOL y)
     _b[BUTTON_Y] = !!y;
     NDS_setPad(all_button, false, false);
 }
+
+const char* EMU_version()
+{
+    return EMU_DESMUME_VERSION_STRING();
+}
+

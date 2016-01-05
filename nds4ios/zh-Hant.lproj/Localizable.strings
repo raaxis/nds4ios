@@ -1,0 +1,52 @@
+"ROM List" = "ROM表";
+"About nds4ios" = "關於nds4ios";
+"Settings" = "設置";
+"Donate" = "捐助";
+
+"Share" = "分享";
+
+"InfiniDev Developers" = "InfiniDev開發團隊";
+"Contributors" = "貢獻者";
+"Emulator Core Code" = "特別感謝";
+
+"Donate using PayPal" = "使用PayPal捐助";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "我們很努力的使用戶可以享受和喜愛這個軟件。如果你喜歡這個軟件，請考慮捐助，以幫助我們做的更好。";
+
+"Emulator" = "模擬器設置";
+"Controls" = "控制設置";
+"Developer" = "開發設置";
+"Experimental" = "實驗設置";
+
+"The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "像素網格會使畫面看上去更清晰，但是黑色的網格會降低一半的亮度。";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "啟用Dropbox將會增加一個「nds4ios」文件夾到您的Dropbox帳戶。這將同步您的游戲保存到該文件夾，它會進行跨設備同步。（iPhone、iPad、iPod touch、Android、PC）。";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lighting JIT將讓游戲運行得更快。您必須越獄您的iOS設備，否則nds4ios會崩潰。";
+
+"Auto" = "自動";
+"D-Pad" = "方向鍵";
+"Joystick" = "搖杆";
+"Top" = "頂部";
+"Bottom" = "底部";
+
+"Frame Skip" = "跳幀";
+"Disable Sound" = "禁用聲音";
+"Overlay Pixel Grid" = "附疊網格";
+
+"Control Pad Style" = "控制類型";
+"Controls Position (Portrait)" = "按鍵位置";
+"Control Opacity (Portrait)" = "按鍵透明度";
+
+"Enable Dropbox Sync" = "開啟Dropbox同步";
+"Not Linked" = "未鏈接";
+"Linked" = "已連接";
+"Unlinked!" = "鏈接斷開!";
+"Dropbox has been unlinked. Your games will no longer be synced." = "Dropbox 的連接已經斷開。已儲存的文件將停止同步。";
+"Success!" = "成功！";
+"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox 連接成功！ nds4ios 將會把已儲存的文件同步到Dropbox 根目錄裡的文件夾 ’nds4ios’ 裡面。";
+"Error Configuring Dropbox" = "Dropbox配置錯誤";
+
+"Show FPS" = "顯示FPS";
+"Vibration" = "振動";
+
+"Launch Game" = "開啓遊戲";
+"Start this ROM" = "正常開啓遊戲";
+"Resume from Save State" = "從自動保存中繼續遊戲";

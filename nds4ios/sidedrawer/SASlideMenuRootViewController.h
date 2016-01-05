@@ -29,7 +29,7 @@
 
 -(void) doSlideToSide;
 -(void) rightMenuAction;
-
-
+-(void) doSlideIn:(void (^)(BOOL completed))completion;
+-(void) removeRightMenu;
 
 @end

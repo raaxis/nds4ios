@@ -37,6 +37,8 @@
 #ifndef __lightning_core_i386_h
 #define __lightning_core_i386_h
 
+#include "asm.h"
+
 /* ffs* prototype */
 #if !defined(__GNU_SOURCE)
 #  define __GNU_SOURCE			1

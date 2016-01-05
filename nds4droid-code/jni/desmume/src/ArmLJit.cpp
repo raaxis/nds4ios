@@ -22,15 +22,25 @@
 #include "instructions.h"
 #include "Disassembler.h"
 
-#import "core.h"
+#include "utils/lightning/lightning.h"
+#if defined(__arm__) || defined(__arm64__)
+#import "utils/lightning/arm/funcs.h"
+#import "utils/lightning/arm/core.h"
+#else
+#import "utils/lightning/i386/funcs.h"
+#import "utils/lightning/i386/core.h"
+#endif
 
 #include "armcpu.h"
 #include "MMU.h"
 #include "MMU_timing.h"
 #include "JitCommon.h"
 #include "utils/MemBuffer.h"
-#include "utils/lightning/lightning.h"
-#import "utils/lightning/arm/funcs.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/mman.h>
 
 #ifdef _MSC_VER
 #include <intrin.h>
@@ -7428,14 +7438,121 @@ TEMPLATE static void cpuClear(u32 Addr, u32 Size)
 	}
 }
 
+#define PAGESIZE 4096
+
+// Attention InfiniDev, comment out the following line to test out my attempts at JIT.
+#define USE_TEST_JIT
+
+#ifdef USE_TEST_JIT
+
+typedef int (*inc_t)(int temp);
+inc_t _inc = NULL;
+uint32_t *p;
+
 TEMPLATE static u32 cpuExecuteLJIT()
 {
-	ArmOpCompiled opfun = (ArmOpCompiled)JITLUT_HANDLE(ARMPROC.instruct_adr, PROCNUM);
-	if (!opfun)
-		opfun = armcpu_compile<PROCNUM>();
+    uint32_t code[] = {
+		0xe2800001, // add	r0, r0, #1
+		0xe12fff1e, // bx	lr
+	};
+    
+    printf("Before Execution\n");
+    
+    if (!p)
+    {
+         p = (uint32_t *)malloc(1024+PAGESIZE-1);
+    }
+    else
+    {
+        if (mprotect(p, 1024, PROT_READ | PROT_WRITE)) {
+            perror("Couldn't mprotect");
+            exit(errno);
+        }
+    }
+    if (!p) {
+        perror("Couldn't malloc(1024)");
+        exit(errno);
+    }
+    
+    printf("Malloced\n");
+    
+    p = (uint32_t *)(((uintptr_t)p + PAGESIZE-1) & ~(PAGESIZE-1));
+    
+    printf("Before Compiling\n");
+    
+    // copy instructions to function
+	p[0] = code[0];
+	p[1] = code[1];
+    
+    printf("After Compiling\n");
+    
+    if (mprotect(p, 1024, PROT_READ | PROT_EXEC)) {
+        perror("Couldn't mprotect");
+        exit(errno);
+    }
+    
+    printf("About to JIT\n");
+    
+    int a = 1;
+    inc_t opfun = (inc_t)p;
+        
+	return opfun(a);
+}
+
+#else
+
+typedef int (*inc_t)(int temp);
+inc_t _inc = NULL;
+uint32_t *p;
+
+TEMPLATE static u32 cpuExecuteLJIT()
+{
+    
+    printf("Before Execution\n");
+    
+    if (!p)
+    {
+        p = (uint32_t *)malloc(1024+PAGESIZE-1);
+    }
+    else
+    {
+        if (mprotect(p, 1024, PROT_READ | PROT_WRITE)) {
+            perror("Couldn't mprotect");
+            exit(errno);
+        }
+    }
+    if (!p) {
+        perror("Couldn't malloc(1024)");
+        exit(errno);
+    }
+    
+    printf("Malloced\n");
+    
+    p = (uint32_t *)(((int)p + PAGESIZE-1) & ~(PAGESIZE-1));
+    
+    printf("Before Compiling\n");
+    
+	*p = (uint32_t)JITLUT_HANDLE(ARMPROC.instruct_adr, PROCNUM);
+    if (!*p) {
+        
+        *p = (uint32_t)armcpu_compile<PROCNUM>();
+    }
+    
+    printf("After Compiling\n");
+    
+    if (mprotect(p, 1024, PROT_READ | PROT_EXEC)) {
+        perror("Couldn't mprotect");
+        exit(errno);
+    }
+    
+    printf("About to JIT\n");
+    
+    ArmOpCompiled opfun = (ArmOpCompiled)p;
     
 	return opfun();
 }
+
+#endif
 
 static u32 cpuGetCacheReserve()
 {

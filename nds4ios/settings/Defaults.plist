@@ -14,11 +14,15 @@
 	<integer>0</integer>
 	<key>showFPS</key>
 	<false/>
+	<key>showPixelGrid</key>
+	<false/>
 	<key>enableDropbox</key>
 	<false/>
 	<key>enableDropboxCellular</key>
 	<false/>
-	<key>enableJIT</key>
-	<false/>
+	<key>dbAppKey</key>
+	<string>si4f6nnhrhl1ftc</string>
+	<key>dbAppSecret</key>
+	<string>w7c03bp86hmh54q</string>
 </dict>
 </plist>

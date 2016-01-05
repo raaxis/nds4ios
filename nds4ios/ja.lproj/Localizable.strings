@@ -1,0 +1,52 @@
+"ROM List" = "ROMリスト";
+"About nds4ios" = "nds4iosについて";
+"Settings" = "設定";
+"Donate" = "寄付";
+
+"Share" = "シェア";
+
+"InfiniDev Developers" = "InfiniDevの開発者";
+"Contributors" = "貢献者";
+"Emulator Core Code" = "エミュレータコアコード";
+
+"Donate using PayPal" = "PayPalを使って寄付する";
+"We all work hard to make this into software that users will enjoy and love. If you enjoy this software, please consider making a donation to help us create and provide better things." = "InfiniDevは、ユーザーが楽しむためにこのエミュレータを作成するために努力しています。このエミュレータに好意を持って頂ければ、InfiniDevをサポートするために是非寄付をご検討ください。";
+
+"Emulator" = "エミュレータ";
+"Controls" = "コントロール";
+"Developer" = "開発者";
+"Experimental" = "実験的";
+
+"The pixel grid makes games appear less blurry, but at the same time, reduces brightness." = "ピクセルグリッドはゲームブラーを低減します。その代わり、ピクセルグリッドは明るさを低減します。";
+"Enabling Dropbox will add an \"nds4ios\" folder to your Dropbox account. Your game saves will be synced back to that folder so it will carry across devices (iPhone, iPad, iPod touch, Android, PC, etc)." = "Dropboxとの同期を有効にすると、あなたのDropboxアカウントに「nds4ios」フォルダを作成され、セーブデータ（DSV）に保存されます。よって、セーブデータはすべてのデバイス（iPhone、iPad、iPod touch、Android、PCなど）で利用できるようになります。";
+"GNU Lighting JIT makes games run faster. You must be jailbroken or nds4ios will crash." = "GNU Lightning JITはエミュレーションが速くなります。脱獄(Jailbreak)をしていなければnds4iosがクラッシュします。";
+
+"Auto" = "オート";
+"D-Pad" = "Dパッド";
+"Joystick" = "ジョイスティック";
+"Top" = "上側";
+"Bottom" = "下側";
+
+"Frame Skip" = "フレームスキップ";
+"Disable Sound" = "サウンドを無効にする";
+"Overlay Pixel Grid" = "ピクセルグリッド";
+
+"Control Pad Style" = "コントロールパッドスタイル";
+"Controls Position (Portrait)" = "コントロールのポジション (縦向き時)";
+"Control Opacity (Portrait)" = "コントロールの不透明 (縦向き時)";
+
+"Enable Dropbox Sync" = "Dropbox同期を有効にする";
+"Not Linked" = "接続されていません";
+"Linked" = "接続されてしました";
+"Unlinked!" = "切断されました！";
+"Dropbox has been unlinked. Your games will no longer be synced." = "Dropboxから切断されました。セーブデータは同期されません。";
+"Success!" = "成功！";
+"Dropbox was linked successfully! nds4ios will now start syncing your saves to a Dropbox folder called 'nds4ios' located in the root directory of your Dropbox folder." = "Dropbox接続されてしました！今から、Dropbox上の「nds4ios」フォルダにあなたのセーブデータ（DSV）を同期します。";
+"Error Configuring Dropbox" = "Dropbox接続エラー";
+
+"Show FPS" = "FPSを表示";
+"Vibration" = "振動";
+
+"Launch Game" = "ゲームをスタートする";
+"Start this ROM" = "ゲームを起動する";
+"Resume from Save State" = "オートセーブから再開";

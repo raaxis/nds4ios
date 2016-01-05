@@ -26,10 +26,11 @@
 #define MAP_ANONYMOUS MAP_ANON
 #define _MAIN_H
 
+#if defined(__arm__) || defined(__arm64__)
+#define HAVE_NEON
+#endif
+
 #define HAVE_JIT
-#define HAVE_CJIT
-#define TARGET_DEFS_ONLY
-#define USE_EXOPHASEJIT
 
 // Necessary #defines
 
@@ -41,7 +42,7 @@
 #include <mach/mach_time.h>
 #include <strings.h>
 
-#include "types.h"
-#include "nullJit.h"
+//#include "types.h"
+//#include "nullJit.h"
 
 #endif

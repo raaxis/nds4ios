@@ -28,16 +28,23 @@
 // Singleton instance
 CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
+static UIBackgroundTaskIdentifier backTask = 0;
+
 @implementation CHBgDropboxSync
 
 #pragma mark - Showing and hiding the syncing indicator
 
 - (void)showWorking {
     [ZAActivityBar showWithStatus:@"Syncing saves..."];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    backTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [self internalShutdownForced];
+    }];
 }
 
 - (void)hideWorking {
-    [ZAActivityBar showSuccessWithStatus:@"Synced!" duration:2];
+    [ZAActivityBar dismiss];
+    [[UIApplication sharedApplication] endBackgroundTask: backTask];
 }
 
 #pragma mark - Startup
@@ -114,22 +121,22 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
 // For forced shutdowns eg closing the app
 - (void)internalShutdownForced {
-    [self hideWorking];
+    //[self hideWorking];
     [self internalCommonShutdown];
 }
 
 // For clean shutdowns on sync success
 - (void)internalShutdownSuccess {
     [self lastSyncCompletionRescan];
-    workingLabel.text = @"Done ";
-    [self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
+    [ZAActivityBar showSuccessWithStatus:@"Synced!" duration:2];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self internalCommonShutdown];
 }
 
 // For failed shutdowns
 - (void)internalShutdownFailed {
-    workingLabel.text = @"Failed ";
-    [self performSelector:@selector(hideWorking) withObject:nil afterDelay:0.5];
+    [ZAActivityBar showErrorWithStatus:@"Failed to sync!" duration:4];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self internalCommonShutdown];
 }
 
@@ -145,7 +152,8 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 
 - (void)startTaskLocalDelete:(NSString*)file {
     NSLog(@"Sync: Deleting local file %@", file);
-    [[NSFileManager defaultManager] removeItemAtPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file] error:nil];
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Removing file %@", file]];
+    [[NSFileManager defaultManager] removeItemAtPath:[[[AppDelegate sharedInstance] batteryDir] stringByAppendingPathComponent:file] error:nil];
     [self stepComplete];
     anyLocalChanges = YES; // So that when we complete, we notify that there were local changes
 }
@@ -153,7 +161,8 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Upload
 - (void)startTaskUpload:(NSString*)file rev:(NSString*)rev {
     NSLog(@"Sync: Uploading file %@, %@", file, rev?@"overwriting":@"new");
-    [client uploadFile:file toPath:@"/" withParentRev:rev fromPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Uploading file %@, %@", file, rev?@"overwriting":@"new"]];
+    [client uploadFile:file toPath:@"/" withParentRev:rev fromPath:[[[AppDelegate sharedInstance] batteryDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath from:(NSString *)srcPath metadata:(DBMetadata *)metadata {
     // Now the file has uploaded, we need to set its 'last modified' date locally to match the date on dropbox.
@@ -170,7 +179,8 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Download
 - (void)startTaskDownload:(NSString*)file {
     NSLog(@"Sync: Downloading file %@", file);
-    [client loadFile:$str(@"/%@", file) intoPath:[[[AppDelegate sharedInstance] batterDir] stringByAppendingPathComponent:file]];
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Downloading file %@", file]];
+    [client loadFile:$str(@"/%@", file) intoPath:[[[AppDelegate sharedInstance] batteryDir] stringByAppendingPathComponent:file]];
 }
 - (void)restClient:(DBRestClient*)client loadedFile:(NSString*)destPath contentType:(NSString*)contentType metadata:(DBMetadata*)metadata {
     // Now the file has downloaded, we need to set its 'last modified' date locally to match the date on dropbox
@@ -188,6 +198,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Remote delete
 - (void)startTaskRemoteDelete:(NSString*)file {
     NSLog(@"Sync: Deleting remote file %@", file);
+    [ZAActivityBar showWithStatus:[NSString stringWithFormat:@"Removing remote file %@", file]];
     [client deletePath:$str(@"/%@", file)];
     [self stepComplete];
 }
@@ -204,7 +215,7 @@ CHBgDropboxSync* bgDropboxSyncInstance=nil;
 // Get the current status of files and folders as a dict: Path (eg 'abc.txt') => last mod date
 - (NSDictionary*)getLocalStatus {
     NSMutableDictionary* localFiles = [NSMutableDictionary dictionary];
-    NSString* root = [[AppDelegate sharedInstance] batterDir]; // Where are we going to sync to
+    NSString* root = [[AppDelegate sharedInstance] batteryDir]; // Where are we going to sync to
     for (NSString* item in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:root error:nil]) {
         // Skip hidden/system files - you may want to change this if your files start with ., however dropbox errors on many 'ignored' files such as .DS_Store which you'll want to skip
         if ([item hasPrefix:@"."]) continue;

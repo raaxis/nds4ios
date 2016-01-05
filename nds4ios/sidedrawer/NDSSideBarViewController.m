@@ -3,7 +3,7 @@
 //  nds4ios
 //
 //  Created by Developer on 7/8/13.
-//  Copyright (c) 2013 DS Team. All rights reserved.
+//  Copyright (c) 2013 InfiniDev. All rights reserved.
 //
 
 #import "NDSSideBarViewController.h"
@@ -16,6 +16,15 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return YES;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    romListLabel.text = NSLocalizedString(@"ROM List", "ROM List menu item");
+    aboutLabel.text = NSLocalizedString(@"About nds4ios", "About nds4ios menu item");
+    settingsLabel.text = NSLocalizedString(@"Settings", "Settings menu item");
+    donateLabel.text = NSLocalizedString(@"Donate", "Donate menu item");
 }
 
 #pragma mark -
@@ -60,6 +69,10 @@
 }
 
 -(CGFloat) leftMenuVisibleWidth{
+    return 280;
+}
+
+-(CGFloat) rightMenuVisibleWidth{
     return 280;
 }
 

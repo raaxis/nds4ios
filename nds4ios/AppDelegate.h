@@ -8,16 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "NDSEmulatorViewController.h"
+#import "NDSGame.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic) BOOL gameOpen;
-@property (nonatomic) NSString *currentGame;
+@property (strong, nonatomic) NDSGame *currentGame;
 @property (strong, nonatomic) NDSEmulatorViewController *currentEmulatorViewController;
 
 + (AppDelegate *)sharedInstance;
 
-- (NSString *)batterDir;
+- (NSString *)batteryDir;
+- (NSString *)documentsPath;
+
+- (void)startGame:(NDSGame *)game withSavedState:(NSInteger)savedState;
 
 @end

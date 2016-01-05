@@ -173,7 +173,7 @@ jit_get_cpu(void)
 	} bits;
 	_ui	cpuid;
     } edx;
-#if __WORDSIZE == 32
+#ifndef __LP64__
     int		ac, flags;
 #endif
     _ui		eax, ebx;
@@ -184,7 +184,7 @@ jit_get_cpu(void)
 		return;
     initialized = 1;
 
-#if __WORDSIZE == 32
+#ifndef __LP64__
 #ifdef _MSC_VER
     _asm 
     {
@@ -272,7 +272,7 @@ jit_get_cpu(void)
     jit_cpu.aes		= ecx.bits.aes;
     jit_cpu.avx		= ecx.bits.avx;
 
-#if __WORDSIZE == 64
+#ifdef __LP64__
 #ifdef _MSC_VER
 	//_asm 
 	//{

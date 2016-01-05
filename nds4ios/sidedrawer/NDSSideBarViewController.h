@@ -11,6 +11,12 @@
 #import "SASlideMenuViewController.h"
 #import "SASlideMenuDataSource.h"
 
-@interface NDSSideBarViewController : SASlideMenuViewController
+@interface NDSSideBarViewController : SASlideMenuViewController {
+    IBOutlet UILabel *romListLabel;
+    IBOutlet UILabel *aboutLabel;
+    IBOutlet UILabel *settingsLabel;
+    IBOutlet UILabel *donateLabel;
+}
+
 
 @end

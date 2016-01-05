@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RSTFileBrowserViewController.h"
-#import "NDSEmulatorViewController.h"
-#import "OLGhostAlertView.h"
 #import <DropboxSDK/DropboxSDK.h>
+#import "DocWatchHelper.h"
 
-@interface NDSROMTableViewController : RSTFileBrowserViewController
+@interface NDSROMTableViewController : UITableViewController <UIAlertViewDelegate>
 {
-    OLGhostAlertView *resumeGame;
-    BOOL isAway;
-    //DBPath *saveDir;
+    NSArray *games;
+    DocWatchHelper *docWatchHelper;
+    
+    IBOutlet UINavigationItem *romListTitle;
 }
+
+- (void)reloadGames:(NSNotification*)aNotification;
 
 @end
