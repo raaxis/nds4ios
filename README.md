@@ -16,7 +16,6 @@ Due to the need to mmap the entire ROM into memory, older devices with only 256M
 
 [DeSmuME](http://desmume.org/) 
 
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MCAFUKL3CM8QQ)
 
 ##### We all work hard to make software that users will enjoy and love. If you enjoy nds4ios, please consider making a donation to help us create and provide better things.
 
