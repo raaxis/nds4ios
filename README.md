@@ -35,7 +35,7 @@ If you're NOT jailbroken, please follow the instructions here: http://nds4ios.an
 1.  Open a Terminal instance and go to your working directory.
 
 2.  Do
-<code>git clone https://github.com/InfiniDev/nds4ios.git</code>
+<code>git clone https://github.com/raaxis/nds4ios.git</code>
 
 3.  then
 Navigate to the "nds4ios" folder in your working directory.
