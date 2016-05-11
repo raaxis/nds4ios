@@ -1310,11 +1310,6 @@
 				CLASSPREFIX = NDS;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = InfiniDev;
-				TargetAttributes = {
-					BFCFE0EE1764FBD3000A70CF = {
-						DevelopmentTeam = 9UHQLN2HJH;
-					};
-				};
 			};
 			buildConfigurationList = BFCFE0EA1764FBD3000A70CF /* Build configuration list for PBXProject "nds4ios" */;
 			compatibilityVersion = "Xcode 3.2";
