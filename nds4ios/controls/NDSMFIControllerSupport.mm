@@ -59,6 +59,8 @@
         [NSValue valueWithNonretainedObject:_controller.gamepad.dpad.left] : @(BUTTON_LEFT),
         [NSValue valueWithNonretainedObject:_controller.gamepad.dpad.down] : @(BUTTON_DOWN),
         [NSValue valueWithNonretainedObject:_controller.gamepad.dpad.up] : @(BUTTON_UP),
+        [NSValue valueWithNonretainedObject:_controller.extendedGamepad.leftTrigger] : @(BUTTON_SELECT),
+        [NSValue valueWithNonretainedObject:_controller.extendedGamepad.rightTrigger] : @(BUTTON_START),
         // [NSValue valueWithNonretainedObject:_controller.gamepad.NONE] : @(BUTTON_SELECT),
         // [NSValue valueWithNonretainedObject:_controller.gamepad.NONE] : @(BUTTON_START),
         [NSValue valueWithNonretainedObject:_controller.gamepad.buttonB] : @(BUTTON_A),
