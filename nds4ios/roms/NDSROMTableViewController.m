@@ -179,7 +179,7 @@
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
     if( buttonIndex == 1 )
     {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/InfiniDev/nds4ios#adding-roms-to-nds4ios"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/raaxis/nds4ios#adding-roms-to-nds4ios"]];
     }
 }
 
